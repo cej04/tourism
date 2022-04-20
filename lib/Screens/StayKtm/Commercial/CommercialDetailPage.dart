@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/StayKtm/Commercial/Commercial.dart';
 
-import 'package:readmore/readmore.dart';
 
 import '../../../Utils/constants.dart';
 
@@ -99,7 +98,7 @@ class commercialDetailsPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
                ListTile(
-                leading: Icon(Icons.location_on,color: Colors.red,),
+                leading: const Icon(Icons.location_on,color: Colors.red,),
                 title: Text('Address',style: Theme.of(context).textTheme.headline6,),
                 subtitle: Padding(
                   padding: const EdgeInsets.all(8.0),

@@ -18,7 +18,7 @@ List<Commercial> commercial = [
   Commercial(
     image:"assets/images/tajhotel.jpg",
     title: "Taj Garden Retreat",
-    address: "Waterscapes, Kumarakom, Kottayam",
+    address: "Taj Garden Retreat, Kumarakom, Kottayam",
     pin:686563,
     phone: 04812524377,
     email: "retreat.kumarakom@tajhotels.com",

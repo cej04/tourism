@@ -11,7 +11,7 @@ import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/home_screen.dart';
 import 'package:ktmtourism/Screens/TourismInfo/tourismInfo.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
-//import 'culinarydelightsPage.dart';
+
 import 'Screens/MainHome/mainPage.dart';
 
 import 'Screens/StayKtm/stayktmpage.dart';
@@ -30,9 +30,7 @@ class MyApp extends StatelessWidget {
       title: 'Kottayam Tourism',
       initialRoute: '/',
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-
-        // When navigating to the "/second" route, build the SecondScreen widget.
+       
         '/mainPage': (context) => const MainPage(),
         '/welcomektmPage': (context) => const welcomektmPage(),
         '/Homescreen': (context) => const Homescreen(),
@@ -71,8 +69,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // Color gradientStart = Colors.green; //Change start gradient color here
-  // Color gradientEnd = Colors.orange; //Change end gradient color here
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -87,18 +84,7 @@ class _HomePageState extends State<HomePage> {
               child: IconButton(
                 icon: Icon(Icons.more_vert, color: Colors.black),
                 onPressed: () {
-                  //  PopupMenuButton(
-                  //     itemBuilder: (context) => [
-                  //       PopupMenuItem(
-                  //         child: Text("First"),
-                  //         value: 1,
-                  //       ),
-                  //       PopupMenuItem(
-                  //         child: Text("Second"),
-                  //         value: 2,
-                  //       )
-                  //     ]
-                  // );
+                  
                 },
               ),
             ),
@@ -123,27 +109,9 @@ class _HomePageState extends State<HomePage> {
       ),
 
       body:
-          // Container(
-          //    decoration: const BoxDecoration(
-          //   gradient: LinearGradient(
-          //     begin: Alignment.topLeft,
-          //     end:
-          //         Alignment.bottomLeft, // 10% of the width, so there are ten blinds.
-          //     colors: <Color>[
-
-          //       Color(0xff3EADCF),
-          //       Color(0xffFE5858),
-          //       Color(0xffeeee00),
-          //       Color(0xFF0BAB64),
-
-          //     ], // red to yellow
-          //     tileMode: TileMode.repeated, // repeats the gradient over the canvas
-          //   ),
-          // ),
-          //   child:
+         
           MainPage(),
-      //MainListPage(),
-      // ),
+     
 
       drawer: Drawer(
         child: ListView(
@@ -200,83 +168,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, '/HomeScreen');
               },
             ),
-            // ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('welcome kottayam'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/welcomektmPage');
-            //   },
-            // ),
-            //  ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('tourist places'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/Homescreen');
-            //   },
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('Stay n ktm'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/StayKtmPage');
-            //   },
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('Main Pilgrim centers'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/PilgrimKtmPage');
-            //   },
-            // ),
-            //  ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('About Kottayam'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/AboutKtmPage');
-            //   },
-            // ),
-            //  ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('Culinary delights'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/CulinaryDelightPage');
-            //   },
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('Produce'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/ProducePage');
-            //   },
-            // ),
-            //  ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('Festivals'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/FestivalPage');
-            //   },
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('Art & Culture'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/ArtCulturePage');
-            //   },
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('How To Reach'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/HowToReachPage');
-            //   },
-            // ),
-            //  ListTile(
-            //   leading: const Icon(Icons.question_answer),
-            //   title: Text('How To Reach demo'),
-            //   onTap: () {
-            //    Navigator.pushNamed(context, '/ReachKtm');
-            //   },
-            // ),
+            
           ],
         ),
       ),

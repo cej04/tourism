@@ -61,7 +61,7 @@ class _CommercialPageState extends State<CommercialPage> {
             ),
           ],
         ),
-        actions: [],
+        actions: const [],
       ),
       body:
        Column(
@@ -72,7 +72,7 @@ class _CommercialPageState extends State<CommercialPage> {
                padding: const EdgeInsets.all(20),
               itemCount: commercial.length,
               gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(
+              const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               // mainAxisSpacing: kDefaultPadding,
               crossAxisSpacing: 10,

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/StayKtm/Commercial/Commercial.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwned.dart';
 
-import 'package:readmore/readmore.dart';
 
 import '../../../Utils/constants.dart';
 

@@ -35,7 +35,7 @@ class historicPage extends StatelessWidget {
                   );
                 },
                 child: Container(
-                margin:EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
+                margin:const EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
                 width: size.width * 0.8,
                 height:185,
                 decoration: BoxDecoration(
