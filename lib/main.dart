@@ -79,14 +79,11 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 5.0),
-              child: IconButton(
-                icon: Icon(Icons.more_vert, color: Colors.black),
-                onPressed: () {
-                  
-                },
-              ),
+            IconButton(
+              icon: Icon(Icons.more_vert, color: Colors.black),
+              onPressed: () {
+                
+              },
             ),
             const Text(
               "Kottayam Tourism",
@@ -161,13 +158,13 @@ class _HomePageState extends State<HomePage> {
               //  Navigator.pushNamed(context, '/TourismInfoPage');
               // },
             ),
-            ListTile(
-              leading: const Icon(Icons.info),
-              title: Text('Sample Nav'),
-              onTap: () {
-                Navigator.pushNamed(context, '/HomeScreen');
-              },
-            ),
+            // ListTile(
+            //   leading: const Icon(Icons.info),
+            //   title: Text('Sample Nav'),
+            //   onTap: () {
+            //     Navigator.pushNamed(context, '/HomeScreen');
+            //   },
+            // ),
             
           ],
         ),
