@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/ArtCulture/art_culturePage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
+import 'package:ktmtourism/Screens/EmergencyContact/emergency.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
         '/HowToReachPage': (context) => const HowToReachPage(),
 // '/ReachKtm': (context) => const ReachKtm(),
         '/TourismInfoPage': (context) => const TourismInfoPage(),
+        '/EmergencyPage': (context) => const EmergencyPage(),
         // '/HomeScreen': (context) => const HomeScreen(),
       },
       theme: ThemeData(
@@ -135,8 +137,9 @@ class _HomePageState extends State<HomePage> {
               leading: const Icon(Icons.phone),
               title: Text('Emergency Contacts'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, '/EmergencyPage');
               },
+              
             ),
             Divider(
               thickness: 2.0,
