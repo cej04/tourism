@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Headers/header_EmergencyContact.dart';
 import 'package:ktmtourism/Utils/constants.dart';
-import 'package:ktmtourism/Screens/Headers/header_tourisminfo.dart';
 
 
 
@@ -68,7 +67,7 @@ class EmergencyPage extends StatelessWidget {
               children: [
                 
                 TextSpan(
-                  text: 'ISD Code of India : +91\n\n',
+                  text: 'ISD Code of India : +91\nSTD Code Kottayam : 0481\n\n',
                   style: const TextStyle(
                     fontSize: 18.0,
                     color: Colors.black,

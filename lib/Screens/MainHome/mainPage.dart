@@ -165,14 +165,6 @@ class _MainPageState extends State<MainPage> {
                   );
                 },
               ),
-    
-              //Image.asset(images[index]),
-              // SizedBox(height: 10,),
-              // Icon(
-              //   Icons.favorite,
-              //   color: Colors.red,
-              //   size: 50,
-              // ),
             ],
           );
         },
@@ -180,11 +172,4 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-// title: Text(images[index],
-//     style: TextStyle(fontWeight: FontWeight.bold)),
-// subtitle: Text(images[index]),
 
-// // leading: CircleAvatar(
-// //   backgroundImage: AssetImage(images[index]),
-// // ),
-// trailing: Icon(Icons.push_pin),
