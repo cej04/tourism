@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/FAQ/FAQ.dart';
 import 'package:ktmtourism/Screens/Headers/header_FAQ.dart';
+import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
 
 class FAQPage extends StatelessWidget {
@@ -11,34 +12,11 @@ class FAQPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return 
     Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 5.0),
-              child: IconButton(
-                icon: Icon(
-                  Icons.more_vert,
-                ),
-                onPressed: () {
-                
-                },
-              ),
-            ),
-            Text("Kottayam Tourism",style: TextStyle(color:Colors.black),),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: Image.asset(
-                    "assets/images/APPlogo2.png",
-                    fit: BoxFit.cover,
-                    
-                  )),
-            ),
-          ],
-        ),
-        actions: [],
+       appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(80.0),
+       
+          child: const MyAppBar(),
+        
       ),
       body: Column(
         children: [

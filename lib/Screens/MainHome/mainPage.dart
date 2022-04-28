@@ -6,12 +6,12 @@ import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
+import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 
 
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/home_screen.dart';
 
 
-import 'package:ktmtourism/Screens/StayKtm/stayktmpage.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 class MainPage extends StatefulWidget {
@@ -75,7 +75,7 @@ class _MainPageState extends State<MainPage> {
      List pages =[ 
       const welcomektmPage(),
       const Homescreen(),
-      const StayKtmPage(),
+      const StayKtmBodyPage(),
       const PilgrimKtmPage(),
       const CulinaryDelightPage(),
       const ProducePage(),

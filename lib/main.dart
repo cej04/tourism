@@ -4,20 +4,18 @@ import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/EmergencyContact/emergency.dart';
 import 'package:ktmtourism/Screens/FAQ/FAQPage.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
-import 'package:ktmtourism/Screens/MainHome/samplemain.dart';
-import 'package:ktmtourism/Screens/MainHome/samplemainimages.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
+import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/home_screen.dart';
 
 import 'package:ktmtourism/Screens/TourismInfo/tourismInfo.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
+import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
 import 'Screens/MainHome/mainPage.dart';
-
-import 'Screens/StayKtm/stayktmpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +35,7 @@ class MyApp extends StatelessWidget {
         '/welcomektmPage': (context) => const welcomektmPage(),
         '/Homescreen': (context) => const Homescreen(),
         '/Body': (context) => const Homescreen(),
-        '/StayKtmPage': (context) => const StayKtmPage(),
+        '/StayKtmBodyPage': (context) => const StayKtmBodyPage(),
         '/PilgrimKtmPage': (context) => const PilgrimKtmPage(),
 
 // '/AboutKtmPage': (context) => const AboutKtmPage(),
@@ -77,108 +75,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-   //   backgroundColor: Color(0xFF757575),
-      // backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Row(
-          children: [
-            PopupMenuButton(
-              icon: Icon(
-                  Icons.more_vert), //don't specify icon if you want 3 dot menu
-              color: Color(0xFF757575),
-              itemBuilder: (context) => [
-                PopupMenuItem<int>(
-                  value: 0,
-                  child: Text(
-                    "About Kottayam",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 1,
-                  child: Text(
-                    "Tourist Places",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 2,
-                  child: Text(
-                    "Stay in Kottayam",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 3,
-                  child: Text(
-                    "Main Pilgrim Centers",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 4,
-                  child: Text(
-                    "Culinary Delights",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 5,
-                  child: Text(
-                    "Produce",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 6,
-                  child: Text(
-                    "Festivals",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 7,
-                  child: Text(
-                    "Art & Culture",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                PopupMenuItem<int>(
-                  value: 8,
-                  child: Text(
-                    "How to Reach",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ],
-              onSelected: (item) => SelectedItem(context, item),
-            ),
-            const Text(
-              "Kottayam Tourism",
-              style: TextStyle(color: Colors.black),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: Image.asset(
-                    "assets/images/APPlogo2.png",
-                    fit: BoxFit.contain,
-                    // width: 70.0,
-                    // height: 70.0,
-                  )),
-            ),
-          ],
-        ),
-        actions: [],
+      backgroundColor: Color(0xFF757575),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(80.0),
+        child: const MyAppBar(),
       ),
+      body:
+          //MainHomeSample(),
 
-      body:MainHomeSample(),
-      
-      //SampleMain(),
-      
-      // MainPage(),
+          //SampleMain(),
 
+          MainPage(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -227,66 +134,9 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, '/FAQPage');
               },
             ),
-            // ListTile(
-            //   leading: const Icon(Icons.info),
-            //   title: Text('Sample Nav'),
-            //   onTap: () {
-            //     Navigator.pushNamed(context, '/HomeScreen');
-            //   },
-            // ),
           ],
         ),
       ),
     );
   }
 }
-
- void SelectedItem(BuildContext context, item) {
-    switch (item) {
-      case 0:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => welcomektmPage()));
-        break;
-      case 1:
-       Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => Homescreen()));
-        
-        break;
-         case 2:
-       Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => StayKtmPage()));
-        
-        break;
-         case 3:
-       Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => PilgrimKtmPage()));
-        
-        break;
-        case 4:
-       Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => CulinaryDelightPage()));
-        
-        break;
-         case 5:
-       Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => ProducePage()));
-        
-        break;
-        case 6:
-       Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => FestivalPage()));
-        
-        break;
-        case 7:
-       Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => ArtCulturePage()));
-        
-        break;
-          case 8:
-       Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => HowToReachPage()));
-        
-        break;
-     
-    }
-  }
