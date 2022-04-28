@@ -231,7 +231,7 @@ import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/home_screen.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -419,7 +419,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         break;
       case 1:
        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => Homescreen()));
+            .push(MaterialPageRoute(builder: (context) => Body()));
         
         break;
          case 2:

@@ -9,9 +9,9 @@ import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 
-import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/home_screen.dart';
 
 import 'package:ktmtourism/Screens/TourismInfo/tourismInfo.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/mainPage': (context) => const MainPage(),
         '/welcomektmPage': (context) => const welcomektmPage(),
-        '/Homescreen': (context) => const Homescreen(),
-        '/Body': (context) => const Homescreen(),
+        //'/Homescreen': (context) => const Homescreen(),
+        '/Body': (context) => const Body(),
         '/StayKtmBodyPage': (context) => const StayKtmBodyPage(),
         '/PilgrimKtmPage': (context) => const PilgrimKtmPage(),
 

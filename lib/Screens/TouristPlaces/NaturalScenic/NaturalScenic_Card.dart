@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/NaturalScenic/NaturalScenic.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Recreational/recreational.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Religious/religious.dart';
 
 
 
