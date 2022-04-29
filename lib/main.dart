@@ -4,6 +4,7 @@ import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/EmergencyContact/emergency.dart';
 import 'package:ktmtourism/Screens/FAQ/FAQPage.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
+import 'package:ktmtourism/Screens/MainHome/samplemain.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
@@ -75,17 +76,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF757575),
+      //backgroundColor: Color(0xFF757575),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(80.0),
         child: const MyAppBar(),
       ),
       body:
-          //MainHomeSample(),
+        MainHomeSample(),
 
           //SampleMain(),
 
-          MainPage(),
+         // MainPage(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,

@@ -1,20 +1,39 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:ktmtourism/Screens/ArtCulture/art_culturePage.dart';
+import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
+import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
+import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
+import 'package:ktmtourism/Screens/Produce/producePage.dart';
+import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
+import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
+import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
+
 
 class MainHomeSample extends StatelessWidget {
   const MainHomeSample({ Key? key }) : super(key: key);
 
+ 
+
+ 
+
+   
+
+ 
+
   @override
   Widget build(BuildContext context) {
+    
+    
     return ListView(
       children: [
         Column(
           children: [
-           
-            
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+                         Container(
+                color:Colors.grey[350],
                 child: CarouselSlider(
+                  
                 items: [
                     
                   //1st Image of Slider
@@ -69,6 +88,7 @@ class MainHomeSample extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.all(6.0),
                     decoration: BoxDecoration(
+                     
                       borderRadius: BorderRadius.circular(8.0),
                       image: DecorationImage(
                         image: AssetImage("assets/images/vembanad.jpg"),
@@ -89,25 +109,34 @@ class MainHomeSample extends StatelessWidget {
                   enableInfiniteScroll: true,
                   autoPlayAnimationDuration: Duration(milliseconds: 800),
                   viewportFraction: 0.8,
+                  
                 ),
           ),
+          
               ),
-          SizedBox(height:10),
+               
+          SizedBox(height:25),
           Container(
+            
             margin: EdgeInsets.symmetric(horizontal: 10),
               width: MediaQuery.of(context).size.width,
                height: MediaQuery.of(context).size.height*.5,
-            child: GridView.count(crossAxisCount: 3,
+            child: GridView.count(
+              crossAxisCount: 3,
             mainAxisSpacing:15,
             crossAxisSpacing: 15,
             children: [
-             customGridView('assets/images/aboutktm.jpeg','About Kottayam'),
-             customGridView('assets/images/tourism.jpg','Tourist Places'),
-             customGridView('assets/images/vagamon.jpg','vagamon'),
-             customGridView('assets/images/vagamon.jpg','vagamon'),
-             customGridView('assets/images/vagamon.jpg','vagamon'),
+             customGridView(Icons.explore_outlined,'About Kottayam'),
+             customGridView(Icons.bed_rounded,'Tourist Places'),
+             customGridView(Icons.holiday_village,'Stay in Kottayam'),
+             customGridView(Icons.flatware,'Culinary Delights'),
+             customGridView(Icons.color_lens,'Produce'),
+              customGridView(Icons.celebration_rounded,'Festivals'),
+             customGridView(Icons.festival_outlined,'Art & Culture'),
+             customGridView(Icons.commute_outlined,'How to Reach'),
             ],
             ),
+            
           )
         
           ],
@@ -117,32 +146,55 @@ class MainHomeSample extends StatelessWidget {
     );
    
   }
-   Widget customGridView(image,title){
-      return  Container(
-              
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  // boxShadow: [
-                  //  BoxShadow(
-                  //    color:Colors.grey,
-                  //  spreadRadius: 1,
-                  //  blurRadius: 8) 
-                  // ]
+   GestureDetector customGridView(IconData icon,title){
+     List pages =[ 
+      const welcomektmPage(),
+      const Body(),
+      const StayKtmBodyPage(),
+      const PilgrimKtmPage(),
+      const CulinaryDelightPage(),
+      const ProducePage(),
+      const FestivalPage(),
+      const ArtCulturePage(),
+      const HowToReachPage(),
+
+    ];
+      return  GestureDetector(
+        child: Container(
+                
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    // boxShadow: [
+                    //  BoxShadow(
+                    //    color:Colors.grey,
+                    //  spreadRadius: 1,
+                    //  blurRadius: 8) 
+                    // ]
+                  ),
+                  child:Column(
+                   // mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                    children:[
+                      Icon(icon),
+                    //Image.asset('$image',fit: BoxFit.fill,),
+                     // Text("About Kottayam"),
+                      Row(
+                          mainAxisAlignment:MainAxisAlignment.center,
+                        children: [
+                          Text('$title',style: TextStyle(fontSize: 12,fontWeight:FontWeight.bold),)
+                        ],
+                     )
+                    ]
+                  )
                 ),
-                child:Column(
-                 // mainAxisSize: MainAxisSize.max,
-                  //mainAxisAlignment:MainAxisAlignment.spaceEvenly,
-                  children:[
-                  Image.asset('$image',fit: BoxFit.fill,),
-                   // Text("About Kottayam"),
-                    Row(
-                      children: [
-                        Text('$title',style: TextStyle(fontSize: 12,fontWeight:FontWeight.bold),)
-                      ],
-                    )
-                  ]
-                )
-              );
+                //   onTap: () {
+
+                //   Navigator.push(BuildContext, MaterialPageRoute(
+                //    builder: (context) => pages[index]
+                //      ),
+                //   );
+                // },
+      );
     }
 }
