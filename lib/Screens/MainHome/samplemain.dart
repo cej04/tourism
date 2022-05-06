@@ -11,17 +11,14 @@ import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 
-class MainHomeSample extends StatelessWidget {
+class MainHomeSample extends StatefulWidget {
   const MainHomeSample({ Key? key }) : super(key: key);
 
- 
+  @override
+  State<MainHomeSample> createState() => _MainHomeSampleState();
+}
 
- 
-
-   
-
- 
-
+class _MainHomeSampleState extends State<MainHomeSample> {
   @override
   Widget build(BuildContext context) {
     
@@ -46,6 +43,12 @@ class MainHomeSample extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
+                      alignment: Alignment.bottomCenter, // This aligns the child of the container
+              child: Padding(
+               padding: EdgeInsets.only(left: 15.0,
+               bottom: 15), //some spacing to the child from bottom
+               child: Text("vagamon".toUpperCase(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,backgroundColor: Colors.black.withOpacity(.3)))
+              ),
                   ),
                     
                   //2nd Image of Slider
@@ -58,6 +61,13 @@ class MainHomeSample extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
+                    
+                      alignment: Alignment.bottomCenter, // This aligns the child of the container
+              child: Padding(
+               padding: EdgeInsets.only(left: 15.0,
+               bottom: 15), //some spacing to the child from bottom
+               child: Text("kumarakom".toUpperCase(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,backgroundColor: Colors.black.withOpacity(.3)))
+              ),
                   ),
                     
                   //3rd Image of Slider
@@ -70,6 +80,13 @@ class MainHomeSample extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
+                    alignment: Alignment.bottomCenter, // This aligns the child of the container
+              child: Padding(
+               padding: EdgeInsets.only(left: 15.0,
+               bottom: 15), //some spacing to the child from bottom
+               child: Text("Bharananganam Church".toUpperCase(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,backgroundColor: Colors.black.withOpacity(.3)))
+              ),
+                    
                   ),
                     
                   //4th Image of Slider
@@ -82,6 +99,12 @@ class MainHomeSample extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
+                    alignment: Alignment.bottomCenter, // This aligns the child of the container
+              child: Padding(
+               padding: EdgeInsets.only(left: 15.0,
+               bottom: 15), //some spacing to the child from bottom
+               child: Text("ilaveezhapoonjira".toUpperCase(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,backgroundColor: Colors.black.withOpacity(.3)))
+              ),
                   ),
                     
                   //5th Image of Slider
@@ -95,6 +118,12 @@ class MainHomeSample extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
+                    alignment: Alignment.bottomCenter, // This aligns the child of the container
+              child: Padding(
+               padding: EdgeInsets.only(left: 15.0,
+               bottom: 15), //some spacing to the child from bottom
+               child: Text("vembanad".toUpperCase(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,backgroundColor: Colors.black.withOpacity(.3)))
+              ),
                   ),
   
           ],
@@ -146,7 +175,9 @@ class MainHomeSample extends StatelessWidget {
     );
    
   }
+
    GestureDetector customGridView(IconData icon,title){
+    
      List pages =[ 
       const welcomektmPage(),
       const Body(),
@@ -159,6 +190,7 @@ class MainHomeSample extends StatelessWidget {
       const HowToReachPage(),
 
     ];
+    
       return  GestureDetector(
         child: Container(
                 

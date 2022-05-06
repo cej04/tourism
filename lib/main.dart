@@ -4,18 +4,15 @@ import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/EmergencyContact/emergency.dart';
 import 'package:ktmtourism/Screens/FAQ/FAQPage.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
-import 'package:ktmtourism/Screens/MainHome/samplemain.dart';
+import 'package:ktmtourism/Screens/MainHome/sampleMain2.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
-
-
 import 'package:ktmtourism/Screens/TourismInfo/tourismInfo.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
-
 import 'Screens/MainHome/mainPage.dart';
 
 void main() {
@@ -50,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/TourismInfoPage': (context) => const TourismInfoPage(),
         '/EmergencyPage': (context) => const EmergencyPage(),
         '/FAQPage': (context) => const FAQPage(),
+       //  '/MainSample2Page': (context) => const MainSample2Page(),
 
         // '/HomeScreen': (context) => const HomeScreen(),
       },
@@ -76,17 +74,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Color(0xFF757575),
+      backgroundColor: Color(0xFF757575),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(80.0),
         child: const MyAppBar(),
       ),
-      body:
-        MainHomeSample(),
+      body: 
+      //MainHomeSample(),
 
-          //SampleMain(),
-
-         // MainPage(),
+      //SampleMain(),
+MainSample2Page(),
+       //MainPage(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -135,6 +133,13 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, '/FAQPage');
               },
             ),
+            //  ListTile(
+            //   leading: Icon(Icons.question_answer),
+            //   title: Text('SampleMainHome'),
+            //   onTap: () {
+            //     Navigator.pushNamed(context, '/MainSample2Page');
+            //   },
+            // ),
           ],
         ),
       ),

@@ -3,8 +3,6 @@ import 'package:ktmtourism/Screens/Produce/produce.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
-
-
 class ProduceBodyPage extends StatelessWidget {
   final Produce produce;
   const ProduceBodyPage({Key? key, required this.produce}) : super(key: key);
@@ -13,7 +11,7 @@ class ProduceBodyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-       appBar: PreferredSize(
+      appBar: PreferredSize(
         preferredSize: const Size.fromHeight(80.0),
         child: const MyAppBar(),
       ),
@@ -41,37 +39,38 @@ class ProduceBodyPage extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(produce.image),
                   fit: BoxFit.fill,
-    
+
                   //alignment: Alignment.topCenter,
                 ),
               ),
             ),
             Column(
               children: [
-                  SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 // Padding(
                 //   padding: const EdgeInsets.all(kDefaultPadding),
                 //   child:
-                   Container(
-                    
-                      color: Colors.grey,
-                      //crossAxisAlignment:CrossAxisAlignment.end,
-                      //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Icon(Icons.apps_sharp),
-                          Text(
-                            "Type :",
-                            style: Theme.of(context).textTheme.headline6,
-                          ),
-                          Text(
-                            produce.type,
-                            style: Theme.of(context).textTheme.headline6,
-                          ),
-                        ],
-                      )),
-               // ),
+                Container(
+                    color: Colors.grey,
+                    //crossAxisAlignment:CrossAxisAlignment.end,
+                    //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(Icons.apps_sharp),
+                        Text(
+                          "Type :",
+                          style: Theme.of(context).textTheme.headline6,
+                        ),
+                        Text(
+                          produce.type,
+                          style: Theme.of(context).textTheme.headline6,
+                        ),
+                      ],
+                    )),
+                // ),
                 // SizedBox(height: 20,),
                 Padding(
                   padding: const EdgeInsets.all(kDefaultPadding),
@@ -99,13 +98,8 @@ class ProduceBodyPage extends StatelessWidget {
                     ),
                   ),
                 )
-    
-                //Text(product.description,overflow: TextOverflow.visible,),
               ],
             ),
-            // Container(
-            //   child: Text(product.description),
-            // ),
           ],
         ),
       ),

@@ -5,11 +5,6 @@ import 'package:ktmtourism/Screens/Produce/produce_bodyPage.dart';
 import 'package:ktmtourism/Screens/Produce/produce_card.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
-
-// import 'culinary_card.dart';
-// import 'culinary_detail.dart';
-
-
 class ProducePage extends StatelessWidget {
   
   const ProducePage({ Key? key,  }) : super(key: key);

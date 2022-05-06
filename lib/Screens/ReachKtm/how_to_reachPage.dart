@@ -1,9 +1,14 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Headers/header_howToReach.dart';
+import 'package:ktmtourism/Screens/ReachKtm/ReachAir/AirDetails.dart';
+import 'package:ktmtourism/Screens/ReachKtm/ReachRoad/RoadDetail.dart';
+import 'package:ktmtourism/Screens/ReachKtm/ReachTrain/TrainDetail.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reach.dart';
-import 'package:ktmtourism/Screens/ReachKtm/how_to_reachBodyPage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachCard.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
+
 //import 'package:ktmtourism/header_how_to_reach.dart';
 
 
@@ -14,10 +19,17 @@ class HowToReachPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     List pages =[ 
+       const AirDetailPage(),
+      const TrainDetailPage(),
+      const RoadDetailPage(),
+     
+
+    ];
     Size size = MediaQuery.of(context).size;
     return 
     Scaffold(
-      appBar: PreferredSize(
+       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(80.0),
         child: const MyAppBar(),
       ),
@@ -30,7 +42,7 @@ class HowToReachPage extends StatelessWidget {
                padding: const EdgeInsets.all(20),
               itemCount: howtoreach.length,
               gridDelegate:
-              const SliverGridDelegateWithFixedCrossAxisCount(
+              SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               // mainAxisSpacing: kDefaultPadding,
               crossAxisSpacing: 10,
@@ -40,13 +52,10 @@ class HowToReachPage extends StatelessWidget {
             
             itemBuilder: (context,index) => HowToReachCard(
               howtoreach: howtoreach[index],
-               press: () => Navigator.push(
-                 context, MaterialPageRoute(
-                   builder: (context) => HowToReachBodyPage(
-                     howtoreach:howtoreach[index],
+               press: () =>  Navigator.push(context, MaterialPageRoute(
+                   builder: (context) => pages[index]
                      ),
-                     ),
-               ),
+                  ),
             )
             ),
             )
