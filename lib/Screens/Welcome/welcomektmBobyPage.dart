@@ -9,37 +9,36 @@ class WelcomeKtmBodyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(kDefaultPadding),
-            child: Container(
-              child: Text(welcome.title,
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
-            ),
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(kDefaultPadding),
+          child: Container(
+            child: Text(welcome.title,
+                style: Theme.of(context).textTheme.headline6?.copyWith(
+                    color: Colors.black, fontWeight: FontWeight.bold)),
           ),
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 6.0,
-                ),
-              ],
-             // borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                image: AssetImage(welcome.image),
-                fit: BoxFit.fill,
-
-                //alignment: Alignment.topCenter,
+        ),
+        Container(
+          height: 200,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black,
+                blurRadius: 6.0,
               ),
+            ],
+           // borderRadius: BorderRadius.circular(10),
+            image: DecorationImage(
+              image: AssetImage(welcome.image),
+              fit: BoxFit.fill,
+
+              //alignment: Alignment.topCenter,
             ),
           ),
-          Column(
+        ),
+        Expanded(
+          child: ListView(
             children: [
               SizedBox(height: 10,),
               // Container(
@@ -86,14 +85,14 @@ class WelcomeKtmBodyPage extends StatelessWidget {
                       welcome.description,
                        textAlign: TextAlign.justify,
                          style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
-  trimLines: 20,
-  colorClickableText: Colors.blue,
-  trimMode: TrimMode.Line,
-  trimCollapsedText: 'Read more',
-  trimExpandedText: 'Show less',
-  moreStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue),
-  lessStyle:TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue)
-)
+          trimLines: 20,
+          colorClickableText: Colors.blue,
+          trimMode: TrimMode.Line,
+          trimCollapsedText: 'Read more',
+          trimExpandedText: 'Show less',
+          moreStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue),
+          lessStyle:TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue)
+        )
                     // Text(
                     //   festivals.description,
                     //   overflow: TextOverflow.visible,
@@ -103,15 +102,15 @@ class WelcomeKtmBodyPage extends StatelessWidget {
                 ),
               ),
               Container()
-
+        
               //Text(product.description,overflow: TextOverflow.visible,),
             ],
           ),
-          // Container(
-          //   child: Text(product.description),
-          // ),
-        ],
-      ),
+        ),
+        // Container(
+        //   child: Text(product.description),
+        // ),
+      ],
     );
   }
 }

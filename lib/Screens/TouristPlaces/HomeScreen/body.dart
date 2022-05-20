@@ -24,45 +24,79 @@ class Body extends StatelessWidget {
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            HeaderWithTouristPlace(
-              size: size,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            // HeaderWithSearchBox(size: size),
-            const TitleHistoric(
-              icon: Icons.history_edu,
-              title: "Historic",
-             
-            ),
-            const historicPage(),
-            TitleNaturalPage(
+      body: Column(
+        children: [
+          HeaderWithTouristPlace(
+            size: size,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          // HeaderWithSearchBox(size: size),
+          Expanded(
+            child: Container(
+              child: ListView(
+                children: [
+                   const TitleHistoric(
+                  icon: Icons.history_edu,
+                  title: "Historic",
+                 
+                ),
+                 const historicPage(),
+                      TitleNaturalPage(
                 icon: Icons.nature_people_outlined,
                 title: "Natural/Scenic Beauty",
                 press: () {}),
-            const NaturalScenicPages(),
-            titleRecreationalPage(
+                      const NaturalScenicPages(),
+                      titleRecreationalPage(
               icon: Icons.rowing_outlined,
               title: "Recreational",
               press: () {
               //  Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllRecreation() ));
               },
-            ),
-            const RecreationalPage(),
-            titlereligiousPage(
+                      ),
+                      const RecreationalPage(),
+                      titlereligiousPage(
                 icon: Icons.self_improvement_outlined,
                 title: "Religious",
                 press: () {}),
-            const ReligiousPage(),
-            const SizedBox(
+                      const ReligiousPage(),
+                      const SizedBox(
               height: kDefaultPadding,
-            )
-          ],
-        ),
+                      )
+                ],
+                
+              ),
+            ),
+          ),
+          //  child: const TitleHistoric(
+          //       icon: Icons.history_edu,
+          //       title: "Historic",
+               
+          //     ),
+          // const historicPage(),
+          // TitleNaturalPage(
+          //     icon: Icons.nature_people_outlined,
+          //     title: "Natural/Scenic Beauty",
+          //     press: () {}),
+          // const NaturalScenicPages(),
+          // titleRecreationalPage(
+          //   icon: Icons.rowing_outlined,
+          //   title: "Recreational",
+          //   press: () {
+          //   //  Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllRecreation() ));
+          //   },
+          // ),
+          // const RecreationalPage(),
+          // titlereligiousPage(
+          //     icon: Icons.self_improvement_outlined,
+          //     title: "Religious",
+          //     press: () {}),
+          // const ReligiousPage(),
+          // const SizedBox(
+          //   height: kDefaultPadding,
+          // )
+        ],
       ),
     );
   }

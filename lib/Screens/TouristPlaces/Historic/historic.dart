@@ -42,7 +42,7 @@ class Historic {
 
   List<Historic> historic =[
     Historic(imageU: "assets/images/poonjarkottaram.jpg", 
-    title: "POONJAR PALACE",
+    title: "Poonjar Palace ",
     Desc: "The Poonjar Palace in Meenachil taluk is a glorious testimony to the regal opulence of a bygone era. With the palace walls, is an extra ordinary royal collection of antiques and exquisite furniture which include a palanquin, a thoni carved out of a single piece of wood for ayurvedic massages, huge chandeliers, palm leaf engravings, jewel boxes, a variety of lamps, sculptures of Nataraja (dancing Lord Siva ), grain measures, statues and weapons. A unique couch preserved here is taken out once a year for ritualistic purposes. Near the palace is an amazing replica of the Madurai Meenakshi Temple. The walls of this temple have sculptures with war fare stories from the Puranas (the legends of ancient India ). However the most fascinating thing here is the Chuttuvilakku (row of lamps) carved out on the stonewalls of the Sastha Temple nearby. Such rocks cut lamps are rare in India.",
     AirDesc:"Nearest airports are:\n\n Cochin International Airport,\n\n Ernakulam District (74.3 Km)& Trivandrum International Airport, \n\nThiruvananthapuram District (196 Km)",  
     TrainDesc:"Railway Station Kottayam (43 Km)\n\n (Enquiry : 0481-2563535, 2567360, 2567491)",
@@ -52,7 +52,7 @@ class Historic {
       
       ]),
   Historic(imageU: "assets/images/juma.jpg", 
-  title:"THAZHATHANGADI JUMA  MASJID",
+  title:"Thazhathangadi Juma Masjid",
     Desc: "The Thazhathangadi Juma Masjid is one of the oldest mosques in India (about 1,000 years old). It is believed that Habib Dinar (son of Malik Dinar who introduced Kerala to Islam) constructed the masjid. It is built in the traditional Kerala style of architecture. It is famous for its richness of architecture, wood caring and the beauty. This mosque is situated on the bank of Meenachil river.",
     AirDesc:"Nearest airports are :\n\nCochin International Airport, \n\nErnakulam District (90 Km)& Trivandrum International Airport,\n\n Thiruvananthapuram District (153.5 Km)",  
     TrainDesc:"Railway Station Kottayam (4 Km)\n\n (Enquiry : 0481-2563535, 2567360, 2567491)",

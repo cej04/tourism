@@ -15,61 +15,67 @@ class ProduceBodyPage extends StatelessWidget {
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(kDefaultPadding),
-              child: Container(
-                child: Text(produce.title,
-                    style: Theme.of(context).textTheme.headline6?.copyWith(
-                        color: Colors.black, fontWeight: FontWeight.bold)),
-              ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(kDefaultPadding),
+            child: Container(
+              child: Text(produce.title,
+                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                      color: Colors.black, fontWeight: FontWeight.bold)),
             ),
-            Container(
-              height: 200,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black,
-                    blurRadius: 6.0,
-                  ),
-                ],
-                //borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                  image: AssetImage(produce.image),
-                  fit: BoxFit.fill,
-
-                  //alignment: Alignment.topCenter,
+          ),
+          Container(
+            height: 200,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 6.0,
                 ),
+              ],
+              //borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                image: AssetImage(produce.image),
+                fit: BoxFit.fill,
+
+                //alignment: Alignment.topCenter,
               ),
             ),
-            Column(
-              children: [
-                SizedBox(
+          ),
+          SizedBox(
                   height: 10,
                 ),
+            Container(
+                    
+                      color: Colors.grey,
+                      //crossAxisAlignment:CrossAxisAlignment.end,
+                      //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Icon(Icons.apps_sharp),
+                            Text(
+                              "Type :",
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                            Text(
+                              produce.type,
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                          ],
+                        ),
+                      )),
+          Expanded(
+            child: ListView(
+              children: [
+                
                 // Padding(
                 //   padding: const EdgeInsets.all(kDefaultPadding),
                 //   child:
-                Container(
-                    color: Colors.grey,
-                    //crossAxisAlignment:CrossAxisAlignment.end,
-                    //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Icon(Icons.apps_sharp),
-                        Text(
-                          "Type :",
-                          style: Theme.of(context).textTheme.headline6,
-                        ),
-                        Text(
-                          produce.type,
-                          style: Theme.of(context).textTheme.headline6,
-                        ),
-                      ],
-                    )),
+                
                 // ),
                 // // SizedBox(height: 20,),
                 // Padding(
@@ -95,15 +101,15 @@ class ProduceBodyPage extends StatelessWidget {
                         overflow: TextOverflow.visible,
                         textAlign: TextAlign.justify,
                                                  style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
-
+          
                       ),
                     ),
                   ),
                 )
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

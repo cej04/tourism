@@ -21,29 +21,37 @@ class StayKtmBodyPage extends StatelessWidget {
           child: const MyAppBar(),
         
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            HeaderWithStay(size: size),
-            TitleStateOwnedPage(
-              title: "State-Owned",
-              icon: Icons.bed_outlined,
-              press: () {},
-             
-            ),
-            // StayTitleWithMoreBtn(title: "State-Owned", icon: Icons.bed_outlined  ,press: (){},),
+      body: Column(
+        children: [
+          HeaderWithStay(size: size),
+          Expanded(
+            child: Container(
+              child: ListView(
+                children: [
+                TitleStateOwnedPage(
+                  title: "State-Owned",
+                  icon: Icons.bed_outlined,
+                  press: () {},
+                 
+                ),
+                  StayGovPage(),
+          TitleCommercialPage(
+            title: "Commercial",
+            icon: Icons.star_border_purple500,
+            press: () {},
+          ),
+          StayCommercialPage(),
+                ],
     
-            // StayGovPageHead(title: "gov", icon: Icons.ac_unit),
-            StayGovPage(),
-            TitleCommercialPage(
-              title: "Commercial",
-              icon: Icons.star_border_purple500,
-              press: () {},
+              ),
             ),
-            StayCommercialPage(),
-            //StaycommercialTitleWithMoreBtn(title: "State-Owned", icon: Icons.bed_outlined  ,press: (){},),
-          ],
-        ),
+          ),
+          // StayTitleWithMoreBtn(title: "State-Owned", icon: Icons.bed_outlined  ,press: (){},),
+    
+          // StayGovPageHead(title: "gov", icon: Icons.ac_unit),
+        
+          //StaycommercialTitleWithMoreBtn(title: "State-Owned", icon: Icons.bed_outlined  ,press: (){},),
+        ],
       ),
     );
   }
