@@ -16,7 +16,7 @@ class HowToReachBodyPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
        appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(50.0),
         child: const MyAppBar(),
       ),
       body: SingleChildScrollView(

@@ -30,7 +30,7 @@ class WelcomeKtmBodyPage extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-              borderRadius: BorderRadius.circular(10),
+             // borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                 image: AssetImage(welcome.image),
                 fit: BoxFit.fill,
@@ -63,19 +63,19 @@ class WelcomeKtmBodyPage extends StatelessWidget {
               //       ],
               //     )),
               // SizedBox(height: 20,),
-              Padding(
-                padding: const EdgeInsets.all(kDefaultPadding),
-                child: Row(
-                  //crossAxisAlignment:CrossAxisAlignment.end,
-                  //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "Description",
-                      style: Theme.of(context).textTheme.headline6,
-                    ),
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.all(kDefaultPadding),
+              //   child: Row(
+              //     //crossAxisAlignment:CrossAxisAlignment.end,
+              //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //     children: [
+              //       Text(
+              //         "Description",
+              //         style: Theme.of(context).textTheme.headline6,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
@@ -85,8 +85,8 @@ class WelcomeKtmBodyPage extends StatelessWidget {
                     ReadMoreText(
                       welcome.description,
                        textAlign: TextAlign.justify,
-                      style: TextStyle(color: Colors.black),
-  trimLines: 6,
+                         style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
+  trimLines: 20,
   colorClickableText: Colors.blue,
   trimMode: TrimMode.Line,
   trimCollapsedText: 'Read more',

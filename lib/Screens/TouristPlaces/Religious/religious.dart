@@ -6,6 +6,7 @@ class Religious {
  
  
   List<String> ReligiousImg;
+   List<String> titletext;
 
   Religious ({
     required this.imageU,
@@ -14,6 +15,7 @@ class Religious {
    required this.AirDesc,
    required this.TrainDesc,
    required this.RoadDesc,
+   required this.titletext,
     
     required this.ReligiousImg
   });
@@ -50,7 +52,9 @@ class Religious {
     ReligiousImg: [
       "assets/images/juma.jpg","assets/images/jumaHeritage1.jpg","assets/images/jumaHeritage2.jpg",
       
-      ]),
+      ],
+      titletext:["By Air","By Road", "By Train"]
+      ),
  
 
 

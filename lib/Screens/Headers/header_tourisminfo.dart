@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../Utils/constants.dart';
 class HeaderWithTourismInfo extends StatelessWidget {
   const HeaderWithTourismInfo({
     Key? key,
@@ -22,7 +21,7 @@ class HeaderWithTourismInfo extends StatelessWidget {
              height: size.height * 0.2 - 25,
               decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/images/emergncy.jpg"),
+                  image: AssetImage("assets/images/tourism.jpg"),
                   fit: BoxFit.cover),
             ),
             //  decoration : BoxDecoration(
@@ -35,7 +34,7 @@ class HeaderWithTourismInfo extends StatelessWidget {
              child: 
              Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 SizedBox(
                   height: 70,
                 ),
@@ -50,10 +49,15 @@ class HeaderWithTourismInfo extends StatelessWidget {
               //     child:
                    Center(
                       child: Text("Tourism Information",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0,
-                              color: Colors.white))),
+
+                       style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+
+                          // style: TextStyle(
+                          //     fontWeight: FontWeight.bold,
+                          //     fontSize: 24.0,
+                          //     color: Colors.white)
+                              
+                              )),
                 //),
               ],
             ),

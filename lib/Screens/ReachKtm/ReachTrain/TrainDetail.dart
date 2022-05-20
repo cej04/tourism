@@ -11,7 +11,7 @@ class TrainDetailPage extends StatelessWidget {
 
     return Scaffold(
        appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(50.0),
         child: const MyAppBar(),
       ),
         body: Column(
@@ -37,9 +37,9 @@ class TrainDetailPage extends StatelessWidget {
                     blurRadius: 6.0,
                   ),
                 ],
-                borderRadius: BorderRadius.circular(10),
+                //borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
-                  image: AssetImage("assets/images/train.jpg"),
+                  image: AssetImage("assets/images/trains.jpg"),
                   fit: BoxFit.fill,
 
                 ),
@@ -48,8 +48,13 @@ class TrainDetailPage extends StatelessWidget {
             SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Container(child: Text("You can easily get regular trains to Kottayam from other major cities of the country. Railway Station Kottayam.",style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.black)),),
+              child: Container(child: Text("You can easily get regular trains to Kottayam from other major cities of the country. Railway Station Kottayam.",
+                               style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
+
+                          
+                          ),
+                          
+                          ),
             )
            
             ,Flexible(
@@ -95,8 +100,11 @@ class TrainDetailCard extends StatelessWidget {
           color:Colors.grey,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(train.title,textAlign: TextAlign.center,style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black,)),
+            child: Text(train.title,textAlign: TextAlign.center,
+                                   style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
+
+                        
+                        ),
           ),
         ),
         SizedBox(height: 20,),

@@ -44,7 +44,7 @@ class StayGovPage extends StatelessWidget {
               child: Padding(
                padding: EdgeInsets.only(left: 15.0,
                bottom: 15), //some spacing to the child from bottom
-               child: Text(stateOwned.title.toUpperCase(), style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,backgroundColor: Colors.black.withOpacity(.3)))
+               child: Text(stateOwned.title.toUpperCase(),  style: Theme.of(context).textTheme.caption?.apply(color: Colors.white,backgroundColor:Colors.black.withOpacity(0.5), ).copyWith(letterSpacing: 1))
               )
              
                 ),

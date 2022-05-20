@@ -11,7 +11,7 @@ class RoadDetailPage extends StatelessWidget {
 
     return Scaffold(
          appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(50.0),
         child: const MyAppBar(),
       ),
         body: Column(
@@ -34,7 +34,7 @@ class RoadDetailPage extends StatelessWidget {
                     blurRadius: 6.0,
                   ),
                 ],
-                borderRadius: BorderRadius.circular(10),
+                //borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
                   image: AssetImage("assets/images/road.jpg"),
                   fit: BoxFit.fill,
@@ -93,8 +93,12 @@ class RoadDetailCard extends StatelessWidget {
           //margin: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(road.title,textAlign: TextAlign.center,style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black,)),
+            child: Text(road.title,textAlign: TextAlign.center,
+            
+                                     style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
+
+                        
+                        ),
           ),
         ),
         SizedBox(height: 20,),

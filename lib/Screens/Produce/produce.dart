@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class Produce{
   final String image, title,description,type;

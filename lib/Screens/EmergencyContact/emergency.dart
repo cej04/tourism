@@ -13,7 +13,7 @@ class EmergencyPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
          appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
        
           child: const MyAppBar(),
         
@@ -50,7 +50,7 @@ class EmergencyPage extends StatelessWidget {
                    // },
                 ),
                 TextSpan(
-                  text: 'Police - 100\nFire - 101\nAmbulance - 102\nCitizens Call Center - 155300\nChild Helpline - 1098\nWomen Helpline - 1091\n Disaster Management - 1077(Collectorate),1070(State Control Room)\nArogya Setu - 1921',
+                  text: 'Police - 100\nFire - 101\nAmbulance - 102\nCitizens Call Center - 155300\nChild Helpline - 1098\nWomen Helpline - 1091\n Disaster Management - 1077(Collectorate),1070(State Control Room)\nAarogya Setu - 1921',
                   style: const TextStyle(
                     fontSize: 16.0,
                     color: Colors.black,

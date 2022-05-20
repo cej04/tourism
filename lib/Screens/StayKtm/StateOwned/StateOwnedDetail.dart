@@ -16,7 +16,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
    
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
        
           child: const MyAppBar(),
         
@@ -46,7 +46,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-              borderRadius: BorderRadius.circular(10),
+           //   borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                 image: AssetImage(stateowned.image),
                 fit: BoxFit.fill,

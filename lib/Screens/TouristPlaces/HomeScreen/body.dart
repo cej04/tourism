@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(),
       ),
       body: SingleChildScrollView(

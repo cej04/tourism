@@ -13,7 +13,7 @@ class FAQPage extends StatelessWidget {
     return 
     Scaffold(
        appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
        
           child: const MyAppBar(),
         

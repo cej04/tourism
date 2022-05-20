@@ -25,22 +25,21 @@ class HeaderWithCommercial extends StatelessWidget {
             ),
             
              child: 
-             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                SizedBox(
-                  height: 70,
-                ),
+            //  Column(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children:  [
+            //     SizedBox(
+            //       height: 70,
+            //     ),
              
                    Center(
                       child: Text("Commercial",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0,
-                              color: Colors.white))),
+                          style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+                              )
+                              ),
              
-              ],
-            ),
+            //   ],
+            // ),
            
            ),
          

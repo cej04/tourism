@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class Culinary{
   final String image, title,description,type;

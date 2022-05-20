@@ -13,7 +13,7 @@ class ArtCultureBodyPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
        
           child: const MyAppBar(),
         
@@ -38,7 +38,7 @@ class ArtCultureBodyPage extends StatelessWidget {
                     blurRadius: 6.0,
                   ),
                 ],
-                borderRadius: BorderRadius.circular(10),
+               // borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
                   image: AssetImage(artculture.image),
                   fit: BoxFit.fill,
@@ -72,19 +72,19 @@ class ArtCultureBodyPage extends StatelessWidget {
                 //     )
                 //     ),
                 // SizedBox(height: 20,),
-                Padding(
-                  padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Row(
-                    //crossAxisAlignment:CrossAxisAlignment.end,
-                    //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text(
-                        "Description",
-                        style: Theme.of(context).textTheme.headline6,
-                      ),
-                    ],
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.all(kDefaultPadding),
+                //   child: Row(
+                //     //crossAxisAlignment:CrossAxisAlignment.end,
+                //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //     children: [
+                //       Text(
+                //         "Description",
+                //         style: Theme.of(context).textTheme.headline6,
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -94,6 +94,8 @@ class ArtCultureBodyPage extends StatelessWidget {
                         artculture.description,
                         overflow: TextOverflow.visible,
                         textAlign: TextAlign.justify,
+                                                 style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
+
                       ),
                     ),
                   ),

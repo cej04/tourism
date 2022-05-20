@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../Utils/constants.dart';
 class HeaderWithArtCulture extends StatelessWidget {
   const HeaderWithArtCulture({
     Key? key,
@@ -33,12 +32,12 @@ class HeaderWithArtCulture extends StatelessWidget {
             //    )
             //  ),
              child: 
-             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                SizedBox(
-                  height: 70,
-                ),
+            //  Column(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children:  [
+            //     SizedBox(
+            //       height: 70,
+            //     ),
               //   Container(
               //     height: 30,
               //     decoration: const BoxDecoration(
@@ -48,15 +47,19 @@ class HeaderWithArtCulture extends StatelessWidget {
               //  )
               //     ),
               //     child:
-                   Center(
-                      child: Text("Art & Culture",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0,
-                              color: Colors.white))),
+                  
+                   Container(
+                          width: MediaQuery. of(context). size. width,
+                             color: Colors.grey[900]?.withOpacity(0.4),
+                             alignment: Alignment.center,
+                     child: Text("Art & Culture",
+       
+                      style: Theme.of(context).textTheme.headline5?.apply(color: Colors.white,).copyWith(letterSpacing: 1)
+                 )
+                              ),
                 //),
-              ],
-            ),
+            //   ],
+            // ),
             //  Row(
                
             //    children: [

@@ -26,15 +26,15 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     
     List<String> images = [
-      "assets/images/aboutktm.jpeg",
-      "assets/images/vembanattu kayal.jpg",
+      "assets/images/about300500.jpg",
+      "assets/images/vembanad.jpg",
       "assets/images/tajhotel.jpg",
       "assets/images/bhmchurch.jpg",
       "assets/images/sadhya.png",
       "assets/images/woodshaped.jpg",
       "assets/images/onam.jpg",
       "assets/images/koodiyattam.jpg",
-      "assets/images/howtobanner.jpg",
+      "assets/images/how.jpg",
     ];
     int selectedIndex = 0;
     int index;

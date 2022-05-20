@@ -22,7 +22,7 @@ List<HowToReach> howtoreach = [
     category: "Airports"
 ),
  HowToReach(
-    image:"assets/images/train.jpg",
+    image:"assets/images/trains.jpg",
     title: " By Rail",
     description: "You can easily get regular trains to Kottayam from other major cities of the country. Railway Station Kottayam.",
     category: "Railways"

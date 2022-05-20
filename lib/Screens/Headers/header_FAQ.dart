@@ -20,24 +20,28 @@ class HeaderWithFAQS extends StatelessWidget {
              height: size.height * 0.2 - 25,
               decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/images/pilgrm.jpg"),
+                  image: AssetImage("assets/images/faq.jpg"),
                   fit: BoxFit.cover),
             ),
           
              child: 
              Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 SizedBox(
                   height: 70,
                 ),
             
                    Center(
                       child: Text("FAQ's",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0,
-                              color: Colors.white))),
+                       style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+                              )
+                          // style: TextStyle(
+                          //     fontWeight: FontWeight.bold,
+                          //     fontSize: 24.0,
+                          //     color: Colors.white))
+                              
+                              ),
                 //),
               ],
             ),

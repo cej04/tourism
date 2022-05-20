@@ -137,12 +137,12 @@ class HeaderWithTouristPlace extends StatelessWidget {
             //    )
             //  ),
              child: 
-             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                SizedBox(
-                  height: 70,
-                ),
+            //  Column(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children:  [
+            //     SizedBox(
+            //       height: 70,
+            //     ),
               //   Container(
               //     height: 30,
               //     decoration: const BoxDecoration(
@@ -152,15 +152,29 @@ class HeaderWithTouristPlace extends StatelessWidget {
               //  )
               //     ),
               //     child:
-                   Center(
-                      child: Text("Tourist Places",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0,
-                              color: Colors.white))),
+               Container(
+                          width: MediaQuery. of(context). size. width,
+                             color: Colors.grey[900]?.withOpacity(0.4),
+                             alignment: Alignment.center,
+                     child: Text("Tourist Places",
+       
+                      style: Theme.of(context).textTheme.headline5?.apply(color: Colors.white,).copyWith(letterSpacing: 1)
+       
+                  //  Center(
+                  //     child: Text("",
+
+                  //      style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+
+                          // style: TextStyle(
+                          //     fontWeight: FontWeight.bold,
+                          //     fontSize: 24.0,
+                          //     color: Colors.white)
+                              
+                              
+                              )),
                 //),
-              ],
-            ),
+            //   ],
+            // ),
             //  Row(
                
             //    children: [

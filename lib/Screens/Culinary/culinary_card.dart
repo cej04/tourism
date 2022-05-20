@@ -19,46 +19,31 @@ class CulinaryCard extends StatelessWidget {
       child: Column(
        mainAxisSize: MainAxisSize.max, 
         children: [
-           Expanded(
-                            child: Container(
-                             decoration: const BoxDecoration(
-    //                              border: Border.all(
-    //  // color: Colors.green,
-    //  // width: 1,
-    // ),
-    boxShadow: [
-      BoxShadow(
-      color: Colors.grey,
-     blurRadius: 6.0,
-    ),
-    ]
-                              ),
-                              
-                              child: Image.asset(
-                               culinary.image,
-                                fit: BoxFit.cover,
-                                // height: 150,
-                                // width: 150,
-                              ),
-                            ),
-                          ),
-                              Container(
-                               
-                                child: 
-                                // Text.rich(TextSpan(
-                                //   text: item.last
-                                // ))
-                                Text(
-                                  
-                                
-                                  culinary.title,
-                                  overflow: TextOverflow.visible,
-                                  softWrap: true,
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                ),
-                              ),
+           Container(
+              height: 200,
+              decoration: BoxDecoration(
+                boxShadow: [
+            BoxShadow(
+              color: Colors.black,
+              blurRadius: 6.0,
+            ),
+                ],
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+            image: AssetImage(culinary.image),
+            fit: BoxFit.fill,
+    
+            //alignment: Alignment.topCenter,
+                ),
+              ),
+                alignment: Alignment.bottomCenter, // This aligns the child of the container
+              child: Padding(
+               padding: EdgeInsets.only(left: 15.0,
+               bottom: 15), //some spacing to the child from bottom
+               child: Text(culinary.title.toUpperCase(),  style: Theme.of(context).textTheme.labelMedium?.apply(color: Colors.white,backgroundColor:Colors.black.withOpacity(0.5), ).copyWith(letterSpacing: 1))
+              )
+             
+                ),
 
           // Image.asset(
           //   product.image,

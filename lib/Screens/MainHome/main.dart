@@ -12,13 +12,13 @@ final IconData icons;
 }
 List<MainSample> mainsample = [
   MainSample(
-    image:"assets/images/aboutktm.jpeg",
+    image:"assets/images/me.png",
     title: "About Kottayam",
     icons:  Icons.info
 ),
 
 MainSample(
-      image:"assets/images/vembanattu kayal.jpg",
+      image:"assets/images/destination.png",
     title: "Tourist Places",
     icons:  Icons.explore_outlined
     
@@ -26,48 +26,48 @@ MainSample(
 
 
 MainSample(
-      image:"assets/images/tajhotel.jpg",
-    title: "Stay in Kottayam",
+      image:"assets/images/stay.png",
+    title: "Stay ",
     icons: Icons.bed_rounded
     
 ),
 MainSample(
-      image:"assets/images/bhmchurch.jpg",
-    title: "Pilgrim",
+      image:"assets/images/religion.png",
+    title: "Pilgrim Centers",
     icons:  Icons.holiday_village
     
 
 ),
 MainSample(
-      image:"assets/images/sadhya.png",
+      image:"assets/images/delight.png",
     title: "Culinary Delights",
     icons: Icons.flatware
     
 
 ),
 MainSample(
-      image:"assets/images/woodshaped.jpg",
+      image:"assets/images/produce.png",
     title: "Produce",
     icons: Icons.color_lens
     
 
 ),
 MainSample(
-      image:"assets/images/onam.jpg",
-    title: "Festival",
+      image:"assets/images/festival.png",
+    title: "Festivals",
     icons: Icons.celebration_rounded
     
 
 ),
 MainSample(
-      image:"assets/images/koodiyattam.jpg",
+      image:"assets/images/artbook.png",
     title: "Art & Culture",
     icons:  Icons.festival_outlined
     
 
 ),
 MainSample(
-      image:"assets/images/reachktm.png",
+      image:"assets/images/passenger.png",
     title: "How to Reach",
     icons: Icons.commute_outlined
     

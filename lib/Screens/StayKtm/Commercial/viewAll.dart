@@ -24,7 +24,7 @@ class _CommercialPageState extends State<CommercialPage> {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(50.0),
        
           child: const MyAppBar(),
         

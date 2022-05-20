@@ -16,7 +16,7 @@ class NaturalScenicDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(),
       ),
         body: SingleChildScrollView(
@@ -39,7 +39,7 @@ class NaturalScenicDetail extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-              borderRadius: BorderRadius.circular(10),
+             // borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                 image: AssetImage(naturalscenic.imageU),
                 fit: BoxFit.fill,
@@ -73,19 +73,19 @@ class NaturalScenicDetail extends StatelessWidget {
               //       ],
               //     )),
               // SizedBox(height: 20,),
-              Padding(
-                padding: const EdgeInsets.all(kDefaultPadding),
-                child: Row(
-                  //crossAxisAlignment:CrossAxisAlignment.end,
-                  //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "Description",
-                      style: Theme.of(context).textTheme.headline6,
-                    ),
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.all(kDefaultPadding),
+              //   child: Row(
+              //     //crossAxisAlignment:CrossAxisAlignment.end,
+              //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //     children: [
+              //       Text(
+              //         "Description",
+              //         style: Theme.of(context).textTheme.headline6,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
@@ -93,7 +93,7 @@ class NaturalScenicDetail extends StatelessWidget {
                       padding: const EdgeInsets.all(kDefaultPadding),
                       child: ReadMoreText(naturalscenic.Desc,
                           textAlign: TextAlign.justify,
-                          style: TextStyle(color: Colors.black, height: 1.5),
+                         style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
                           trimLines: 6,
                           colorClickableText: Colors.blue,
                           trimMode: TrimMode.Line,

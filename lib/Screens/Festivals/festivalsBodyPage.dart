@@ -14,7 +14,7 @@ class FestivalsBodyPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
        
           child: const MyAppBar(),
         
@@ -39,7 +39,7 @@ class FestivalsBodyPage extends StatelessWidget {
                     blurRadius: 6.0,
                   ),
                 ],
-                borderRadius: BorderRadius.circular(10),
+               // borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
                   image: AssetImage(festivals.image),
                   fit: BoxFit.fill,
@@ -57,34 +57,37 @@ class FestivalsBodyPage extends StatelessWidget {
                     color: Colors.grey,
                     //crossAxisAlignment:CrossAxisAlignment.end,
                     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Icon(Icons.calendar_view_month_sharp  ),
-                        Text(
-                          "Celebrated on/during: ",
-                          style: Theme.of(context).textTheme.headline6,
-                        ),
-                        Text(
-                          festivals.type,
-                          style: Theme.of(context).textTheme.headline6,
-                        ),
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Icon(Icons.calendar_view_month_sharp  ),
+                          Text(
+                            "Celebrated on/during: ",
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                          Text(
+                            festivals.type,
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ],
+                      ),
                     )),
                 // SizedBox(height: 20,),
-                Padding(
-                  padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Row(
-                    //crossAxisAlignment:CrossAxisAlignment.end,
-                    //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text(
-                        "Description",
-                        style: Theme.of(context).textTheme.headline6,
-                      ),
-                    ],
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.all(kDefaultPadding),
+                //   child: Row(
+                //     //crossAxisAlignment:CrossAxisAlignment.end,
+                //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //     children: [
+                //       Text(
+                //         "Description",
+                //         style: Theme.of(context).textTheme.headline6,
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -94,8 +97,8 @@ class FestivalsBodyPage extends StatelessWidget {
                       ReadMoreText(
                         festivals.description,
                          textAlign: TextAlign.justify,
-                        style: TextStyle(color: Colors.black),
-      trimLines: 6,
+                         style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
+      trimLines: 20,
       colorClickableText: Colors.blue,
       trimMode: TrimMode.Line,
       trimCollapsedText: 'Read more',

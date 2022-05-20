@@ -22,44 +22,64 @@ class NaturalScenicCard extends StatelessWidget {
         children: [
            Expanded(
                             child: Container(
-                             decoration: BoxDecoration(
-    //                              border: Border.all(
-    //  // color: Colors.green,
-    //  // width: 1,
+              //  margin:EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
+              //  width: size.width * 0.8,
+              //   height:185,
+               decoration: BoxDecoration(
+                 borderRadius:BorderRadius.circular(10),
+                 image:DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(naturalScenic.imageU))
+               ),
+               
+                alignment: Alignment.bottomCenter, // This aligns the child of the container
+              child: Padding(
+               padding: EdgeInsets.only(left: 15.0,
+               bottom: 15), //some spacing to the child from bottom
+               child: Text(naturalScenic.title.toUpperCase(),  style: Theme.of(context).textTheme.labelMedium?.apply(color: Colors.white,backgroundColor:Colors.black.withOpacity(0.5), ).copyWith(letterSpacing: 1))
+              )
+             
+                ),
+    
+    // Container(
+    //                          decoration: BoxDecoration(
+    // //                              border: Border.all(
+    // //  // color: Colors.green,
+    // //  // width: 1,
+    // // ),
+    // boxShadow: [
+    //   BoxShadow(
+    //   color: Colors.grey,
+    //  blurRadius: 6.0,
     // ),
-    boxShadow: [
-      BoxShadow(
-      color: Colors.grey,
-     blurRadius: 6.0,
-    ),
-    ]
-                              ),
+    // ]
+    //                           ),
                               
-                              child: Image.asset(
-                               naturalScenic.imageU,
-                                fit: BoxFit.cover,
-                                // height: 150,
-                                // width: 150,
-                              ),
-                            ),
-                          ),
-                              Container(
+    //                           child: Image.asset(
+    //                            naturalScenic.imageU,
+    //                             fit: BoxFit.cover,
+    //                             // height: 150,
+    //                             // width: 150,
+    //                           ),
+    //                         ),
+    //                       ),
+    //                           Container(
                                
-                                child: 
-                                // Text.rich(TextSpan(
-                                //   text: item.last
-                                // ))
-                                Text(
+    //                             child: 
+    //                             // Text.rich(TextSpan(
+    //                             //   text: item.last
+    //                             // ))
+    //                             Text(
                                   
                                 
-                                  naturalScenic.title,
-                                  overflow: TextOverflow.visible,
-                                  softWrap: true,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14),
-                                ),
-                              ),
+    //                               naturalScenic.title,
+    //                               overflow: TextOverflow.visible,
+    //                               softWrap: true,
+    //                               style: TextStyle(
+    //                                   fontWeight: FontWeight.bold,
+    //                                   fontSize: 14),
+    //                             ),
+    //                           ),
 
           // Image.asset(
           //   product.image,
@@ -79,8 +99,9 @@ class NaturalScenicCard extends StatelessWidget {
           // //   child: Image.asset(product.image,fit: BoxFit.cover,),
           // // ),
           // Text(product.title)
-        ],
       ),
+        ]
+      )
     );
   }
 }

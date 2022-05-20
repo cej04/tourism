@@ -3,6 +3,7 @@ import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Screens/destination_model.dart';
 
 import 'package:ktmtourism/Utils/constants.dart';
+import 'package:photo_view/photo_view.dart';
 import 'package:readmore/readmore.dart';
 
 class DestinationScreen extends StatelessWidget {
@@ -15,7 +16,7 @@ class DestinationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(),
       ),
         body: SingleChildScrollView(
@@ -38,7 +39,7 @@ class DestinationScreen extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-              borderRadius: BorderRadius.circular(10),
+              //borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                 image: AssetImage(destination.imageU),
                 fit: BoxFit.fill,
@@ -72,19 +73,19 @@ class DestinationScreen extends StatelessWidget {
               //       ],
               //     )),
               // SizedBox(height: 20,),
-              Padding(
-                padding: const EdgeInsets.all(kDefaultPadding),
-                child: Row(
-                  //crossAxisAlignment:CrossAxisAlignment.end,
-                  //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "Description",
-                      style: Theme.of(context).textTheme.headline6,
-                    ),
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.all(kDefaultPadding),
+              //   child: Row(
+              //     //crossAxisAlignment:CrossAxisAlignment.end,
+              //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //     children: [
+              //       Text(
+              //         "Description",
+              //         style: Theme.of(context).textTheme.headline6,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
@@ -92,7 +93,7 @@ class DestinationScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(kDefaultPadding),
                       child: ReadMoreText(destination.Desc,
                           textAlign: TextAlign.justify,
-                          style: TextStyle(color: Colors.black, height: 1.5),
+                         style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
                           trimLines: 6,
                           colorClickableText: Colors.blue,
                           trimMode: TrimMode.Line,
@@ -139,70 +140,79 @@ class DestinationScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 120,
-                child: ListView.separated(
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      String activity = destination.activities[index];
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 120,
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        String activity = destination.activities[index];
 
-                      return Row(
-                        children: [
-                          Container(
-                              height: 100,
-                              width: 120,
-                              child: Image.asset(
-                                activity,
-                                fit: BoxFit.cover,
-                              )),
-                          // Container(
+                        return Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Container(
+                                height: 100,
+                                width: 120,
+                                child:
+                                PhotoView(
+      imageProvider: AssetImage(activity),
+    )
+                                //  Image.asset(
+                                //   activity,
+                                //   fit: BoxFit.cover,
+                                // )
+                                ),
+                            // Container(
 
-                          //   height: 100,
+                            //   height: 100,
 
-                          //   width:120,
+                            //   width:120,
 
-                          //   child: Image.asset(activity.gallery[1],
-                          //   fit: BoxFit.cover,)
+                            //   child: Image.asset(activity.gallery[1],
+                            //   fit: BoxFit.cover,)
 
-                          // ),
-                          //  Container(
+                            // ),
+                            //  Container(
 
-                          //   height: 100,
+                            //   height: 100,
 
-                          //   width:120,
+                            //   width:120,
 
-                          //   child: Image.asset(activity.gallery[2],
-                          //   fit: BoxFit.cover,)
+                            //   child: Image.asset(activity.gallery[2],
+                            //   fit: BoxFit.cover,)
 
-                          // ),
-                          // Container(
+                            // ),
+                            // Container(
 
-                          //   height: 100,
+                            //   height: 100,
 
-                          //   width:120,
+                            //   width:120,
 
-                          //   child: Image.asset(activity.gallery[3],
+                            //   child: Image.asset(activity.gallery[3],
 
-                          //   fit: BoxFit.cover,)
+                            //   fit: BoxFit.cover,)
 
-                          // ),
-                          // Container(
+                            // ),
+                            // Container(
 
-                          //   height: 100,
+                            //   height: 100,
 
-                          //   width:120,
+                            //   width:120,
 
-                          //   child: Image.asset(activity.gallery[4],
-                          //   fit: BoxFit.cover,)
+                            //   child: Image.asset(activity.gallery[4],
+                            //   fit: BoxFit.cover,)
 
-                          // ),
-                        ],
-                      );
-                    },
-                    separatorBuilder: (_, index) => const SizedBox(
-                          width: 10.0,
-                        ),
-                    itemCount: destination.activities.length),
+                            // ),
+                          ],
+                        );
+                      },
+                      separatorBuilder: (_, index) => const SizedBox(
+                            width: 10.0,
+                          ),
+                      itemCount: destination.activities.length),
+                ),
               ),
               SizedBox(
                 height: 20,

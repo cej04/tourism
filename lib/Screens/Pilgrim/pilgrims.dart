@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class Pilgrims{
   final String image, title,description;

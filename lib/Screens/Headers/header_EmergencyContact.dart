@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../Utils/constants.dart';
 class HeaderWithEmergencyContact extends StatelessWidget {
   const HeaderWithEmergencyContact({
     Key? key,
@@ -35,7 +34,7 @@ class HeaderWithEmergencyContact extends StatelessWidget {
              child: 
              Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children:  [
                 SizedBox(
                   height: 70,
                 ),
@@ -50,10 +49,14 @@ class HeaderWithEmergencyContact extends StatelessWidget {
               //     child:
                    Center(
                       child: Text("Emergency Contact",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0,
-                              color: Colors.white))),
+                       style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+                              )
+                          // style: TextStyle(
+                          //     fontWeight: FontWeight.bold,
+                          //     fontSize: 24.0,
+                          //     color: Colors.white))
+                              
+                              ),
                 //),
               ],
             ),

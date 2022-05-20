@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../Utils/constants.dart';
 class HeaderWithRecreational extends StatelessWidget {
   const HeaderWithRecreational({
     Key? key,
@@ -33,12 +32,12 @@ class HeaderWithRecreational extends StatelessWidget {
             //    )
             //  ),
              child: 
-             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                SizedBox(
-                  height: 70,
-                ),
+            //  Column(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children:  [
+            //     SizedBox(
+            //       height: 70,
+            //     ),
               //   Container(
               //     height: 30,
               //     decoration: const BoxDecoration(
@@ -50,13 +49,18 @@ class HeaderWithRecreational extends StatelessWidget {
               //     child:
                    Center(
                       child: Text("Recreational",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0,
-                              color: Colors.white))),
+                                             style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+
+
+                          // style: TextStyle(
+                          //     fontWeight: FontWeight.bold,
+                          //     fontSize: 24.0,
+                          //     color: Colors.white)
+                               )
+                              ),
                 //),
-              ],
-            ),
+            //   ],
+            // ),
             //  Row(
                
             //    children: [

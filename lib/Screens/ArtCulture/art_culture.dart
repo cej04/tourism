@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class ArtCulture{
   final String image, title,description,type,dish;
