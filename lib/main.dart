@@ -4,6 +4,8 @@ import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/EmergencyContact/emergency.dart';
 import 'package:ktmtourism/Screens/FAQ/FAQPage.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
+import 'package:ktmtourism/Screens/Headers/allHeaders.dart';
+import 'package:ktmtourism/Screens/Headers/headers.dart';
 import 'package:ktmtourism/Screens/MainHome/sampleMain2.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
@@ -57,7 +59,7 @@ class MyApp extends StatelessWidget {
         '/EmergencyPage': (context) => const EmergencyPage(),
         '/FAQPage': (context) => const FAQPage(),
         '/MainSample2Page': (context) => const MainSample2Page(),
-
+         
         // '/HomeScreen': (context) => const HomeScreen(),
       },
       // theme: ThemeData(

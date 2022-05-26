@@ -32,7 +32,31 @@ class TourismInfoPage extends StatelessWidget {
               //   color: Colors.black,
               // ),
               children: [
+                    TextSpan(
+                  text: 'Deputy Director\n\n',
+                  style: const TextStyle(
+                    fontSize: 18.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+                  ),
+                  // recognizer: TapGestureRecognizer()
+                  //   ..onTap = () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => const AnotherRicTextPage(),
+                  //       ),
+                  //     );
+                   // },
+                ),
                 
+                TextSpan(
+                  text: 'District Office\nDepartment of Tourism\nKavanattinkara\nKumarakom P O\nKottayam :0481-2524343\n\n',
+                  style: const TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.black,
+                  
+                  ),), 
                 TextSpan(
                   text: 'District Tourism Promotion Council(DTPC)\n\n',
                   style: const TextStyle(
