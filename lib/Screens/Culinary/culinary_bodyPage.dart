@@ -11,7 +11,8 @@ class CulinaryBodyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: PreferredSize(
+      appBar: 
+      PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(),
       ),

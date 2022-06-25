@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Headers/header_welcome.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektm.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmDetailPage.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
@@ -14,51 +13,236 @@ class welcomektmPage extends StatefulWidget {
 class _welcomektmPageState extends State<welcomektmPage> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    double cardWidth = MediaQuery.of(context).size.width / 4;
-    double cardHeight = MediaQuery.of(context).size.height / 4;
-    final images = [
-      ["assets/images/aboutktm.jpeg", "About Kottayam"],
-      ["assets/images/app bannerhistory.jpg", "History"],
-      ["assets/images/app banner geography.jpg", "Geography & Weather"],
-      ["assets/images/app banner climt.jpg", "Climate"],
-      ["assets/images/app banner best time.jpg", "Best Time to Visit"],
-    ];
-
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: MyAppBar(),
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          "Welcome to kottayam",
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Image.asset(
+                  "assets/images/APPlogo2.png",
+                  fit: BoxFit.contain,
+                  // width: 70.0,
+                  // height: 70.0,
+                )),
+          ),
+          PopupMenuButton(
+            elevation: 5.0,
+            itemBuilder: (context) => [
+              PopupMenuItem<int>(
+                value: 0,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.info,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "About Kottayam",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 1,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.explore_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Tourist Places",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 2,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.bed_rounded,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Stay in Kottayam",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 3,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.holiday_village,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Main Pilgrim Centers",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 4,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.flatware,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Culinary Delights",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 5,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.color_lens,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Produce",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 6,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.celebration_rounded,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Festivals",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 7,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.festival_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text("Art & Culture"),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 8,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.commute_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "How to Reach",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 9,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.hotel_class_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Restaurants",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 10,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.shopping_bag_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Shopping",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 11,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.local_hospital_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Hospital",
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            onSelected: (item) => SelectedItem(context, item),
+          ),
+        ],
       ),
       body: Column(
         children: [
-          HeaderWithWelcome(size: size),
-          // Expanded(
-          //   child: GridView.builder(
-          //      padding: const EdgeInsets.all(20),
-          //     itemCount: welcome.length,
-          //     gridDelegate:
-          //     SliverGridDelegateWithFixedCrossAxisCount(
-          //       crossAxisCount: 2,
-          //     // mainAxisSpacing: kDefaultPadding,
-          //     crossAxisSpacing: 10,
-          //       mainAxisSpacing: 10,
-          //     // childAspectRatio: 0.75,
-          //     ),
-
-          //   itemBuilder: (context,index) => WelcomeKtmCard(
-          //     welcome: welcome[index],
-          //      press: () => Navigator.push(
-          //        context, MaterialPageRoute(
-          //          builder: (context) => WelcomeKtmDetailsPage(
-          //            welcome:welcome[index],
-          //            ),
-          //            ),
-          //      ),
-          //   )
-          //   ),
-          //   )
-
           Expanded(
               child: Container(
             child: ListView.builder(
@@ -69,21 +253,15 @@ class _welcomektmPageState extends State<welcomektmPage> {
                       child: GestureDetector(
                         child: Container(
                             height: 200,
-                            //  margin:EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
-                            //  width: size.width * 0.8,
-                            //   height:185,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
                                     fit: BoxFit.fill,
                                     image: AssetImage(welcome[index].image))),
-                            alignment: Alignment
-                                .bottomCenter, // This aligns the child of the container
+                            alignment: Alignment.bottomCenter,
                             child: Padding(
-                                padding: EdgeInsets.only(
-                                    left: 15.0,
-                                    bottom:
-                                        15), //some spacing to the child from bottom
+                                padding:
+                                    EdgeInsets.only(left: 15.0, bottom: 15),
                                 child: Text(welcome[index].title.toUpperCase(),
                                     style: Theme.of(context)
                                         .textTheme
@@ -100,103 +278,12 @@ class _welcomektmPageState extends State<welcomektmPage> {
                               builder: (context) => WelcomeKtmDetailsPage(
                                 welcome: welcome[index],
                               ),
-                              //            ),
                             )),
                       ));
                 }),
           ))
         ],
       ),
-      //    Container(
-      //       child: Column(
-      //     children: [
-      //       HeaderWithWelcome(size: size),
-
-      //       // Container(
-      //       //   width: double.infinity,
-      //       //   //height:150,
-      //       //   decoration: const BoxDecoration(
-      //       //     image: DecorationImage(
-      //       //         image: AssetImage("assets/images/welcome.jpg"),
-      //       //         fit: BoxFit.cover),
-      //       //   ),
-      //       //   child: Column(
-      //       //     mainAxisAlignment: MainAxisAlignment.center,
-      //       //     children: [
-      //       //       const SizedBox(
-      //       //         height: 70,
-      //       //       ),
-      //       //       Container(
-      //       //         height: 30,
-      //       //         decoration: const BoxDecoration(),
-      //       //         child:
-      //       //         const Center(
-      //       //             child: Text("Welcome  Kottayam",
-      //       //                 style: TextStyle(
-      //       //                     fontWeight: FontWeight.bold,
-      //       //                     fontSize: 24.0,
-      //       //                     color: Colors.white))),
-      //       //       ),
-      //       //     ],
-      //       //   ),
-      //       // ),
-      //       const SizedBox(height: 5),
-      //       Expanded(
-      //         child: GridView.count(
-      //             crossAxisCount: 2,
-      //             padding: const EdgeInsets.all(20),
-      //             crossAxisSpacing: 10,
-      //             mainAxisSpacing: 10,
-      //             children: [
-      //               ...images.map((item) => Column(
-      //                     mainAxisSize: MainAxisSize.max,
-      //                     children: [
-
-      //                       Expanded(
-      //                         child: Container(
-      //                          decoration: BoxDecoration(
-      // //                              border: Border.all(
-      // //  // color: Colors.green,
-      // //  // width: 1,
-      // // ),
-      // boxShadow: [
-      //   BoxShadow(
-      //   color: Colors.grey,
-      //  blurRadius: 6.0,
-      // ),
-      // ]
-      //                           ),
-
-      //                           child: Image.asset(
-      //                             item.first,
-      //                             fit: BoxFit.cover,
-      //                             // height: 150,
-      //                             // width: 150,
-      //                           ),
-      //                         ),
-      //                       ),
-      //                           Container(
-
-      //                             child:
-      //                             // Text.rich(TextSpan(
-      //                             //   text: item.last
-      //                             // ))
-      //                             Text(
-
-      //                               item.last,
-      //                               overflow: TextOverflow.visible,
-      //                               softWrap: false,
-      //                               style: TextStyle(
-      //                                   fontWeight: FontWeight.bold,
-      //                                   fontSize: 14),
-      //                             ),
-      //                           ),
-      //                     ],
-      //                   ))
-      //             ]),
-      //       ),
-      //     ],
-      //   )),
     );
   }
 }

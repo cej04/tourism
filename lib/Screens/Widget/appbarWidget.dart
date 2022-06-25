@@ -240,10 +240,12 @@ import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
+
+
   // final String title;
   // final Color backgroundColor;
   const MyAppBar({
-    Key? key,
+    Key? key,title
     // required this.title,
     // required this.backgroundColor
   }) : super(key: key);
@@ -251,10 +253,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 //Size  get PreferredSize => Size.fromHeight(60.0);
   @override
   Widget build(BuildContext context) {
+   
     return AppBar(
       elevation: 0,
       // backgroundColor: backgroundColor,
-      title: const Text(
+      title:  Text(
         "Kottayam Tourism",
         // style: TextStyle(color: Colors.black),
       ),

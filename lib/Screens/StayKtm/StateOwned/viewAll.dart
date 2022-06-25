@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/StayKtm/Commercial/Commercial.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektm.dart';
-import 'package:ktmtourism/Screens/Welcome/welcomektmCard.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmDetailPage.dart';
 
 class StateOwnedPage extends StatefulWidget {
@@ -66,29 +65,29 @@ class _StateOwnedPageState extends State<StateOwnedPage> {
       body: Column(
         children: [
           // HeaderWithCommercial(size: size),
-          Expanded(
-            child: GridView.builder(
-                padding: const EdgeInsets.all(20),
-                itemCount: commercial.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  // mainAxisSpacing: kDefaultPadding,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  // childAspectRatio: 0.75,
-                ),
-                itemBuilder: (context, index) => WelcomeKtmCard(
-                      welcome: welcome[index],
-                      press: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => WelcomeKtmDetailsPage(
-                            welcome: welcome[index],
-                          ),
-                        ),
-                      ),
-                    )),
-          )
+          // Expanded(
+          //   child: GridView.builder(
+          //       padding: const EdgeInsets.all(20),
+          //       itemCount: commercial.length,
+          //       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          //         crossAxisCount: 2,
+          //         // mainAxisSpacing: kDefaultPadding,
+          //         crossAxisSpacing: 10,
+          //         mainAxisSpacing: 10,
+          //         // childAspectRatio: 0.75,
+          //       ),
+          //       itemBuilder: (context, index) => WelcomeKtmCard(
+          //             welcome: welcome[index],
+          //             press: () => Navigator.push(
+          //               context,
+          //               MaterialPageRoute(
+          //                 builder: (context) => WelcomeKtmDetailsPage(
+          //                   welcome: welcome[index],
+          //                 ),
+          //               ),
+          //             ),
+          //           )),
+          // )
         ],
       ),
       //    Container(
