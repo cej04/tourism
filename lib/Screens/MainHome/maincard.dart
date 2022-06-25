@@ -12,69 +12,52 @@ class mainCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
 
- child:   Padding(
-   padding: const EdgeInsets.all(5.0),
-   child: Card(
-     
-    
-    elevation: 10,
-    // shape: RoundedRectangleBorder(
-    //   side: BorderSide(color: Colors.blue, width: 1),
-    //   borderRadius: BorderRadius.circular(10),
-    // ),
-     child: Column(
-        mainAxisSize: MainAxisSize.max,
-                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  
-       //mainAxisSize: MainAxisSize.min,
-       children: <Widget>[
-       
+      child: Padding(
+        padding: const EdgeInsets.all(5.0),
+        child: Card(
+          elevation: 10,
+          // shape: RoundedRectangleBorder(
+          //   side: BorderSide(color: Colors.blue, width: 1),
+          //   borderRadius: BorderRadius.circular(10),
+          // ),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
 
-
-
-         Container(
-            height: MediaQuery.of(context).size.height/18,
-           child: 
-         
-         Image.asset(mainsample.image,)
-         
-         ),
-
-        
-         Text(mainsample.title,style: Theme.of(context).textTheme.bodyText2,textAlign: TextAlign.center,)
-         
-     
-       ],
-     ),
-   ),
- ),
-
-
-
-
-
-
-
-
-
+            //mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Container(
+                  height: MediaQuery.of(context).size.height / 18,
+                  child: Image.asset(
+                    mainsample.image,
+                  )),
+              Text(
+                mainsample.title,
+                style: Theme.of(context).textTheme.bodyText2,
+                textAlign: TextAlign.center,
+              )
+            ],
+          ),
+        ),
+      ),
 
       // child: Column(
       //   mainAxisSize: MainAxisSize.max,
       //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       //   children: [
-          
+
       //     Expanded(
       //       flex: 1,
       //       child: Container(
       //         width:200,
       //         height: 200,
       //         child: Card(
-                
+
       //           //color: Colors.blue[50],
       //           elevation: 10,
       //           shape: RoundedRectangleBorder(
-                  
+
       //             borderRadius: BorderRadius.circular(10), // if you need this
       //             side: BorderSide(
       //               color: Colors.grey.withOpacity(0.5),
@@ -87,9 +70,9 @@ class mainCard extends StatelessWidget {
       //                 height: 10,
       //               ),
       //               Expanded(
-      //                   child:  
-      //                   Container(  
-                          
+      //                   child:
+      //                   Container(
+
       //                         height: 120.0,
       // width: 150.0,
       // decoration: BoxDecoration(
@@ -100,7 +83,7 @@ class mainCard extends StatelessWidget {
       //   ),
       //   shape: BoxShape.circle,
       // ),)
-                  
+
       //                     ),
       //               // SvgPicture.asset(mainsample.image),
       //               //  Icon(mainsample.icons),

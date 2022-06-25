@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Historic/viewAll.dart';
-
 import 'package:ktmtourism/Utils/constants.dart';
-
-
-
-
-
-
 
 class TitleHistoric extends StatelessWidget {
   const TitleHistoric({
@@ -40,18 +33,20 @@ class TitleHistoric extends StatelessWidget {
           Spacer(),
           FloatingActionButton.extended(
               onPressed: () {
-
-                  // Navigator.push(context, MaterialPageRoute(
-                  //  builder: (context) => HistoricViewAll() ),
-                  // );
-                },
+                // Navigator.push(context, MaterialPageRoute(
+                //  builder: (context) => HistoricViewAll() ),
+                // );
+              },
               heroTag: "action button1",
               elevation: 0,
               backgroundColor: Colors.white,
               label: GestureDetector(
-                 onTap: (){
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllHistoric() ));
-               },
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ViewAllHistoric()));
+                },
                 child: const Text("View All",
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold)),

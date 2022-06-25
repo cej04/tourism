@@ -1,4 +1,3 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/ArtCulture/art_culturePage.dart';
@@ -6,14 +5,12 @@ import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
 import 'package:ktmtourism/Screens/MainHome/main.dart';
 import 'package:ktmtourism/Screens/MainHome/maincard.dart';
-
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
-import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
 class MainSample2Page extends StatefulWidget {
   const MainSample2Page({
@@ -40,7 +37,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
     ];
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-    //  backgroundColor: Colors.grey,
+      //  backgroundColor: Colors.grey,
       //  appBar: PreferredSize(
       //   preferredSize: const Size.fromHeight(60.0),
 
@@ -53,7 +50,6 @@ class _MainSample2PageState extends State<MainSample2Page> {
           children: [
             //  HeaderWithHowToReach(size: size),
             Container(
-              
               // color: Colors.grey[350],
               padding: EdgeInsets.symmetric(
                 vertical: 20.0,
@@ -61,15 +57,14 @@ class _MainSample2PageState extends State<MainSample2Page> {
               child: CarouselSlider(
                 items: [
                   //1st Image of Slider
-                 
-      
+
                   //2nd Image of Slider
                   Container(
                       margin: EdgeInsets.all(6.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: DecorationImage(
-                          image: AssetImage("assets/images/kumarakom.jpg"),
+                          image: AssetImage("assets/images/heritage.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -78,24 +73,25 @@ class _MainSample2PageState extends State<MainSample2Page> {
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 15.0,
-                              bottom: 15), //some spacing to the child from bottom
-                          child: Text("Kumarakom".toUpperCase(),
-                               style: Theme.of(context)
-                                .textTheme
-                                .caption
-                                ?.apply(
-                                  color: Colors.white,
-                                  backgroundColor: Colors.black.withOpacity(0.5),
-                                )
-                                .copyWith(letterSpacing: 1))
-                                      )),
-      
-                                       Container(
+                              bottom:
+                                  15), //some spacing to the child from bottom
+                          child: Text("Heritage Destinations".toUpperCase(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .caption
+                                  ?.apply(
+                                    color: Colors.white,
+                                    backgroundColor:
+                                        Colors.black.withOpacity(0.5),
+                                  )
+                                  .copyWith(letterSpacing: 1)))),
+
+                  Container(
                       margin: EdgeInsets.all(6.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: DecorationImage(
-                          image: AssetImage("assets/images/vagamon.jpg"),
+                          image: AssetImage("assets/images/back1.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -104,25 +100,27 @@ class _MainSample2PageState extends State<MainSample2Page> {
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 15.0,
-                              bottom: 15), //some spacing to the child from bottom
-                          child: Text("vagamon".toUpperCase(),
-                               style: Theme.of(context)
-                                .textTheme
-                                .caption
-                                ?.apply(
-                                  color: Colors.white,
-                                  backgroundColor: Colors.black.withOpacity(0.5),
-                                )
-                                .copyWith(letterSpacing: 1))
-                                      )),
-      
+                              bottom:
+                                  15), //some spacing to the child from bottom
+                          child: Text("Backwaters".toUpperCase(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .caption
+                                  ?.apply(
+                                    color: Colors.white,
+                                    backgroundColor:
+                                        Colors.black.withOpacity(0.5),
+                                  )
+                                  .copyWith(letterSpacing: 1)))),
+
                   //3rd Image of Slider
                   Container(
                       margin: EdgeInsets.all(6.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: DecorationImage(
-                          image: AssetImage("assets/images/bhmchurch.jpg"),
+                          image: AssetImage(
+                              "assets/images/aruvikkuzhi waterfalls.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -131,26 +129,26 @@ class _MainSample2PageState extends State<MainSample2Page> {
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 15.0,
-                              bottom: 15), //some spacing to the child from bottom
-                          child: Text("Bharananganam Church".toUpperCase(),
+                              bottom:
+                                  15), //some spacing to the child from bottom
+                          child: Text("Waterfalls".toUpperCase(),
                               style: Theme.of(context)
-                                .textTheme
-                                .caption
-                                ?.apply(
-                                  color: Colors.white,
-                                  backgroundColor: Colors.black.withOpacity(0.5),
-                                )
-                                .copyWith(letterSpacing: 1))
-                                      )),
-      
+                                  .textTheme
+                                  .caption
+                                  ?.apply(
+                                    color: Colors.white,
+                                    backgroundColor:
+                                        Colors.black.withOpacity(0.5),
+                                  )
+                                  .copyWith(letterSpacing: 1)))),
+
                   //4th Image of Slider
                   Container(
                       margin: EdgeInsets.all(6.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         image: DecorationImage(
-                          image:
-                              AssetImage("assets/images/ilaveezhapoonjira.jpg"),
+                          image: AssetImage("assets/images/vallyachanmala.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -158,26 +156,26 @@ class _MainSample2PageState extends State<MainSample2Page> {
                           .bottomCenter, // This aligns the child of the container
                       child: Padding(
                           padding: EdgeInsets.only(left: 15.0, bottom: 15),
-      
+
                           //some spacing to the child from bottom
-                          child: Text("Ilaveezhapoonchira".toUpperCase(),
+                          child: Text("Worship".toUpperCase(),
                               style: Theme.of(context)
-                                .textTheme
-                                .caption
-                                ?.apply(
-                                  color: Colors.white,
-                                  backgroundColor: Colors.black.withOpacity(0.5),
-                                )
-                                .copyWith(letterSpacing: 1))
-                                      )),
-      
+                                  .textTheme
+                                  .caption
+                                  ?.apply(
+                                    color: Colors.white,
+                                    backgroundColor:
+                                        Colors.black.withOpacity(0.5),
+                                  )
+                                  .copyWith(letterSpacing: 1)))),
+
                   //5th Image of Slider
                   Container(
                     margin: EdgeInsets.all(6.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.0),
                       image: DecorationImage(
-                        image: AssetImage("assets/images/vembanad.jpg"),
+                        image: AssetImage("assets/images/illikkal-kallu3.jpg"),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -185,20 +183,74 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         .bottomCenter, // This aligns the child of the container
                     child: Padding(
                         padding: EdgeInsets.only(left: 15.0, bottom: 15),
-                        child: Text("Vembanad Lake".toUpperCase(),
+                        child: Text("Hill Stations".toUpperCase(),
                             style: Theme.of(context)
                                 .textTheme
                                 .caption
                                 ?.apply(
                                   color: Colors.white,
-                                  backgroundColor: Colors.black.withOpacity(0.5),
+                                  backgroundColor:
+                                      Colors.black.withOpacity(0.5),
                                 )
                                 .copyWith(letterSpacing: 1))
-      //some spacing to the child from bottom
+                        //some spacing to the child from bottom
                         ),
                   ),
+                  Container(
+                      margin: EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/paddy-filed1.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      alignment: Alignment
+                          .bottomCenter, // This aligns the child of the container
+                      child: Padding(
+                          padding: EdgeInsets.only(
+                              left: 15.0,
+                              bottom:
+                                  15), //some spacing to the child from bottom
+                          child: Text("Agriculture".toUpperCase(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .caption
+                                  ?.apply(
+                                    color: Colors.white,
+                                    backgroundColor:
+                                        Colors.black.withOpacity(0.5),
+                                  )
+                                  .copyWith(letterSpacing: 1)))),
+                  Container(
+                      margin: EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        image: DecorationImage(
+                          image:
+                              AssetImage("assets/images/bird-sanctuary9.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      alignment: Alignment
+                          .bottomCenter, // This aligns the child of the container
+                      child: Padding(
+                          padding: EdgeInsets.only(
+                              left: 15.0,
+                              bottom:
+                                  15), //some spacing to the child from bottom
+                          child: Text("Wildlife".toUpperCase(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .caption
+                                  ?.apply(
+                                    color: Colors.white,
+                                    backgroundColor:
+                                        Colors.black.withOpacity(0.5),
+                                  )
+                                  .copyWith(letterSpacing: 1)))),
                 ],
-      
+
                 //Slider Container properties
                 options: CarouselOptions(
                   height: 180.0,
@@ -212,20 +264,26 @@ class _MainSample2PageState extends State<MainSample2Page> {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
-      TextLiquidFill(
-        text: 'Welcome To Kottayam',
-        waveColor: Colors.teal,
-       boxBackgroundColor:Colors.white,
-       boxHeight: 50,
-        textStyle: TextStyle(
-        fontSize: 24.0,
-        fontWeight: FontWeight.bold,
-        ),
-      
-      ),  
-      SizedBox(height: 15,),
-          //SizedBox(height: 50), //HeaderWithHowToReach(size: size),
+            //       SizedBox(height: 20,),
+            // TextLiquidFill(
+            //   text: 'Welcome To Kottayam',
+            //   waveColor: Colors.teal,
+            //  boxBackgroundColor:Colors.white,
+            //  boxHeight: 50,
+            //   textStyle: TextStyle(
+            //   fontSize: 24.0,
+            //   fontWeight: FontWeight.bold,
+            //   ),
+
+            // ),
+            SizedBox(
+              height: 15,
+            ),
+            // CategoriesPage() ,
+            SizedBox(
+              height: 15,
+            ),
+            //SizedBox(height: 50), //HeaderWithHowToReach(size: size),
             GridView.builder(
                 shrinkWrap: true,
                 // padding: const EdgeInsets.all(20),
@@ -233,7 +291,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   // mainAxisSpacing: kDefaultPadding,
-                   //crossAxisSpacing: 1,
+                  //crossAxisSpacing: 1,
                   // mainAxisSpacing: 10,
                   childAspectRatio: (1 / .9),
                 ),

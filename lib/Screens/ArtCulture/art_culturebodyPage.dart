@@ -6,17 +6,16 @@ import 'package:ktmtourism/Utils/constants.dart';
 
 class ArtCultureBodyPage extends StatelessWidget {
   final ArtCulture artculture;
-  const ArtCultureBodyPage({Key? key, required this.artculture}) : super(key: key);
+  const ArtCultureBodyPage({Key? key, required this.artculture})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: PreferredSize(
+      appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-       
-          child: const MyAppBar(),
-        
+        child: const MyAppBar(),
       ),
       body: Column(
         children: [
@@ -37,11 +36,11 @@ class ArtCultureBodyPage extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-             // borderRadius: BorderRadius.circular(10),
+              // borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                 image: AssetImage(artculture.image),
                 fit: BoxFit.fill,
-    
+
                 //alignment: Alignment.topCenter,
               ),
             ),
@@ -49,10 +48,11 @@ class ArtCultureBodyPage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 // Container(
-                  
-                  
+
                 //     color: Colors.grey,
                 //     //crossAxisAlignment:CrossAxisAlignment.end,
                 //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -94,13 +94,18 @@ class ArtCultureBodyPage extends StatelessWidget {
                         artculture.description,
                         overflow: TextOverflow.visible,
                         textAlign: TextAlign.justify,
-                                                 style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
-          
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText2
+                            ?.apply(
+                              color: Colors.black,
+                            )
+                            .copyWith(height: 1.8),
                       ),
                     ),
                   ),
                 )
-              
+
                 //Text(product.description,overflow: TextOverflow.visible,),
               ],
             ),

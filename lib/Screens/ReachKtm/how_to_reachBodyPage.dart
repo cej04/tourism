@@ -7,15 +7,14 @@ import 'package:readmore/readmore.dart';
 
 class HowToReachBodyPage extends StatelessWidget {
   final HowToReach howtoreach;
-  const HowToReachBodyPage({Key? key, required this.howtoreach}) : super(key: key);
+  const HowToReachBodyPage({Key? key, required this.howtoreach})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-  
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-       appBar: PreferredSize(
+      appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50.0),
         child: const MyAppBar(),
       ),
@@ -43,25 +42,25 @@ class HowToReachBodyPage extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(howtoreach.image),
                   fit: BoxFit.fill,
-    
+
                   //alignment: Alignment.topCenter,
                 ),
               ),
             ),
             Column(
               children: [
-                SizedBox(height: 10,),
-               
+                SizedBox(
+                  height: 10,
+                ),
+
                 Container(
-                  
-                  
                     color: Colors.grey,
                     //crossAxisAlignment:CrossAxisAlignment.end,
                     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Icon(Icons.category_outlined  ),
+                        Icon(Icons.category_outlined),
                         Text(
                           "Category/Type: ",
                           style: Theme.of(context).textTheme.headline6,
@@ -71,39 +70,41 @@ class HowToReachBodyPage extends StatelessWidget {
                           style: Theme.of(context).textTheme.headline6,
                         ),
                       ],
-                    )
-                    ),
-                
+                    )),
+
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     child: Padding(
-                      padding: const EdgeInsets.all(kDefaultPadding),
-                      child: 
-                      ReadMoreText(
-                        howtoreach.description,
-                         textAlign: TextAlign.justify,
-                        style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
-      trimLines: 6,
-      colorClickableText: Colors.blue,
-      trimMode: TrimMode.Line,
-      trimCollapsedText: 'Read more',
-      trimExpandedText: 'Show less',
-      moreStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue),
-      lessStyle:const TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue)
-    )
-                      // Text(
-                      //   festivals.description,
-                      //   overflow: TextOverflow.visible,
-                      //   textAlign: TextAlign.justify,
-                      // ),
-                    ),
+                        padding: const EdgeInsets.all(kDefaultPadding),
+                        child: ReadMoreText(howtoreach.description,
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                            trimLines: 6,
+                            colorClickableText: Colors.blue,
+                            trimMode: TrimMode.Line,
+                            trimCollapsedText: 'Read more',
+                            trimExpandedText: 'Show less',
+                            moreStyle: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue),
+                            lessStyle: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blue))
+                        // Text(
+                        //   festivals.description,
+                        //   overflow: TextOverflow.visible,
+                        //   textAlign: TextAlign.justify,
+                        // ),
+                        ),
                   ),
                 ),
-                Card(
+                Card()
 
-                )
-              
                 //Text(product.description,overflow: TextOverflow.visible,),
               ],
             ),

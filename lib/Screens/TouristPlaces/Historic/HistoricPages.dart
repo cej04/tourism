@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:ktmtourism/Screens/TouristPlaces/Historic/Destination_screen.dart';
 import 'package:ktmtourism/Screens/destination_model.dart';
 import 'package:ktmtourism/Utils/constants.dart';

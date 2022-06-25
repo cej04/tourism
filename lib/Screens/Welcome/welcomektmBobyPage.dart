@@ -28,7 +28,7 @@ class WelcomeKtmBodyPage extends StatelessWidget {
                 blurRadius: 6.0,
               ),
             ],
-           // borderRadius: BorderRadius.circular(10),
+            // borderRadius: BorderRadius.circular(10),
             image: DecorationImage(
               image: AssetImage(welcome.image),
               fit: BoxFit.fill,
@@ -40,10 +40,11 @@ class WelcomeKtmBodyPage extends StatelessWidget {
         Expanded(
           child: ListView(
             children: [
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               // Container(
-                
-                
+
               //     color: Colors.grey,
               //     //crossAxisAlignment:CrossAxisAlignment.end,
               //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -79,30 +80,39 @@ class WelcomeKtmBodyPage extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   child: Padding(
-                    padding: const EdgeInsets.all(kDefaultPadding),
-                    child: 
-                    ReadMoreText(
-                      welcome.description,
-                       textAlign: TextAlign.justify,
-                         style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
-          trimLines: 20,
-          colorClickableText: Colors.blue,
-          trimMode: TrimMode.Line,
-          trimCollapsedText: 'Read more',
-          trimExpandedText: 'Show less',
-          moreStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue),
-          lessStyle:TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue)
-        )
-                    // Text(
-                    //   festivals.description,
-                    //   overflow: TextOverflow.visible,
-                    //   textAlign: TextAlign.justify,
-                    // ),
-                  ),
+                      padding: const EdgeInsets.all(kDefaultPadding),
+                      child: ReadMoreText(welcome.description,
+                          textAlign: TextAlign.justify,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText2
+                              ?.apply(
+                                color: Colors.black,
+                              )
+                              .copyWith(height: 1.8),
+                          trimLines: 20,
+                          colorClickableText: Colors.blue,
+                          trimMode: TrimMode.Line,
+                          trimCollapsedText: 'Read more',
+                          trimExpandedText: 'Show less',
+                          moreStyle: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue),
+                          lessStyle: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue))
+                      // Text(
+                      //   festivals.description,
+                      //   overflow: TextOverflow.visible,
+                      //   textAlign: TextAlign.justify,
+                      // ),
+                      ),
                 ),
               ),
               Container()
-        
+
               //Text(product.description,overflow: TextOverflow.visible,),
             ],
           ),

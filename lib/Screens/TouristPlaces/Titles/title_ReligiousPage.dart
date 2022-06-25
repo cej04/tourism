@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Religious/viewAll.dart';
-
 import '../../../Utils/constants.dart';
+
 class titlereligiousPage extends StatelessWidget {
   const titlereligiousPage({
-     Key? key,
+    Key? key,
     required this.icon,
     required this.title,
     required this.press,
   }) : super(key: key);
-  
+
   final String title;
   final Function press;
   final IconData icon;
- 
 
   @override
   Widget build(BuildContext context) {
@@ -21,35 +20,33 @@ class titlereligiousPage extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 0),
       child: Row(
         children: [
-            Padding(
-             padding: const EdgeInsets.only(left:kDefaultPadding / 2),
-              child: Icon(icon),
-            ),
-                SizedBox(width: 10,),
-                Text(title,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold
-                )
-                ),
-        //  TitleWithCustomUnderline(icon:icon,text: title),
+          Padding(
+            padding: const EdgeInsets.only(left: kDefaultPadding / 2),
+            child: Icon(icon),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Text(title,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          //  TitleWithCustomUnderline(icon:icon,text: title),
           Spacer(),
           FloatingActionButton.extended(
-            
-            heroTag: "action button4",
-            elevation: 0,
-            backgroundColor: Colors.white,
-            onPressed: press(),
-             label: GestureDetector(
-               onTap: (){
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllReligious() ));
-               },
-               child: const Text(
-                 
-                 
-                 "View All",style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
-             )
-            )
+              heroTag: "action button4",
+              elevation: 0,
+              backgroundColor: Colors.white,
+              onPressed: press(),
+              label: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ViewAllReligious()));
+                },
+                child: const Text("View All",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold)),
+              ))
         ],
       ),
     );

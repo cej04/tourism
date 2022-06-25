@@ -44,38 +44,36 @@ class ProduceBodyPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-                  height: 10,
+            height: 10,
+          ),
+          Container(
+              color: Colors.grey,
+              //crossAxisAlignment:CrossAxisAlignment.end,
+              //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(Icons.apps_sharp),
+                    Text(
+                      "Type :",
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    Text(
+                      produce.type,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                  ],
                 ),
-            Container(
-                    
-                      color: Colors.grey,
-                      //crossAxisAlignment:CrossAxisAlignment.end,
-                      //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Icon(Icons.apps_sharp),
-                            Text(
-                              "Type :",
-                              style: Theme.of(context).textTheme.headline6,
-                            ),
-                            Text(
-                              produce.type,
-                              style: Theme.of(context).textTheme.headline6,
-                            ),
-                          ],
-                        ),
-                      )),
+              )),
           Expanded(
             child: ListView(
               children: [
-                
                 // Padding(
                 //   padding: const EdgeInsets.all(kDefaultPadding),
                 //   child:
-                
+
                 // ),
                 // // SizedBox(height: 20,),
                 // Padding(
@@ -100,8 +98,13 @@ class ProduceBodyPage extends StatelessWidget {
                         produce.description,
                         overflow: TextOverflow.visible,
                         textAlign: TextAlign.justify,
-                                                 style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
-          
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText2
+                            ?.apply(
+                              color: Colors.black,
+                            )
+                            .copyWith(height: 1.8),
                       ),
                     ),
                   ),

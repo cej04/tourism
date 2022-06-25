@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwnedPage.dart';
 //import 'package:ktmtourism/sample.dart';
-
 import '../../../Utils/constants.dart';
 
 class TitleStateOwnedPage extends StatelessWidget {
@@ -39,9 +38,11 @@ class TitleStateOwnedPage extends StatelessWidget {
               backgroundColor: Colors.white,
               onPressed: press(),
               label: GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder:(context) => StateOwnedPage()));
-
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => StateOwnedPage()));
                 },
                 child: const Text("View All",
                     style: TextStyle(

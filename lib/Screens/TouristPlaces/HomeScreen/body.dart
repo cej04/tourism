@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
-
 import 'package:ktmtourism/Screens/Headers/header_touristPlace.dart';
+import 'package:ktmtourism/Screens/ReachKtm/ReachAir/AirDetails.dart';
+import 'package:ktmtourism/Screens/ReachKtm/ReachRoad/RoadDetail.dart';
+import 'package:ktmtourism/Screens/ReachKtm/ReachTrain/TrainDetail.dart';
+import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Historic/viewAll.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/KumarakomPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/NaturalScenic/NaturalScenicPages.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/NaturalScenic/viewAll.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Recreational/viewAll.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Religious/viewAll.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Titles/title_Historic.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Titles/title_Kumarakom.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Titles/title_Natural.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Utils/constants.dart';
-
 import '../Historic/historicPage.dart';
 import '../Recreational/recreationalPage.dart';
 import '../Religious/religiousPage.dart';
@@ -20,7 +28,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: PreferredSize(
+      appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(),
       ),
@@ -29,50 +37,58 @@ class Body extends StatelessWidget {
           HeaderWithTouristPlace(
             size: size,
           ),
+          Container(
+
+                //color: Colors.teal,
+
+                child: _tabSection(context)),
           const SizedBox(
             height: 20,
           ),
           // HeaderWithSearchBox(size: size),
-          Expanded(
-            child: Container(
-              child: ListView(
-                children: [
-                   const TitleHistoric(
-                  icon: Icons.history_edu,
-                  title: "Historic",
-                 
-                ),
-                 const historicPage(),
-                      TitleNaturalPage(
-                icon: Icons.nature_people_outlined,
-                title: "Natural/Scenic Beauty",
-                press: () {}),
-                      const NaturalScenicPages(),
-                      titleRecreationalPage(
-              icon: Icons.rowing_outlined,
-              title: "Recreational",
-              press: () {
-              //  Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllRecreation() ));
-              },
-                      ),
-                      const RecreationalPage(),
-                      titlereligiousPage(
-                icon: Icons.self_improvement_outlined,
-                title: "Religious",
-                press: () {}),
-                      const ReligiousPage(),
-                      const SizedBox(
-              height: kDefaultPadding,
-                      )
-                ],
-                
-              ),
-            ),
-          ),
+          // Expanded(
+          //   child: Container(
+          //     child: ListView(
+          //       children: [
+          //         const titleKumarakom(
+          //           icon: Icons.water,
+          //           title: "Kumarakom",
+          //         ),
+          //         KumarakomPage(),
+          //         const TitleHistoric(
+          //           icon: Icons.history_edu,
+          //           title: "Historic",
+          //         ),
+          //         const historicPage(),
+          //         TitleNaturalPage(
+          //             icon: Icons.nature_people_outlined,
+          //             title: "Natural/Scenic Beauty",
+          //             press: () {}),
+          //         const NaturalScenicPages(),
+          //         titleRecreationalPage(
+          //           icon: Icons.rowing_outlined,
+          //           title: "Recreational",
+          //           press: () {
+          //             //  Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllRecreation() ));
+          //           },
+          //         ),
+          //         const RecreationalPage(),
+          //         titlereligiousPage(
+          //             icon: Icons.self_improvement_outlined,
+          //             title: "Religious",
+          //             press: () {}),
+          //         const ReligiousPage(),
+          //         const SizedBox(
+          //           height: kDefaultPadding,
+          //         )
+          //       ],
+          //     ),
+          //   ),
+          // ),
           //  child: const TitleHistoric(
           //       icon: Icons.history_edu,
           //       title: "Historic",
-               
+
           //     ),
           // const historicPage(),
           // TitleNaturalPage(
@@ -100,4 +116,55 @@ class Body extends StatelessWidget {
       ),
     );
   }
+}
+Widget _tabSection(BuildContext context) {
+  return DefaultTabController(
+    length: 5,
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        TabBar(
+          labelColor: Colors.teal,
+          isScrollable: true,
+          indicatorColor: Colors.teal,
+          tabs: [
+            Tab(icon: Icon(Icons.water), text: "Kumarakom"),
+            Tab(
+              icon: Icon(Icons.history_edu),
+              text: "Historic",
+            ),
+            Tab(
+              icon: Icon(Icons.nature_people_outlined),
+              text: "Natural/Scenic Beauty",
+            ),
+            Tab(icon: Icon(Icons.rowing_outlined), text: "Recreational"),
+            Tab(icon: Icon(Icons.self_improvement_outlined), text: "Religious"),
+
+            // Tab(
+            //   text: "Mundakkayam",
+            // ),
+          ],
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Container(
+          //Add this to give height
+          height: MediaQuery.of(context).size.height /2,
+          child: TabBarView(children: [
+              
+            const KumarakomPage(),
+            const ViewAllHistoric(),
+            const ViewAllNatural(),
+            // const ListViewChanganacherry(),
+            // const ListViewEttumanoor(),
+            // const ListViewVaikom(),
+            const ViewAllRecreation(),
+           const ViewAllReligious(),
+            //const ListViewMundakkayam(),
+          ]),
+        ),
+      ],
+    ),
+  );
 }

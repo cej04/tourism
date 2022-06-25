@@ -3,7 +3,6 @@ import 'package:ktmtourism/Screens/Culinary/culinary.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
-
 class CulinaryBodyPage extends StatelessWidget {
   final Culinary culinary;
   const CulinaryBodyPage({Key? key, required this.culinary}) : super(key: key);
@@ -12,11 +11,9 @@ class CulinaryBodyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: PreferredSize(
+      appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-       
-          child: const MyAppBar(),
-        
+        child: const MyAppBar(),
       ),
       body: Column(
         children: [
@@ -41,43 +38,43 @@ class CulinaryBodyPage extends StatelessWidget {
               image: DecorationImage(
                 image: AssetImage(culinary.image),
                 fit: BoxFit.fill,
-    
+
                 //alignment: Alignment.topCenter,
               ),
             ),
           ),
-           SizedBox(height: 10,),
-           Container(
-                    
-                      color: Colors.grey,
-                      //crossAxisAlignment:CrossAxisAlignment.end,
-                      //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Icon(Icons.apps_sharp),
-                            Text(
-                              "Type :",
-                              style: Theme.of(context).textTheme.headline6,
-                            ),
-                            Text(
-                              culinary.type,
-                              style: Theme.of(context).textTheme.headline6,
-                            ),
-                          ],
-                        ),
-                      )),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+              color: Colors.grey,
+              //crossAxisAlignment:CrossAxisAlignment.end,
+              //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(Icons.apps_sharp),
+                    Text(
+                      "Type :",
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    Text(
+                      culinary.type,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                  ],
+                ),
+              )),
           Expanded(
             child: ListView(
               children: [
-                
                 // Padding(
                 //   padding: const EdgeInsets.all(kDefaultPadding),
                 //  child:
-                  
-              //  ),
+
+                //  ),
                 // SizedBox(height: 20,),
                 // Padding(
                 //   padding: const EdgeInsets.all(kDefaultPadding),
@@ -101,13 +98,18 @@ class CulinaryBodyPage extends StatelessWidget {
                         culinary.description,
                         overflow: TextOverflow.visible,
                         textAlign: TextAlign.justify,
-                                                 style: Theme.of(context).textTheme.bodyText2?.apply(color: Colors.black,).copyWith(height: 1.8),
-          
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText2
+                            ?.apply(
+                              color: Colors.black,
+                            )
+                            .copyWith(height: 1.8),
                       ),
                     ),
                   ),
                 )
-              
+
                 //Text(product.description,overflow: TextOverflow.visible,),
               ],
             ),

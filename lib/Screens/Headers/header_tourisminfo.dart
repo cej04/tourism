@@ -32,35 +32,51 @@ class HeaderWithTourismInfo extends StatelessWidget {
             //    )
             //  ),
              child: 
-             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                SizedBox(
-                  height: 70,
-                ),
-              //   Container(
-              //     height: 30,
-              //     decoration: const BoxDecoration(
-              //           borderRadius: BorderRadius.only(
-              //    bottomLeft: Radius.circular(36),
-              //    bottomRight: Radius.circular(36)
-              //  )
-              //     ),
-              //     child:
-                   Center(
-                      child: Text("Tourism Information",
-
-                       style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
-
+  
+                   Container(
+                          width: MediaQuery. of(context). size. width,
+                             color: Colors.grey[900]?.withOpacity(0.4),
+                             alignment: Alignment.center,
+                     child: Text("Tourism Information",
+       
+                      style: Theme.of(context).textTheme.headline5?.apply(color: Colors.white,).copyWith(letterSpacing: 1)
+                )
                           // style: TextStyle(
                           //     fontWeight: FontWeight.bold,
                           //     fontSize: 24.0,
-                          //     color: Colors.white)
+                          //     color: Colors.white))
                               
-                              )),
-                //),
-              ],
-            ),
+                              ),
+
+            //  Column(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children:  [
+            //     SizedBox(
+            //       height: 70,
+            //     ),
+            //   //   Container(
+            //   //     height: 30,
+            //   //     decoration: const BoxDecoration(
+            //   //           borderRadius: BorderRadius.only(
+            //   //    bottomLeft: Radius.circular(36),
+            //   //    bottomRight: Radius.circular(36)
+            //   //  )
+            //   //     ),
+            //   //     child:
+            //        Center(
+            //           child: Text("Tourism Information",
+
+            //            style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+
+            //               // style: TextStyle(
+            //               //     fontWeight: FontWeight.bold,
+            //               //     fontSize: 24.0,
+            //               //     color: Colors.white)
+                              
+            //                   )),
+            //     //),
+            //   ],
+            // ),
             //  Row(
                
             //    children: [

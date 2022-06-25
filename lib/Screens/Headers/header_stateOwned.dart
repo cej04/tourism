@@ -47,10 +47,26 @@ class HeaderWithStateOwned extends StatelessWidget {
               //  )
               //     ),
               //     child:
-                   Center(
-                      child: Text("State Owned",
+                  //  Center(
+                  //     child: Text("State Owned",
 
-                                             style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+                  //                            style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
+
+                  //         // style: TextStyle(
+                  //         //     fontWeight: FontWeight.bold,
+                  //         //     fontSize: 24.0,
+                  //         //     color: Colors.white)
+                              
+                  //             )
+                  //             ),
+                                 Container(
+                          width: MediaQuery. of(context). size. width,
+                             color: Colors.grey[900]?.withOpacity(0.4),
+                             alignment: Alignment.center,
+                     child: Text("State Owned",
+       
+                      style: Theme.of(context).textTheme.headline5?.apply(color: Colors.white,).copyWith(letterSpacing: 1)
+       
 
                           // style: TextStyle(
                           //     fontWeight: FontWeight.bold,

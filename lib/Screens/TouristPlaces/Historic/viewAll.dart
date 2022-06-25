@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Headers/header_Historci.dart';
-
 import 'package:ktmtourism/Screens/TouristPlaces/Historic/Destination_screen.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Historic/historic.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
@@ -16,13 +15,13 @@ class ViewAllHistoric extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return 
     Scaffold(
-       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(50.0),
-        child: const MyAppBar(),
-      ),
+      //  appBar: PreferredSize(
+      //   preferredSize: const Size.fromHeight(50.0),
+      //   child: const MyAppBar(),
+      // ),
       body: Column(
         children: [
-            HeaderWithHistoric(size: size),
+           // HeaderWithHistoric(size: size),
           // Expanded(
           //   child: GridView.builder(
           //      padding: const EdgeInsets.all(20),
