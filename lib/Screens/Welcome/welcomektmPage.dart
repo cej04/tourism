@@ -265,8 +265,8 @@ class _welcomektmPageState extends State<welcomektmPage> {
                               //   leading: Icon(Icons.arrow_circle_right),
                               title: Text(welcome[index].title),
                               subtitle: Text(
-                                //  welcome[index].title,
-                                "Thi sis a sample subtitle regarding th etitle",
+                                welcome[index].subtitle1,
+                              //  "Thi sis a sample subtitle regarding th etitle",
                                 style: TextStyle(
                                     color: Colors.black.withOpacity(0.6)),
                               ),
