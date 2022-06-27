@@ -19,14 +19,14 @@ class ResponsibleTourism {
 
 List<ResponsibleTourism> responsibletourism = [
   ResponsibleTourism(
-      name: "A DAY WITH THE FARMERS",
+      name: "A Day With the Farmers",
       description:
           "Kavanattinkara - Cheepumkal - Kalppuzhamuttu – Manchadikkari Traditional Coir Making Unit - Duck Farm -Village Boating - Farm Fishing - Toddy Tapping-Coconut Leaf Weaving-Screw Pine Weaving-Vegetable Farm - Bird Watching-Village Life Experience - Backwater Trek Guide Service/Lunch/ Transportation etc. Tariff: Rs. 2,500/- per head",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFFF7EC),
       iconColor: Color.fromARGB(255, 236, 199, 119)),
   ResponsibleTourism(
-      name: "VILLAGE LIFE EXPERIENCE AT KUMARAKOM  ",
+      name: "Village Life Experience at Kumarakom ",
       description:
           "Kumarakom - Anganvady Visit - Weaving-Making of Miniature Snake Boats Toddy Tapping - Karimeen Farm - Village Boat Ride - Bow and Arrow Fishing - Village Walking (Half Day Tour) Guide Service/Refreshments/Transport, etc. Tariff: Rs. 1,500/- per head",
       //iconData :Icons.hotel_class_outlined,

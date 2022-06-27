@@ -14,7 +14,7 @@ class historicPage extends StatelessWidget {
     return Column(children: [
       Container(
         height: 200.0,
-        // color: Colors.blue,
+       
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: destinations.length,

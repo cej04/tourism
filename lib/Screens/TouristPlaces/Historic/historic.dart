@@ -19,26 +19,7 @@ class Historic {
       required this.HistoricImages});
 }
 
-// List<Activity> activities =[
-//   Activity(
-//     imageU :"assets/images/waterscapes.jpg",
-//   name:"waterscapes",
-//   type:"tour",
-//   gallery:['assets/images/waterscapes.jpg','assets/images/juma.jpg','assets/images/juma.jpg','assets/images/juma.jpg','assets/images/juma.jpg'],
-//   rating:5,
-//   price:30
-//   ),
 
-//  Activity(
-//    imageU :"assets/images/weather.jpg",
-// name:"weather",
-// type:"weather",
-// gallery:['assets/images/weather.jpg','assets/images/waterscapes.jpg'],
-// rating:5,
-// price:40
-// ),
-
-//];
 
 List<Historic> historic = [
   Historic(

@@ -15,20 +15,7 @@ class DestinationCarousel extends StatelessWidget {
     Size  size = MediaQuery.of(context).size;
     return Column(
         children:[
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal:20.0),
-          //   child: Row(
-          //     //mainAxisAlignment:MainAxisAlignment.spaceBetween,
-          //     children: [
-          //        Icon(Icons.history_edu),
-          //        SizedBox(width:10.0),
-          //       const Text("Historic",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          //      Spacer(),
-          //       GestureDetector(child: const Text("view all",style: TextStyle(
-          //             color: Colors.black, fontWeight: FontWeight.bold)))
-          //     ],
-          //   ),
-          // ),
+        
           Container(
             
             height: 200.0,

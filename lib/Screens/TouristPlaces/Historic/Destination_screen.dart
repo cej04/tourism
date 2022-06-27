@@ -44,48 +44,7 @@ class DestinationScreen extends StatelessWidget {
                 //alignment: Alignment.topCenter,
               ),
             ),
-            //             child: new Stack(
-            //         children: <Widget>[
-
-            //           new Positioned(
-            //             right: 0.0,
-            //             bottom: 5.0,
-            //             child:   GestureDetector(
-            //               onTap: (){  MapUtils.openMap(destination.lat, destination.long);},
-            //               child: Padding(
-            //                 padding: const EdgeInsets.all(8.0),
-            //                 child: Container(
-
-            //                  // width: MediaQuery.of(context).size.width/6.5,
-            //                                       height: MediaQuery.of(context).size.height/14.5,
-            //   //                 duration: const Duration(seconds: 2),
-            //   // foregroundDecoration: BoxDecoration(
-            //   //   //color: _isInitialValue ? Colors.blue : Colors.red,
-            //   //   border: Border.all(width: _isInitialValue ? 0 : 10),
-            //  // ),
-            //                   child: Image.asset(  'assets/images/location1.png',fit: BoxFit.fill,)
-
-            //                   ),
-            //               ),
-            //             ),
-
-            //            // )
-
-            //     //         FloatingActionButton.extended(
-
-            //     //   onPressed: () {
-            //     //    MapUtils.openMap(destination.lat, destination.long);
-
-            //     //   },
-
-            //     //   label: const Text(''),
-            //     //   icon: const Icon(Icons.location_on_rounded,color: Colors.teal,size: 50,),
-            //     //   backgroundColor: Colors.white,
-            //     //   elevation: 0,
-            //     // ),
-            //           ),
-            //         ],
-            //       ),
+           
           ),
           GestureDetector(
             onTap: () {
@@ -93,13 +52,9 @@ class DestinationScreen extends StatelessWidget {
             },
             child: Container(
 
-                // width: MediaQuery.of(context).size.width/6.5,
+                
                 height: MediaQuery.of(context).size.height / 14.5,
-                //                 duration: const Duration(seconds: 2),
-                // foregroundDecoration: BoxDecoration(
-                //   //color: _isInitialValue ? Colors.blue : Colors.red,
-                //   border: Border.all(width: _isInitialValue ? 0 : 10),
-                // ),
+              
                 child: Image.asset(
                   'assets/images/location1.png',
                   fit: BoxFit.fill,
@@ -111,39 +66,7 @@ class DestinationScreen extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                // Container(
-
-                //     color: Colors.grey,
-                //     //crossAxisAlignment:CrossAxisAlignment.end,
-                //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //     child: Row(
-                //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //       children: [
-                //         Icon(Icons.calendar_view_month_sharp  ),
-                //         Text(
-                //           "Celebrated on/during: ",
-                //           style: Theme.of(context).textTheme.headline6,
-                //         ),
-                //         Text(
-                //           welcome.type,
-                //           style: Theme.of(context).textTheme.headline6,
-                //         ),
-                //       ],
-                //     )),
-                // SizedBox(height: 20,),
-                // Padding(
-                //   padding: const EdgeInsets.all(kDefaultPadding),
-                //   child: Row(
-                //     //crossAxisAlignment:CrossAxisAlignment.end,
-                //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //     children: [
-                //       Text(
-                //         "Description",
-                //         style: Theme.of(context).textTheme.headline6,
-                //       ),
-                //     ],
-                //   ),
-                // ),
+                
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -171,25 +94,12 @@ class DestinationScreen extends StatelessWidget {
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.blue))
-                        // Text(
-                        //   festivals.description,
-                        //   overflow: TextOverflow.visible,
-                        //   textAlign: TextAlign.justify,
-                        // ),
+                       
                         ),
                   ),
                 ),
 
-                // GridView.builder(gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                //                 crossAxisCount: 2,
-                //               // mainAxisSpacing: kDefaultPadding,
-                //               crossAxisSpacing: 10,
-                //                 mainAxisSpacing: 10,
-                //               // childAspectRatio: 0.75,
-                //               ),  itemBuilder: (BuildContext context, int index) {
-
-                //   },
-                //   ),
+                
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -197,10 +107,7 @@ class DestinationScreen extends StatelessWidget {
                     children: [
                       Text("How To Reach",
                           style: Theme.of(context).textTheme.titleSmall),
-                      // GestureDetector(
-                      //     //  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllScreen())),
-                      //     child: Text("View All",style: TextStyle(
-                      //   color: Colors.black, fontWeight: FontWeight.bold)))
+                    
                     ],
                   ),
                 ),
@@ -212,7 +119,7 @@ class DestinationScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         Container(
-                          // margin: EdgeInsets.symmetric(vertical: 10),
+                          
                           width: MediaQuery.of(context).size.width / 3,
                           height: MediaQuery.of(context).size.height,
                           color: Colors.teal[100],
@@ -227,8 +134,7 @@ class DestinationScreen extends StatelessWidget {
                               ),
                             ),
 
-                            //   elevation: 20,
-                            //color: Colors.teal[100],
+                          
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
@@ -310,26 +216,7 @@ class DestinationScreen extends StatelessWidget {
                             },
                           ),
                         ),
-                        // AspectRatio(
-                        //   aspectRatio: 1 / 1,
-                        //   child: Container(
-                        //     margin: EdgeInsets.only(right: 15),
-                        //     decoration: BoxDecoration(
-                        //         borderRadius: BorderRadius.circular(10),
-                        //         color: Colors.white),
-                        //     child: Icon(Icons.train),
-                        //   ),
-                        // ),
-                        // AspectRatio(
-                        //   aspectRatio: 1 / 1,
-                        //   child: Container(
-                        //     margin: EdgeInsets.only(right: 15),
-                        //     decoration: BoxDecoration(
-                        //         borderRadius: BorderRadius.circular(10),
-                        //         color: Colors.white),
-                        //     child: Icon(Icons.commute),
-                        //   ),
-                        // )
+                        
                       ],
                     ),
                   ),
@@ -341,10 +228,7 @@ class DestinationScreen extends StatelessWidget {
                     children: [
                       Text("Photo Gallery",
                           style: Theme.of(context).textTheme.titleSmall),
-                      // GestureDetector(
-                      //     //  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllScreen())),
-                      //     child: Text("View All",style: TextStyle(
-                      //   color: Colors.black, fontWeight: FontWeight.bold)))
+                     
                     ],
                   ),
                 ),
@@ -358,8 +242,7 @@ class DestinationScreen extends StatelessWidget {
                           String activity = destination.activities[index];
 
                           return Row(
-                            //     crossAxisAlignment: CrossAxisAlignment.center,
-                            //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            
                             children: [
                               Container(
                                   //alignment: Alignment.center,
@@ -369,47 +252,7 @@ class DestinationScreen extends StatelessWidget {
                                     activity,
                                     fit: BoxFit.cover,
                                   )),
-                              // Container(
-
-                              //   height: 100,
-
-                              //   width:120,
-
-                              //   child: Image.asset(activity.gallery[1],
-                              //   fit: BoxFit.cover,)
-
-                              // ),
-                              //  Container(
-
-                              //   height: 100,
-
-                              //   width:120,
-
-                              //   child: Image.asset(activity.gallery[2],
-                              //   fit: BoxFit.cover,)
-
-                              // ),
-                              // Container(
-
-                              //   height: 100,
-
-                              //   width:120,
-
-                              //   child: Image.asset(activity.gallery[3],
-
-                              //   fit: BoxFit.cover,)
-
-                              // ),
-                              // Container(
-
-                              //   height: 100,
-
-                              //   width:120,
-
-                              //   child: Image.asset(activity.gallery[4],
-                              //   fit: BoxFit.cover,)
-
-                              // ),
+                             
                             ],
                           );
                         },
@@ -423,208 +266,14 @@ class DestinationScreen extends StatelessWidget {
                   height: 20,
                 ),
 
-                //   Padding(
-                //     padding: const EdgeInsets.all(8.0),
-                //     child: Container(
-                //       height: 120,
-                //       child: ListView.separated(
-                //           scrollDirection: Axis.horizontal,
-                //           itemBuilder: (context, index) {
-                //             String activity = destination.activities[index];
-
-                //             return Row(
-                //               crossAxisAlignment: CrossAxisAlignment.stretch,
-                //               children: [
-                //                 Container(
-                //                     height: 100,
-                //                     width: 120,
-                //                     child:
-                //                     PhotoView(
-                //     imageProvider: AssetImage(activity),
-                // )
-                //                     //  Image.asset(
-                //                     //   activity,
-                //                     //   fit: BoxFit.cover,
-                //                     // )
-                //                     ),
-                //                 // Container(
-
-                //                 //   height: 100,
-
-                //                 //   width:120,
-
-                //                 //   child: Image.asset(activity.gallery[1],
-                //                 //   fit: BoxFit.cover,)
-
-                //                 // ),
-                //                 //  Container(
-
-                //                 //   height: 100,
-
-                //                 //   width:120,
-
-                //                 //   child: Image.asset(activity.gallery[2],
-                //                 //   fit: BoxFit.cover,)
-
-                //                 // ),
-                //                 // Container(
-
-                //                 //   height: 100,
-
-                //                 //   width:120,
-
-                //                 //   child: Image.asset(activity.gallery[3],
-
-                //                 //   fit: BoxFit.cover,)
-
-                //                 // ),
-                //                 // Container(
-
-                //                 //   height: 100,
-
-                //                 //   width:120,
-
-                //                 //   child: Image.asset(activity.gallery[4],
-                //                 //   fit: BoxFit.cover,)
-
-                //                 // ),
-                //               ],
-                //             );
-                //           },
-                //           separatorBuilder: (_, index) => const SizedBox(
-                //                 width: 10.0,
-                //               ),
-                //           itemCount: destination.activities.length),
-                //     ),
-                //   ),
-                //   SizedBox(
-                //     height: 20,
-                //   ),
-                //   Padding(
-                //     padding: const EdgeInsets.only(left: 25.0),
-                //     child: Container(
-                //       height: 100,
-                //       child: ListView(
-                //         scrollDirection: Axis.horizontal,
-                //         children: [
-                //           Container(
-                //             margin: EdgeInsets.symmetric(vertical: 10),
-                //             height: 100,
-                //             width: 100,
-                //             color: Colors.teal[100],
-                //             child: PopupMenuButton(
-                //               //color: Colors.teal[100],
-                //               child: Column(
-                //                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //                 children: [
-                //                   Icon(Icons.flight),
-                //                   Text("By Air",
-                //                       style:
-                //                           TextStyle(fontWeight: FontWeight.bold))
-                //                 ],
-                //               ),
-                //               itemBuilder: (context) {
-                //                 return <PopupMenuItem>[
-                //                   new PopupMenuItem(
-                //                       child: Text(destination.AirDesc))
-                //                 ];
-                //               },
-                //             ),
-                //           ),
-                //           SizedBox(width:10.0),
-                //            Container(
-                //             margin: EdgeInsets.symmetric(vertical: 10),
-                //             height: 100,
-                //             width: 100,
-                //             color: Colors.teal[100],
-                //             child: PopupMenuButton(
-                //              // color: Colors.teal[100],
-                //               child: Column(
-                //                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //                 children: [
-                //                   Icon(Icons.train),
-                //                   Text("By Train",
-                //                       style:
-                //                           TextStyle(fontWeight: FontWeight.bold))
-                //                 ],
-                //               ),
-                //               itemBuilder: (context) {
-                //                 return <PopupMenuItem>[
-                //                   new PopupMenuItem(
-                //                       child: Text(destination.TrainDesc))
-                //                 ];
-                //               },
-                //             ),
-                //           ),
-                //           SizedBox(width:10.0),
-                //           Container(
-                //             margin: EdgeInsets.symmetric(vertical: 10),
-                //             height: 100,
-                //             width: 100,
-                //             color: Colors.teal[100],
-                //             child: PopupMenuButton(
-                //             //  color: Colors.teal[100],
-                //               child: Column(
-                //                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //                 children: [
-                //                   Icon(Icons.bus_alert),
-                //                   Text("By Bus",
-                //                       style:
-                //                           TextStyle(fontWeight: FontWeight.bold))
-                //                 ],
-                //               ),
-                //               itemBuilder: (context) {
-                //                 return <PopupMenuItem>[
-                //                   new PopupMenuItem(
-                //                       child: Text(destination.RoadDesc))
-                //                 ];
-                //               },
-                //             ),
-                //           ),
-                //           // AspectRatio(
-                //           //   aspectRatio: 1 / 1,
-                //           //   child: Container(
-                //           //     margin: EdgeInsets.only(right: 15),
-                //           //     decoration: BoxDecoration(
-                //           //         borderRadius: BorderRadius.circular(10),
-                //           //         color: Colors.white),
-                //           //     child: Icon(Icons.train),
-                //           //   ),
-                //           // ),
-                //           // AspectRatio(
-                //           //   aspectRatio: 1 / 1,
-                //           //   child: Container(
-                //           //     margin: EdgeInsets.only(right: 15),
-                //           //     decoration: BoxDecoration(
-                //           //         borderRadius: BorderRadius.circular(10),
-                //           //         color: Colors.white),
-                //           //     child: Icon(Icons.commute),
-                //           //   ),
-                //           // )
-                //         ],
-                //       ),
-                //     ),
-                //   )
-                //   //Text(product.description,overflow: TextOverflow.visible,),
+               
               ],
             ),
           ),
-          // Container(
-          //   child: Text(product.description),
-          // ),
+        
         ],
       ),
-      //    floatingActionButton: FloatingActionButton.extended(
-      //   onPressed: () {
-      //   //  MapUtils.openMap(pilgrims.lat, pilgrims.long);
-
-      //   },
-
-      //   label: const Text(''),
-      //   icon: const Icon(Icons.location_on_rounded,color: Colors.teal,size: 50,),
-      //   backgroundColor: Colors.white,
-      //   elevation: 10,
-      // ),
+     
     );
   }
 }

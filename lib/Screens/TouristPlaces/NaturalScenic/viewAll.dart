@@ -13,51 +13,21 @@ class ViewAllNatural extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      // appBar: PreferredSize(
-      //   preferredSize: const Size.fromHeight(kToolbarHeight),
-      //   child: MyAppBar(),
-      // ),
+     
       body: Column(
         children: [
-       //   HeaderWithNaturalScenic(size: size),
-          // Expanded(
-          //   child: GridView.builder(
-          //      padding: const EdgeInsets.all(20),
-          //     itemCount: naturalscenic.length,
-          //     gridDelegate:
-          //     const SliverGridDelegateWithFixedCrossAxisCount(
-          //       crossAxisCount: 2,
-          //     // mainAxisSpacing: kDefaultPadding,
-          //     crossAxisSpacing: 10,
-          //       mainAxisSpacing: 10,
-          //     // childAspectRatio: 0.75,
-          //     ),
-
-          //   itemBuilder: (context,index)  => NaturalScenicCard(
-          //     naturalScenic: naturalscenic[index],
-          //      press: () => Navigator.push(
-          //        context, MaterialPageRoute(
-          //          builder: (context) => NaturalScenicDetail(
-          //            naturalscenic:naturalscenic[index],
-          //            ),
-          //            ),
-          //      ),
-          //   )
-          //   ),
-          //   )
+       
           Expanded(
               child: Container(
             child: ListView.builder(
                 itemCount: naturalscenic.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                     padding: const EdgeInsets.only(left:25.0,right: 25.0,top: 25.0),
                       child: GestureDetector(
                         child: Container(
                             height: 200,
-                            //  margin:EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
-                            //  width: size.width * 0.8,
-                            //   height:185,
+                           
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
