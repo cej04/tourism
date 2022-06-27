@@ -244,82 +244,61 @@ class _welcomektmPageState extends State<welcomektmPage> {
       body: Column(
         children: [
           Expanded(
-              child: Container(
-            child: ListView.builder(
-                itemCount: welcome.length,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding:
-                        const EdgeInsets.only(top: 15, left: 15, right: 15),
-                    child: GestureDetector(
-                      child: Card(
-                        color: Colors.grey[200],
-                        clipBehavior: Clip.antiAlias,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(welcome[index].image),
-                            ListTile(
-                              //   leading: Icon(Icons.arrow_circle_right),
-                              title: Text(welcome[index].title),
-                              subtitle: Text(
-                                welcome[index].subtitle1,
-                              //  "Thi sis a sample subtitle regarding th etitle",
-                                style: TextStyle(
-                                    color: Colors.black.withOpacity(0.6)),
+              child: ListView.builder(
+                  itemCount: welcome.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                        padding: const EdgeInsets.only(left:25.0,right: 25.0,top: 25.0),
+                        child: GestureDetector(
+                          child: 
+                          Card(
+                          color: Colors.grey[200],
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              Image.asset(welcome[index].image),
+                              ListTile(
+                           
+                                title: Text(welcome[index].title  ,style: Theme.of(context).textTheme.headline6?.copyWith(
+                      color: Colors.black, fontWeight: FontWeight.bold)),
+                      
+                      
+                                subtitle: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                  
+                                    welcome[index].subtitle1,
+                                   textAlign: TextAlign.justify,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2
+                                ?.apply(
+                                  color: Colors.black,
+                                )
+                                .copyWith(height: 1.2),
+                                  ),
+                                ),
+                                trailing: Icon(Icons.navigate_next),
                               ),
-                              trailing: Icon(Icons.navigate_next),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => WelcomeKtmDetailsPage(
-                              welcome: welcome[index],
-                            ),
-                          )),
-                    ),
-                  );
-                  // return Padding(
-                  //     padding: const EdgeInsets.all(25.0),
-                  //     child: GestureDetector(
-                  //       child: Container(
-                  //           height: 200,
-                  //           decoration: BoxDecoration(
-                  //               borderRadius: BorderRadius.circular(10),
-                  //               image: DecorationImage(
-                  //                   fit: BoxFit.fill,
-                  //                   image: AssetImage(welcome[index].image))),
-                  //           alignment: Alignment.bottomCenter,
-                  //           child: Padding(
-                  //               padding:
-                  //                   EdgeInsets.only(left: 15.0, bottom: 15),
-                  //               child: Text(welcome[index].title.toUpperCase(),
-                  //                   style: Theme.of(context)
-                  //                       .textTheme
-                  //                       .labelMedium
-                  //                       ?.apply(
-                  //                         color: Colors.white,
-                  //                         backgroundColor:
-                  //                             Colors.black.withOpacity(0.5),
-                  //                       )
-                  //                       .copyWith(letterSpacing: 1)))),
-                  //       onTap: () => Navigator.push(
-                  //           context,
-                  //           MaterialPageRoute(
-                  //             builder: (context) => WelcomeKtmDetailsPage(
-                  //               welcome: welcome[index],
-                  //             ),
-                  //           )),
-                  //     ));
-                }),
-          ))
+                          
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => WelcomeKtmDetailsPage(
+                                  welcome: welcome[index],
+                                ),
+                              )),
+                        ));
+                  }))
         ],
       ),
     );
   }
 }
+

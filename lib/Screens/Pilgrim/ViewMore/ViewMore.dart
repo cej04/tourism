@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Pilgrim/View.dart';
-import 'package:ktmtourism/Screens/Pilgrim/ViewMorePigrimCard.dart';
+import 'package:ktmtourism/Screens/Pilgrim/ViewMore/View.dart';
+import 'package:ktmtourism/Screens/Pilgrim/ViewMore/ViewMorePigrimCard.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
 class ViewMorePilgrim extends StatelessWidget {
@@ -19,13 +19,7 @@ class ViewMorePilgrim extends StatelessWidget {
           itemCount: pilgrimviewmore.length,
           itemBuilder: (context, index) =>
               ViewMoreCard(pilgrimviewmore: pilgrimviewmore[index], press: () {}
-                  //  => Navigator.push(
-                  //    context, MaterialPageRoute(
-                  //      builder: (context) => PilgrimsBodyPage(
-                  //        pilgrims:pilgrims[index],
-                  //        ),
-                  //        ),
-                  //  ),
+                  
                   )),
     );
   }

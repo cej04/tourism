@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Pilgrim/ViewMore.dart';
+import 'package:ktmtourism/Screens/Pilgrim/ViewMore/ViewMore.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimsBodyPage.dart';
-import 'package:ktmtourism/Screens/Headers/header_pilgrims.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrims.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
@@ -17,17 +16,12 @@ class PilgrimKtmPage extends StatelessWidget {
       appBar: 
       AppBar(
       elevation: 0,
-      // backgroundColor: backgroundColor,
+    
       title:  Text(
         "Pilgrim Centers",
-        // style: TextStyle(color: Colors.black),
+     
       ),
-      //  Row(
-      //   mainAxisAlignment:MainAxisAlignment.spaceEvenly,
-      //   children: [
-
-      //   ],
-      // ),
+    
       actions: [
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -42,9 +36,7 @@ class PilgrimKtmPage extends StatelessWidget {
         ),
         PopupMenuButton(
           elevation: 5.0,
-          // icon: Icon(
-          //     Icons.more_vert), //don't specify icon if you want 3 dot menu
-          // color: Color(0xFF757575),
+         
 
           itemBuilder: (context) => [
             PopupMenuItem<int>(
@@ -60,7 +52,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "About Kottayam",
-                    // style: TextStyle(color: Colors.white),
+                
                   ),
                 ],
               ),
@@ -78,7 +70,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Tourist Places",
-                    //style: TextStyle(color: Colors.white),
+                 
                   ),
                 ],
               ),
@@ -96,7 +88,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Stay in Kottayam",
-                    //style: TextStyle(color: Colors.white),
+                   
                   ),
                 ],
               ),
@@ -114,7 +106,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Main Pilgrim Centers",
-                    //style: TextStyle(color: Colors.white),
+                   
                   ),
                 ],
               ),
@@ -132,7 +124,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Culinary Delights",
-                    //style: TextStyle(color: Colors.white),
+                 
                   ),
                 ],
               ),
@@ -150,7 +142,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Produce",
-                    //style: TextStyle(color: Colors.white),
+                  
                   ),
                 ],
               ),
@@ -168,7 +160,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Festivals",
-                    //style: TextStyle(color: Colors.white),
+                
                   ),
                 ],
               ),
@@ -186,7 +178,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Art & Culture",
-                    // style: TextStyle(color: Colors.white),
+                    
                   ),
                 ],
               ),
@@ -204,7 +196,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "How to Reach",
-                    // style: TextStyle(color: Colors.white),
+                   
                   ),
                 ],
               ),
@@ -222,7 +214,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Restaurants",
-                    // style: TextStyle(color: Colors.white),
+                
                   ),
                 ],
               ),
@@ -240,7 +232,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Shopping",
-                    // style: TextStyle(color: Colors.white),
+                
                   ),
                 ],
               ),
@@ -258,7 +250,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   ),
                   Text(
                     "Hospital",
-                    // style: TextStyle(color: Colors.white),
+                    
                   ),
                 ],
               ),
@@ -266,42 +258,14 @@ class PilgrimKtmPage extends StatelessWidget {
           ],
           onSelected: (item) => SelectedItem(context, item),
         ),
-        //  ChangeThemeButtonWidget(),
+       
       ],
     ),
       
-      // PreferredSize(
-      //   preferredSize: const Size.fromHeight(kToolbarHeight),
-      //   child: const MyAppBar(),
-      // ),
+     
       body: Column(
         children: [
-          //HeaderWithPilgrims(size: size),
-          // Expanded(
-          //   child: GridView.builder(
-          //      padding: const EdgeInsets.all(20),
-          //     itemCount: pilgrims.length,
-          //     gridDelegate:
-          //     SliverGridDelegateWithFixedCrossAxisCount(
-          //       crossAxisCount: 2,
-          //     // mainAxisSpacing: kDefaultPadding,
-          //     crossAxisSpacing: 10,
-          //       mainAxisSpacing: 10,
-          //     // childAspectRatio: 0.75,
-          //     ),
-
-          //   itemBuilder: (context,index) => PilgrimsCard(
-          //     pilgrims: pilgrims[index],
-          //      press: () => Navigator.push(
-          //        context, MaterialPageRoute(
-          //          builder: (context) => PilgrimsBodyPage(
-          //            pilgrims:pilgrims[index],
-          //            ),
-          //            ),
-          //      ),
-          //   )
-          //   ),
-          //   )
+         
           Expanded(
               child: Container(
             child: ListView.builder(
@@ -312,21 +276,19 @@ class PilgrimKtmPage extends StatelessWidget {
                       child: GestureDetector(
                         child: Container(
                             height: 200,
-                            //  margin:EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
-                            //  width: size.width * 0.8,
-                            //   height:185,
+                            
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
                                     fit: BoxFit.fill,
                                     image: AssetImage(pilgrims[index].image))),
                             alignment: Alignment
-                                .bottomCenter, // This aligns the child of the container
+                                .bottomCenter, 
                             child: Padding(
                                 padding: EdgeInsets.only(
                                     left: 15.0,
                                     bottom:
-                                        15), //some spacing to the child from bottom
+                                        15), 
                                 child: Text(
                                   pilgrims[index].title.toUpperCase(),
                                   style: Theme.of(context)

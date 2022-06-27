@@ -31,27 +31,7 @@ class FAQPage extends StatelessWidget {
                     subtitle: Text(que.answer),
                   ));
                 }),
-            // GridView.builder(
-            //    padding: const EdgeInsets.all(20),
-            //   itemCount: pilgrims.length,
-            //   gridDelegate:
-            //   SliverGridDelegateWithFixedCrossAxisCount(
-            //     crossAxisCount: 2,
-            //   crossAxisSpacing: 10,
-            //     mainAxisSpacing: 10,
-            //   ),
-
-            // itemBuilder: (context,index) => PilgrimsCard(
-            //   pilgrims: pilgrims[index],
-            //    press: () => Navigator.push(
-            //      context, MaterialPageRoute(
-            //        builder: (context) => PilgrimDetailPage(
-            //          pilgrims:pilgrims[index],
-            //          ),
-            //          ),
-            //    ),
-            // )
-            // ),
+     
           )
         ],
       ),

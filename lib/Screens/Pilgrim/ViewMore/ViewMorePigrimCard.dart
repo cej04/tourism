@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Pilgrim/View.dart';
+import 'package:ktmtourism/Screens/Pilgrim/ViewMore/View.dart';
 
 class ViewMoreCard extends StatelessWidget {
   final PilgrimViewMore pilgrimviewmore;
@@ -15,7 +15,7 @@ class ViewMoreCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Container(
-          //  height: MediaQuery.of(context).size.height/2.5,
+      
           padding: EdgeInsets.all(15),
           decoration: BoxDecoration(
               color: pilgrimviewmore.bgcolor,
@@ -33,10 +33,7 @@ class ViewMoreCard extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                //    Text(commercialviewmore.name,style: Theme.of(context).textTheme.headline6)
-                // ,
-
-                //Text(commercialviewmore.description,style: Theme.of(context).textTheme.subtitle1),
+               
 
                 Text(
                   pilgrimviewmore.title.toString(),
@@ -54,10 +51,7 @@ class ViewMoreCard extends StatelessWidget {
               ],
             ),
           ),
-          //     height: MediaQuery.of(context).size.height/18,
-          //    child:
-
-          // Image.asset(restaurant.image,)
+         
         ),
       ),
     );

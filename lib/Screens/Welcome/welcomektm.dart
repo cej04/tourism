@@ -10,7 +10,7 @@ class Welcome {
 }
 
 List<Welcome> welcome = [
-  Welcome(
+    Welcome(
     image: "assets/images/about300500.jpg",
     title: " About Kottayam",
     subtitle1: " About Kottayam and its Unique Characteristics",
