@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/KumarakomDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/AccessingKottayam/AccessingDetail.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/AccessingKumarakom/AccessingKumarakom.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/RoadBased/RoadBasedDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/Spotlight/SpotlightDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/WaterBased/WaterBasedDetail.dart';
@@ -83,7 +83,7 @@ Widget _tabSection(BuildContext context) {
           height: MediaQuery.of(context).size.height,
           child: TabBarView(children: [
              KumarakomDetails(),
-            const AccessingDetail(),
+            const AccessingKumarakomPage(),
             const SpotlightDetail(),
             const BoatRaceDetail(),
             const ResponsibleTourismDetail(),

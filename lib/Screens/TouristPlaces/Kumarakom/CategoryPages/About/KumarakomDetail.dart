@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/Kumarakom.dart';
-import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Screens/map_utils.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 import 'package:readmore/readmore.dart';
