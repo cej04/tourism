@@ -29,7 +29,7 @@ class AccessingKumarakomPage extends StatelessWidget {
                       tileColor: que.bgcolor,
                       leading: Icon(Icons.alt_route,color: que.iconColor,),
                       title: Text(que.title),
-                     // subtitle: Text(que.description),
+                    
                     ),
                   );
                 }),

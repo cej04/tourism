@@ -15,38 +15,10 @@ class ViewAllHistoric extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return 
     Scaffold(
-      //  appBar: PreferredSize(
-      //   preferredSize: const Size.fromHeight(50.0),
-      //   child: const MyAppBar(),
-      // ),
+      
       body: Column(
         children: [
-           // HeaderWithHistoric(size: size),
-          // Expanded(
-          //   child: GridView.builder(
-          //      padding: const EdgeInsets.all(20),
-          //     itemCount: historic.length,
-          //     gridDelegate:
-          //     const SliverGridDelegateWithFixedCrossAxisCount(
-          //       crossAxisCount: 2,
-          //     // mainAxisSpacing: kDefaultPadding,
-          //     crossAxisSpacing: 10,
-          //       mainAxisSpacing: 10,
-          //     // childAspectRatio: 0.75,
-          //     ),
-            
-          //   itemBuilder: (context,index) => HistoricCard(
-          //     historic: historic[index],
-          //      press: () => Navigator.push(
-          //        context, MaterialPageRoute(
-          //          builder: (context) => DestinationScreen(
-          //            destination:destinations[index],
-          //            ),
-          //            ),
-          //      ),
-          //   )
-          //   ),
-          //   )
+           
 
            Expanded(
             child: Container(
@@ -57,14 +29,12 @@ ListView.builder(
             return 
             
              Padding(
-               padding: const EdgeInsets.all(8.0),
+               padding: const EdgeInsets.only(left:25.0,right: 25.0,top: 25.0),
                child: GestureDetector(
                  
                  child: Container(
                    height: 200,
-                  //  margin:EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
-                  //  width: size.width * 0.8,
-                  //   height:185,
+                
                    decoration: BoxDecoration(
                      borderRadius:BorderRadius.circular(10),
                      image:DecorationImage(

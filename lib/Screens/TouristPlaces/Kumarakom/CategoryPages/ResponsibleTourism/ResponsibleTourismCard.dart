@@ -35,7 +35,7 @@ class ResponsibleTourismCard extends StatelessWidget {
                   height: 10,
                 ),
                 Text(responsibletourism.name,
-                    style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.headline6,
                     textAlign: TextAlign.center),
                 SizedBox(
                   height: 10,

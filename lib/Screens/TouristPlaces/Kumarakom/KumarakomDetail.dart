@@ -53,7 +53,6 @@ Widget _tabSection(BuildContext context) {
           indicatorColor: Colors.white,
           tabs: [
             Tab(icon: Icon(Icons.info), text: "About Kumarakom "),
-
             Tab(icon: Icon(Icons.alt_route), text: "Accessing Kumarakom "),
             Tab(
               icon: Icon(Icons.attractions_rounded),
@@ -79,10 +78,10 @@ Widget _tabSection(BuildContext context) {
           ],
         ),
         Container(
-          //Add this to give height
+  
           height: MediaQuery.of(context).size.height,
           child: TabBarView(children: [
-             KumarakomDetails(),
+            KumarakomDetails(),
             const AccessingKumarakomPage(),
             const SpotlightDetail(),
             const BoatRaceDetail(),

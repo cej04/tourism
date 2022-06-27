@@ -241,13 +241,13 @@ class Body extends StatelessWidget {
             ),
           ],
           bottom: TabBar(
+            isScrollable: true,
             tabs: [
               Tab(icon: Icon(Icons.water), text: "Kumarakom"),
               Tab(
                 icon: Icon(Icons.history_edu),
                 text: "Historic",
               ),
-
               Tab(
                 icon: Icon(Icons.nature_people_outlined),
                 text: "Natural/Scenic Beauty",
@@ -256,10 +256,6 @@ class Body extends StatelessWidget {
               Tab(
                   icon: Icon(Icons.self_improvement_outlined),
                   text: "Religious"),
-
-              // Tab(
-              //   text: "Mundakkayam",
-              // ),
             ],
           ),
         ),
