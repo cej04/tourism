@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/StayKtm/Commercial/ViewMore/KottayamViewMoreCard.dart';
 import 'package:ktmtourism/Screens/StayKtm/Commercial/ViewMore/viewMore.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
-import 'package:ktmtourism/Screens/restaurantcategory.dart';
+
 
 class KottayamViewMoreDetail extends StatefulWidget {
   const KottayamViewMoreDetail({
@@ -15,30 +15,23 @@ class KottayamViewMoreDetail extends StatefulWidget {
 
 class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
   var selected = 0;
-  late Category category;
+ 
   late Function callback;
   var tabindex = 0;
   final pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+  
     return Scaffold(
         backgroundColor: Colors.white,
         appBar:
         AppBar(
       elevation: 0,
-      // backgroundColor: backgroundColor,
       title:  Text(
         "Commercial Stay",
-        // style: TextStyle(color: Colors.black),
       ),
-      //  Row(
-      //   mainAxisAlignment:MainAxisAlignment.spaceEvenly,
-      //   children: [
-
-      //   ],
-      // ),
+     
       actions: [
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -47,15 +40,12 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
               child: Image.asset(
                 "assets/images/APPlogo2.png",
                 fit: BoxFit.contain,
-                // width: 70.0,
-                // height: 70.0,
+              
               )),
         ),
         PopupMenuButton(
           elevation: 5.0,
-          // icon: Icon(
-          //     Icons.more_vert), //don't specify icon if you want 3 dot menu
-          // color: Color(0xFF757575),
+         
 
           itemBuilder: (context) => [
             PopupMenuItem<int>(
@@ -71,7 +61,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "About Kottayam",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -88,9 +77,7 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                     width: 20,
                   ),
                   Text(
-                    "Tourist Places",
-                    //style: TextStyle(color: Colors.white),
-                  ),
+                    "Tourist Places",                  ),
                 ],
               ),
             ),
@@ -107,7 +94,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Stay in Kottayam",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -125,7 +111,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Main Pilgrim Centers",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -143,7 +128,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Culinary Delights",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -161,7 +145,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Produce",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -179,7 +162,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Festivals",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -197,7 +179,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Art & Culture",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -215,7 +196,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "How to Reach",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -233,7 +213,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Restaurants",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -251,7 +230,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Shopping",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -269,7 +247,6 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
                   ),
                   Text(
                     "Hospital",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -277,13 +254,9 @@ class _KottayamViewMoreDetailState extends State<KottayamViewMoreDetail> {
           ],
           onSelected: (item) => SelectedItem(context, item),
         ),
-        //  ChangeThemeButtonWidget(),
       ],
     ), 
-        // PreferredSize(
-        //   preferredSize: const Size.fromHeight(kToolbarHeight),
-        //   child: const MyAppBar(),
-        // ),
+       
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -372,13 +345,7 @@ class ListViewKottayam extends StatelessWidget {
           itemCount: commercialviewmore.length,
           itemBuilder: (context, index) => kottayamViewMoreCard(
               commercialviewmore: commercialviewmore[index], press: () {}
-              //  => Navigator.push(
-              //    context, MaterialPageRoute(
-              //      builder: (context) => PilgrimsBodyPage(
-              //        pilgrims:pilgrims[index],
-              //        ),
-              //        ),
-              //  ),
+              
               )),
     );
   }
@@ -397,13 +364,7 @@ class ListViewChanganacherry extends StatelessWidget {
           itemBuilder: (context, index) => ChanganacherryViewMoreCard(
               viewmorechanganacherry: viewmorechanganacherry[index],
               press: () {}
-              //  => Navigator.push(
-              //    context, MaterialPageRoute(
-              //      builder: (context) => PilgrimsBodyPage(
-              //        pilgrims:pilgrims[index],
-              //        ),
-              //        ),
-              //  ),
+             
               )),
     );
   }
@@ -421,13 +382,7 @@ class ListViewEttumanoor extends StatelessWidget {
           itemCount: viewmorettumanoor.length,
           itemBuilder: (context, index) => EttumanoorViewMoreCard(
               viewmorettumanoor: viewmorettumanoor[index], press: () {}
-              //  => Navigator.push(
-              //    context, MaterialPageRoute(
-              //      builder: (context) => PilgrimsBodyPage(
-              //        pilgrims:pilgrims[index],
-              //        ),
-              //        ),
-              //  ),
+             
               )),
     );
   }
@@ -445,13 +400,7 @@ class ListViewVaikom extends StatelessWidget {
           itemCount: viewmoreVaikom.length,
           itemBuilder: (context, index) => VaikomViewMoreCard(
               viewmoreVaikom: viewmoreVaikom[index], press: () {}
-              //  => Navigator.push(
-              //    context, MaterialPageRoute(
-              //      builder: (context) => PilgrimsBodyPage(
-              //        pilgrims:pilgrims[index],
-              //        ),
-              //        ),
-              //  ),
+              
               )),
     );
   }
@@ -469,13 +418,7 @@ class ListViewMundakkayam extends StatelessWidget {
           itemCount: viewmoremundakkayam.length,
           itemBuilder: (context, index) => MundakkayamViewMoreCard(
               viewmoremundakkayam: viewmoremundakkayam[index], press: () {}
-              //  => Navigator.push(
-              //    context, MaterialPageRoute(
-              //      builder: (context) => PilgrimsBodyPage(
-              //        pilgrims:pilgrims[index],
-              //        ),
-              //        ),
-              //  ),
+            
               )),
     );
   }

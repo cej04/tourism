@@ -36,12 +36,12 @@ class ArtCultureBodyPage extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-              // borderRadius: BorderRadius.circular(10),
+             
               image: DecorationImage(
                 image: AssetImage(artculture.image),
                 fit: BoxFit.fill,
 
-                //alignment: Alignment.topCenter,
+                
               ),
             ),
           ),
@@ -51,40 +51,7 @@ class ArtCultureBodyPage extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                // Container(
-
-                //     color: Colors.grey,
-                //     //crossAxisAlignment:CrossAxisAlignment.end,
-                //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //     child: Row(
-                //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //       children: [
-                //         Icon(Icons.calendar_view_month_sharp  ),
-                //         Text(
-                //           "Celebrated on/during: ",
-                //           style: Theme.of(context).textTheme.headline6,
-                //         ),
-                //         Text(
-                //           artculture.type,
-                //           style: Theme.of(context).textTheme.headline6,
-                //         ),
-                //       ],
-                //     )
-                //     ),
-                // SizedBox(height: 20,),
-                // Padding(
-                //   padding: const EdgeInsets.all(kDefaultPadding),
-                //   child: Row(
-                //     //crossAxisAlignment:CrossAxisAlignment.end,
-                //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //     children: [
-                //       Text(
-                //         "Description",
-                //         style: Theme.of(context).textTheme.headline6,
-                //       ),
-                //     ],
-                //   ),
-                // ),
+               
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -106,13 +73,11 @@ class ArtCultureBodyPage extends StatelessWidget {
                   ),
                 )
 
-                //Text(product.description,overflow: TextOverflow.visible,),
+                
               ],
             ),
           ),
-          // Container(
-          //   child: Text(product.description),
-          // ),
+         
         ],
       ),
     );

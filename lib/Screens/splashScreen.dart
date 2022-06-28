@@ -11,23 +11,11 @@ class Splash extends StatelessWidget {
       duration: 3000,
       imageSize: 710,
       imageSrc: "assets/images/flash1.png",
-      // text: "Kottayam Tourism",
-      // textType: TextType.TyperAnimatedText,
-      // textStyle: Theme.of(context).textTheme.headline5,
+    
 
       backgroundColor: Colors.white,
     );
 
-    //   (
-    //     seconds: 14,
-    // navigateAfterSeconds: new HomePage(),
-    // title: new Text('Welcome In SplashScreen'),
-    // image: new Image.asset("assets/images/APPlogo3.png"),
-    // backgroundColor: Colors.white,
-    // styleTextUnderTheLoader: new TextStyle(),
-    // photoSize: 100.0,
-    // loaderColor: Colors.red
-
-    //   );
+   
   }
 }
