@@ -3,7 +3,7 @@ import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwned.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import '../../../Utils/constants.dart';
 
-//import '../../culinary_bodyPage.dart';
+
 
 class StateOwnedDetailsPage extends StatelessWidget {
   final StateOwned stateowned;
@@ -20,10 +20,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              // const SizedBox(width: 10,),
-              // Text(commercial.title,
-              //     style:
-              //         const TextStyle(fontWeight: FontWeight.bold, fontSize: 20,color: Colors.white)),
+ 
               Padding(
                 padding: const EdgeInsets.all(kDefaultPadding),
                 child: Container(
@@ -41,12 +38,12 @@ class StateOwnedDetailsPage extends StatelessWidget {
                       blurRadius: 6.0,
                     ),
                   ],
-                  //   borderRadius: BorderRadius.circular(10),
+               
                   image: DecorationImage(
                     image: AssetImage(stateowned.image),
                     fit: BoxFit.fill,
 
-                    //alignment: Alignment.topCenter,
+                  
                   ),
                 ),
               ),
@@ -63,7 +60,6 @@ class StateOwnedDetailsPage extends StatelessWidget {
                               Icons.location_on,
                               color: Colors.red,
                             ),
-                            // title: Text('Address',style: Theme.of(context).textTheme.headline6,),
                             subtitle: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(stateowned.address,

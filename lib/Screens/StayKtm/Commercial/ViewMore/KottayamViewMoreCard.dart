@@ -13,7 +13,8 @@ class kottayamViewMoreCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Padding(
-        padding: const EdgeInsets.all(25.0),
+     padding: const EdgeInsets.only(
+                          left: 25.0, right: 25.0, top: 25.0),
         child: Container(
           // height: MediaQuery.of(context).size.height/3,
           padding: EdgeInsets.all(15),
@@ -106,7 +107,8 @@ class ChanganacherryViewMoreCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Padding(
-        padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.only(
+                          left: 25.0, right: 25.0, top: 25.0),
         child: Container(
           // height: MediaQuery.of(context).size.height/4,
           padding: EdgeInsets.all(15),
@@ -181,7 +183,8 @@ class EttumanoorViewMoreCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Padding(
-        padding: const EdgeInsets.all(25.0),
+       padding: const EdgeInsets.only(
+                          left: 25.0, right: 25.0, top: 25.0),
         child: Container(
           //height: MediaQuery.of(context).size.height/4,
           padding: EdgeInsets.all(15),
@@ -256,7 +259,8 @@ class VaikomViewMoreCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Padding(
-        padding: const EdgeInsets.all(25.0),
+        padding: const EdgeInsets.only(
+                          left: 25.0, right: 25.0, top: 25.0),
         child: Container(
           height: MediaQuery.of(context).size.height / 4,
           padding: EdgeInsets.all(15),
@@ -331,7 +335,8 @@ class MundakkayamViewMoreCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Padding(
-        padding: const EdgeInsets.all(25.0),
+     padding: const EdgeInsets.only(
+                          left: 25.0, right: 25.0, top: 25.0),
         child: Container(
           //height: MediaQuery.of(context).size.height/4,
           padding: EdgeInsets.all(15),

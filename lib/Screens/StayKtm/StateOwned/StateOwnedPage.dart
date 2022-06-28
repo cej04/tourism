@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Headers/header_stateOwned.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwned.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwnedDetail.dart';
-import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
 class StateOwnedPage extends StatefulWidget {
   const StateOwnedPage({Key? key}) : super(key: key);
@@ -17,39 +15,29 @@ class _StateOwnedPageState extends State<StateOwnedPage> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      // appBar: PreferredSize(
-      //   preferredSize: const Size.fromHeight(kToolbarHeight),
-      //   child: const MyAppBar(),
-      // ),
       body: Column(
         children: [
-         // HeaderWithStateOwned(size: size),
           Expanded(
               child: Container(
             child: ListView.builder(
                 itemCount: stateowned.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                      padding: const EdgeInsets.all(25.0),
+                      padding: const EdgeInsets.only(
+                          left: 25.0, right: 25.0, top: 25.0),
                       child: GestureDetector(
                         child: Container(
                             height: 200,
-                            //  margin:EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
-                            //  width: size.width * 0.8,
-                            //   height:185,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
                                     fit: BoxFit.fill,
                                     image:
                                         AssetImage(stateowned[index].image))),
-                            alignment: Alignment
-                                .bottomCenter, // This aligns the child of the container
+                            alignment: Alignment.bottomCenter,
                             child: Padding(
-                                padding: EdgeInsets.only(
-                                    left: 15.0,
-                                    bottom:
-                                        15), //some spacing to the child from bottom
+                                padding:
+                                    EdgeInsets.only(left: 15.0, bottom: 15),
                                 child:
                                     Text(stateowned[index].title.toUpperCase(),
                                         style: Theme.of(context)
@@ -67,36 +55,10 @@ class _StateOwnedPageState extends State<StateOwnedPage> {
                               builder: (context) => StateOwnedDetailsPage(
                                 stateowned: stateowned[index],
                               ),
-                              //            ),
                             )),
                       ));
                 }),
           ))
-          // Expanded(
-          //   child: GridView.builder(
-          //      padding: const EdgeInsets.all(20),
-          //     itemCount: stateowned.length,
-          //     gridDelegate:
-          //     const SliverGridDelegateWithFixedCrossAxisCount(
-          //       crossAxisCount: 2,
-          //     // mainAxisSpacing: kDefaultPadding,
-          //     crossAxisSpacing: 10,
-          //       mainAxisSpacing: 10,
-          //     // childAspectRatio: 0.75,
-          //     ),
-
-          //   itemBuilder: (context,index) => StateOwnedCard(
-          //     stateowned: stateowned[index],
-          //      press: () => Navigator.push(
-          //        context, MaterialPageRoute(
-          //          builder: (context) => StateOwnedDetailsPage(
-          //            stateowned:stateowned[index],
-          //            ),
-          //            ),
-          //      ),
-          //   )
-          //   ),
-          //   )
         ],
       ),
     );
