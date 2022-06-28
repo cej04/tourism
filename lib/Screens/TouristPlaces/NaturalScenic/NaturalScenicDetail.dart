@@ -42,31 +42,9 @@ class NaturalScenicDetail extends StatelessWidget {
                   image: AssetImage(naturalscenic.imageU),
                   fit: BoxFit.fill,
 
-                  //alignment: Alignment.topCenter,
                 ),
               ),
-              //           child: new Stack(
-              //     children: <Widget>[
-
-              //       new Positioned(
-              //         right: 0.0,
-              //         bottom: 0.0,
-              //         child:
-              //         FloatingActionButton.extended(
-
-              //   onPressed: () {
-              //    MapUtils.openMap(naturalscenic.lat, naturalscenic.long);
-
-              //   },
-
-              //   label: const Text(''),
-              //   icon: const Icon(Icons.location_on_rounded,color: Colors.teal,size: 50,),
-              //   backgroundColor: Colors.white,
-              //   elevation: 0,
-              // ),
-              //       ),
-              //     ],
-              //   ),
+           
             ),
             GestureDetector(
               onTap: () {
@@ -74,12 +52,8 @@ class NaturalScenicDetail extends StatelessWidget {
               },
               child: Container(
 
-                  // width: MediaQuery.of(context).size.width/6.5,
                   height: MediaQuery.of(context).size.height / 14.5,
-                  //                 duration: const Duration(seconds: 2),
-                  // foregroundDecoration: BoxDecoration(
-                  //   //color: _isInitialValue ? Colors.blue : Colors.red,
-                  //   border: Border.all(width: _isInitialValue ? 0 : 10),
+                
                   // ),
                   child: Image.asset(
                     'assets/images/location1.png',
@@ -92,39 +66,7 @@ class NaturalScenicDetail extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  // Container(
-
-                  //     color: Colors.grey,
-                  //     //crossAxisAlignment:CrossAxisAlignment.end,
-                  //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  //     child: Row(
-                  //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  //       children: [
-                  //         Icon(Icons.calendar_view_month_sharp  ),
-                  //         Text(
-                  //           "Celebrated on/during: ",
-                  //           style: Theme.of(context).textTheme.headline6,
-                  //         ),
-                  //         Text(
-                  //           welcome.type,
-                  //           style: Theme.of(context).textTheme.headline6,
-                  //         ),
-                  //       ],
-                  //     )),
-                  // SizedBox(height: 20,),
-                  // Padding(
-                  //   padding: const EdgeInsets.all(kDefaultPadding),
-                  //   child: Row(
-                  //     //crossAxisAlignment:CrossAxisAlignment.end,
-                  //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  //     children: [
-                  //       Text(
-                  //         "Description",
-                  //         style: Theme.of(context).textTheme.headline6,
-                  //       ),
-                  //     ],
-                  //   ),
-                  // ),
+             
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
@@ -152,25 +94,12 @@ class NaturalScenicDetail extends StatelessWidget {
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.blue))
-                          // Text(
-                          //   festivals.description,
-                          //   overflow: TextOverflow.visible,
-                          //   textAlign: TextAlign.justify,
-                          // ),
+                          
                           ),
                     ),
                   ),
 
-                  // GridView.builder(gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                  //                 crossAxisCount: 2,
-                  //               // mainAxisSpacing: kDefaultPadding,
-                  //               crossAxisSpacing: 10,
-                  //                 mainAxisSpacing: 10,
-                  //               // childAspectRatio: 0.75,
-                  //               ),  itemBuilder: (BuildContext context, int index) {
-
-                  //   },
-                  //   ),
+                
 
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -179,10 +108,7 @@ class NaturalScenicDetail extends StatelessWidget {
                       children: [
                         Text("How To Reach",
                             style: Theme.of(context).textTheme.titleSmall),
-                        // GestureDetector(
-                        //     //  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllScreen())),
-                        //     child: Text("View All",style: TextStyle(
-                        //   color: Colors.black, fontWeight: FontWeight.bold)))
+                    
                       ],
                     ),
                   ),
@@ -194,7 +120,7 @@ class NaturalScenicDetail extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         children: [
                           Container(
-                            // margin: EdgeInsets.symmetric(vertical: 10),
+                            
                             width: MediaQuery.of(context).size.width / 3,
                             height: MediaQuery.of(context).size.height,
                             color: Colors.teal[100],
@@ -209,8 +135,7 @@ class NaturalScenicDetail extends StatelessWidget {
                                 ),
                               ),
 
-                              //   elevation: 20,
-                              //color: Colors.teal[100],
+                           
                               child: Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -244,7 +169,7 @@ class NaturalScenicDetail extends StatelessWidget {
                                   topRight: Radius.circular(8.0),
                                 ),
                               ),
-                              // color: Colors.teal[100],
+                           
                               child: Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -278,7 +203,7 @@ class NaturalScenicDetail extends StatelessWidget {
                                   topRight: Radius.circular(8.0),
                                 ),
                               ),
-                              //  color: Colors.teal[100],
+                         
                               child: Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -298,26 +223,7 @@ class NaturalScenicDetail extends StatelessWidget {
                               },
                             ),
                           ),
-                          // AspectRatio(
-                          //   aspectRatio: 1 / 1,
-                          //   child: Container(
-                          //     margin: EdgeInsets.only(right: 15),
-                          //     decoration: BoxDecoration(
-                          //         borderRadius: BorderRadius.circular(10),
-                          //         color: Colors.white),
-                          //     child: Icon(Icons.train),
-                          //   ),
-                          // ),
-                          // AspectRatio(
-                          //   aspectRatio: 1 / 1,
-                          //   child: Container(
-                          //     margin: EdgeInsets.only(right: 15),
-                          //     decoration: BoxDecoration(
-                          //         borderRadius: BorderRadius.circular(10),
-                          //         color: Colors.white),
-                          //     child: Icon(Icons.commute),
-                          //   ),
-                          // )
+                       
                         ],
                       ),
                     ),
@@ -330,10 +236,7 @@ class NaturalScenicDetail extends StatelessWidget {
                       children: [
                         Text("Photo Gallery",
                             style: Theme.of(context).textTheme.titleSmall),
-                        // GestureDetector(
-                        //     //  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ViewAllScreen())),
-                        //     child: Text("View All",style: TextStyle(
-                        //   color: Colors.black, fontWeight: FontWeight.bold)))
+                       
                       ],
                     ),
                   ),
@@ -349,11 +252,10 @@ class NaturalScenicDetail extends StatelessWidget {
                                 naturalscenic.NaturalScenicImg[index];
 
                             return Row(
-                              //     crossAxisAlignment: CrossAxisAlignment.center,
-                              //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                             
                               children: [
                                 Container(
-                                    //alignment: Alignment.center,
+                                    
                                     width:
                                         MediaQuery.of(context).size.width / 3,
                                     height: MediaQuery.of(context).size.height,
@@ -361,47 +263,7 @@ class NaturalScenicDetail extends StatelessWidget {
                                       activity,
                                       fit: BoxFit.cover,
                                     )),
-                                // Container(
-
-                                //   height: 100,
-
-                                //   width:120,
-
-                                //   child: Image.asset(activity.gallery[1],
-                                //   fit: BoxFit.cover,)
-
-                                // ),
-                                //  Container(
-
-                                //   height: 100,
-
-                                //   width:120,
-
-                                //   child: Image.asset(activity.gallery[2],
-                                //   fit: BoxFit.cover,)
-
-                                // ),
-                                // Container(
-
-                                //   height: 100,
-
-                                //   width:120,
-
-                                //   child: Image.asset(activity.gallery[3],
-
-                                //   fit: BoxFit.cover,)
-
-                                // ),
-                                // Container(
-
-                                //   height: 100,
-
-                                //   width:120,
-
-                                //   child: Image.asset(activity.gallery[4],
-                                //   fit: BoxFit.cover,)
-
-                                // ),
+                              
                               ],
                             );
                           },
@@ -416,13 +278,11 @@ class NaturalScenicDetail extends StatelessWidget {
                     height: 20,
                   ),
 
-                  //Text(product.description,overflow: TextOverflow.visible,),
+            
                 ],
               ),
             ),
-            // Container(
-            //   child: Text(product.description),
-            // ),
+           
           ],
         ));
   }

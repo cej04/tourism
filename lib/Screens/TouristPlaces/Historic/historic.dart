@@ -5,7 +5,7 @@ class Historic {
   String Desc, AirDesc, TrainDesc, RoadDesc, title;
   double lat, long;
 
-  List<String> HistoricImages;
+  List<String> activities;
 
   Historic(
       {required this.imageU,
@@ -16,7 +16,7 @@ class Historic {
       required this.RoadDesc,
       required this.lat,
       required this.long,
-      required this.HistoricImages});
+      required this.activities});
 }
 
 
@@ -32,7 +32,7 @@ List<Historic> historic = [
       TrainDesc:
           "Railway Station Kottayam (43 Km)\n\n (Enquiry : 0481-2563535, 2567360, 2567491)",
       RoadDesc: "KSRTC, Kottayam (45 Km)\n\n (Enquiry: 0481 2562908)",
-      HistoricImages: [
+      activities: [
         "assets/images/poonjarkottaram.jpg",
         "assets/images/poonjar1.jpg",
         "assets/images/poonjar2.jpg"
@@ -40,21 +40,20 @@ List<Historic> historic = [
       lat: 9.6689266,
       long: 76.79698),
   Historic(
-    imageU: "assets/images/juma.jpg",
-    title: "Thazhathangadi Juma Masjid",
-    Desc:
-        "The Thazhathangadi Juma Masjid is one of the oldest mosques in India (about 1,000 years old). It is believed that Habib Dinar (son of Malik Dinar who introduced Kerala to Islam) constructed the masjid. It is built in the traditional Kerala style of architecture. It is famous for its richness of architecture, wood caring and the beauty. This mosque is situated on the bank of Meenachil river.",
-    AirDesc:
-        "Nearest airports are :\n\nCochin International Airport, \n\nErnakulam District (90 Km)& Trivandrum International Airport,\n\n Thiruvananthapuram District (153.5 Km)",
-    TrainDesc:
-        "Railway Station Kottayam (4 Km)\n\n (Enquiry : 0481-2563535, 2567360, 2567491)",
-    RoadDesc: "KSRTC, Kottayam (4 Km) \n\n(Enquiry: 0481 2562908)",
-    HistoricImages: [
-      "assets/images/juma.jpg",
-      "assets/images/jumaHeritage1.jpg",
-      "assets/images/jumaHeritage2.jpg"
-    ],
-    lat: 9.598417,
-    long: 76.50551,
-  ),
+      imageU: "assets/images/juma.jpg",
+      title: "Thazhathangadi Juma Masjid",
+      Desc:
+          "The Thazhathangadi Juma Masjid is one of the oldest mosques in India (about 1,000 years old). It is believed that Habib Dinar (son of Malik Dinar who introduced Kerala to Islam) constructed the masjid. It is built in the traditional Kerala style of architecture. It is famous for its richness of architecture, wood caring and the beauty. This mosque is situated on the bank of Meenachil river.",
+      AirDesc:
+          "Nearest airports are :\n\nCochin International Airport, \n\nErnakulam District (90 Km)& Trivandrum International Airport,\n\n Thiruvananthapuram District (153.5 Km)",
+      TrainDesc:
+          "Railway Station Kottayam (4 Km)\n\n (Enquiry : 0481-2563535, 2567360, 2567491)",
+      RoadDesc: "KSRTC, Kottayam (4 Km) \n\n(Enquiry: 0481 2562908)",
+      activities: [
+        "assets/images/juma.jpg",
+        "assets/images/jumaHeritage1.jpg",
+        "assets/images/jumaHeritage2.jpg"
+      ],
+      lat: 9.59862752669,
+      long: 76.5055463601),
 ];
