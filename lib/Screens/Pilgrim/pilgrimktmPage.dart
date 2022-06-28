@@ -272,45 +272,93 @@ class PilgrimKtmPage extends StatelessWidget {
                 itemCount: pilgrims.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                      padding: const EdgeInsets.all(25.0),
-                      child: GestureDetector(
-                        child: Container(
-                            height: 200,
-                            
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.fill,
-                                    image: AssetImage(pilgrims[index].image))),
-                            alignment: Alignment
-                                .bottomCenter, 
-                            child: Padding(
-                                padding: EdgeInsets.only(
-                                    left: 15.0,
-                                    bottom:
-                                        15), 
-                                child: Text(
-                                  pilgrims[index].title.toUpperCase(),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .labelMedium
-                                      ?.apply(
-                                        color: Colors.white,
-                                        backgroundColor:
-                                            Colors.black.withOpacity(0.5),
-                                      )
-                                      .copyWith(letterSpacing: 1),
-                                  textAlign: TextAlign.center,
-                                ))),
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => PilgrimsBodyPage(
-                                pilgrims: pilgrims[index],
+                        padding: const EdgeInsets.only(left:25.0,right: 25.0,top: 25.0),
+                        child: GestureDetector(
+                          child: 
+                          Card(
+                          color: Colors.grey[200],
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              Image.asset(pilgrims[index].image),
+                              ListTile(
+                           
+                                title: Text(pilgrims[index].title  ,style: Theme.of(context).textTheme.headline6?.copyWith(
+                      color: Colors.black, fontWeight: FontWeight.bold)),
+                      
+                      
+                                subtitle: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                  
+                                    pilgrims[index].subtitle,
+                                   textAlign: TextAlign.justify,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2
+                                ?.apply(
+                                  color: Colors.black,
+                                )
+                                .copyWith(height: 1.2),
+                                  ),
+                                ),
+                                trailing: Icon(Icons.navigate_next),
                               ),
-                              //            ),
-                            )),
-                      ));
+                            ],
+                          ),
+                        ),
+                          
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PilgrimsBodyPage(
+                                  pilgrims: pilgrims[index],
+                                ),
+                              )),
+                        ));
+                  // return Padding(
+                  //     padding: const EdgeInsets.all(25.0),
+                  //     child: GestureDetector(
+                  //       child: Container(
+                  //           height: 200,
+                            
+                  //           decoration: BoxDecoration(
+                  //               borderRadius: BorderRadius.circular(10),
+                  //               image: DecorationImage(
+                  //                   fit: BoxFit.fill,
+                  //                   image: AssetImage(pilgrims[index].image))),
+                  //           alignment: Alignment
+                  //               .bottomCenter, 
+                  //           child: Padding(
+                  //               padding: EdgeInsets.only(
+                  //                   left: 15.0,
+                  //                   bottom:
+                  //                       15), 
+                  //               child: Text(
+                  //                 pilgrims[index].title.toUpperCase(),
+                  //                 style: Theme.of(context)
+                  //                     .textTheme
+                  //                     .labelMedium
+                  //                     ?.apply(
+                  //                       color: Colors.white,
+                  //                       backgroundColor:
+                  //                           Colors.black.withOpacity(0.5),
+                  //                     )
+                  //                     .copyWith(letterSpacing: 1),
+                  //                 textAlign: TextAlign.center,
+                  //               ))),
+                  //       onTap: () => Navigator.push(
+                  //           context,
+                  //           MaterialPageRoute(
+                  //             builder: (context) => PilgrimsBodyPage(
+                  //               pilgrims: pilgrims[index],
+                  //             ),
+                  //             //            ),
+                  //           )),
+                  //     ));
                 }),
           ))
         ],
