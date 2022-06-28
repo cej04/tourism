@@ -13,7 +13,6 @@ class CommercialPage extends StatefulWidget {
 class _CommercialPageState extends State<CommercialPage> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: Column(
@@ -36,12 +35,12 @@ class _CommercialPageState extends State<CommercialPage> {
                                     image:
                                         AssetImage(commercial[index].image))),
                             alignment: Alignment
-                                .bottomCenter, // This aligns the child of the container
+                                .bottomCenter,
                             child: Padding(
                                 padding: EdgeInsets.only(
                                     left: 15.0,
                                     bottom:
-                                        15), //some spacing to the child from bottom
+                                        15), 
                                 child:
                                     Text(commercial[index].title.toUpperCase(),
                                         style: Theme.of(context)

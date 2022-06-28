@@ -19,11 +19,9 @@ class _HomePageState extends State<HomePage> {
         child: MyAppBar(),
       ),
       body:
-          //MainHomeSample(),
-
-          //SampleMain(),
+         
           MainSample2Page(),
-      // MainPage(),
+
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -73,20 +71,6 @@ class _HomePageState extends State<HomePage> {
               },
             ),
 
-            // ListTile(
-            //   leading: Icon(Icons.question_answer),
-            //   title: Text('GoogleMap'),
-            //   onTap: () {
-            //     Navigator.pushNamed(context, '/GoogleMap');
-            //   },
-            // ),
-            //    ListTile(
-            //   leading: Icon(Icons.question_answer),
-            //   title: Text('kumarakom'),
-            //   onTap: () {
-            //     Navigator.pushNamed(context, '/kumarakom');
-            //   },
-            // ),
           ],
         ),
       ),

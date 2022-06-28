@@ -37,28 +37,19 @@ class _MainSample2PageState extends State<MainSample2Page> {
     ];
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      //  backgroundColor: Colors.grey,
-      //  appBar: PreferredSize(
-      //   preferredSize: const Size.fromHeight(60.0),
-
-      //     child: const MyAppBar(),
-
-      // ),
+    
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            //  HeaderWithHowToReach(size: size),
+           
             Container(
-              // color: Colors.grey[350],
               padding: EdgeInsets.symmetric(
                 vertical: 20.0,
               ),
               child: CarouselSlider(
                 items: [
-                  //1st Image of Slider
-
-                  //2nd Image of Slider
+                 
                   Container(
                       margin: EdgeInsets.all(6.0),
                       decoration: BoxDecoration(
@@ -69,12 +60,12 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         ),
                       ),
                       alignment: Alignment
-                          .bottomCenter, // This aligns the child of the container
+                          .bottomCenter,
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 15.0,
                               bottom:
-                                  15), //some spacing to the child from bottom
+                                  15), 
                           child: Text("Heritage Destinations".toUpperCase(),
                               style: Theme.of(context)
                                   .textTheme
@@ -96,12 +87,12 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         ),
                       ),
                       alignment: Alignment
-                          .bottomCenter, // This aligns the child of the container
+                          .bottomCenter, 
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 15.0,
                               bottom:
-                                  15), //some spacing to the child from bottom
+                                  15),
                           child: Text("Backwaters".toUpperCase(),
                               style: Theme.of(context)
                                   .textTheme
@@ -113,7 +104,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
                                   )
                                   .copyWith(letterSpacing: 1)))),
 
-                  //3rd Image of Slider
+                 
                   Container(
                       margin: EdgeInsets.all(6.0),
                       decoration: BoxDecoration(
@@ -125,12 +116,12 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         ),
                       ),
                       alignment: Alignment
-                          .bottomCenter, // This aligns the child of the container
+                          .bottomCenter, 
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 15.0,
                               bottom:
-                                  15), //some spacing to the child from bottom
+                                  15),
                           child: Text("Waterfalls".toUpperCase(),
                               style: Theme.of(context)
                                   .textTheme
@@ -142,7 +133,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
                                   )
                                   .copyWith(letterSpacing: 1)))),
 
-                  //4th Image of Slider
+                
                   Container(
                       margin: EdgeInsets.all(6.0),
                       decoration: BoxDecoration(
@@ -153,11 +144,11 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         ),
                       ),
                       alignment: Alignment
-                          .bottomCenter, // This aligns the child of the container
+                          .bottomCenter,
                       child: Padding(
                           padding: EdgeInsets.only(left: 15.0, bottom: 15),
 
-                          //some spacing to the child from bottom
+                         
                           child: Text("Worship".toUpperCase(),
                               style: Theme.of(context)
                                   .textTheme
@@ -169,7 +160,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
                                   )
                                   .copyWith(letterSpacing: 1)))),
 
-                  //5th Image of Slider
+              
                   Container(
                     margin: EdgeInsets.all(6.0),
                     decoration: BoxDecoration(
@@ -180,7 +171,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
                       ),
                     ),
                     alignment: Alignment
-                        .bottomCenter, // This aligns the child of the container
+                        .bottomCenter, 
                     child: Padding(
                         padding: EdgeInsets.only(left: 15.0, bottom: 15),
                         child: Text("Hill Stations".toUpperCase(),
@@ -193,7 +184,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
                                       Colors.black.withOpacity(0.5),
                                 )
                                 .copyWith(letterSpacing: 1))
-                        //some spacing to the child from bottom
+                     
                         ),
                   ),
                   Container(
@@ -206,12 +197,12 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         ),
                       ),
                       alignment: Alignment
-                          .bottomCenter, // This aligns the child of the container
+                          .bottomCenter, 
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 15.0,
                               bottom:
-                                  15), //some spacing to the child from bottom
+                                  15), 
                           child: Text("Agriculture".toUpperCase(),
                               style: Theme.of(context)
                                   .textTheme
@@ -233,12 +224,12 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         ),
                       ),
                       alignment: Alignment
-                          .bottomCenter, // This aligns the child of the container
+                          .bottomCenter, 
                       child: Padding(
                           padding: EdgeInsets.only(
                               left: 15.0,
                               bottom:
-                                  15), //some spacing to the child from bottom
+                                  15), 
                           child: Text("Wildlife".toUpperCase(),
                               style: Theme.of(context)
                                   .textTheme
@@ -264,18 +255,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
                 ),
               ),
             ),
-            //       SizedBox(height: 20,),
-            // TextLiquidFill(
-            //   text: 'Welcome To Kottayam',
-            //   waveColor: Colors.teal,
-            //  boxBackgroundColor:Colors.white,
-            //  boxHeight: 50,
-            //   textStyle: TextStyle(
-            //   fontSize: 24.0,
-            //   fontWeight: FontWeight.bold,
-            //   ),
-
-            // ),
+           
             SizedBox(
               height: 15,
             ),
@@ -283,7 +263,6 @@ class _MainSample2PageState extends State<MainSample2Page> {
             SizedBox(
               height: 15,
             ),
-            //SizedBox(height: 50), //HeaderWithHowToReach(size: size),
             GridView.builder(
                 shrinkWrap: true,
                 // padding: const EdgeInsets.all(20),

@@ -20,10 +20,7 @@ class commercialDetailsPage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              // const SizedBox(width: 10,),
-              // Text(commercial.title,
-              //     style:
-              //         const TextStyle(fontWeight: FontWeight.bold, fontSize: 20,color: Colors.white)),
+             
               Padding(
                 padding: const EdgeInsets.all(kDefaultPadding),
                 child: Container(
@@ -41,12 +38,12 @@ class commercialDetailsPage extends StatelessWidget {
                       blurRadius: 6.0,
                     ),
                   ],
-                  //  borderRadius: BorderRadius.circular(10),
+              
                   image: DecorationImage(
                     image: AssetImage(commercial.image),
                     fit: BoxFit.fill,
 
-                    //alignment: Alignment.topCenter,
+                    
                   ),
                 ),
               ),
@@ -63,7 +60,7 @@ class commercialDetailsPage extends StatelessWidget {
                               Icons.location_on,
                               color: Colors.red,
                             ),
-                            //  title: Text('Address',style: Theme.of(context).textTheme.headline6,),
+                          
                             subtitle: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(commercial.address,
@@ -75,7 +72,6 @@ class commercialDetailsPage extends StatelessWidget {
                               Icons.local_phone_rounded,
                               color: Colors.grey,
                             ),
-                            // title: Text('Phone',style: Theme.of(context).textTheme.headline6,),
                             subtitle: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(commercial.phone.toString(),
@@ -87,7 +83,6 @@ class commercialDetailsPage extends StatelessWidget {
                               Icons.mail_outline_rounded,
                               color: Colors.green,
                             ),
-                            //title: Text('Email',style: Theme.of(context).textTheme.headline6,),
                             subtitle: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(commercial.email.toString(),
@@ -99,145 +94,22 @@ class commercialDetailsPage extends StatelessWidget {
                               Icons.web,
                               color: Colors.red,
                             ),
-                            //title: Text('Website',style: Theme.of(context).textTheme.headline6,),
                             subtitle: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(commercial.website.toString(),
                                   style: TextStyle(color: Colors.blue)),
                             ),
                           ),
-                          //  ListTile(
-                          //  // leading: Icon(Icons.post_add_outlined,color: Colors.orange,),
-                          //   //title: Text('Pincode',style: Theme.of(context).textTheme.headline6,),
-                          //   subtitle: Padding(
-                          //     padding: const EdgeInsets.all(8.0),
-                          //     child: Text(commercial.pin.toString(),style: TextStyle(color: Colors.blue)),
-                          //   ),
-                          // ),
+                         
                         ],
                       ),
                     ),
 
-                    //     Card(
-                    //        child: Column(
-                    // mainAxisSize: MainAxisSize.min,
-                    // children: <Widget>[
-                    //    ListTile(
-                    //     leading: Icon(Icons.push_pin_rounded ,color: Colors.orange,),
-                    //     title: Text('Pincode',style: Theme.of(context).textTheme.headline6,),
-                    //     subtitle: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Text(commercial.pin.toString(),style: TextStyle(color: Colors.blue)),
-                    //     ),
-                    //   ),
-                    // ],
-                    //   ),
-                    //     ),
-                    //      Card(
-                    //        child: Column(
-                    // mainAxisSize: MainAxisSize.min,
-                    // children: <Widget>[
-                    //    ListTile(
-                    //     leading: Icon(Icons.local_phone_rounded ,color: Colors.grey,),
-                    //     title: Text('Phone',style: Theme.of(context).textTheme.headline6,),
-                    //     subtitle: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Text(commercial.phone.toString(),style: TextStyle(color: Colors.blue)),
-                    //     ),
-                    //   ),
-                    // ],
-                    //   ),
-                    //     ),
-                    //     Card(
-                    //        child: Column(
-                    // mainAxisSize: MainAxisSize.min,
-                    // children: <Widget>[
-                    //    ListTile(
-                    //     leading: Icon(Icons.mail_outline_rounded ,color: Colors.green,),
-                    //     title: Text('Email',style: Theme.of(context).textTheme.headline6,),
-                    //     subtitle: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Text(commercial.email.toString(),style: TextStyle(color: Colors.blue)),
-                    //     ),
-                    //   ),
-                    // ],
-                    //   ),
-                    //     ),
-                    //     Card(
-                    //        child: Column(
-                    // mainAxisSize: MainAxisSize.min,
-                    // children: <Widget>[
-                    //    ListTile(
-                    //     leading: Icon(Icons.web ,color: Colors.red,),
-                    //     title: Text('Website',style: Theme.of(context).textTheme.headline6,),
-                    //     subtitle: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Text(commercial.website.toString(),style: TextStyle(color: Colors.blue)),
-                    //     ),
-                    //   ),
-                    // ],
-                    //   ),
-                    //     )
+                    
                   ],
                 ),
               )
-//           Column(
-//             mainAxisSize: MainAxisSize.max,
-//             children: [
-//               //SizedBox(height: 10,),
 
-//               Padding(
-//                 padding: const EdgeInsets.all(kDefaultPadding),
-//                 child: Expanded(
-//                   child: Row(
-//                     mainAxisSize: MainAxisSize.max,
-//                     mainAxisAlignment: MainAxisAlignment.start,
-
-//                     children: [
-//                                           Icon(imgicons[0]),
-
-//                       Text(
-//                         "Address:",
-//                         style: Theme.of(context).textTheme.headline6,
-//                       ),
-//                        Text(
-//                         commercial.address,
-//                         textAlign: TextAlign.justify,
-//                         softWrap: true,
-
-//                         maxLines: 2,
-//                         style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.blue),
-//                       ),
-//                     ],
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.all(8.0),
-//                 child: Container(
-//                   child: Padding(
-//                     padding: const EdgeInsets.all(kDefaultPadding),
-//                     child:
-//                     ReadMoreText(
-//                       commercial.address,
-//                        textAlign: TextAlign.justify,
-//                       style: TextStyle(color: Colors.black),
-//   trimLines: 6,
-//   colorClickableText: Colors.blue,
-//   trimMode: TrimMode.Line,
-//   trimCollapsedText: 'Read more',
-//   trimExpandedText: 'Show less',
-//   moreStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue),
-//   lessStyle:TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue)
-// )
-
-//                   ),
-//                 ),
-//               ),
-//               Container()
-
-//             ],
-//           ),
             ],
           ),
         ));
