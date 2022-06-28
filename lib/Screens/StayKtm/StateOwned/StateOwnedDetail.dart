@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwned.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import '../../../Utils/constants.dart';
-
+import 'package:ktmtourism/Screens/map_utils.dart';
 
 
 class StateOwnedDetailsPage extends StatelessWidget {
@@ -47,6 +47,20 @@ class StateOwnedDetailsPage extends StatelessWidget {
                   ),
                 ),
               ),
+              GestureDetector(
+            onTap: () {
+              MapUtils.openMap(stateowned.latitude, stateowned.longitude);
+            },
+            child: Container(
+
+                
+                height: MediaQuery.of(context).size.height / 14.5,
+              
+                child: Image.asset(
+                  'assets/images/location1.png',
+                  fit: BoxFit.fill,
+                )),
+          ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(

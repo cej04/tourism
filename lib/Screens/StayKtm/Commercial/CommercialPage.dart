@@ -24,43 +24,72 @@ class _CommercialPageState extends State<CommercialPage> {
                 itemBuilder: (context, index) {
                   return Padding(
                       padding: const EdgeInsets.only(
-                          left: 25.0, right: 25.0, top: 25.0),
+                          left: 20.0, right: 20.0, top: 20.0),
                       child: GestureDetector(
-                        child: Container(
-                            height: 200,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.fill,
-                                    image:
-                                        AssetImage(commercial[index].image))),
-                            alignment: Alignment
-                                .bottomCenter,
-                            child: Padding(
-                                padding: EdgeInsets.only(
-                                    left: 15.0,
-                                    bottom:
-                                        15), 
-                                child:
-                                    Text(commercial[index].title.toUpperCase(),
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .labelMedium
-                                            ?.apply(
-                                              color: Colors.white,
-                                              backgroundColor:
-                                                  Colors.black.withOpacity(0.5),
-                                            )
-                                            .copyWith(letterSpacing: 1)))),
+                        child: Card(
+                          color: Colors.grey[200],
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              Image.asset(commercial[index].image),
+                              ListTile(
+                                leading: Icon(Icons.location_city),
+                                title: Text(commercial[index].title),
+                                trailing: Text(commercial[index].tariff),
+                              ),
+                            ],
+                          ),
+                        ),
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => commercialDetailsPage(
                                 commercial: commercial[index],
                               ),
-                              //            ),
                             )),
                       ));
+                  // return Padding(
+                  //     padding: const EdgeInsets.only(
+                  //         left: 25.0, right: 25.0, top: 25.0),
+                  //     child: GestureDetector(
+                  //       child: Container(
+                  //           height: 200,
+                  //           decoration: BoxDecoration(
+                  //               borderRadius: BorderRadius.circular(10),
+                  //               image: DecorationImage(
+                  //                   fit: BoxFit.fill,
+                  //                   image:
+                  //                       AssetImage(commercial[index].image))),
+                  //           alignment: Alignment
+                  //               .bottomCenter,
+                  //           child: Padding(
+                  //               padding: EdgeInsets.only(
+                  //                   left: 15.0,
+                  //                   bottom:
+                  //                       15), 
+                  //               child:
+                  //                   Text(commercial[index].title.toUpperCase(),
+                  //                       style: Theme.of(context)
+                  //                           .textTheme
+                  //                           .labelMedium
+                  //                           ?.apply(
+                  //                             color: Colors.white,
+                  //                             backgroundColor:
+                  //                                 Colors.black.withOpacity(0.5),
+                  //                           )
+                  //                           .copyWith(letterSpacing: 1)))),
+                  //       onTap: () => Navigator.push(
+                  //           context,
+                  //           MaterialPageRoute(
+                  //             builder: (context) => commercialDetailsPage(
+                  //               commercial: commercial[index],
+                  //             ),
+                  //             //            ),
+                  //           )),
+                  //     ));
                 }),
           ))
         ],

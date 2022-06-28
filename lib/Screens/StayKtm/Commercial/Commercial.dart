@@ -1,5 +1,6 @@
 class Commercial {
-  final String image, title, address, email, website, phone;
+  final String image, title, address, email, website, phone, tariff;
+  final double latitude, longitude;
   final int pin;
 
   Commercial({
@@ -10,6 +11,9 @@ class Commercial {
     required this.email,
     required this.phone,
     required this.website,
+    required this.tariff,
+    required this.latitude,
+    required this.longitude,
   });
 }
 
@@ -21,7 +25,12 @@ List<Commercial> commercial = [
       pin: 686563,
       phone: "+91481 2525711",
       email: "retreat.kumarakom@tajhotels.com",
-      website: "https://www.tajhotels.com/en-in/taj/taj-kumarakom-kerala/"),
+      website: "https://www.tajhotels.com/en-in/taj/taj-kumarakom-kerala/",
+      tariff: "\u{20B9}11000-22000",
+      latitude: 0,
+      longitude: 0,
+  ),
+
   Commercial(
       image: "assets/images/illikalam.jpg",
       title: " Illikkalam Lake Resort",
@@ -29,7 +38,10 @@ List<Commercial> commercial = [
       pin: 686563,
       phone: "+91481 2524234",
       email: "klcottages@gmail.com",
-      website: "https://www.klcottages.com/"),
+      website: "https://www.klcottages.com/",
+      tariff: "\u{20B9}1800-7499",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/aida.jpg",
       title: "Hotel Aida",
@@ -37,7 +49,10 @@ List<Commercial> commercial = [
       pin: 686001,
       phone: "+91481 2568391",
       email: "bookings@hotelaida.in",
-      website: "http://www.hotelaida.in/"),
+      website: "http://www.hotelaida.in/",
+      tariff: "\u{20B9}750-2100",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/goldenwaters.jpg",
       title: "Golden Waters",
@@ -45,7 +60,10 @@ List<Commercial> commercial = [
       pin: 686563,
       phone: "+91481 2525826",
       email: "email@not.available",
-      website: " https://golden-waters.kerala-hotels.net/en/"),
+      website: " https://golden-waters.kerala-hotels.net/en/",
+      tariff: "",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/tharavadu.jpg",
       title: "Tharavadu",
@@ -53,7 +71,10 @@ List<Commercial> commercial = [
       pin: 686563,
       phone: "+91481 2525230",
       email: "tharavaduhome@gmail.com",
-      website: "https://www.tharavaduheritage.com/"),
+      website: "https://www.tharavaduheritage.com/",
+      tariff: "\u{20B9}1400-2000",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/waterscapes.jpg",
       title: "Waterscapes",
@@ -61,7 +82,10 @@ List<Commercial> commercial = [
       pin: 686563,
       phone: "+91481 2525861",
       email: "waterscapes@ktdc.com",
-      website: "https://business.google.com/website/waterscapes"),
+      website: "https://business.google.com/website/waterscapes",
+      tariff: "\u{20B9}6500-10000",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/paradise.jpg",
       title: "Paradise Resort",
@@ -69,7 +93,10 @@ List<Commercial> commercial = [
       pin: 686563,
       phone: "+91481 2524984",
       email: "info@paradisein.com",
-      website: "http://paradisein.com/"),
+      website: "http://paradisein.com/",
+      tariff: "\u{20B9}7000",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/cocunut.jpg",
       title: "Coconut Lagoon",
@@ -77,7 +104,10 @@ List<Commercial> commercial = [
       pin: 686563,
       phone: "+91481 2525834",
       email: "contact@cghearth.com",
-      website: "https://www.cghearth.com/coconut-lagoon"),
+      website: "https://www.cghearth.com/coconut-lagoon",
+      tariff: "\u{20B9}14950-26450",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/kumarakomlakeresort.jpg",
       title: "Kumarakom Lake Resort",
@@ -85,7 +115,10 @@ List<Commercial> commercial = [
       pin: 686563,
       phone: "+91481 2524900",
       email: "reservationklr@thepaul.in",
-      website: "https://www.kumarakomlakeresort.in/"),
+      website: "https://www.kumarakomlakeresort.in/",
+      tariff: "\u{20B9}19200-70400",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/ambassador.jpg",
       title: "Ambassador Hotel",
@@ -93,7 +126,10 @@ List<Commercial> commercial = [
       pin: 686001,
       phone: "+91481 2563293",
       email: "ambassadorhotel@yahoo.in",
-      website: "https://www.kumarakomlakeresort.in/"),
+      website: "https://www.kumarakomlakeresort.in/",
+      tariff: "",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/nithyahotel.jpg",
       title: "Hotel Nithya",
@@ -101,7 +137,10 @@ List<Commercial> commercial = [
       pin: 686008,
       phone: "+91481 2597849",
       email: "hotelnithya@hotmail.com",
-      website: "https://www.hotelnithya.com/"),
+      website: "https://www.hotelnithya.com/",
+      tariff: "",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/princehotel.jpg",
       title: "Hotel Prince",
@@ -109,7 +148,10 @@ List<Commercial> commercial = [
       pin: 686001,
       phone: "+91481 2574483",
       email: "email@not.available",
-      website: "https://www.hotelnithya.com/"),
+      website: "https://www.hotelnithya.com/",
+      tariff: "",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/vembanadhotel.jpg",
       title: "Vembanad Resort",
@@ -117,7 +159,10 @@ List<Commercial> commercial = [
       pin: 686013,
       phone: "+91481 2360866",
       email: "info[at]vlvs[dot]com",
-      website: "https://www.hotelnithya.com/"),
+      website: "https://www.hotelnithya.com/",
+      tariff: "\u{20B9}650",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/anjalihotel.jpg",
       title: "Anjali Hotel",
@@ -125,7 +170,10 @@ List<Commercial> commercial = [
       pin: 686001,
       phone: "+91481 2563661",
       email: "email@not.available",
-      website: "https://hotelanjalipark.in/"),
+      website: "https://hotelanjalipark.in/",
+      tariff: "\u{20B9}2300-4000",
+      latitude: 0,
+      longitude: 0),
   Commercial(
       image: "assets/images/windsorCastleResort.jpg",
       title: "Windsor Castle & lake resort",
@@ -133,5 +181,8 @@ List<Commercial> commercial = [
       pin: 686001,
       phone: "+91481 2363637",
       email: "info@thewindsorcastle.co.in",
-      website: "http://www.thewindsorcastle.co.in/"),
+      website: "http://www.thewindsorcastle.co.in/",
+      tariff: "\u{20B9}: 3000-6500",
+      latitude: 0,
+      longitude: 0),
 ];

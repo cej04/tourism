@@ -13,269 +13,247 @@ class PilgrimKtmPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: 
-      AppBar(
-      elevation: 0,
-    
-      title:  Text(
-        "Pilgrim Centers",
-     
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          "Pilgrim Centers",
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Image.asset(
+                  "assets/images/APPlogo2.png",
+                  fit: BoxFit.contain,
+                  // width: 70.0,
+                  // height: 70.0,
+                )),
+          ),
+          PopupMenuButton(
+            elevation: 5.0,
+            itemBuilder: (context) => [
+              PopupMenuItem<int>(
+                value: 0,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.info,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "About Kottayam",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 1,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.explore_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Tourist Places",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 2,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.bed_rounded,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Stay in Kottayam",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 3,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.holiday_village,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Main Pilgrim Centers",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 4,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.flatware,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Culinary Delights",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 5,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.color_lens,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Produce",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 6,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.celebration_rounded,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Festivals",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 7,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.festival_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Art & Culture",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 8,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.commute_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "How to Reach",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 9,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.hotel_class_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Restaurants",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 10,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.shopping_bag_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Shopping",
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuItem<int>(
+                value: 11,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.local_hospital_outlined,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Hospital",
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            onSelected: (item) => SelectedItem(context, item),
+          ),
+        ],
       ),
-    
-      actions: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: CircleAvatar(
-              backgroundColor: Colors.white,
-              child: Image.asset(
-                "assets/images/APPlogo2.png",
-                fit: BoxFit.contain,
-                // width: 70.0,
-                // height: 70.0,
-              )),
-        ),
-        PopupMenuButton(
-          elevation: 5.0,
-         
-
-          itemBuilder: (context) => [
-            PopupMenuItem<int>(
-              value: 0,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.info,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "About Kottayam",
-                
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 1,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.explore_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Tourist Places",
-                 
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 2,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.bed_rounded,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Stay in Kottayam",
-                   
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 3,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.holiday_village,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Main Pilgrim Centers",
-                   
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 4,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.flatware,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Culinary Delights",
-                 
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 5,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.color_lens,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Produce",
-                  
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 6,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.celebration_rounded,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Festivals",
-                
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 7,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.festival_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Art & Culture",
-                    
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 8,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.commute_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "How to Reach",
-                   
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 9,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.hotel_class_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Restaurants",
-                
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 10,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.shopping_bag_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Shopping",
-                
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 11,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.local_hospital_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Hospital",
-                    
-                  ),
-                ],
-              ),
-            ),
-          ],
-          onSelected: (item) => SelectedItem(context, item),
-        ),
-       
-      ],
-    ),
-      
-     
       body: Column(
         children: [
-         
           Expanded(
               child: Container(
             child: ListView.builder(
                 itemCount: pilgrims.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                        padding: const EdgeInsets.only(left:25.0,right: 25.0,top: 25.0),
-                        child: GestureDetector(
-                          child: 
-                          Card(
+                      padding: const EdgeInsets.only(
+                          left: 20.0, right: 20.0, top: 20.0),
+                      child: GestureDetector(
+                        child: Card(
                           color: Colors.grey[200],
                           clipBehavior: Clip.antiAlias,
                           shape: RoundedRectangleBorder(
@@ -285,58 +263,41 @@ class PilgrimKtmPage extends StatelessWidget {
                             children: [
                               Image.asset(pilgrims[index].image),
                               ListTile(
-                           
-                                title: Text(pilgrims[index].title  ,style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
-                      
-                      
-                                subtitle: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                  
-                                    pilgrims[index].subtitle,
-                                   textAlign: TextAlign.justify,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2
-                                ?.apply(
-                                  color: Colors.black,
-                                )
-                                .copyWith(height: 1.2),
-                                  ),
+                                title: Text(pilgrims[index].title),
+                                subtitle: Text(
+                                  pilgrims[index].subtitle,
                                 ),
-                                trailing: Icon(Icons.navigate_next),
+                                trailing: Text(pilgrims[index].distance),
                               ),
                             ],
                           ),
                         ),
-                          
-                          onTap: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PilgrimsBodyPage(
-                                  pilgrims: pilgrims[index],
-                                ),
-                              )),
-                        ));
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PilgrimsBodyPage(
+                                pilgrims: pilgrims[index],
+                              ),
+                            )),
+                      ));
                   // return Padding(
                   //     padding: const EdgeInsets.all(25.0),
                   //     child: GestureDetector(
                   //       child: Container(
                   //           height: 200,
-                            
+
                   //           decoration: BoxDecoration(
                   //               borderRadius: BorderRadius.circular(10),
                   //               image: DecorationImage(
                   //                   fit: BoxFit.fill,
                   //                   image: AssetImage(pilgrims[index].image))),
                   //           alignment: Alignment
-                  //               .bottomCenter, 
+                  //               .bottomCenter,
                   //           child: Padding(
                   //               padding: EdgeInsets.only(
                   //                   left: 15.0,
                   //                   bottom:
-                  //                       15), 
+                  //                       15),
                   //               child: Text(
                   //                 pilgrims[index].title.toUpperCase(),
                   //                 style: Theme.of(context)
@@ -360,9 +321,7 @@ class PilgrimKtmPage extends StatelessWidget {
                   //           )),
                   //     ));
                 }),
-          )
-          
-          )
+          ))
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
