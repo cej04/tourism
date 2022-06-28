@@ -71,7 +71,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
                               Icons.local_phone_rounded,
                               color: Colors.grey,
                             ),
-                            //  title: Text('Phone',style: Theme.of(context).textTheme.headline6,),
+                          
                             subtitle: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(stateowned.phone.toString(),
@@ -83,7 +83,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
                               Icons.mail_outline_rounded,
                               color: Colors.green,
                             ),
-                            // title: Text('Email',style: Theme.of(context).textTheme.headline6,),
+                            
                             subtitle: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(stateowned.email.toString(),
@@ -94,111 +94,11 @@ class StateOwnedDetailsPage extends StatelessWidget {
                       ),
                     ),
 
-                    //     Card(
-                    //        child: Column(
-                    // mainAxisSize: MainAxisSize.min,
-                    // children: <Widget>[
-                    //    ListTile(
-                    //     leading: Icon(Icons.push_pin_rounded ,color: Colors.orange,),
-                    //     title: Text('Pincode',style: Theme.of(context).textTheme.headline6,),
-                    //     subtitle: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Text(stateowned.pin.toString(),style: TextStyle(color: Colors.blue)),
-                    //     ),
-                    //   ),
-                    // ],
-                    //   ),
-                    // //     ),
-                    //      Card(
-                    //        child: Column(
-                    // mainAxisSize: MainAxisSize.min,
-                    // children: <Widget>[
-                    //    ListTile(
-                    //     leading: Icon(Icons.local_phone_rounded ,color: Colors.grey,),
-                    //   //  title: Text('Phone',style: Theme.of(context).textTheme.headline6,),
-                    //     subtitle: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Text(stateowned.phone.toString(),style: TextStyle(color: Colors.blue)),
-                    //     ),
-                    //   ),
-                    // ],
-                    //   ),
-                    //     ),
-                    //     Card(
-                    //        child: Column(
-                    // mainAxisSize: MainAxisSize.min,
-                    // children: <Widget>[
-                    //    ListTile(
-                    //     leading: Icon(Icons.mail_outline_rounded ,color: Colors.green,),
-                    //    // title: Text('Email',style: Theme.of(context).textTheme.headline6,),
-                    //     subtitle: Padding(
-                    //       padding: const EdgeInsets.all(8.0),
-                    //       child: Text(stateowned.email.toString(),style: TextStyle(color: Colors.blue)),
-                    //     ),
-                    //   ),
-                    // ],
-                    //   ),
-                    //     ),
+                  
                   ],
                 ),
               )
-//           Column(
-//             mainAxisSize: MainAxisSize.max,
-//             children: [
-//               //SizedBox(height: 10,),
 
-//               Padding(
-//                 padding: const EdgeInsets.all(kDefaultPadding),
-//                 child: Expanded(
-//                   child: Row(
-//                     mainAxisSize: MainAxisSize.max,
-//                     mainAxisAlignment: MainAxisAlignment.start,
-
-//                     children: [
-//                                           Icon(imgicons[0]),
-
-//                       Text(
-//                         "Address:",
-//                         style: Theme.of(context).textTheme.headline6,
-//                       ),
-//                        Text(
-//                         commercial.address,
-//                         textAlign: TextAlign.justify,
-//                         softWrap: true,
-
-//                         maxLines: 2,
-//                         style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.blue),
-//                       ),
-//                     ],
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.all(8.0),
-//                 child: Container(
-//                   child: Padding(
-//                     padding: const EdgeInsets.all(kDefaultPadding),
-//                     child:
-//                     ReadMoreText(
-//                       commercial.address,
-//                        textAlign: TextAlign.justify,
-//                       style: TextStyle(color: Colors.black),
-//   trimLines: 6,
-//   colorClickableText: Colors.blue,
-//   trimMode: TrimMode.Line,
-//   trimCollapsedText: 'Read more',
-//   trimExpandedText: 'Show less',
-//   moreStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue),
-//   lessStyle:TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.blue)
-// )
-
-//                   ),
-//                 ),
-//               ),
-//               Container()
-
-//             ],
-//           ),
             ],
           ),
         ));

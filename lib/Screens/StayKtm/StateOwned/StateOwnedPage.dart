@@ -12,7 +12,6 @@ class StateOwnedPage extends StatefulWidget {
 class _StateOwnedPageState extends State<StateOwnedPage> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: Column(
