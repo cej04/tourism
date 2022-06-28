@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Headers/header_produce.dart';
 import 'package:ktmtourism/Screens/Produce/produce.dart';
 import 'package:ktmtourism/Screens/Produce/produce_bodyPage.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
@@ -16,17 +15,12 @@ class ProducePage extends StatelessWidget {
       appBar:
       AppBar(
       elevation: 0,
-      // backgroundColor: backgroundColor,
+      
       title:  Text(
         "Produce",
-        // style: TextStyle(color: Colors.black),
+       
       ),
-      //  Row(
-      //   mainAxisAlignment:MainAxisAlignment.spaceEvenly,
-      //   children: [
-
-      //   ],
-      // ),
+      
       actions: [
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -35,15 +29,12 @@ class ProducePage extends StatelessWidget {
               child: Image.asset(
                 "assets/images/APPlogo2.png",
                 fit: BoxFit.contain,
-                // width: 70.0,
-                // height: 70.0,
+                
               )),
         ),
         PopupMenuButton(
           elevation: 5.0,
-          // icon: Icon(
-          //     Icons.more_vert), //don't specify icon if you want 3 dot menu
-          // color: Color(0xFF757575),
+       
 
           itemBuilder: (context) => [
             PopupMenuItem<int>(
@@ -59,7 +50,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "About Kottayam",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -77,7 +67,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Tourist Places",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -95,7 +84,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Stay in Kottayam",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -113,7 +101,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Main Pilgrim Centers",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -131,7 +118,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Culinary Delights",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -149,7 +135,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Produce",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -167,7 +152,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Festivals",
-                    //style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -185,7 +169,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Art & Culture",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -203,7 +186,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "How to Reach",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -221,7 +203,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Restaurants",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -239,7 +220,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Shopping",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -257,7 +237,6 @@ class ProducePage extends StatelessWidget {
                   ),
                   Text(
                     "Hospital",
-                    // style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -265,16 +244,12 @@ class ProducePage extends StatelessWidget {
           ],
           onSelected: (item) => SelectedItem(context, item),
         ),
-        //  ChangeThemeButtonWidget(),
       ],
     ),
-      // PreferredSize(
-      //   preferredSize: const Size.fromHeight(kToolbarHeight),
-      //   child: const MyAppBar(),
-      // ),
+      
       body: Column(
         children: [
-        //  HeaderWithProduce(size: size),
+      
           Expanded(
               child: Container(
             child: ListView.builder(
@@ -285,9 +260,7 @@ class ProducePage extends StatelessWidget {
                       child: GestureDetector(
                         child: Container(
                             height: 200,
-                            //  margin:EdgeInsets.only(left: kDefaultPadding,top:kDefaultPadding/2,bottom: kDefaultPadding/2),
-                            //  width: size.width * 0.8,
-                            //   height:185,
+                     
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
@@ -318,33 +291,7 @@ class ProducePage extends StatelessWidget {
                               ),
                             )),
                       ));
-                  // Expanded(
-                  //   child:
-
-                  //   GridView.builder(
-                  //      padding: const EdgeInsets.all(20),
-                  //     itemCount: produce.length,
-                  //     gridDelegate:
-                  //     const SliverGridDelegateWithFixedCrossAxisCount(
-                  //       crossAxisCount: 2,
-                  //     // mainAxisSpacing: kDefaultPadding,
-                  //     crossAxisSpacing: 10,
-                  //       mainAxisSpacing: 10,
-                  //     // childAspectRatio: 0.75,
-                  //     ),
-
-                  //   itemBuilder: (context,index) => ProduceCard(
-                  //     produce: produce[index],
-                  //      press: () => Navigator.push(
-                  //        context, MaterialPageRoute(
-                  //          builder: (context) => ProduceBodyPage(
-                  //            produce:produce[index],
-                  //            ),
-                  //            ),
-                  //      ),
-                  //   )
-                  //   ),
-                  //   )
+                 
                 }),
           ))
         ],

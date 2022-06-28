@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Headers/header_NaturalScenic.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/NaturalScenic/NaturalScenic.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/NaturalScenic/NaturalScenicDetail.dart';
-import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
+
 
 class ViewAllNatural extends StatelessWidget {
   const ViewAllNatural({
@@ -35,12 +34,12 @@ class ViewAllNatural extends StatelessWidget {
                                     image: AssetImage(
                                         naturalscenic[index].imageU))),
                             alignment: Alignment
-                                .bottomCenter, // This aligns the child of the container
+                                .bottomCenter,
                             child: Padding(
                                 padding: EdgeInsets.only(
                                     left: 15.0,
                                     bottom:
-                                        15), //some spacing to the child from bottom
+                                        15), 
                                 child: Text(
                                     naturalscenic[index].title.toUpperCase(),
                                     style: Theme.of(context)

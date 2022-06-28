@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Headers/header_religious.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Religious/religious.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Religious/religiousDetails.dart';
 

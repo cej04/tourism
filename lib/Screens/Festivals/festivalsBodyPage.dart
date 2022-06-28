@@ -36,12 +36,12 @@ class FestivalsBodyPage extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-              // borderRadius: BorderRadius.circular(10),
+        
               image: DecorationImage(
                 image: AssetImage(festivals.image),
                 fit: BoxFit.fill,
 
-                //alignment: Alignment.topCenter,
+               
               ),
             ),
           ),
@@ -50,8 +50,7 @@ class FestivalsBodyPage extends StatelessWidget {
           ),
           Container(
               color: Colors.grey,
-              //crossAxisAlignment:CrossAxisAlignment.end,
-              //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+          
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -72,20 +71,7 @@ class FestivalsBodyPage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                // SizedBox(height: 20,),
-                // Padding(
-                //   padding: const EdgeInsets.all(kDefaultPadding),
-                //   child: Row(
-                //     //crossAxisAlignment:CrossAxisAlignment.end,
-                //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //     children: [
-                //       Text(
-                //         "Description",
-                //         style: Theme.of(context).textTheme.headline6,
-                //       ),
-                //     ],
-                //   ),
-                // ),
+                
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -113,23 +99,16 @@ class FestivalsBodyPage extends StatelessWidget {
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.blue))
-                        // Text(
-                        //   festivals.description,
-                        //   overflow: TextOverflow.visible,
-                        //   textAlign: TextAlign.justify,
-                        // ),
+                       
                         ),
                   ),
                 ),
                 Container()
 
-                //Text(product.description,overflow: TextOverflow.visible,),
               ],
             ),
           ),
-          // Container(
-          //   child: Text(product.description),
-          // ),
+      
         ],
       ),
     );

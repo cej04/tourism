@@ -36,13 +36,10 @@ class HeaderWithFAQS extends StatelessWidget {
                       child: Text("FAQ's",
                        style: Theme.of(context).textTheme.headlineSmall?.apply(color: Colors.white,backgroundColor:Colors.teal.withOpacity(0.2), ).copyWith(letterSpacing: 2)
                               )
-                          // style: TextStyle(
-                          //     fontWeight: FontWeight.bold,
-                          //     fontSize: 24.0,
-                          //     color: Colors.white))
+                      
                               
                               ),
-                //),
+      
               ],
             ),
            
