@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Historic/historic.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
-import 'package:ktmtourism/Screens/destination_model.dart';
 import 'package:ktmtourism/Screens/map_utils.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 import 'package:readmore/readmore.dart';
 
 // ignore: must_be_immutable
-class DestinationScreen extends StatelessWidget {
-  final Destination destination;
-  DestinationScreen({Key? key, required this.destination}) : super(key: key);
+class HistoricScreen extends StatelessWidget {
+  final Historic historic;
+  HistoricScreen({Key? key, required this.historic}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class DestinationScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
             child: Container(
-              child: Text(destination.title,
+              child: Text(historic.title,
                   style: Theme.of(context).textTheme.headline6?.copyWith(
                       color: Colors.black, fontWeight: FontWeight.bold)),
             ),
@@ -38,7 +38,7 @@ class DestinationScreen extends StatelessWidget {
               ],
               //borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                image: AssetImage(destination.imageU),
+                image: AssetImage(historic.imageU),
                 fit: BoxFit.fill,
 
                 //alignment: Alignment.topCenter,
@@ -48,7 +48,7 @@ class DestinationScreen extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              MapUtils.openMap(destination.lat, destination.long);
+              MapUtils.openMap(historic.lat, historic.long);
             },
             child: Container(
 
@@ -72,7 +72,7 @@ class DestinationScreen extends StatelessWidget {
                   child: Container(
                     child: Padding(
                         padding: const EdgeInsets.all(kDefaultPadding),
-                        child: ReadMoreText(destination.Desc,
+                        child: ReadMoreText(historic.Desc,
                             textAlign: TextAlign.justify,
                             style: Theme.of(context)
                                 .textTheme
@@ -147,7 +147,7 @@ class DestinationScreen extends StatelessWidget {
                             itemBuilder: (context) {
                               return <PopupMenuItem>[
                                 new PopupMenuItem(
-                                    child: Text(destination.AirDesc))
+                                    child: Text(historic.AirDesc))
                               ];
                             },
                           ),
@@ -179,7 +179,7 @@ class DestinationScreen extends StatelessWidget {
                             itemBuilder: (context) {
                               return <PopupMenuItem>[
                                 new PopupMenuItem(
-                                    child: Text(destination.TrainDesc))
+                                    child: Text(historic.TrainDesc))
                               ];
                             },
                           ),
@@ -211,7 +211,7 @@ class DestinationScreen extends StatelessWidget {
                             itemBuilder: (context) {
                               return <PopupMenuItem>[
                                 new PopupMenuItem(
-                                    child: Text(destination.RoadDesc))
+                                    child: Text(historic.RoadDesc))
                               ];
                             },
                           ),
@@ -239,7 +239,7 @@ class DestinationScreen extends StatelessWidget {
                     child: ListView.separated(
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
-                          String activity = destination.activities[index];
+                          String activity = historic.activities[index];
 
                           return Row(
                             
@@ -259,7 +259,7 @@ class DestinationScreen extends StatelessWidget {
                         separatorBuilder: (_, index) => const SizedBox(
                               width: 10.0,
                             ),
-                        itemCount: destination.activities.length),
+                        itemCount: historic.activities.length),
                   ),
                 ),
                 SizedBox(

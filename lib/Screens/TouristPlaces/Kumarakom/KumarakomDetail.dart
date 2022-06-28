@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/KumarakomDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/AccessingKumarakom/AccessingKumarakom.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/FerryTiming/FerryTimingDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/RoadBased/RoadBasedDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/Spotlight/SpotlightDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/WaterBased/WaterBasedDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/FerryTiming/FerryTimingDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/Kumarakom.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'CategoryPages/BoatRaces/BoatRaceDetail.dart';

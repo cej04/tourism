@@ -35,12 +35,11 @@ class CulinaryBodyPage extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-              //borderRadius: BorderRadius.circular(10),
+             
               image: DecorationImage(
                 image: AssetImage(culinary.image),
                 fit: BoxFit.fill,
 
-                //alignment: Alignment.topCenter,
               ),
             ),
           ),
@@ -49,8 +48,7 @@ class CulinaryBodyPage extends StatelessWidget {
           ),
           Container(
               color: Colors.grey,
-              //crossAxisAlignment:CrossAxisAlignment.end,
-              //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+           
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
@@ -71,25 +69,7 @@ class CulinaryBodyPage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                // Padding(
-                //   padding: const EdgeInsets.all(kDefaultPadding),
-                //  child:
-
-                //  ),
-                // SizedBox(height: 20,),
-                // Padding(
-                //   padding: const EdgeInsets.all(kDefaultPadding),
-                //   child: Row(
-                //     //crossAxisAlignment:CrossAxisAlignment.end,
-                //     //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //     children: [
-                //       Text(
-                //         "Description",
-                //         style: Theme.of(context).textTheme.headline6,
-                //       ),
-                //     ],
-                //   ),
-                // ),
+            
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -111,13 +91,11 @@ class CulinaryBodyPage extends StatelessWidget {
                   ),
                 )
 
-                //Text(product.description,overflow: TextOverflow.visible,),
+        
               ],
             ),
           ),
-          // Container(
-          //   child: Text(product.description),
-          // ),
+        
         ],
       ),
     );

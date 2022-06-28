@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/FerryTiming/FerryTimimg.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/FerryTiming/FerryTimingCard.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/FerryTiming/FerryTimimg.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/FerryTiming/FerryTimingCard.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
 class FerryTimingDetail extends StatelessWidget {

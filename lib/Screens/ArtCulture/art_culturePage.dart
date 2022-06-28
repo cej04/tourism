@@ -15,10 +15,8 @@ class ArtCulturePage extends StatelessWidget {
       appBar:
       AppBar(
       elevation: 0,
-      // backgroundColor: backgroundColor,
       title:  Text(
         "Art & Culture",
-        // style: TextStyle(color: Colors.black),
       ),
      
       actions: [

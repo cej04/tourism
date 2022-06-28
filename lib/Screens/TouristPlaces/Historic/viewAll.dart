@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Headers/header_Historci.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Historic/Destination_screen.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Historic/HistoricDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Historic/historic.dart';
-import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
-import 'package:ktmtourism/Screens/destination_model.dart';
 
 
 class ViewAllHistoric extends StatelessWidget {
@@ -52,8 +49,8 @@ ListView.builder(
                     ),
                     onTap: () => Navigator.push(
                    context, MaterialPageRoute(
-                    builder: (context) => DestinationScreen(
-                     destination:destinations[index],
+                    builder: (context) => HistoricScreen(
+                     historic:historic[index],
                      ),
           //            ),
                        )
