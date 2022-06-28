@@ -274,7 +274,8 @@ class PilgrimKtmPage extends StatelessWidget {
                   return Padding(
                       padding: const EdgeInsets.all(25.0),
                       child: GestureDetector(
-                        child: Container(
+                        child:
+                         Container(
                             height: 200,
                             
                             decoration: BoxDecoration(
@@ -310,9 +311,12 @@ class PilgrimKtmPage extends StatelessWidget {
                               ),
                               //            ),
                             )),
-                      ));
+                      ))
+                      ;
                 }),
-          ))
+          )
+          
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
