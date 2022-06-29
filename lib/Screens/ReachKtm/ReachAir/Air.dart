@@ -20,18 +20,18 @@ List<Air> air = [
     title:
         " Cochin International Airport – Nearest Airport (Ernakulam District)",
     subtitle: "Cochin International Airport, Ernakulam District",
-    weblink: "http://www.cial.aero/",
+    weblink: "https://cial.aero/",
     pincode: 682031,
-    phone: "+910484 2610115",
+    phone: "+91484 2610115",
     bgcolor: Color(0xFFFFF7EC),
     iconColor: Color.fromARGB(255, 236, 199, 119),
   ),
   Air(
     title: " Trivandrum International Airport ( Thiruvananthapuram District)",
     subtitle: "Trivandrum International Airport, Thiruvananthapuram District",
-    weblink: " https://www.aai.aero/en/node/2654",
+    weblink: " https://www.trivandrumairport.com/",
     pincode: 695004,
-    phone: "+910471 2702600",
+    phone: "+91471 2702600",
     bgcolor: Color(0xFFFCF0F0),
     iconColor: Color.fromARGB(255, 236, 151, 158),
   )
