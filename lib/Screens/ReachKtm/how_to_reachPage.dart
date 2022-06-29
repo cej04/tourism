@@ -290,15 +290,13 @@ class FerryServise extends StatelessWidget {
                 color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
          // HeaderWithFAQS(size: size),
-          Expanded(
-            child: ListTile(
-              tileColor: Color(0xFFFFF7EC),
-              leading: Icon(Icons.sailing,color:Color.fromARGB(255, 236, 199, 119)),
-              title: Text("There are two ferry stations. \n\nThe Town Jetty is about 3 km from the railway station and operates services during the monsoon. \nDuring summer, boats are operated from the Kodimatha Jetty. "),
+          ListTile(
+            tileColor: Color(0xFFFFF7EC),
+            leading: Icon(Icons.sailing,color:Color.fromARGB(255, 236, 199, 119)),
+            title: Text("There are two ferry stations. \n\nThe Town Jetty is about 3 km from the railway station and operates services during the monsoon. \nDuring summer, boats are operated from the Kodimatha Jetty. "),
+          
             
-              
-              ),
-                  ),
+            ),
           
         ],
       ),
