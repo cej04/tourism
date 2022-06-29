@@ -1,7 +1,7 @@
 // import 'dart:ffi';
 
 class StateOwned {
-  final String image, title, address, email, phone;
+  final String image, title, address, email, phone, bookingurl;
   final double latitude, longitude;
 
   StateOwned({
@@ -11,6 +11,7 @@ class StateOwned {
     //required this.pin,
     required this.email,
     required this.phone,
+    required this.bookingurl,
     required this.latitude,
     required this.longitude,
   });
@@ -23,6 +24,7 @@ List<StateOwned> stateowned = [
     address: "Aruvithura P.O., Erattupetta, Kottayam Dist. PIN 686122",
     //pin:686121,
     phone: "7594970489",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.68650,
     longitude: 76.77612,
@@ -33,6 +35,7 @@ List<StateOwned> stateowned = [
     address: "Erumely P.O, PIN 686509",
     //pin:686121,
     phone: "7594970488",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.48287,
     longitude: 76.84430,
@@ -43,6 +46,7 @@ List<StateOwned> stateowned = [
     address: "Mundakkayam P.O - 686513",
     //pin:686121,
     phone: "7594970487",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.53764,
     longitude: 76.88631,
@@ -53,6 +57,7 @@ List<StateOwned> stateowned = [
     address: "Kunnumbhagom P.O, Kanjirappally PIN 686507",
     // pin:686506,
     phone: "7594970486",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.55620,
     longitude: 76.78120,
@@ -63,6 +68,7 @@ List<StateOwned> stateowned = [
     address: "Pala P.O, Kottayam (Dt), PIN 686575",
     // pin:686575,
     phone: "7594970485",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.71490,
     longitude: 76.68488,
@@ -74,6 +80,7 @@ List<StateOwned> stateowned = [
     address: "Vaikom, Kottayam Dist., Pin: 686141",
     //pin:686041,
     phone: "7594970484",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.74886,
     longitude: 76.39003,
@@ -84,6 +91,7 @@ List<StateOwned> stateowned = [
     address: "Near Block Panchayat Office, Appanchira, Kaduthuruthy, PIN 686604",
     //pin:686041,
     phone: "7594970483",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.77124,
     longitude: 76.48857,
@@ -94,6 +102,7 @@ List<StateOwned> stateowned = [
     address: "Changanssery, Kottayam Dist., Pin: 686101",
     // pin:686101,
     phone: "7594970481",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.44348,
     longitude: 76.53959,
@@ -104,6 +113,7 @@ List<StateOwned> stateowned = [
     address: "Kottayam, Pin: 686001",
     //pin:686001,
     phone: "7594970068",
+    bookingurl: "https://resthouse.pwd.kerala.gov.in/index",
     email: "buildingsktm@gmail.com",
     latitude: 9.58207,
     longitude: 76.52298,
@@ -114,6 +124,7 @@ List<StateOwned> stateowned = [
     address: "Guest House, Kottayam, Pin: 680012",
     //  pin:680012,
     phone: "0481-2562219",
+    bookingurl: "https://gad.kerala.gov.in/index.php/online-guest-house-booking-0",
     email: "gghkottayam@gmail.com",
     latitude: 9.57249,
     longitude: 76.53264,
