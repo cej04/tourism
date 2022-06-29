@@ -1,3 +1,4 @@
+import 'package:carousel_indicator/carousel_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/ArtCulture/art_culturePage.dart';
@@ -22,6 +23,22 @@ class MainSample2Page extends StatefulWidget {
 }
 
 class _MainSample2PageState extends State<MainSample2Page> {
+  int activeIndex = 0;
+  final images = [
+    "assets/images/heritage.jpg",
+    "assets/images/back1.jpg",
+    "assets/images/aruvikkuzhi waterfalls.jpg",
+    "assets/images/vallyachanmala.jpg",
+    "assets/images/paddy-filed1.jpg"
+  ];
+  final titles = [
+    "Heritage Destinations",
+    "Backwaters",
+    "Waterfalls",
+    "Worship",
+    "Agriculture"
+  ];
+
   @override
   Widget build(BuildContext context) {
     List pages = [
@@ -37,241 +54,69 @@ class _MainSample2PageState extends State<MainSample2Page> {
     ];
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-    
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-           
             Container(
               padding: EdgeInsets.symmetric(
                 vertical: 20.0,
               ),
-              child: CarouselSlider(
-                items: [
-                 
-                  Container(
-                      margin: EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/heritage.jpg"),
-                          fit: BoxFit.cover,
+              child: CarouselSlider.builder(
+                itemCount: images.length,
+                itemBuilder: (BuildContext context, int itemIndex,
+                        int pageViewIndex) =>
+                    Container(
+                        margin: EdgeInsets.all(6.0),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          image: DecorationImage(
+                            image: AssetImage(images[itemIndex]),
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ),
-                      alignment: Alignment
-                          .bottomCenter,
-                      child: Padding(
-                          padding: EdgeInsets.only(
-                              left: 15.0,
-                              bottom:
-                                  15), 
-                          child: Text("Heritage Destinations".toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .caption
-                                  ?.apply(
-                                    color: Colors.white,
-                                    backgroundColor:
-                                        Colors.black.withOpacity(0.5),
-                                  )
-                                  .copyWith(letterSpacing: 1)))),
-
-                  Container(
-                      margin: EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/back1.jpg"),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      alignment: Alignment
-                          .bottomCenter, 
-                      child: Padding(
-                          padding: EdgeInsets.only(
-                              left: 15.0,
-                              bottom:
-                                  15),
-                          child: Text("Backwaters".toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .caption
-                                  ?.apply(
-                                    color: Colors.white,
-                                    backgroundColor:
-                                        Colors.black.withOpacity(0.5),
-                                  )
-                                  .copyWith(letterSpacing: 1)))),
-
-                 
-                  Container(
-                      margin: EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          image: AssetImage(
-                              "assets/images/aruvikkuzhi waterfalls.jpg"),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      alignment: Alignment
-                          .bottomCenter, 
-                      child: Padding(
-                          padding: EdgeInsets.only(
-                              left: 15.0,
-                              bottom:
-                                  15),
-                          child: Text("Waterfalls".toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .caption
-                                  ?.apply(
-                                    color: Colors.white,
-                                    backgroundColor:
-                                        Colors.black.withOpacity(0.5),
-                                  )
-                                  .copyWith(letterSpacing: 1)))),
-
-                
-                  Container(
-                      margin: EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/vallyachanmala.jpg"),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      alignment: Alignment
-                          .bottomCenter,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 15.0, bottom: 15),
-
-                         
-                          child: Text("Worship".toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .caption
-                                  ?.apply(
-                                    color: Colors.white,
-                                    backgroundColor:
-                                        Colors.black.withOpacity(0.5),
-                                  )
-                                  .copyWith(letterSpacing: 1)))),
-
-              
-                  Container(
-                    margin: EdgeInsets.all(6.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.0),
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/illikkal-kallu3.jpg"),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    alignment: Alignment
-                        .bottomCenter, 
-                    child: Padding(
-                        padding: EdgeInsets.only(left: 15.0, bottom: 15),
-                        child: Text("Hill Stations".toUpperCase(),
-                            style: Theme.of(context)
-                                .textTheme
-                                .caption
-                                ?.apply(
-                                  color: Colors.white,
-                                  backgroundColor:
-                                      Colors.black.withOpacity(0.5),
-                                )
-                                .copyWith(letterSpacing: 1))
-                     
-                        ),
-                  ),
-                  Container(
-                      margin: EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/paddy-filed1.jpg"),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      alignment: Alignment
-                          .bottomCenter, 
-                      child: Padding(
-                          padding: EdgeInsets.only(
-                              left: 15.0,
-                              bottom:
-                                  15), 
-                          child: Text("Agriculture".toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .caption
-                                  ?.apply(
-                                    color: Colors.white,
-                                    backgroundColor:
-                                        Colors.black.withOpacity(0.5),
-                                  )
-                                  .copyWith(letterSpacing: 1)))),
-                  Container(
-                      margin: EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          image:
-                              AssetImage("assets/images/bird-sanctuary9.jpg"),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      alignment: Alignment
-                          .bottomCenter, 
-                      child: Padding(
-                          padding: EdgeInsets.only(
-                              left: 15.0,
-                              bottom:
-                                  15), 
-                          child: Text("Wildlife".toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .caption
-                                  ?.apply(
-                                    color: Colors.white,
-                                    backgroundColor:
-                                        Colors.black.withOpacity(0.5),
-                                  )
-                                  .copyWith(letterSpacing: 1)))),
-                ],
-
-                //Slider Container properties
+                        alignment: Alignment.bottomCenter,
+                        child: Padding(
+                            padding: EdgeInsets.only(left: 15.0, bottom: 15),
+                            child: Text(titles[itemIndex].toUpperCase(),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .caption
+                                    ?.apply(
+                                      color: Colors.white,
+                                      backgroundColor:
+                                          Colors.black.withOpacity(0.5),
+                                    )
+                                    .copyWith(letterSpacing: 1)))),
                 options: CarouselOptions(
-                  height: 180.0,
-                  enlargeCenterPage: true,
-                  autoPlay: true,
-                  aspectRatio: 16 / 9,
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  enableInfiniteScroll: true,
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  viewportFraction: 0.8,
-                ),
+                    height: 180.0,
+                    enlargeCenterPage: true,
+                    autoPlay: true,
+                    aspectRatio: 16 / 9,
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    enableInfiniteScroll: true,
+                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    viewportFraction: 0.8,
+                    onPageChanged: (itemIndex, reason) =>
+                        setState(() => activeIndex = itemIndex)),
               ),
             ),
-           
-            SizedBox(
-              height: 15,
+            CarouselIndicator(
+              cornerRadius: 20.0,
+              width: 10,
+              count: images.length,
+              index: activeIndex,
+              activeColor: Colors.teal,
+              color: Colors.grey,
             ),
-            // CategoriesPage() ,
             SizedBox(
               height: 15,
             ),
             GridView.builder(
                 shrinkWrap: true,
-                // padding: const EdgeInsets.all(20),
                 itemCount: mainsample.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  // mainAxisSpacing: kDefaultPadding,
-                  //crossAxisSpacing: 1,
-                  // mainAxisSpacing: 10,
                   childAspectRatio: (1 / .9),
                 ),
                 itemBuilder: (context, index) => mainCard(
