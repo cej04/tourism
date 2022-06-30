@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/ReachKtm/ReachAir/AirDetails.dart';
-import 'package:ktmtourism/Screens/ReachKtm/ReachRoad/RoadDetail.dart';
+import 'package:ktmtourism/Screens/ReachKtm/ReachRoad/RoadDetails.dart';
 import 'package:ktmtourism/Screens/ReachKtm/ReachTrain/TrainDetail.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
+import 'package:ktmtourism/Utils/constants.dart';
 
 class HowToReachPage extends StatelessWidget {
   const HowToReachPage({
@@ -263,7 +264,7 @@ class HowToReachPage extends StatelessWidget {
           ]),
         ),
         body: TabBarView(children: [
-          const RoadDetailPage(),
+          const RoadDEtails(),
           const TrainDetailPage(),
           const AirDetailPage(),
           const FerryServise(),
@@ -274,41 +275,32 @@ class HowToReachPage extends StatelessWidget {
 }
 
 class FerryServise extends StatelessWidget {
-  const FerryServise({Key? key}) : super(key: key);
-
+  const FerryServise({
+    Key? key,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: Container(
-          height: MediaQuery.of(context).size.height / 1,
-          padding: EdgeInsets.all(15),
-          decoration: BoxDecoration(
-              color: Color(0xFFFFF7EC),
-              borderRadius: BorderRadius.circular(20)),
-          child: Column(
-            children: [
-              Icon(
-                Icons.sailing,
-                color: Color.fromARGB(255, 236, 199, 119),
-                size: 35,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "There are two ferry stations.\n\nThe Town Jetty is about 3 km from the railway station and operates services during the monsoon.\n\nDuring summer,boats are operated from the Kodimatha Jetty."
-                    .toString(),
-                style: Theme.of(context).textTheme.subtitle1,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-            ],
+      // 
+      body: Column(
+        children: [
+           Padding(
+            padding: const EdgeInsets.all(kDefaultPadding),
+            child: Text("Backwater Ferry Services",style: Theme.of(context).textTheme.headline6?.copyWith(
+                color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
-        ),
+         // HeaderWithFAQS(size: size),
+          Expanded(
+            child: ListTile(
+              tileColor: Color(0xFFFFF7EC),
+              leading: Icon(Icons.sailing,color:Color.fromARGB(255, 236, 199, 119)),
+              title: Text("There are two ferry stations. \n\nThe Town Jetty is about 3 km from the railway station and operates services during the monsoon. \nDuring summer, boats are operated from the Kodimatha Jetty. "),
+            
+              
+              ),
+                  ),
+          
+        ],
       ),
     );
   }

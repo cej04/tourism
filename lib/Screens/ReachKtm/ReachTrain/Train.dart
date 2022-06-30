@@ -17,7 +17,7 @@ List<Train> train = [
   Train(
     title: " Railway Station Kottayam",
     pincode: 686002,
-    phone: "+910481 2563535",
+    phone: "+91481 2563535",
     bgcolor: Color(0xFFFFF7EC),
     iconColor: Color.fromARGB(255, 236, 199, 119),
   ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/ReachKtm/ReachTrain/Train.dart';
+import 'package:ktmtourism/Screens/ReachKtm/ReachRoad/Road.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
-class TrainDetailPage extends StatelessWidget {
-  const TrainDetailPage({
+class RoadDEtails extends StatelessWidget {
+  const RoadDEtails({
     Key? key,
   }) : super(key: key);
   @override
@@ -14,20 +14,20 @@ class TrainDetailPage extends StatelessWidget {
         children: [
            Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
-            child: Text(" Railway Station Kottayam",style: Theme.of(context).textTheme.headline6?.copyWith(
+            child: Text("K S R T C Bus Stations",style: Theme.of(context).textTheme.headline6?.copyWith(
                 color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
          // HeaderWithFAQS(size: size),
           Expanded(
             child: ListView.builder(
-                itemCount: train.length,
+                itemCount: road.length,
                 itemBuilder: (BuildContext context, int index) {
-                  final que = train[index];
+                  final que = road[index];
 
                   return Card(
                     child: ListTile(
                       tileColor: que.bgcolor,
-                      leading: Icon(Icons.train,color: que.iconColor,),
+                      leading: Icon(Icons.bus_alert,color: que.iconColor,),
                       title: Text(que.title),
                     
                       subtitle: Column(
