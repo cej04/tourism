@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/StayKtm/Commercial/Commercial.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import '../../../Utils/constants.dart';
-
-//import '../../culinary_bodyPage.dart';
+import 'package:ktmtourism/Screens/map_utils.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class commercialDetailsPage extends StatelessWidget {
   final Commercial commercial;
@@ -20,13 +20,11 @@ class commercialDetailsPage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-             
               Padding(
                 padding: const EdgeInsets.all(kDefaultPadding),
                 child: Container(
                   child: Text(commercial.title,
-                      style: Theme.of(context).textTheme.headline6?.copyWith(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
+                      style: Theme.of(context).textTheme.headline6),
                 ),
               ),
               Container(
@@ -38,78 +36,73 @@ class commercialDetailsPage extends StatelessWidget {
                       blurRadius: 6.0,
                     ),
                   ],
-              
                   image: DecorationImage(
                     image: AssetImage(commercial.image),
                     fit: BoxFit.fill,
-
-                    
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(3.0),
                 child: Column(
                   children: [
-                    Card(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          ListTile(
-                            leading: const Icon(
-                              Icons.location_on,
-                              color: Colors.red,
-                            ),
-                          
-                            subtitle: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(commercial.address,
-                                  style: TextStyle(color: Colors.blue)),
-                            ),
-                          ),
-                          ListTile(
-                            leading: Icon(
-                              Icons.local_phone_rounded,
-                              color: Colors.grey,
-                            ),
-                            subtitle: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(commercial.phone.toString(),
-                                  style: TextStyle(color: Colors.blue)),
-                            ),
-                          ),
-                          ListTile(
-                            leading: Icon(
-                              Icons.mail_outline_rounded,
-                              color: Colors.green,
-                            ),
-                            subtitle: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(commercial.email.toString(),
-                                  style: TextStyle(color: Colors.blue)),
-                            ),
-                          ),
-                          ListTile(
-                            leading: Icon(
-                              Icons.web,
-                              color: Colors.red,
-                            ),
-                            subtitle: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(commercial.website.toString(),
-                                  style: TextStyle(color: Colors.blue)),
-                            ),
-                          ),
-                         
-                        ],
+                    ListTile(
+                      title: Text(commercial.address),
+                      leading: ElevatedButton.icon(
+                        icon: Icon(Icons.location_pin),
+                        label: Text('Locate on Map'),
+                        onPressed: () {
+                          MapUtils.openMap(
+                              commercial.latitude, commercial.longitude);
+                        },
                       ),
                     ),
-
-                    
+                    ListTile(
+                      title: Text(
+                        commercial.phone.toString(),
+                      ),
+                      leading: ElevatedButton.icon(
+                        icon: Icon(Icons.call),
+                        label: Text('Make a call'),
+                        onPressed: () async {
+                          final phoneNumber = commercial.phone;
+                          final url = 'tel:$phoneNumber';
+                          // final url = 'tel:$stateowned.phone';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(commercial.email.toString()),
+                      leading: ElevatedButton.icon(
+                        icon: Icon(Icons.email),
+                        label: Text('Send an email'),
+                        onPressed: () async {
+                          final url = 'mailto:$commercial.email';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(commercial.website.toString()),
+                      leading: ElevatedButton.icon(
+                        icon: Icon(Icons.web),
+                        label: Text('Visit'),
+                        onPressed: () async {
+                          final Uri url = Uri.parse(commercial.website);
+                          if (await canLaunchUrl(url)) {
+                            await launchUrl(url);
+                          }
+                        },
+                      ),
+                    ),
                   ],
                 ),
               )
-
             ],
           ),
         ));

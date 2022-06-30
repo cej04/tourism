@@ -23,10 +23,8 @@ class StateOwnedDetailsPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(kDefaultPadding),
                 child: Container(
-                  child: Text(stateowned.title,style: Theme.of(context).textTheme.headline6),
-                      // style: Theme.of(context).textTheme.headline6?.copyWith(
-                      //     color: Colors.black, fontWeight: FontWeight.bold)
-                      // ),
+                  child: Text(stateowned.title,
+                      style: Theme.of(context).textTheme.headline6),
                 ),
               ),
               Container(
@@ -45,57 +43,50 @@ class StateOwnedDetailsPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(3.0),
                 child: Column(
-                  children: [
-                    Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        ListTile(
-                          title: Text(stateowned.address),
-                          leading: ElevatedButton.icon(
-                            icon: Icon(Icons.location_pin),
-                            label: Text('Locate on Map'),
-                            onPressed: () {
-                              MapUtils.openMap(
-                                  stateowned.latitude, stateowned.longitude);
-                            },
-                          ),
-                        ),
-
-                        ListTile(
-                          title: Text(
-                            stateowned.phone.toString(),
-                          ),
-                          leading: ElevatedButton.icon(
-                            icon: Icon(Icons.call),
-                            label: Text('Make a call'),
-                            onPressed: () async {
-                              final phoneNumber = stateowned.phone;
-                              final url = 'tel:$phoneNumber';
-                              // final url = 'tel:$stateowned.phone';
-                              if (await canLaunch(url)) {
-                                await launch(url);
-                              }
-                            },
-                          ),
-                        ),
-
-                        ListTile(
-                          title: Text(stateowned.email.toString()),
-                          leading: ElevatedButton.icon(
-                            icon: Icon(Icons.email),
-                            label: Text('Send an email'),
-                            onPressed: () async {
-                              final url = 'mailto:$stateowned.email';
-                              if (await canLaunch(url)) {
-                                await launch(url);
-                              }
-                            },
-                          ),
-                        ),
-                        // ),
-                      ],
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    ListTile(
+                      title: Text(stateowned.address),
+                      leading: ElevatedButton.icon(
+                        icon: Icon(Icons.location_pin),
+                        label: Text('Locate on Map'),
+                        onPressed: () {
+                          MapUtils.openMap(
+                              stateowned.latitude, stateowned.longitude);
+                        },
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(
+                        stateowned.phone.toString(),
+                      ),
+                      leading: ElevatedButton.icon(
+                        icon: Icon(Icons.call),
+                        label: Text('Make a call'),
+                        onPressed: () async {
+                          final phoneNumber = stateowned.phone;
+                          final url = 'tel:$phoneNumber';
+                          // final url = 'tel:$stateowned.phone';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(stateowned.email.toString()),
+                      leading: ElevatedButton.icon(
+                        icon: Icon(Icons.email),
+                        label: Text('Send an email'),
+                        onPressed: () async {
+                          final url = 'mailto:${stateowned.email}';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                      ),
                     ),
                   ],
                 ),
