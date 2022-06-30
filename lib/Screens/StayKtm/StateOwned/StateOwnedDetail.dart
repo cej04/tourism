@@ -43,52 +43,59 @@ class StateOwnedDetailsPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(3.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    ListTile(
-                      title: Text(stateowned.address),
-                      leading: ElevatedButton.icon(
-                        icon: Icon(Icons.location_pin),
-                        label: Text('Locate on Map'),
-                        onPressed: () {
-                          MapUtils.openMap(
-                              stateowned.latitude, stateowned.longitude);
-                        },
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ListTile(
+                        leading: Icon(Icons.location_searching),
+                        title: Text('${stateowned.address}'),
                       ),
-                    ),
-                    ListTile(
-                      title: Text(
-                        stateowned.phone.toString(),
+                    
+                      ListTile(
+                    //    title: Text(stateowned.address),
+                        title: ElevatedButton.icon(
+                          icon: Icon(Icons.location_pin),
+                          label: Text('Locate on Map'),
+                          onPressed: () {
+                            MapUtils.openMap(
+                                stateowned.latitude, stateowned.longitude);
+                          },
+                        ),
                       ),
-                      leading: ElevatedButton.icon(
-                        icon: Icon(Icons.call),
-                        label: Text('Make a call'),
-                        onPressed: () async {
-                          final phoneNumber = stateowned.phone;
-                          final url = 'tel:$phoneNumber';
-                          // final url = 'tel:$stateowned.phone';
-                          if (await canLaunch(url)) {
-                            await launch(url);
-                          }
-                        },
+                      ListTile(
+                    //    title: Text(
+                    //      stateowned.phone.toString(),
+                     //   ),
+                        title: ElevatedButton.icon(
+                          icon: Icon(Icons.call),
+                          label: Text('${stateowned.phone}'),
+                          onPressed: () async {
+                            
+                            final url = 'tel:${stateowned.phone}';
+                            
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            }
+                          },
+                        ),
                       ),
-                    ),
-                    ListTile(
-                      title: Text(stateowned.email.toString()),
-                      leading: ElevatedButton.icon(
-                        icon: Icon(Icons.email),
-                        label: Text('Send an email'),
-                        onPressed: () async {
-                          final url = 'mailto:${stateowned.email}';
-                          if (await canLaunch(url)) {
-                            await launch(url);
-                          }
-                        },
+                      ListTile(
+                      //  title: Text(stateowned.email.toString()),
+                        title: ElevatedButton.icon(
+                          icon: Icon(Icons.email),
+                          label: Text('${stateowned.email}'),
+                          onPressed: () async {
+                            final url = 'mailto:${stateowned.email}';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            }
+                          },
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               )
             ],

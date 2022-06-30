@@ -42,13 +42,19 @@ class commercialDetailsPage extends StatelessWidget {
                   ),
                 ),
               ),
+              
               Padding(
                 padding: const EdgeInsets.all(3.0),
                 child: Column(
                   children: [
+                     ListTile(
+                        leading: Icon(Icons.location_searching),
+                        title: Text('${commercial.address}'),
+                      ),
+              //      Text('${commercial.address}'),
                     ListTile(
-                      title: Text(commercial.address),
-                      leading: ElevatedButton.icon(
+//title: Text('${commercial.address}'),
+                      title: ElevatedButton.icon(
                         icon: Icon(Icons.location_pin),
                         label: Text('Locate on Map'),
                         onPressed: () {
@@ -58,15 +64,14 @@ class commercialDetailsPage extends StatelessWidget {
                       ),
                     ),
                     ListTile(
-                      title: Text(
-                        commercial.phone.toString(),
-                      ),
-                      leading: ElevatedButton.icon(
+                      //   title: Text(
+                      //     commercial.phone.toString(),
+                      //  ),
+                      title: ElevatedButton.icon(
                         icon: Icon(Icons.call),
-                        label: Text('Make a call'),
+                        label: Text('${commercial.phone}'),
                         onPressed: () async {
-                          final phoneNumber = commercial.phone;
-                          final url = 'tel:$phoneNumber';
+                          final url = 'tel:${commercial.phone}';
                           // final url = 'tel:$stateowned.phone';
                           if (await canLaunch(url)) {
                             await launch(url);
@@ -75,12 +80,12 @@ class commercialDetailsPage extends StatelessWidget {
                       ),
                     ),
                     ListTile(
-                      title: Text(commercial.email.toString()),
-                      leading: ElevatedButton.icon(
+                      // title: Text(commercial.email.toString()),
+                      title: ElevatedButton.icon(
                         icon: Icon(Icons.email),
-                        label: Text('Send an email'),
+                        label: Text('${commercial.email}'),
                         onPressed: () async {
-                          final url = 'mailto:$commercial.email';
+                          final url = 'mailto:${commercial.email}';
                           if (await canLaunch(url)) {
                             await launch(url);
                           }
@@ -88,10 +93,10 @@ class commercialDetailsPage extends StatelessWidget {
                       ),
                     ),
                     ListTile(
-                      title: Text(commercial.website.toString()),
-                      leading: ElevatedButton.icon(
+                      //  title: Text(commercial.website.toString()),
+                      title: ElevatedButton.icon(
                         icon: Icon(Icons.web),
-                        label: Text('Visit'),
+                        label: Text(commercial.website),
                         onPressed: () async {
                           final Uri url = Uri.parse(commercial.website);
                           if (await canLaunchUrl(url)) {
