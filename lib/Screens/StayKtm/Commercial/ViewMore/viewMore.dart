@@ -254,8 +254,8 @@ List<CommercialViewMore> commercialviewmore = [
   CommercialViewMore(
       title: "Hotel Floral Park",
       tariff: "450-1500 ",
-      phone: "+91481 2597108",
-      website: "NA",
+      phone: "+91481-2597020, 2597108,\n9387659039 ,\n8281373811",
+      website: "http://www.hotelfloralpark.in/",
       bgcolor: Color(0XFFEDF4FE),
       iconColor: Color.fromARGB(255, 96, 151, 219)),
   CommercialViewMore(
@@ -319,15 +319,15 @@ List<ViewMoreEttumanoor> viewmorettumanoor = [
     title: "Hotel Elegance",
     tariff: "1400-3500",
     phone: "+91482 257398",
-    website: "NA",
+    website: " www.thehotelelegance.com",
     bgcolor: Color(0xFFFFF7EC),
     iconColor: Color.fromARGB(255, 236, 199, 119),
   ),
   ViewMoreEttumanoor(
       title: "Palakkunnel Tourist Home ",
       tariff: "NA",
-      phone: " +91482 2535281",
-      website: "NA",
+      phone: " +91481 2535281",
+      website: "www.palakunneltouristhotel.com",
       bgcolor: Color(0xFFFCF0F0),
       iconColor: Color.fromARGB(255, 236, 151, 158)),
 ];
@@ -351,8 +351,8 @@ List<ViewMoreVaikom> viewmoreVaikom = [
   ViewMoreVaikom(
     title: "Hotel White Gate Residency",
     tariff: "NA",
-    phone: "NA",
-    website: "NA",
+    phone: "+91482 9216961",
+    website: "https://www.whitegateresidency.com/",
     bgcolor: Color(0xFFFFF7EC),
     iconColor: Color.fromARGB(255, 236, 199, 119),
   ),
