@@ -14,7 +14,7 @@ class CulinaryBodyPage extends StatelessWidget {
       appBar: 
       PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: const MyAppBar(title: '',),
+        child: const MyAppBar(title: 'Kottayam Tourism',),
       ),
       body: Column(
         children: [
