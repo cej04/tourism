@@ -15,7 +15,7 @@ class ArtCultureBodyPage extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: const MyAppBar(),
+        child: const MyAppBar(title: '',),
       ),
       body: Column(
         children: [

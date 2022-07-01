@@ -30,7 +30,7 @@ class _KumarakomDetailState extends State<KumarakomDetail> {
     return Scaffold(
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
-          child: MyAppBar(),
+          child: MyAppBar(title: 'Kottayam Tourism',),
         ),
         body: SingleChildScrollView(
           child: Column(
