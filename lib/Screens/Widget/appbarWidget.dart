@@ -15,10 +15,10 @@ import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
-
+final String title;
 
   const MyAppBar({
-    Key? key,title
+    Key? key, required this.title
 
   }) : super(key: key);
   @override
@@ -30,7 +30,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       
       elevation: 0,
       title:  Text(
-        "Kottayam Tourism",
+       title,
       ),
      
       actions: [

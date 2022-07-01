@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color(0xFF757575),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: MyAppBar(),
+        child: MyAppBar(title: 'Kottayam Tourism',),
       ),
       body:
          
