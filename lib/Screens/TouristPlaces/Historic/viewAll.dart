@@ -26,37 +26,67 @@ ListView.builder(
             return 
             
              Padding(
-               padding: const EdgeInsets.only(left:25.0,right: 25.0,top: 25.0),
+               padding: const EdgeInsets.only(left:20.0,right: 20.0,top: 20.0),
                child: GestureDetector(
                  
-                 child: Container(
-                   height: 200,
+                 child: 
+          //        Container(
+          //          height: 200,
                 
-                   decoration: BoxDecoration(
-                     borderRadius:BorderRadius.circular(10),
-                     image:DecorationImage(
-                           fit: BoxFit.fill,
-                           image: AssetImage( historic[index].imageU))
-                   ),
+          //          decoration: BoxDecoration(
+          //            borderRadius:BorderRadius.circular(10),
+          //            image:DecorationImage(
+          //                  fit: BoxFit.fill,
+          //                  image: AssetImage( historic[index].imageU))
+          //          ),
                    
-                    alignment: Alignment.bottomCenter, // This aligns the child of the container
-                  child: Padding(
-                   padding: EdgeInsets.only(left: 15.0,
-                   bottom: 15), //some spacing to the child from bottom
-                   child: Text( historic[index].title.toUpperCase(),  style: Theme.of(context).textTheme.labelMedium?.apply(color: Colors.white,backgroundColor:Colors.black.withOpacity(0.5), ).copyWith(letterSpacing: 1))
-                  )
+          //           alignment: Alignment.bottomCenter, // This aligns the child of the container
+          //         child: Padding(
+          //          padding: EdgeInsets.only(left: 15.0,
+          //          bottom: 15), //some spacing to the child from bottom
+          //          child: Text( historic[index].title.toUpperCase(),  style: Theme.of(context).textTheme.labelMedium?.apply(color: Colors.white,backgroundColor:Colors.black.withOpacity(0.5), ).copyWith(letterSpacing: 1))
+          //         )
                  
-                    ),
-                    onTap: () => Navigator.push(
-                   context, MaterialPageRoute(
-                    builder: (context) => HistoricScreen(
-                     historic:historic[index],
-                     ),
+          //           ),
+          //           onTap: () => Navigator.push(
+          //          context, MaterialPageRoute(
+          //           builder: (context) => HistoricScreen(
+          //            historic:historic[index],
           //            ),
-                       )
+          // //            ),
+          //              )
                
                
-               ),
+          //      ),
+           Card(
+                          color: Colors.grey[200],
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          
+                          child: Column(
+                            children: [
+                              Image.asset(historic[index].imageU),
+                              ListTile(
+                                title: Text(historic[index].title),
+                               
+                                    subtitle:Text( historic[index].Subtitle) ,
+                                trailing: Icon(Icons.navigate_next),
+                                
+                              ),
+                            ],
+                          ),
+                        ),
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HistoricScreen(
+                                historic: historic[index],
+                              ),
+                            )
+                            ),
+                        
              )
              );
            }

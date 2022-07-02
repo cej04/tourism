@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/Kumarakom.dart';
 import 'package:ktmtourism/Screens/map_utils.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 import 'package:readmore/readmore.dart';
@@ -28,9 +29,16 @@ class KumarakomDetails extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(kDefaultPadding),
               child: Container(
-                child: Text("kumarakom",
-                    style: Theme.of(context).textTheme.headline6?.copyWith(
-                        color: Colors.black, fontWeight: FontWeight.bold)),
+               
+              
+
+                    child: Text("kumarakom",
+                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                      color: Colors.black, fontWeight: FontWeight.bold)),
+                            
+                      
+                  
+                
               ),
             ),
             Container(
@@ -77,19 +85,34 @@ class KumarakomDetails extends StatelessWidget {
               onTap: () {
                 MapUtils.openMap( 9.583331, 76.4333316);
               },
-              child: Container(
+              child:
+              ListTile(
+                tileColor: Colors.grey,
+                
+                title:Text("Category >>>   Natural/Scenic ,Recreational") ,
 
-                  // width: MediaQuery.of(context).size.width/6.5,
-                  height: MediaQuery.of(context).size.height / 14.5,
-                  //                 duration: const Duration(seconds: 2),
-                  // foregroundDecoration: BoxDecoration(
-                  //   //color: _isInitialValue ? Colors.blue : Colors.red,
-                  //   border: Border.all(width: _isInitialValue ? 0 : 10),
-                  // ),
-                  child: Image.asset(
-                    'assets/images/location1.png',
-                    fit: BoxFit.fill,
-                  )),
+                
+                trailing: Image.asset( 'assets/images/location1.png'),)
+              //  Row(
+
+              //     // width: MediaQuery.of(context).size.width/6.5,
+              //  //   height: MediaQuery.of(context).size.height / 14.5,
+                 
+              //     //                 duration: const Duration(seconds: 2),
+              //     // foregroundDecoration: BoxDecoration(
+              //     //   //color: _isInitialValue ? Colors.blue : Colors.red,
+              //     //   border: Border.all(width: _isInitialValue ? 0 : 10),
+              //     // ),
+              //     children:[
+              //       Text("Category >>"),
+                    
+              //       Image.asset(
+              //       'assets/images/location1.png',
+                 
+              //       width: 50,
+              //       height: 50,
+              //      // fit: BoxFit.fill,
+              //     )] ),
             ),
 
             Expanded(
