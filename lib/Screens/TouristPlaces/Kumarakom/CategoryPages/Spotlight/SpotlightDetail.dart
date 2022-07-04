@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/Spotlight/Spotlight.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/Spotlight/SpotlightCard.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
 class SpotlightDetail extends StatelessWidget {
@@ -20,17 +19,37 @@ class SpotlightDetail extends StatelessWidget {
       // ),
       body: Column(
         children: [
-          Padding(
+           Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
             child: Text("Spotlights Near Kumarakom",style: Theme.of(context).textTheme.headline6?.copyWith(
                 color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
-          // HeaderWithRestaurant(size: size),
+         // HeaderWithFAQS(size: size),
           Expanded(
-              child: ListView.builder(
-                  itemCount: spotlight.length,
-                  itemBuilder: (context, index) =>
-                      SpotlightCard(spotlight: spotlight[index], press: () {})))
+            child: ListView.builder(
+                itemCount: spotlight.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final que = spotlight[index];
+
+                  return Card(
+                    child: ListTile(
+                      tileColor: que.bgcolor,
+                      leading: Icon(Icons.attractions_rounded,color: que.iconColor,),
+                      title: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(que.name),
+                           Text(que.trailing),
+                        ],
+                      ),
+                      subtitle:Text(que.description,textAlign: TextAlign.justify,),
+                     // trailing: Text(que.trailing),
+                    
+                    ),
+                  );
+                }),
+     
+          )
         ],
       ),
     );

@@ -27,7 +27,7 @@ class AirDetailPage extends StatelessWidget {
                   return Card(
                     child: ListTile(
                       tileColor: que.bgcolor,
-                      leading: Icon(Icons.train,color: que.iconColor,),
+                      leading: Icon(Icons.flight,color: que.iconColor,),
                       title: Text(que.title),
                     
                       subtitle: Column(
