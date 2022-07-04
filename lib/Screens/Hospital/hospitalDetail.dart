@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Headers/header_hospital.dart';
 import 'package:ktmtourism/Screens/Hospital/hospital.dart';
-import 'package:ktmtourism/Screens/Hospital/hospitalCard.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
+import 'package:ktmtourism/Utils/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HospitalDetail extends StatelessWidget {
   const HospitalDetail({
@@ -15,51 +15,68 @@ class HospitalDetail extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: const MyAppBar(title: 'Kottayam Tourism',),
+        child: const MyAppBar(
+          title: 'Kottayam Tourism',
+        ),
       ),
       body: Column(
         children: [
-          HeaderWithHospital(size: size),
+          Padding(
+            padding: const EdgeInsets.all(kDefaultPadding),
+            child: Text("Hospital",
+                style: Theme.of(context).textTheme.headline6?.copyWith(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    )),
+          ),
+          // HeaderWithFAQS(size: size),
           Expanded(
-              child: ListView.builder(
-                  itemCount: hospital.length,
-                  itemBuilder: (context, index) =>
-                      HospitalCard(hospital: hospital[index], press: () {}
-                          //  => Navigator.push(
-                          //    context, MaterialPageRoute(
-                          //      builder: (context) => PilgrimsBodyPage(
-                          //        pilgrims:pilgrims[index],
-                          //        ),
-                          //        ),
-                          //  ),
-                          ))
+            child: ListView.builder(
+                itemCount: hospital.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final que = hospital[index];
 
-              // GridView.builder(
-              //    padding: const EdgeInsets.all(20),
-              //   itemCount: hospital.length,
-              //   gridDelegate:
-              //   SliverGridDelegateWithFixedCrossAxisCount(
-              //     crossAxisCount: 1,
-              //   // mainAxisSpacing: kDefaultPadding,
-              //   // crossAxisSpacing: 10,
-              //   //   mainAxisSpacing: 10,
-              //   childAspectRatio: 2/1.5,
-              //   ),
+                  return Card(
+                    child: ListTile(
+                      tileColor: que.bgcolor,
+                      leading: Icon(
+                        Icons.local_hospital_outlined,
+                        color: que.iconColor,
+                      ),
+                      title: Text(que.name),
+                      subtitle: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SizedBox(height: 10.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              // Text("Phone :"),
+                              Text(que.description),
+                            ],
+                          ),
+                          SizedBox(height: 5.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text("Phone :"),
+                              TextButton(
+                                  onPressed: () async {
+                                    final url = 'tel:${que.phone}';
 
-              // itemBuilder: (context,index) => HospitalCard(
-              //   hospital: hospital[index],
-              //    press: () {}
-              //   //  => Navigator.push(
-              //   //    context, MaterialPageRoute(
-              //   //      builder: (context) => PilgrimsBodyPage(
-              //   //        pilgrims:pilgrims[index],
-              //   //        ),
-              //   //        ),
-              //   //  ),
-              // )
-              // ),
-
-              )
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
+                                  child: Text(que.phone.toString())),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
+          )
         ],
       ),
     );

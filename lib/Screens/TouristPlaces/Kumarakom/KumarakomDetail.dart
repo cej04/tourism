@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/KumarakomDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/AccessingKumarakom/AccessingKumarakom.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/FerryTiming/FerryTimingDetail.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/MotorBoat/MotorBoatDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/RoadBased/RoadBasedDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/Spotlight/SpotlightDetail.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/WaterBased/WaterBasedDetail.dart';
@@ -44,7 +45,7 @@ class _KumarakomDetailState extends State<KumarakomDetail> {
 
 Widget _tabSection(BuildContext context) {
   return DefaultTabController(
-    length: 8,
+    length: 9,
     child: Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
@@ -75,6 +76,10 @@ Widget _tabSection(BuildContext context) {
               icon: Icon(Icons.alarm),
               text: "Ferry Timing ",
             ),
+             Tab(
+              icon: Icon(Icons.sailing_sharp),
+              text: "Motor Boat Operators",
+            ),
           ],
         ),
         Container(
@@ -89,6 +94,7 @@ Widget _tabSection(BuildContext context) {
             const WaterBasedDetail(),
             const RoadBasedDetail(),
             const FerryTimingDetail(),
+            MotorBoatDetail()
           ]),
         ),
       ],
