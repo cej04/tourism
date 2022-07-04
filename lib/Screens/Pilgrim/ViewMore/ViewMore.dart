@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Pilgrim/ViewMore/View.dart';
+import 'package:ktmtourism/Screens/Pilgrim/ViewMore/ViewMorePigrimCard.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
@@ -52,6 +53,19 @@ class _ViewMorePilgrimState extends State<ViewMorePilgrim> {
             //  Text("Pilgrim Centers",style: Theme.of(context).textTheme.headline6?.copyWith(
             //     color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
+                  Expanded(
+            child: ListView.builder(
+                itemCount: _textEditingController!.text.isNotEmpty
+                    ? pilgrimviewmoreonsearch.length
+                    : pilgrimviewmore.length,
+                itemBuilder: (context, index) => ViewMoreCard(
+                    pilgrimviewmore: _textEditingController!.text.isNotEmpty
+                        ? pilgrimviewmoreonsearch[index]
+                        : pilgrimviewmore[index],
+                    press: () {})),
+          ),
+        ],
+      ),
          // HeaderWithFAQS(size: size),
           // Expanded(
           //   child: ListView.builder(
@@ -79,14 +93,15 @@ class _ViewMorePilgrimState extends State<ViewMorePilgrim> {
      
           // )
           
-        ],
-      ),
+        
+  
+      );
       // ListView.builder(
       //     itemCount: pilgrimviewmore.length,
       //     itemBuilder: (context, index) =>
       //         ViewMoreCard(pilgrimviewmore: pilgrimviewmore[index], press: () {}
                   
       //             )),
-    );
+
   }
 }
