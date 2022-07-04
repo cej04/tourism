@@ -34,7 +34,7 @@ class kottayamViewMoreCard extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text("Tariff :"),
+                              Text("Tariff : "),
                               Text(que.tariff),
                             ],
                           ),
@@ -42,7 +42,7 @@ class kottayamViewMoreCard extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text("Phone :"),
+                              Text("Phone : "),
                               TextButton(
                                   onPressed: () async {
                                     final url = 'tel:${que.phone}';
@@ -52,13 +52,15 @@ class kottayamViewMoreCard extends StatelessWidget {
                                     }
                                   },
                                   child: Text(que.phone)),
+                                  {que.phonedisplay} != "" ? Text('${que.phonedisplay}') : Text(''),
                             ],
                           ),
                           SizedBox(height: 5.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text("Website :"),
+                              Text("Website : "),
+                              que.website != "" ?
                               TextButton(
                                   onPressed: () async {
                                     final Uri url = Uri.parse(que.website);
@@ -66,7 +68,7 @@ class kottayamViewMoreCard extends StatelessWidget {
                                       await launchUrl(url);
                                     }
                                   },
-                                  child: Text(que.website.toString())),
+                                  child: Text(que.website.toString())) : Text(''),
                             ],
                           ),
                         ],
