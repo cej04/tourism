@@ -12,7 +12,7 @@ class EmergencyPage extends StatelessWidget {
     return Scaffold(
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
-          child: const MyAppBar(title: '',),
+          child: const MyAppBar(title: 'Kottayam tourism',),
         ),
         body: SingleChildScrollView(
           child: Column(children: [

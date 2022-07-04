@@ -2,7 +2,7 @@
 
 class Religious {
   String imageU;
-  String Desc, AirDesc, TrainDesc, RoadDesc, title;
+  String Desc, AirDesc, TrainDesc, RoadDesc, title,subtitle;
 
   double lat, long;
   List<String> ReligiousImg;
@@ -11,6 +11,7 @@ class Religious {
   Religious(
       {required this.imageU,
       required this.title,
+      required this.subtitle,
       required this.Desc,
       required this.AirDesc,
       required this.TrainDesc,
@@ -25,6 +26,7 @@ List<Religious> religious = [
   Religious(
       imageU: "assets/images/juma.jpg",
       title: "Thazhathangadi Juma Masjid ",
+      subtitle: "Well known for the architectural richness, wood caring, and natural beauty ",
       Desc:
           "The Thazhathangadi Juma Masjid is one of the oldest mosques in India (about 1,000 years old). It is believed that Habib Dinar (son of Malik Dinar who introduced Kerala to Islam) constructed the masjid. It is built in the traditional Kerala style of architecture. It is famous for its richness of architecture, wood caring and the beauty. This mosque is situated on the bank of Meenachil river.",
       AirDesc:

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Pilgrim/ViewMore/View.dart';
-import 'package:ktmtourism/Screens/Pilgrim/ViewMore/ViewMorePigrimCard.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
+import 'package:ktmtourism/Utils/constants.dart';
 
 class ViewMorePilgrim extends StatefulWidget {
   const ViewMorePilgrim({Key? key}) : super(key: key);

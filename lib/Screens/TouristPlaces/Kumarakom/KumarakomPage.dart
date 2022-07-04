@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/KumarakomDetail.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'CategoryPages/About/Kumarakom.dart';
 
 class KumarakomPage extends StatelessWidget {
@@ -19,40 +20,72 @@ class KumarakomPage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                       padding: const EdgeInsets.only(
-                          left: 25.0, right: 25.0, top: 25.0),
+                          left: 20.0, right: 20.0, top: 20.0),
                       child: GestureDetector(
-                        child: Container(
-                            height: 200,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.fill,
-                                    image:
-                                        AssetImage(kumarakom[index].imageU))),
-                            alignment: Alignment.bottomCenter,
-                            child: Padding(
-                                padding:
-                                    EdgeInsets.only(left: 15.0, bottom: 15),
-                                child:
-                                    Text(kumarakom[index].title.toUpperCase(),
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .labelMedium
-                                            ?.apply(
-                                              color: Colors.white,
-                                              backgroundColor:
-                                                  Colors.black.withOpacity(0.5),
-                                            )
-                                            .copyWith(letterSpacing: 1)))),
+                        child: 
+                        Card(
+                          color: Colors.grey[200],
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          
+                          child: Column(
+                            children: [
+                              Image.asset(kumarakom[index].imageU),
+                              ListTile(
+                                title: Text(kumarakom[index].title),
+                               
+                                    subtitle:Text( kumarakom[index].subtitle) ,
+                                trailing: Icon(Icons.navigate_next),
+                                
+                              ),
+                            ],
+                          ),
+                        ),
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => KumarakomDetail(
                                 kumarakom: kumarakom[index],
                               ),
-                              //            ),
-                            )),
-                      ));
+                            )
+                            ),
+                        
+                        // Container(
+                        //     height: 200,
+                        //     decoration: BoxDecoration(
+                        //         borderRadius: BorderRadius.circular(10),
+                        //         image: DecorationImage(
+                        //             fit: BoxFit.fill,
+                        //             image:
+                        //                 AssetImage(kumarakom[index].imageU))),
+                        //     alignment: Alignment.bottomCenter,
+                        //     child: Padding(
+                        //         padding:
+                        //             EdgeInsets.only(left: 15.0, bottom: 15),
+                        //         child:
+                        //             Text(kumarakom[index].title.toUpperCase(),
+                        //                 style: Theme.of(context)
+                        //                     .textTheme
+                        //                     .labelMedium
+                        //                     ?.apply(
+                        //                       color: Colors.white,
+                        //                       backgroundColor:
+                        //                           Colors.black.withOpacity(0.5),
+                        //                     )
+                        //                     .copyWith(letterSpacing: 1)))),
+                        // onTap: () => Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => KumarakomDetail(
+                        //         kumarakom: kumarakom[index],
+                        //       ),
+                        //       //            ),
+                        //     )
+                        //     ),
+                      )
+                      );
                 }),
           ))
         ],

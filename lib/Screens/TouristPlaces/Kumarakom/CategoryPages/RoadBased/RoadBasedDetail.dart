@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/RoadBased/RoadBased.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/RoadBased/RoadBasedCard.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
 class RoadBasedDetail extends StatelessWidget {
@@ -18,23 +17,52 @@ class RoadBasedDetail extends StatelessWidget {
       //     child: const MyAppBar(),
 
       // ),
-      body: Column(
+      body: 
+         Column(
         children: [
-          Padding(
+           Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
-            child: Text(
-                "Road Based Sightseeing\n Routes In Kumarakom"
-                    ,style: Theme.of(context).textTheme.headline6?.copyWith(
+            child: Text("Road Based Sightseeing\n Routes In Kumarakom",style: Theme.of(context).textTheme.headline6?.copyWith(
                 color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
-          // HeaderWithRestaurant(size: size),
+         // HeaderWithFAQS(size: size),
           Expanded(
-              child: ListView.builder(
-                  itemCount: roadbased.length,
-                  itemBuilder: (context, index) =>
-                      RoadBasedCard(roadbased: roadbased[index], press: () {})))
+            child: ListView.builder(
+                itemCount: roadbased.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final que = roadbased[index];
+
+                  return Card(
+                    child: ListTile(
+                      tileColor: que.bgcolor,
+                      leading: Icon(Icons.emoji_transportation_outlined,color: que.iconColor,),
+                     
+                      subtitle: Text(que.description)
+                    
+                    ),
+                  );
+                }),
+     
+          )
         ],
       ),
+      // Column(
+      //   children: [
+      //     Padding(
+      //       padding: const EdgeInsets.all(kDefaultPadding),
+      //       child: Text(
+      //           "Road Based Sightseeing\n Routes In Kumarakom"
+      //               ,style: Theme.of(context).textTheme.headline6?.copyWith(
+      //           color: Colors.black, fontWeight: FontWeight.bold,)),
+      //     ),
+      //     // HeaderWithRestaurant(size: size),
+      //     Expanded(
+      //         child: ListView.builder(
+      //             itemCount: roadbased.length,
+      //             itemBuilder: (context, index) =>
+      //                 RoadBasedCard(roadbased: roadbased[index], press: () {})))
+      //   ],
+      // ),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/ResponsibleTourism/ResponsibleTourism.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/ResponsibleTourism/ResponsibleTourismCard.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
 class ResponsibleTourismDetail extends StatelessWidget {
@@ -18,22 +17,59 @@ class ResponsibleTourismDetail extends StatelessWidget {
       //     child: const MyAppBar(),
 
       // ),
-      body: Column(
+      body: 
+       Column(
         children: [
-          Padding(
+           Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
             child: Text("Responsible Tourism",style: Theme.of(context).textTheme.headline6?.copyWith(
                 color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
-          // HeaderWithRestaurant(size: size),
+         // HeaderWithFAQS(size: size),
           Expanded(
-              child: ListView.builder(
-                  itemCount: responsibletourism.length,
-                  itemBuilder: (context, index) => ResponsibleTourismCard(
-                      responsibletourism: responsibletourism[index],
-                      press: () {})))
+            child: ListView.builder(
+                itemCount: responsibletourism.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final que = responsibletourism[index];
+
+                  return Card(
+                    child: ListTile(
+                      tileColor: que.bgcolor,
+                      leading: Icon(Icons.currency_rupee_outlined,color: que.iconColor,),
+                      title: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(que.name),
+                          SizedBox(height: 10,),
+                          Text(que.tariff),
+                        ],
+                      ),
+                      subtitle: Text(que.description,textAlign: TextAlign.justify,),
+                     
+                    
+                    ),
+                  );
+                }),
+     
+          )
         ],
       ),
+      // Column(
+      //   children: [
+      //     Padding(
+      //       padding: const EdgeInsets.all(kDefaultPadding),
+      //       child: Text("Responsible Tourism",style: Theme.of(context).textTheme.headline6?.copyWith(
+      //           color: Colors.black, fontWeight: FontWeight.bold,)),
+      //     ),
+      //     // HeaderWithRestaurant(size: size),
+      //     Expanded(
+      //         child: ListView.builder(
+      //             itemCount: responsibletourism.length,
+      //             itemBuilder: (context, index) => ResponsibleTourismCard(
+      //                 responsibletourism: responsibletourism[index],
+      //                 press: () {})))
+      //   ],
+      // ),
     );
   }
 }

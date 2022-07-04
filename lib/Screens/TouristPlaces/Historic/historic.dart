@@ -2,7 +2,7 @@
 
 class Historic {
   String imageU;
-  String Desc, AirDesc, TrainDesc, RoadDesc, title;
+  String Desc, AirDesc, TrainDesc, RoadDesc, title,Subtitle;
   double lat, long;
 
   List<String> activities;
@@ -16,6 +16,7 @@ class Historic {
       required this.RoadDesc,
       required this.lat,
       required this.long,
+      required this.Subtitle,
       required this.activities});
 }
 
@@ -25,6 +26,7 @@ List<Historic> historic = [
   Historic(
       imageU: "assets/images/poonjarkottaram.jpg",
       title: "Poonjar Palace ",
+      Subtitle: "A beautiful reminder of the opulence of a bygone era.",
       Desc:
           "The Poonjar Palace in Meenachil taluk is a glorious testimony to the regal opulence of a bygone era. With the palace walls, is an extra ordinary royal collection of antiques and exquisite furniture which include a palanquin, a thoni carved out of a single piece of wood for ayurvedic massages, huge chandeliers, palm leaf engravings, jewel boxes, a variety of lamps, sculptures of Nataraja (dancing Lord Siva ), grain measures, statues and weapons. A unique couch preserved here is taken out once a year for ritualistic purposes. Near the palace is an amazing replica of the Madurai Meenakshi Temple. The walls of this temple have sculptures with war fare stories from the Puranas (the legends of ancient India ). However the most fascinating thing here is the Chuttuvilakku (row of lamps) carved out on the stonewalls of the Sastha Temple nearby. Such rocks cut lamps are rare in India.",
       AirDesc:
@@ -42,6 +44,7 @@ List<Historic> historic = [
   Historic(
       imageU: "assets/images/juma.jpg",
       title: "Thazhathangadi Juma Masjid",
+      Subtitle: " Well known for the architectural richness, wood caring, and natural beauty .",
       Desc:
           "The Thazhathangadi Juma Masjid is one of the oldest mosques in India (about 1,000 years old). It is believed that Habib Dinar (son of Malik Dinar who introduced Kerala to Islam) constructed the masjid. It is built in the traditional Kerala style of architecture. It is famous for its richness of architecture, wood caring and the beauty. This mosque is situated on the bank of Meenachil river.",
       AirDesc:

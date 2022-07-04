@@ -38,7 +38,13 @@ class PilgrimKtmPage extends StatelessWidget {
                             children: [
                               Image.asset(pilgrims[index].image),
                               ListTile(
-                                title: Text(pilgrims[index].title),
+                                title: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(pilgrims[index].title),
+                                   Icon(Icons.navigate_next) 
+                                  ],
+                                ),
                                 subtitle: Text(
                                   pilgrims[index].subtitle,
                                 ),
