@@ -16,7 +16,7 @@ class PilgrimViewMore {
 
 List<PilgrimViewMore> pilgrimviewmore = [
   PilgrimViewMore(
-    title: "Aruvithira Church",
+    title: "Aruvithura Church",
     trailing: "(11 km from Kottayam)",
     desc:
         "Believed to be one of the seven churches established by St. Thomas, this is also one of the churches in Kerala which collects the largest amount of monetary offerings during the festival days. The annual feast is celebrated from 22nd to 24th of April.",

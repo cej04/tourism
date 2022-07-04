@@ -42,13 +42,13 @@ class PilgrimKtmPage extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(pilgrims[index].title),
-                                   Icon(Icons.navigate_next) 
+                                    Text(pilgrims[index].distance)
+                                  
                                   ],
                                 ),
                                 subtitle: Text(
-                                  pilgrims[index].subtitle,
-                                ),
-                                trailing: Text(pilgrims[index].distance),
+                                  pilgrims[index].subtitle,),
+                                trailing: Icon(Icons.navigate_next)  ,
                               ),
                             ],
                           ),
