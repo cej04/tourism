@@ -23,7 +23,7 @@ List<MotorBoat> motorboat = [
   MotorBoat(
       title: "Vadakkath Kannadichal,Kannadichal",
      
-      phone:"+91481 2524275",
+      phone:"+914812524275",
       tariff: "\u{20B9} 350",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFFF7EC),

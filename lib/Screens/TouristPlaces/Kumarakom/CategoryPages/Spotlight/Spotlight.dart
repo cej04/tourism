@@ -23,7 +23,7 @@ List<Spotlight> spotlight = [
       name: "Aymanam ",
       trailing:"  (1.5 hour boat ride from Kumarakom) ",
       description:
-          "Arundhati Roy's novel 'The God of small things' is set in this beautiful village. It is a typical riverside hamlet with scenic backwaters, a vivid green network of rivers and canals, and vast stretches of green paddy fields and coconut farms. Migratory birds come seeking this verdant landscape every summer and frolic in its natural splendour. Country boat rides through the interior canals is a great way to relax and enjoy nature's bounties.",
+          "Arundhati Roy's novel 'The God of small things' is set in this beautiful village. It is a typical riverside hamlet with scenic backwaters, a vivid green network of rivers and canals, and vast stretches of green paddy fields and coconut farms. \nMigratory birds come seeking this verdant landscape every summer and frolic in its natural splendour. Country boat rides through the interior canals is a great way to relax and enjoy nature's bounties.",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFFF7EC),
       iconColor: Color.fromARGB(255, 236, 199, 119)),
@@ -39,7 +39,7 @@ List<Spotlight> spotlight = [
       name: "Daivathinte Munamb ",
       trailing: "(7 km fom Kumarakom)",
       description:
-          "Daivathinte Munamb (God's island), is an enchanting picnic spot, which provides boating. fishing and sightseeing experiences. Walking along the banks of the lake is a memorable experience. Life of the local people can be observed very closely here. The small island, a little far away from the main shore, is fascinating and offers a beautiful view of the sunset.",
+          "Daivathinte Munamb (God's island), is an enchanting picnic spot, which provides boating. fishing and sightseeing experiences. Walking along the banks of the lake is a memorable experience. Life of the local people can be observed very closely here.\nThe small island, a little far away from the main shore, is fascinating and offers a beautiful view of the sunset.",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0XFFEDF4FE),
       iconColor: Color.fromARGB(255, 96, 151, 219)),
@@ -55,7 +55,7 @@ List<Spotlight> spotlight = [
       name: "Kannadichal",
       trailing: " (3 km from Kumarakom)",
       description:
-          "Witness various types of traditional fishing techniques practiced by the villagers at Kannadichal. During the harvest season, tonnes of paddy is harvested from this place. Migratory birds and common birds can also be seen here. The one hour sightseeing trip through the winding canal in a country boat via Naragathara, Muthalymada, Mathrankayal to Daivathinte Munamb is an unforgettable experience.",
+          "Witness various types of traditional fishing techniques practiced by the villagers at Kannadichal. During the harvest season, tonnes of paddy is harvested from this place. \nMigratory birds and common birds can also be seen here. The one hour sightseeing trip through the winding canal in a country boat via Naragathara, Muthalymada, Mathrankayal to Daivathinte Munamb is an unforgettable experience.",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFCF0F0),
       iconColor: Color.fromARGB(255, 236, 151, 158)),
@@ -63,7 +63,7 @@ List<Spotlight> spotlight = [
       name: "Manchadikkari ",
       trailing: "(4 km from the BoatTerminal at Kavanattinkara)",
       description:
-          "With its unending vast green paddy fields and vegetable farms, and practices like toddy tapping, net fishing, country boat rides, screw pine weaving, coconut leaf weaving, traditional coir making unit, duck farms and bird watching. Manchadikkari has much in store for tourists. This place provides a truly unique village experience. In the summer season, migratory birds like the Sibenan stork, darter, egret, heron and common varieties like water hen, crane and skylark can be spotted here.",
+          "With its unending vast green paddy fields and vegetable farms, and practices like toddy tapping, net fishing, country boat rides, screw pine weaving, coconut leaf weaving, traditional coir making unit, duck farms and bird watching. \nManchadikkari has much in store for tourists. This place provides a truly unique village experience. In the summer season, migratory birds like the Sibenan stork, darter, egret, heron and common varieties like water hen, crane and skylark can be spotted here.",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0XFFEDF4FE),
       iconColor: Color.fromARGB(255, 96, 151, 219)),
@@ -71,7 +71,7 @@ List<Spotlight> spotlight = [
       name: "Mooleapadom  ",
       trailing: "(4 km from Kavanattinkara)",
       description:
-          "The unique attraction here is the vellaveesal style of Karimeen fishing (a special technique of fishing using tender coconut leaves that are tied in ropes). A crew of at least eight fishermen is required for this type of fising. A ride in a country boat through the narrow canal is a memorable experience. Vegetable farms, toddy tapping, coconut leaf thatched houses and bird watching are the main attractions of this place",
+          "The unique attraction here is the vellaveesal style of Karimeen fishing (a special technique of fishing using tender coconut leaves that are tied in ropes). A crew of at least eight fishermen is required for this type of fising.\nA ride in a country boat through the narrow canal is a memorable experience. Vegetable farms, toddy tapping, coconut leaf thatched houses and bird watching are the main attractions of this place",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFFF7EC),
       iconColor: Color.fromARGB(255, 236, 199, 119)),

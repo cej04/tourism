@@ -40,8 +40,11 @@ class ResponsibleTourismDetail extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(que.name),
-                          SizedBox(height: 10,),
-                          Text(que.tariff),
+                      
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(que.tariff),
+                          ),
                         ],
                       ),
                       subtitle: Text(que.description,textAlign: TextAlign.justify,),

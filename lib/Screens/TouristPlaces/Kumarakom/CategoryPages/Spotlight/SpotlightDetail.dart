@@ -39,7 +39,10 @@ class SpotlightDetail extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(que.name),
-                           Text(que.trailing),
+                           Padding(
+                             padding: const EdgeInsets.all(8.0),
+                             child: Text(que.trailing),
+                           ),
                         ],
                       ),
                       subtitle:Text(que.description,textAlign: TextAlign.justify,),
