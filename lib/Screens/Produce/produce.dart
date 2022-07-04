@@ -26,7 +26,7 @@ List<Produce> produce = [
           "PPR Handicraft unit in Kumarakom, Cheepunkal carved wood shaped models like Nettipattom, flags, elephant etc. Tel: 099462 14724 Loc: 9.65220, 76.44121",
       type: "Handicraft"),
   Produce(
-      image: "assets/images/rice.jpg",
+      image: "assets/images/paddy-filed1.jpg",
       title: "Rice",
       subtitle: "The most widely consumed staple food in the State",
       description:

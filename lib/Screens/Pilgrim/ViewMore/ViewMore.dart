@@ -3,11 +3,18 @@ import 'package:ktmtourism/Screens/Pilgrim/ViewMore/View.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
-class ViewMorePilgrim extends StatelessWidget {
+class ViewMorePilgrim extends StatefulWidget {
   const ViewMorePilgrim({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<ViewMorePilgrim> createState() => _ViewMorePilgrimState();
+}
+
+class _ViewMorePilgrimState extends State<ViewMorePilgrim> {
+    TextEditingController _textEditingController = TextEditingController();
+  List<PilgrimViewMore> pilgrimviewmoreonsearch = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,35 +27,58 @@ class ViewMorePilgrim extends StatelessWidget {
         children: [
            Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
-            child: Text("Pilgrim Centers",style: Theme.of(context).textTheme.headline6?.copyWith(
-                color: Colors.black, fontWeight: FontWeight.bold,)),
+            child:
+             Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: TextField(
+                onChanged: (value) {
+                  setState(() {
+                    pilgrimviewmoreonsearch = pilgrimviewmore
+                        .where((element) => element.title
+                            .toLowerCase()
+                            .contains(value.toLowerCase()))
+                        .toList();
+                  });
+                },
+                controller: _textEditingController,
+                decoration: InputDecoration(
+                    contentPadding: EdgeInsets.all(20),
+                    hintText: 'Search here'),
+              )),
+            
+            //  Text("Pilgrim Centers",style: Theme.of(context).textTheme.headline6?.copyWith(
+            //     color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
          // HeaderWithFAQS(size: size),
-          Expanded(
-            child: ListView.builder(
-                itemCount: pilgrimviewmore.length,
-                itemBuilder: (BuildContext context, int index) {
-                  final que = pilgrimviewmore[index];
+          // Expanded(
+          //   child: ListView.builder(
+          //       itemCount: pilgrimviewmore.length,
+          //       itemBuilder: (BuildContext context, int index) {
+          //         final que = pilgrimviewmore[index];
 
-                  return Card(
-                    child: ListTile(
-                      tileColor: que.bgcolor,
-                      leading: Icon(Icons.holiday_village,color: que.iconColor,),
-                      title: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(que.title),
-                           Text(que.trailing),
-                        ],
-                      ),
-                      subtitle:Text(que.desc,textAlign: TextAlign.justify,),
-                     // trailing: Text(que.trailing),
+          //         return Card(
+          //           child: ListTile(
+          //             tileColor: que.bgcolor,
+          //             leading: Icon(Icons.holiday_village,color: que.iconColor,),
+          //             title: Column(
+          //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //               children: [
+          //                 Text(que.title),
+          //                  Text(que.trailing),
+          //               ],
+          //             ),
+          //             subtitle:Text(que.desc,textAlign: TextAlign.justify,),
+          //            // trailing: Text(que.trailing),
                     
-                    ),
-                  );
-                }),
+          //           ),
+          //         );
+          //       }),
      
-          )
+          // )
+          
         ],
       ),
       // ListView.builder(
