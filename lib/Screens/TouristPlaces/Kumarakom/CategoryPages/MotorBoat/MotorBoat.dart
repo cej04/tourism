@@ -24,7 +24,7 @@ List<MotorBoat> motorboat = [
       title: "Vadakkath Kannadichal,Kannadichal",
      
       phone:"+91481 2524275",
-      tariff: "Rs. 350",
+      tariff: "\u{20B9} 350",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFFF7EC),
       iconColor: Color.fromARGB(255, 236, 199, 119)),
@@ -32,14 +32,14 @@ List<MotorBoat> motorboat = [
       title: " Angela, Kumarakom Boat Jetty",
     
       phone:"9447152408 ",
-      tariff: "Rs. 500 ",
+      tariff: "\u{20B9} 500 ",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFCF0F0),
       iconColor: Color.fromARGB(255, 236, 151, 158)),
        MotorBoat(
      title: " St. Thomas, Kumarakom Boat Jetty",
           phone:" 9447420585",
-      tariff: " Rs. 400 ",
+      tariff: " \u{20B9} 400 ",
       
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0XFFEDF4FE),
@@ -47,7 +47,7 @@ List<MotorBoat> motorboat = [
        MotorBoat(
       title: "Mahima, Kumarakom Boat Jetty",
           phone:" 9446509576",
-      tariff: " Rs. 500 ",
+      tariff: " \u{20B9} 500 ",
       
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFFF7EC),
@@ -55,7 +55,7 @@ List<MotorBoat> motorboat = [
   MotorBoat(
   title: "Jerry Mon, Kumarakom Boat Jetty",
           phone:"94468589890 ",
-      tariff: "Rs. 400  ",
+      tariff: "\u{20B9} 400  ",
       
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFCF0F0),
@@ -64,7 +64,7 @@ List<MotorBoat> motorboat = [
    
        title: " Water Lilly, Kumarakom Boat Jetty",
           phone:" 9605924779",
-      tariff: " Rs. 500 ",
+      tariff: " \u{20B9} 500 ",
       
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0XFFEDF4FE),
@@ -72,7 +72,7 @@ List<MotorBoat> motorboat = [
          MotorBoat(
        title: "Holy Mary, Kumarakom Boat Jetty",
           phone:" 9447681274",
-      tariff: " Rs. 500 ",
+      tariff: "\u{20B9} 500 ",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFFF7EC),
       iconColor: Color.fromARGB(255, 236, 199, 119)),

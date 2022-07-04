@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/MotorBoat/MotorBoat.dart';
 import 'package:ktmtourism/Utils/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MotorBoatDetail extends StatelessWidget {
   const MotorBoatDetail({
@@ -36,7 +37,14 @@ class MotorBoatDetail extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text("Phone :"),
-                              Text(que.phone),
+                              TextButton(onPressed: () async {
+                          final url = 'tel:${que.phone}';
+                          // final url = 'tel:$stateowned.phone';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                              child: Text(que.phone)),
                             ],
                           ),
                             SizedBox(height: 10.0),
