@@ -36,8 +36,20 @@ class BoatRaceDetail extends StatelessWidget {
                     child: ListTile(
                       tileColor: que.bgcolor,
                       leading: Icon(Icons.rowing,color: que.iconColor,),
-                      title: Text(que.name),
-                      subtitle: Text(que.description)
+                      title: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          
+                          children: [
+                            Text(que.name),
+                            SizedBox(height: 5,),
+                            Text(que.subtitle)
+                          ],
+                        ),
+                      ),
+                      
+                      subtitle: Text(que.description,textAlign: TextAlign.justify,)
                     
                     ),
                   );

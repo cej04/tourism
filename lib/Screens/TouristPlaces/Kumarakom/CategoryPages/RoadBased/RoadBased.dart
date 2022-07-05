@@ -20,8 +20,14 @@ class RoadBased {
 List<RoadBased> roadbased = [
   RoadBased(
       description:
-          "Kavanattinkara- Vechoor-Achan Road via Kallara - Ezhumanthuruth (1.hr) Kumarakom Market Junction Nazarathpally - Konchumada - Nalupank Daivathinte Munamb (Evening Tour-3 hrs)",
+          "Kavanattinkara- Vechoor-Achan Road via Kallara - Ezhumanthuruth\n \n(1.hr) .",
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFFF7EC),
       iconColor: Color.fromARGB(255, 236, 199, 119)),
+        RoadBased(
+      description:
+          "Kumarakom Market Junction Nazarathpally - Konchumada - Nalupank Daivathinte Munamb \n\n(Evening Tour-3 hrs)",
+      //iconData :Icons.hotel_class_outlined,
+       bgcolor: Color(0xFFFCF0F0),
+      iconColor: Color.fromARGB(255, 236, 151, 158)),
 ];
