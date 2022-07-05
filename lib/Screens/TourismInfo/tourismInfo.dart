@@ -1,7 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 import 'package:ktmtourism/Screens/Headers/header_tourisminfo.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TourismInfoPage extends StatelessWidget {
   const TourismInfoPage({Key? key}) : super(key: key);
@@ -25,11 +27,7 @@ class TourismInfoPage extends StatelessWidget {
                   child: Container(
                     child: RichText(
                       text: TextSpan(
-                        // text: 'The Secretary\nDistrict Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\nPh: +91 481 2560479\nEmail : ',
-                        // style: const TextStyle(
-                        //   fontSize: 14.0,
-                        //   color: Colors.black,
-                        // ),
+                       
                         children: [
                           TextSpan(
                             text: 'Deputy Director\n\n',
@@ -37,15 +35,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            // },
+                           
                           ),
                           TextSpan(
                             text:
@@ -55,6 +45,7 @@ class TourismInfoPage extends StatelessWidget {
                               color: Colors.black,
                             ),
                           ),
+                       
                           TextSpan(
                             text:
                                 'District Tourism Promotion Council(DTPC)\n\n',
@@ -62,15 +53,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            // },
+                          
                           ),
                           TextSpan(
                             text:
@@ -79,15 +62,7 @@ class TourismInfoPage extends StatelessWidget {
                               fontSize: 16.0,
                               color: Colors.black,
                             ),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                        
                           ),
                         ],
                       ),
@@ -99,11 +74,7 @@ class TourismInfoPage extends StatelessWidget {
                   child: Container(
                     child: RichText(
                       text: TextSpan(
-                        // text: 'The Secretary\nDistrict Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\nPh: +91 481 2560479\nEmail : ',
-                        // style: const TextStyle(
-                        //   fontSize: 14.0,
-                        //   color: Colors.black,
-                        // ),
+                      
                         children: [
                           TextSpan(
                             text: 'The Secretary\n\n',
@@ -111,15 +82,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            // },
+                          
                           ),
                           TextSpan(
                             text:
@@ -128,34 +91,21 @@ class TourismInfoPage extends StatelessWidget {
                               fontSize: 18.0,
                               color: Colors.black,
                             ),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                          
                           ),
                           TextSpan(
+                            recognizer: new TapGestureRecognizer()..onTap = () async {
+                                    final Uri url = Uri.parse('info@dtpckottayam.com');
+                                    if (await canLaunchUrl(url)) {
+                                      await launchUrl(url);
+                                    }
+                                  },
                             text: 'info@dtpckottayam.com',
                             style: const TextStyle(
                                 fontSize: 18.0,
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline),
-                            //          GestureDetector(
-                            //   onTap: () {},
-                            //   child: RichText(
-                            //     text: const TextSpan(
-                            //       text: 'Share',
-                            //       style: TextStyle(
-                            //         fontSize: 40.0,
-                            //         color: Colors.green,
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                       
                           ),
                         ],
                       ),
@@ -167,11 +117,7 @@ class TourismInfoPage extends StatelessWidget {
                   child: Container(
                     child: RichText(
                       text: TextSpan(
-                        // text: 'The Secretary\nDistrict Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\nPh: +91 481 2560479\nEmail : ',
-                        // style: const TextStyle(
-                        //   fontSize: 14.0,
-                        //   color: Colors.black,
-                        // ),
+                        
                         children: [
                           TextSpan(
                             text: 'Tourist Information Offices\n\n',
@@ -179,15 +125,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            // },
+                          
                           ),
                           TextSpan(
                             text:
@@ -196,15 +134,7 @@ class TourismInfoPage extends StatelessWidget {
                               fontSize: 18.0,
                               color: Colors.black,
                             ),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                           
                           ),
                           TextSpan(
                             text: 'Ph:2524343\nEmail',
@@ -212,18 +142,7 @@ class TourismInfoPage extends StatelessWidget {
                               fontSize: 18.0,
                               color: Colors.black,
                             ),
-                            //          GestureDetector(
-                            //   onTap: () {},
-                            //   child: RichText(
-                            //     text: const TextSpan(
-                            //       text: 'Share',
-                            //       style: TextStyle(
-                            //         fontSize: 40.0,
-                            //         color: Colors.green,
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                      
                           ),
                           TextSpan(
                             text: ':ddktm@keralatourism.org',
@@ -231,18 +150,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline),
-                            //          GestureDetector(
-                            //   onTap: () {},
-                            //   child: RichText(
-                            //     text: const TextSpan(
-                            //       text: 'Share',
-                            //       style: TextStyle(
-                            //         fontSize: 40.0,
-                            //         color: Colors.green,
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                       
                           ),
                         ],
                       ),
@@ -254,11 +162,7 @@ class TourismInfoPage extends StatelessWidget {
                   child: Container(
                     child: RichText(
                       text: TextSpan(
-                        // text: 'The Secretary\nDistrict Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\nPh: +91 481 2560479\nEmail : ',
-                        // style: const TextStyle(
-                        //   fontSize: 14.0,
-                        //   color: Colors.black,
-                        // ),
+                       
                         children: [
                           TextSpan(
                             text: 'Responsible Tourism Travel Desk  \n\n',
@@ -266,15 +170,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            // },
+                       
                           ),
                           TextSpan(
                             text:
@@ -283,15 +179,7 @@ class TourismInfoPage extends StatelessWidget {
                               fontSize: 18.0,
                               color: Colors.black,
                             ),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                          
                           ),
                           TextSpan(
                             text:
@@ -300,18 +188,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline),
-                            //          GestureDetector(
-                            //   onTap: () {},
-                            //   child: RichText(
-                            //     text: const TextSpan(
-                            //       text: 'Share',
-                            //       style: TextStyle(
-                            //         fontSize: 40.0,
-                            //         color: Colors.green,
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                          
                           ),
                         ],
                       ),
@@ -323,11 +200,7 @@ class TourismInfoPage extends StatelessWidget {
                   child: Container(
                     child: RichText(
                       text: TextSpan(
-                        // text: 'The Secretary\nDistrict Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\nPh: +91 481 2560479\nEmail : ',
-                        // style: const TextStyle(
-                        //   fontSize: 14.0,
-                        //   color: Colors.black,
-                        // ),
+                    
                         children: [
                           TextSpan(
                             text: 'KTDC  \n\n',
@@ -335,15 +208,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            // },
+                        
                           ),
                           TextSpan(
                             text: 'Kumarakom\nPh: +91 481 2527650\nEmail :',
@@ -351,15 +216,7 @@ class TourismInfoPage extends StatelessWidget {
                               fontSize: 18.0,
                               color: Colors.black,
                             ),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                       
                           ),
                           TextSpan(
                             text: 'waterscapes@ktdc.com',
@@ -367,18 +224,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline),
-                            //          GestureDetector(
-                            //   onTap: () {},
-                            //   child: RichText(
-                            //     text: const TextSpan(
-                            //       text: 'Share',
-                            //       style: TextStyle(
-                            //         fontSize: 40.0,
-                            //         color: Colors.green,
-                            //       ),
-                            //     ),
-                            //   ),
-                            // ),
+                         
                           ),
                         ],
                       ),
@@ -390,11 +236,7 @@ class TourismInfoPage extends StatelessWidget {
                   child: Container(
                     child: RichText(
                       text: TextSpan(
-                        // text: 'The Secretary\nDistrict Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\nPh: +91 481 2560479\nEmail : ',
-                        // style: const TextStyle(
-                        //   fontSize: 14.0,
-                        //   color: Colors.black,
-                        // ),
+                       
                         children: [
                           TextSpan(
                             text: 'Websites\n\n',
@@ -402,15 +244,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 18.0,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            // },
+                          
                           ),
                           TextSpan(
                             text:
@@ -419,15 +253,7 @@ class TourismInfoPage extends StatelessWidget {
                               fontSize: 16.0,
                               color: Colors.black,
                             ),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                          
                           ),
                           TextSpan(
                             text: ' www.discoverkottayam.com\n\n',
@@ -435,25 +261,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 16.0,
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline),
-                            // recognizer: TapGestureRecognizer()
-                            // ..onTap = () async {
-                            //   final url = 'https://www.discoverkottayam.com/';
-                            //   if (await canLaunch(url)) {
-                            //     await launch(
-                            //       url,
-                            //       forceSafariVC: false,
-                            //     );
-                            //   }
-                            // },
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                       
                           ),
                           TextSpan(
                             text:
@@ -462,15 +270,7 @@ class TourismInfoPage extends StatelessWidget {
                               fontSize: 16.0,
                               color: Colors.black,
                             ),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                            
                           ),
                           TextSpan(
                             text: ' www.keralatourism.org\n\n',
@@ -478,15 +278,7 @@ class TourismInfoPage extends StatelessWidget {
                                 fontSize: 16.0,
                                 color: Colors.blue,
                                 decoration: TextDecoration.underline),
-                            // recognizer: TapGestureRecognizer()
-                            //   ..onTap = () {
-                            //     Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //         builder: (context) => const AnotherRicTextPage(),
-                            //       ),
-                            //     );
-                            //  },
+                            
                           ),
                         ],
                       ),

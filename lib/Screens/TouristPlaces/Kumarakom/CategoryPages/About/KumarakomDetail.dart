@@ -34,7 +34,7 @@ class KumarakomDetails extends StatelessWidget {
 
                     child: Text("kumarakom",
                   style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
+                      color: Colors.black,)),
                             
                       
                   

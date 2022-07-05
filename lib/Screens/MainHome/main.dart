@@ -21,9 +21,48 @@ List<MainSample> mainsample = [
       icons: Icons.explore_outlined),
   MainSample(
       image: "assets/images/stay.png",
-      title: "Stay ",
+      title: "Guest House ",
+      icons: Icons.bed_rounded),
+ 
+  // MainSample(
+  //     image: "assets/images/produce.png",
+  //     title: "Produce",
+  //     icons: Icons.color_lens),
+  // MainSample(
+  //     image: "assets/images/festival.png",
+  //     title: "Festivals",
+  //     icons: Icons.celebration_rounded),
+  // MainSample(
+  //     image: "assets/images/artbook.png",
+  //     title: "Art & Culture",
+  //     icons: Icons.festival_outlined),
+
+
+    MainSample(
+      image: "assets/images/Aurveda.png",
+      title: "Ayurveda Centre ",
       icons: Icons.bed_rounded),
   MainSample(
+      image: "assets/images/Homestay.png",
+      title: "Home Stay",
+      icons: Icons.holiday_village),
+  MainSample(
+      image: "assets/images/delight.png",
+      title: "Hotel",
+      icons: Icons.flatware),
+        MainSample(
+      image: "assets/images/religion.png",
+      title: "Resort",
+      icons: Icons.holiday_village),
+  MainSample(
+      image: "assets/images/delight.png",
+      title: "Serviced Villa",
+      icons: Icons.flatware),
+        MainSample(
+      image: "assets/images/delight.png",
+      title: "Grihasthali",
+      icons: Icons.flatware),
+       MainSample(
       image: "assets/images/religion.png",
       title: "Pilgrim Centers",
       icons: Icons.holiday_village),
@@ -31,19 +70,7 @@ List<MainSample> mainsample = [
       image: "assets/images/delight.png",
       title: "Culinary Delights",
       icons: Icons.flatware),
-  MainSample(
-      image: "assets/images/produce.png",
-      title: "Produce",
-      icons: Icons.color_lens),
-  MainSample(
-      image: "assets/images/festival.png",
-      title: "Festivals",
-      icons: Icons.celebration_rounded),
-  MainSample(
-      image: "assets/images/artbook.png",
-      title: "Art & Culture",
-      icons: Icons.festival_outlined),
-  MainSample(
+        MainSample(
       image: "assets/images/passenger.png",
       title: "How to Reach",
       icons: Icons.commute_outlined),
