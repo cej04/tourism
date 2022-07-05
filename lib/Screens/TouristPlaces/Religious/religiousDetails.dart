@@ -23,7 +23,7 @@ class ReligiousDetails extends StatelessWidget {
             child: Container(
               child: Text(religious.title,
                   style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
+                      color: Colors.black,)),
               alignment: Alignment.center,
             ),
           ),

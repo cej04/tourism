@@ -117,7 +117,8 @@ class _MainSample2PageState extends State<MainSample2Page> {
                 itemCount: mainsample.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  childAspectRatio: (1 / .9),
+                  childAspectRatio: 1.0
+                  //childAspectRatio: (1 / .9),
                 ),
                 itemBuilder: (context, index) => mainCard(
                       mainsample: mainsample[index],
@@ -125,7 +126,8 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         context,
                         MaterialPageRoute(builder: (context) => pages[index]),
                       ),
-                    ))
+                    )),
+                    SizedBox(height: 10,)
           ],
         ),
       ),

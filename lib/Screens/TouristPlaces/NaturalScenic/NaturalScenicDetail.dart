@@ -25,7 +25,7 @@ class NaturalScenicDetail extends StatelessWidget {
               child: Container(
                 child: Text(naturalscenic.title,
                     style: Theme.of(context).textTheme.headline6?.copyWith(
-                        color: Colors.black, fontWeight: FontWeight.bold)),
+                        color: Colors.black, )),
               ),
             ),
             Container(

@@ -24,7 +24,7 @@ class HistoricScreen extends StatelessWidget {
             child: Container(
               child: Text(historic.title,
                   style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
+                      color: Colors.black, )),
             ),
           ),
           Container(

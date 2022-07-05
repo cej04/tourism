@@ -66,42 +66,12 @@ class _ViewMorePilgrimState extends State<ViewMorePilgrim> {
           ),
         ],
       ),
-         // HeaderWithFAQS(size: size),
-          // Expanded(
-          //   child: ListView.builder(
-          //       itemCount: pilgrimviewmore.length,
-          //       itemBuilder: (BuildContext context, int index) {
-          //         final que = pilgrimviewmore[index];
-
-          //         return Card(
-          //           child: ListTile(
-          //             tileColor: que.bgcolor,
-          //             leading: Icon(Icons.holiday_village,color: que.iconColor,),
-          //             title: Column(
-          //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //               children: [
-          //                 Text(que.title),
-          //                  Text(que.trailing),
-          //               ],
-          //             ),
-          //             subtitle:Text(que.desc,textAlign: TextAlign.justify,),
-          //            // trailing: Text(que.trailing),
-                    
-          //           ),
-          //         );
-          //       }),
-     
-          // )
+       
           
         
   
       );
-      // ListView.builder(
-      //     itemCount: pilgrimviewmore.length,
-      //     itemBuilder: (context, index) =>
-      //         ViewMoreCard(pilgrimviewmore: pilgrimviewmore[index], press: () {}
-                  
-      //             )),
+
 
   }
 }
