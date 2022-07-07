@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Ayurveda/Ayurveda.dart';
-import 'package:ktmtourism/Screens/Ayurveda/AyurvedaDetail.dart';
+import 'package:ktmtourism/Screens/HomeStay/HomeStay.dart';
+import 'package:ktmtourism/Screens/HomeStay/HomeStayDetail.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
-class AyurvedaPage extends StatefulWidget {
-  const AyurvedaPage({Key? key}) : super(key: key);
+class HomeStayPage extends StatefulWidget {
+  const HomeStayPage({Key? key}) : super(key: key);
 
   @override
-  _AyurvedaPageState createState() => _AyurvedaPageState();
+  _HomeStayPageState createState() => _HomeStayPageState();
 }
 
-class _AyurvedaPageState extends State<AyurvedaPage> {
+class _HomeStayPageState extends State<HomeStayPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Ayurveda Center',
+          title: 'Homestay',
         ),
       ),
       body: Column(
@@ -25,7 +25,7 @@ class _AyurvedaPageState extends State<AyurvedaPage> {
           Expanded(
               child: Container(
             child: ListView.builder(
-                itemCount: ayurveda.length,
+                itemCount: Homestay.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(
@@ -35,8 +35,8 @@ class _AyurvedaPageState extends State<AyurvedaPage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => AyuvedaDetail(
-                                ayurveda: ayurveda[index],
+                              builder: (context) => HomeStayDetail(
+                                Homestay: Homestay[index],
                               ),
                             ));
                       }),
@@ -53,7 +53,7 @@ class _AyurvedaPageState extends State<AyurvedaPage> {
                               Stack(
                                 children: [
                                   Ink.image(
-                                      image: AssetImage(ayurveda[index].image),
+                                      image: AssetImage(Homestay[index].image),
                                       width: double.infinity,
                                       height: 250,
                                       fit: BoxFit.cover),
@@ -72,7 +72,7 @@ class _AyurvedaPageState extends State<AyurvedaPage> {
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
-                                          ayurveda[index].classification,
+                                          Homestay[index].classification,
                                           style: TextStyle(color: Colors.white),
                                         ),
                                       ),
@@ -81,8 +81,8 @@ class _AyurvedaPageState extends State<AyurvedaPage> {
                                 ],
                               ),
                               ListTile(
-                                title: Text(ayurveda[index].name),
-                                subtitle: Text(ayurveda[index].address),
+                                title: Text(Homestay[index].name),
+                                subtitle: Text(Homestay[index].address),
                                 trailing: Icon(Icons.navigate_next),
                               ),
                             ],

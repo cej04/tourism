@@ -1,4 +1,4 @@
-class HomeStay {
+class Hotel {
   final String name,
       image,
       classification,
@@ -14,7 +14,7 @@ class HomeStay {
       latitude,
       longitude;
 
-  HomeStay({
+  Hotel({
     required this.name,
     required this.image,
     this.classification ="",
@@ -32,8 +32,8 @@ class HomeStay {
   });
 }
 
-List<HomeStay> Homestay = [
-  HomeStay(
+List<Hotel> hotel = [
+  Hotel(
     name: "",
     image: "",
     classification: "",
