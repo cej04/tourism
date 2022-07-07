@@ -2,13 +2,19 @@ import 'package:carousel_indicator/carousel_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/ArtCulture/art_culturePage.dart';
+import 'package:ktmtourism/Screens/Ayurveda/AyurvedaPage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
+import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliDetail.dart';
+import 'package:ktmtourism/Screens/HomeStay/HomeStayDetail.dart';
+import 'package:ktmtourism/Screens/Hotel/HotelDetail.dart';
 import 'package:ktmtourism/Screens/MainHome/main.dart';
 import 'package:ktmtourism/Screens/MainHome/maincard.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
+import 'package:ktmtourism/Screens/Resort/ResortDetail.dart';
+import 'package:ktmtourism/Screens/ServicedVilla/ServicedVillaDetail.dart';
 import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
@@ -45,11 +51,17 @@ class _MainSample2PageState extends State<MainSample2Page> {
       const welcomektmPage(),
       const Body(),
       const StayKtmBodyPage(),
+      const AyurvedaPage(),
+      HomeStayDetail(),
+      HotelDetail(),
+      ResortDetail(),
+      ServicedVillaDetail(),
+      GrihasthaliDetail(),
       const PilgrimKtmPage(),
       const CulinaryDelightPage(),
-      const ProducePage(),
-      const FestivalPage(),
-      const ArtCulturePage(),
+      // const ProducePage(),
+      // const FestivalPage(),
+      // const ArtCulturePage(),
       const HowToReachPage(),
     ];
     Size size = MediaQuery.of(context).size;

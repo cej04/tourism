@@ -29,8 +29,8 @@ class Ayurveda {
     required this.overview,
     required this.facilities,
     this.treatment = "",
-    required this.latitude = "",
-    required this.longitude = "",
+    required this.latitude,
+    required this.longitude,
   });
 }
 

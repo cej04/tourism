@@ -14,7 +14,7 @@ class StayKtmBodyPage extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           title: Text(
-            "Stay",
+            "Rest House",
           ),
           actions: [
             Padding(
