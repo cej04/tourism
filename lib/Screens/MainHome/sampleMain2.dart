@@ -67,65 +67,65 @@ class _MainSample2PageState extends State<MainSample2Page> {
     ];
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(
-                vertical: 20.0,
-              ),
-              child: CarouselSlider.builder(
-                itemCount: images.length,
-                itemBuilder: (BuildContext context, int itemIndex,
-                        int pageViewIndex) =>
-                    Container(
-                        margin: EdgeInsets.all(6.0),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          image: DecorationImage(
-                            image: AssetImage(images[itemIndex]),
-                            fit: BoxFit.cover,
-                          ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(
+              vertical: 20.0,
+            ),
+            child: CarouselSlider.builder(
+              itemCount: images.length,
+              itemBuilder: (BuildContext context, int itemIndex,
+                      int pageViewIndex) =>
+                  Container(
+                      margin: EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        image: DecorationImage(
+                          image: AssetImage(images[itemIndex]),
+                          fit: BoxFit.cover,
                         ),
-                        alignment: Alignment.bottomCenter,
-                        child: Padding(
-                            padding: EdgeInsets.only(left: 15.0, bottom: 15),
-                            child: Text(titles[itemIndex].toUpperCase(),
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .caption
-                                    ?.apply(
-                                      color: Colors.white,
-                                      backgroundColor:
-                                          Colors.black.withOpacity(0.5),
-                                    )
-                                    .copyWith(letterSpacing: 1)))),
-                options: CarouselOptions(
-                    height: 180.0,
-                    enlargeCenterPage: true,
-                    autoPlay: true,
-                    aspectRatio: 16 / 9,
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enableInfiniteScroll: true,
-                    autoPlayAnimationDuration: Duration(milliseconds: 800),
-                    viewportFraction: 0.8,
-                    onPageChanged: (itemIndex, reason) =>
-                        setState(() => activeIndex = itemIndex)),
-              ),
+                      ),
+                      alignment: Alignment.bottomCenter,
+                      child: Padding(
+                          padding: EdgeInsets.only(left: 15.0, bottom: 15),
+                          child: Text(titles[itemIndex].toUpperCase(),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .caption
+                                  ?.apply(
+                                    color: Colors.white,
+                                    backgroundColor:
+                                        Colors.black.withOpacity(0.5),
+                                  )
+                                  .copyWith(letterSpacing: 1)))),
+              options: CarouselOptions(
+                  height: 180.0,
+                  enlargeCenterPage: true,
+                  autoPlay: true,
+                  aspectRatio: 16 / 9,
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enableInfiniteScroll: true,
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  viewportFraction: 0.8,
+                  onPageChanged: (itemIndex, reason) =>
+                      setState(() => activeIndex = itemIndex)),
             ),
-            CarouselIndicator(
-              cornerRadius: 20.0,
-              width: 10,
-              count: images.length,
-              index: activeIndex,
-              activeColor: Colors.teal,
-              color: Colors.grey,
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            GridView.builder(
+          ),
+          CarouselIndicator(
+            cornerRadius: 20.0,
+            width: 10,
+            count: images.length,
+            index: activeIndex,
+            activeColor: Colors.teal,
+            color: Colors.grey,
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Expanded(
+            child: GridView.builder(
                 shrinkWrap: true,
                 itemCount: mainsample.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -140,9 +140,9 @@ class _MainSample2PageState extends State<MainSample2Page> {
                         MaterialPageRoute(builder: (context) => pages[index]),
                       ),
                     )),
-                    SizedBox(height: 10,)
-          ],
-        ),
+          ),
+                  SizedBox(height: 10,)
+        ],
       ),
     );
   }

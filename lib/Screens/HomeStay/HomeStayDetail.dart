@@ -1,7 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Ayurveda/Ayurveda.dart';
 import 'package:ktmtourism/Screens/HomeStay/HomeStay.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Screens/map_utils.dart';
@@ -37,7 +36,13 @@ class HomeStayDetail extends StatelessWidget {
                     child: Opacity(
                       opacity: .9,
                       child: Container(
-                        color: Colors.blueGrey,
+                         decoration: BoxDecoration(
+                                        color: Colors.blueGrey,
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(10),
+                                          
+                                        ),
+                                      ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(

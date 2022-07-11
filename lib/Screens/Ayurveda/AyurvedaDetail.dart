@@ -36,7 +36,14 @@ class AyuvedaDetail extends StatelessWidget {
                     child: Opacity(
                       opacity: .9,
                       child: Container(
-                        color: Colors.blueGrey,
+
+                        decoration: BoxDecoration(
+                                        color: Colors.blueGrey,
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(10),
+                                          
+                                        ),
+                                      ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -66,7 +73,8 @@ class AyuvedaDetail extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("OVERVIEW"),
+                    title: Text("Overview"),
+                    
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -74,7 +82,8 @@ class AyuvedaDetail extends StatelessWidget {
                           ayurveda.overview,
                           textAlign: TextAlign.justify,
                         ),
-                      )
+                      ),
+                      
                     ],
                     // subtitle: Text(ayurveda.overview),
                   )),
@@ -82,7 +91,7 @@ class AyuvedaDetail extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("FACILITIES"),
+                    title: Text("Facilities"),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -98,7 +107,7 @@ class AyuvedaDetail extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("AYURVEDIC TREATMENTS"),
+                    title: Text("Ayurvedic Treatments"),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -114,7 +123,7 @@ class AyuvedaDetail extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("CONTACT US"),
+                    title: Text("Contact Us"),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -242,7 +251,7 @@ class AyuvedaDetail extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: FloatingActionButton.extended(
-                  label: Text('LOCATE ON MAP'), // <-- Text
+                  label: Text('Locate On Map'), // <-- Text
                   backgroundColor: Colors.teal,
                   icon: Icon(
                     // <-- Icon

@@ -244,28 +244,33 @@ class Body extends StatelessWidget {
             isScrollable: true,
             tabs: [
               Tab(icon: Icon(Icons.water), text: "Kumarakom"),
+               Tab(
+                icon: Icon(Icons.nature_people_outlined),
+                text: "Natural/Scenic Beauty",
+              ),
+               Tab(icon: Icon(Icons.rowing_outlined), text: "Recreational"),
+                Tab(
+                  icon: Icon(Icons.self_improvement_outlined),
+                  text: "Religious"),
+
               Tab(
                 icon: Icon(Icons.history_edu),
                 text: "Historic",
               ),
-              Tab(
-                icon: Icon(Icons.nature_people_outlined),
-                text: "Natural/Scenic Beauty",
-              ),
-              Tab(icon: Icon(Icons.rowing_outlined), text: "Recreational"),
-              Tab(
-                  icon: Icon(Icons.self_improvement_outlined),
-                  text: "Religious"),
+             
+             
             ],
           ),
         ),
         body: TabBarView(
           children: [
             const KumarakomPage(),
-            const ViewAllHistoric(),
             const ViewAllNatural(),
             const ViewAllRecreation(),
             const ViewAllReligious(),
+            const ViewAllHistoric(),
+          
+            
           ],
         ),
       ),

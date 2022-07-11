@@ -64,9 +64,8 @@ class _AyurvedaPageState extends State<AyurvedaPage> {
                                       decoration: BoxDecoration(
                                         color: Colors.orangeAccent,
                                         borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(10),
-                                          topRight: Radius.circular(10),
-                                          bottomLeft: Radius.circular(10),
+                                          
+                                          bottomLeft: Radius.circular(20),
                                         ),
                                       ),
                                       child: Padding(

@@ -25,7 +25,7 @@ class NaturalScenic {
 List<NaturalScenic> naturalscenic = [
 
   NaturalScenic(
-      imageU: "assets/images/sanctuary2.jpg",
+      imageU: "assets/images/sanctuary1.jpg",
       title: "kumarakom Bird sanctuary",
       subtitle:"A bustling hub for rare and abundant birds on the banks of the Vembanad Lake" ,
       Desc:
