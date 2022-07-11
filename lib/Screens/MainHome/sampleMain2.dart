@@ -16,6 +16,7 @@ import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/Resort/ResortDetail.dart';
+import 'package:ktmtourism/Screens/Resort/ResortPage.dart';
 import 'package:ktmtourism/Screens/ServicedVilla/ServicedVillaDetail.dart';
 import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
@@ -56,7 +57,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
       const AyurvedaPage(),
       HomeStayPage(),
       HotelPage(),
-      ResortDetail(),
+      ResortPage(),
       ServicedVillaDetail(),
       GrihasthaliDetail(),
       const PilgrimKtmPage(),
