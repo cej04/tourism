@@ -1,23 +1,17 @@
 import 'package:carousel_indicator/carousel_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/ArtCulture/art_culturePage.dart';
 import 'package:ktmtourism/Screens/Ayurveda/AyurvedaPage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
-import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
 import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliDetail.dart';
-import 'package:ktmtourism/Screens/HomeStay/HomeStayDetail.dart';
 import 'package:ktmtourism/Screens/HomeStay/HomeStayPage.dart';
-import 'package:ktmtourism/Screens/Hotel/HotelDetail.dart';
 import 'package:ktmtourism/Screens/Hotel/HotelPage.dart';
 import 'package:ktmtourism/Screens/MainHome/main.dart';
 import 'package:ktmtourism/Screens/MainHome/maincard.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
-import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
-import 'package:ktmtourism/Screens/Resort/ResortDetail.dart';
 import 'package:ktmtourism/Screens/Resort/ResortPage.dart';
-import 'package:ktmtourism/Screens/ServicedVilla/ServicedVillaDetail.dart';
+import 'package:ktmtourism/Screens/ServicedVilla/ServicedVillaPage.dart';
 import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
@@ -58,7 +52,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
       HomeStayPage(),
       HotelPage(),
       ResortPage(),
-      ServicedVillaDetail(),
+      ServicedVillaPage(),
       GrihasthaliDetail(),
       const PilgrimKtmPage(),
       const CulinaryDelightPage(),
