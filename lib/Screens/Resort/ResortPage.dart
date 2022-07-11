@@ -19,7 +19,7 @@ class _ResortPageState extends State<ResortPage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Ayurveda Center',
+          title: 'Resort',
         ),
       ),
       body: Column(
