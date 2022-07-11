@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Ayurveda/AyurvedaPage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliDetail.dart';
+import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliPage.dart';
 import 'package:ktmtourism/Screens/HomeStay/HomeStayPage.dart';
 import 'package:ktmtourism/Screens/Hotel/HotelPage.dart';
 import 'package:ktmtourism/Screens/MainHome/main.dart';
@@ -53,7 +54,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
       HotelPage(),
       ResortPage(),
       ServicedVillaPage(),
-      GrihasthaliDetail(),
+      GrihasthaliPage(),
       const PilgrimKtmPage(),
       const CulinaryDelightPage(),
       // const ProducePage(),
