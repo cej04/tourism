@@ -156,7 +156,7 @@ class HomeStayDetail extends StatelessWidget {
                                     children: [
                                       TextButton(
                                           onPressed: () async {
-                                            final url = 'tel:${Homestay.ph1}';
+                                            final url = 'tel:${Homestay.ph2}';
                                             // final url = 'tel:$stateowned.phone';
                                             if (await canLaunch(url)) {
                                               await launch(url);
@@ -165,13 +165,13 @@ class HomeStayDetail extends StatelessWidget {
                                           child: Text(Homestay.ph2)),
                                       TextButton(
                                           onPressed: () async {
-                                            final url = 'tel:${Homestay.ph2}';
+                                            final url = 'tel:${Homestay.ph3}';
                                             // final url = 'tel:$stateowned.phone';
                                             if (await canLaunch(url)) {
                                               await launch(url);
                                             }
                                           },
-                                          child: Text(Homestay.ph2))
+                                          child: Text(Homestay.ph3))
                                     ],
                                   ),
                                 ],

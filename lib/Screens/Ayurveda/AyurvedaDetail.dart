@@ -159,15 +159,7 @@ class AyuvedaDetail extends StatelessWidget {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url = 'tel:${ayurveda.ph1}';
-                                            // final url = 'tel:$stateowned.phone';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(ayurveda.ph2)),
+                                     
                                       TextButton(
                                           onPressed: () async {
                                             final url = 'tel:${ayurveda.ph2}';
@@ -176,7 +168,16 @@ class AyuvedaDetail extends StatelessWidget {
                                               await launch(url);
                                             }
                                           },
-                                          child: Text(ayurveda.ph2))
+                                          child: Text(ayurveda.ph2)),
+                                           TextButton(
+                                          onPressed: () async {
+                                            final url = 'tel:${ayurveda.ph3}';
+                                            // final url = 'tel:$stateowned.phone';
+                                            if (await canLaunch(url)) {
+                                              await launch(url);
+                                            }
+                                          },
+                                          child: Text(ayurveda.ph3))
                                     ],
                                   ),
                                 ],
