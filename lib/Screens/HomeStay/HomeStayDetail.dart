@@ -129,120 +129,120 @@ class HomeStayDetail extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Card(
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.phone,
-                                        color: Colors.teal,
-                                      ),
-                                      TextButton(
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.phone,
+                                      color: Colors.teal,
+                                    ),
+                                    TextButton(
+                                      onPressed: () async {
+                                        final url = 'tel:${Homestay.ph1}';
+                                        // final url = 'tel:$stateowned.phone';
+                                        if (await canLaunch(url)) {
+                                          await launch(url);
+                                        }
+                                      },
+                                      child: Text(Homestay.ph1),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Homestay.ph2.isNotEmpty ?
+                                    TextButton(
                                         onPressed: () async {
-                                          final url = 'tel:${Homestay.ph1}';
+                                          final url = 'tel:${Homestay.ph2}';
                                           // final url = 'tel:$stateowned.phone';
                                           if (await canLaunch(url)) {
                                             await launch(url);
                                           }
                                         },
-                                        child: Text(Homestay.ph1),
-                                      )
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url = 'tel:${Homestay.ph2}';
-                                            // final url = 'tel:$stateowned.phone';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(Homestay.ph2)),
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url = 'tel:${Homestay.ph3}';
-                                            // final url = 'tel:$stateowned.phone';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(Homestay.ph3))
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                        child: Text(Homestay.ph2)): Container(),
+                                        Homestay.ph3.isNotEmpty ?
+                                    TextButton(
+                                        onPressed: () async {
+                                          final url = 'tel:${Homestay.ph3}';
+                                          // final url = 'tel:$stateowned.phone';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(Homestay.ph3)) :Container()
+                                  ],
+                                ),
+                              ],
                             ),
-                            Card(
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.email,
+                                      color: Colors.teal,
+                                    ),
+                                    TextButton(
+                                        onPressed: () async {
+                                          final url =
+                                              'mailto:${Homestay.email1}';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(Homestay.email1))
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Homestay.email2.isNotEmpty ?
+                                    TextButton(
+                                        onPressed: () async {
+                                          final url =
+                                              'mailto:${Homestay.email2}';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(Homestay.email2)):Container()
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Homestay.website.isNotEmpty ?
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
                               child: Column(
+                                
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
                                     children: [
                                       Icon(
-                                        Icons.email,
+                                        Icons.web,
                                         color: Colors.teal,
                                       ),
                                       TextButton(
                                           onPressed: () async {
-                                            final url =
-                                                'mailto:${Homestay.email1}';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
+                                            final Uri url =
+                                                Uri.parse(Homestay.website);
+                                            if (await canLaunchUrl(url)) {
+                                              await launchUrl(url);
                                             }
                                           },
-                                          child: Text(Homestay.email1))
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url =
-                                                'mailto:${Homestay.email2}';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(Homestay.email2)),
+                                          child: Text(Homestay.website))
                                     ],
                                   ),
                                 ],
                               ),
-                            ),
-                            Card(
-                              child: SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.web,
-                                          color: Colors.teal,
-                                        ),
-                                        TextButton(
-                                            onPressed: () async {
-                                              final Uri url =
-                                                  Uri.parse(Homestay.website);
-                                              if (await canLaunchUrl(url)) {
-                                                await launchUrl(url);
-                                              }
-                                            },
-                                            child: Text(Homestay.website))
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            )
+                            ):Container()
                           ],
                         ),
                       ),
