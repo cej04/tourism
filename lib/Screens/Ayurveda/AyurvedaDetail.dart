@@ -133,118 +133,114 @@ class AyuvedaDetail extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Card(
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.phone,
-                                        color: Colors.teal,
-                                      ),
-                                      TextButton(
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.phone,
+                                      color: Colors.teal,
+                                    ),
+                                    TextButton(
+                                      onPressed: () async {
+                                        final url = 'tel:${ayurveda.ph1}';
+                                        // final url = 'tel:$stateowned.phone';
+                                        if (await canLaunch(url)) {
+                                          await launch(url);
+                                        }
+                                      },
+                                      child: Text(ayurveda.ph1),
+                                    )
+                                  ],
+                                ),
+                             
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                   ayurveda.ph2.isNotEmpty ?
+                                    TextButton(
                                         onPressed: () async {
-                                          final url = 'tel:${ayurveda.ph1}';
+                                          final url = 'tel:${ayurveda.ph2}';
                                           // final url = 'tel:$stateowned.phone';
                                           if (await canLaunch(url)) {
                                             await launch(url);
                                           }
                                         },
-                                        child: Text(ayurveda.ph1),
-                                      )
-                                    ],
-                                  ),
-                               
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                     
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url = 'tel:${ayurveda.ph2}';
-                                            // final url = 'tel:$stateowned.phone';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(ayurveda.ph2)),
-                                           TextButton(
-                                          onPressed: () async {
-                                            final url = 'tel:${ayurveda.ph3}';
-                                            // final url = 'tel:$stateowned.phone';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(ayurveda.ph3))
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                        child: Text(ayurveda.ph2)):Container(),
+                                        ayurveda.ph3.isNotEmpty ?
+                                         TextButton(
+                                        onPressed: () async {
+                                          final url = 'tel:${ayurveda.ph3}';
+                                          // final url = 'tel:$stateowned.phone';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(ayurveda.ph3)):Container()
+                                  ],
+                                ),
+                              ],
                             ),
-                            Card(
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.email,
+                                      color: Colors.teal,
+                                    ),
+                                    TextButton(
+                                        onPressed: () async {
+                                          final url =
+                                              'mailto:${ayurveda.email1}';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(ayurveda.email1))
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                     ayurveda.email2.isNotEmpty ?
+                                    TextButton(
+                                        onPressed: () async {
+                                          final url =
+                                              'mailto:${ayurveda.email2}';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(ayurveda.email2)):Container()
+                                  ],
+                                ),
+                              ],
+                            ),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
                               child: Column(
                                 children: [
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(
-                                        Icons.email,
+                                        Icons.web,
                                         color: Colors.teal,
                                       ),
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url =
-                                                'mailto:${ayurveda.email1}';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(ayurveda.email1))
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url =
-                                                'mailto:${ayurveda.email2}';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(ayurveda.email2)),
+                                      TextButton(  onPressed: () async {
+                                      final Uri url = Uri.parse(
+                                          ayurveda.website);
+                                      if (await canLaunchUrl(url)) {
+                                        await launchUrl(url);
+                                      }
+                                    },
+                                      child: Text(ayurveda.website))
                                     ],
                                   ),
                                 ],
-                              ),
-                            ),
-                            Card(
-                              child: SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.web,
-                                          color: Colors.teal,
-                                        ),
-                                        TextButton(  onPressed: () async {
-                                        final Uri url = Uri.parse(
-                                            ayurveda.website);
-                                        if (await canLaunchUrl(url)) {
-                                          await launchUrl(url);
-                                        }
-                                      },
-                                        child: Text(ayurveda.website))
-                                      ],
-                                    ),
-                                  ],
-                                ),
                               ),
                             )
                           ],
