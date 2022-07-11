@@ -155,7 +155,7 @@ class AyuvedaDetail extends StatelessWidget {
                                       )
                                     ],
                                   ),
-                                 
+                               
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [

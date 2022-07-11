@@ -67,13 +67,13 @@ class HomeStayDetail extends StatelessWidget {
                   ),
                 ],
               ),
-            Homestay.overview.isEmpty ? 
-            Container():
+        Homestay.overview.isNotEmpty ?
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     collapsedBackgroundColor: Colors.grey[200],
                     title: Text("Overview"),
+                    
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -81,11 +81,12 @@ class HomeStayDetail extends StatelessWidget {
                           Homestay.overview,
                           textAlign: TextAlign.justify,
                         ),
-                      )
+                      ),
+                      
                     ],
                     // subtitle: Text(ayurveda.overview),
-                  )),
-               
+                  )): Container(),
+               Homestay.facilities.isNotEmpty ?
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
@@ -101,7 +102,7 @@ class HomeStayDetail extends StatelessWidget {
                       )
                     ],
                     // subtitle: Text(ayurveda.overview),
-                  )),
+                  )): Container(),
               // Padding(
               //     padding: const EdgeInsets.all(8.0),
               //     child: ExpansionTile(
