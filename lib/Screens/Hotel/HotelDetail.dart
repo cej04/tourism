@@ -118,125 +118,114 @@ class HotelDetail extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Card(
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.phone,
-                                        color: Colors.teal,
-                                      ),
-                                      TextButton(
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.phone,
+                                      color: Colors.teal,
+                                    ),
+                                    TextButton(
+                                      onPressed: () async {
+                                        final url = 'tel:${hotel.ph1}';
+                                        // final url = 'tel:$stateowned.phone';
+                                        if (await canLaunch(url)) {
+                                          await launch(url);
+                                        }
+                                      },
+                                      child: Text(hotel.ph1),
+                                    )
+                                  ],
+                                ),
+                             
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    hotel.ph2.isNotEmpty ?
+                                    TextButton(
                                         onPressed: () async {
-                                          final url = 'tel:${hotel.ph1}';
+                                          final url = 'tel:${hotel.ph2}';
                                           // final url = 'tel:$stateowned.phone';
                                           if (await canLaunch(url)) {
                                             await launch(url);
                                           }
                                         },
-                                        child: Text(hotel.ph1),
-                                      )
-                                    ],
-                                  ),
-                               
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url = 'tel:${hotel.ph1}';
-                                            // final url = 'tel:$stateowned.phone';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(hotel.ph2)),
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url = 'tel:${hotel.ph2}';
-                                            // final url = 'tel:$stateowned.phone';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: TextButton( onPressed: () async {
-                                            final url = 'tel:${hotel.ph3}';
-                                            // final url = 'tel:$stateowned.phone';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(hotel.ph3))),
-                                          
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                        child: Text(hotel.ph2)): Container(),
+                                        hotel.ph3.isNotEmpty ?
+                                 TextButton( onPressed: () async {
+                                          final url = 'tel:${hotel.ph3}';
+                                          // final url = 'tel:$stateowned.phone';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(hotel.ph3)):Container()
+                                        
+                                  ],
+                                ),
+                              ],
                             ),
-                            Card(
+                            Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.email,
+                                      color: Colors.teal,
+                                    ),
+                                    TextButton(
+                                        onPressed: () async {
+                                          final url =
+                                              'mailto:${hotel.email1}';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(hotel.email1))
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    hotel.email2.isNotEmpty ?
+                                    TextButton(
+                                        onPressed: () async {
+                                          final url =
+                                              'mailto:${hotel.email2}';
+                                          if (await canLaunch(url)) {
+                                            await launch(url);
+                                          }
+                                        },
+                                        child: Text(hotel.email2)): Container()
+                                  ],
+                                ),
+                              ],
+                            ),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
                               child: Column(
                                 children: [
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(
-                                        Icons.email,
+                                        Icons.web,
                                         color: Colors.teal,
                                       ),
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url =
-                                                'mailto:${hotel.email1}';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(hotel.email1))
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      TextButton(
-                                          onPressed: () async {
-                                            final url =
-                                                'mailto:${hotel.email2}';
-                                            if (await canLaunch(url)) {
-                                              await launch(url);
-                                            }
-                                          },
-                                          child: Text(hotel.email2)),
+                                      TextButton(  onPressed: () async {
+                                      final Uri url = Uri.parse(
+                                          hotel.website);
+                                      if (await canLaunchUrl(url)) {
+                                        await launchUrl(url);
+                                      }
+                                    },
+                                      child: Text(hotel.website))
                                     ],
                                   ),
                                 ],
-                              ),
-                            ),
-                            Card(
-                              child: SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.web,
-                                          color: Colors.teal,
-                                        ),
-                                        TextButton(  onPressed: () async {
-                                        final Uri url = Uri.parse(
-                                            hotel.website);
-                                        if (await canLaunchUrl(url)) {
-                                          await launchUrl(url);
-                                        }
-                                      },
-                                        child: Text(hotel.website))
-                                      ],
-                                    ),
-                                  ],
-                                ),
                               ),
                             )
                           ],
