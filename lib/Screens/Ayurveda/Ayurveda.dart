@@ -109,7 +109,7 @@ List<Ayurveda> ayurveda = [
   Ayurveda(
     name: "Soma Kerala Palace",
     image: "assets/stay/ac-soma.jpg",
-    classification: "",
+    classification: "Green Leaf",
     address: "Chempu P.O. Kochi – Kumarakom Road, Vaikom,\nKottayam, Pin: 686615",
     ph1: "+914829271350",
     ph2: "",
@@ -128,7 +128,7 @@ List<Ayurveda> ayurveda = [
   Ayurveda(
     name: "Ayurkshethra",
     image: "assets/stay/ac-ayurkshethra.jpg",
-    classification: "",
+    classification: "Green Leaf",
     address: "Ammankari Road, Kumarakom,\nKottayam, Pin: 686563",
     ph1: "+918075378189",
     ph2: "+919446004811",
@@ -145,7 +145,7 @@ List<Ayurveda> ayurveda = [
   Ayurveda(
     name: "Coconut Lagoon Ayurvedic Centre",
     image: "assets/stay/ac-coconut.jpg",
-    classification: "",
+    classification: "Green Leaf",
     address: "Kumarakom,\nKottayam, Pin: 686563",
     ph1: "+919061009164",
     ph2: "+914812525834",
@@ -163,7 +163,7 @@ List<Ayurveda> ayurveda = [
    Ayurveda(
     name: "Maya Spa",
     image: "assets/stay/ac-maya.jpg",
-    classification: "",
+    classification: "Green Leaf",
     address: "The Zuri Kumarakom Kerala Resort and Spa,\nV 235 A1 to A54 Karottukayal Kumarakom,\nKottayam, Pin: 686563",
     ph1: "+919946105520",
     ph2: "+914812527272",

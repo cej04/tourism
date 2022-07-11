@@ -36,13 +36,12 @@ class HomeStayDetail extends StatelessWidget {
                     child: Opacity(
                       opacity: .9,
                       child: Container(
-                         decoration: BoxDecoration(
-                                        color: Colors.blueGrey,
-                                        borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(10),
-                                          
-                                        ),
-                                      ),
+                        decoration: BoxDecoration(
+                          color: Colors.blueGrey,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                          ),
+                        ),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -68,11 +67,13 @@ class HomeStayDetail extends StatelessWidget {
                   ),
                 ],
               ),
+            Homestay.overview.isEmpty ? 
+            Container():
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("OVERVIEW"),
+                    title: Text("Overview"),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -84,11 +85,12 @@ class HomeStayDetail extends StatelessWidget {
                     ],
                     // subtitle: Text(ayurveda.overview),
                   )),
+               
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("FACILITIES"),
+                    title: Text("Facilities"),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -120,7 +122,7 @@ class HomeStayDetail extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("CONTACT US"),
+                    title: Text("Contact Us"),
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -218,20 +220,22 @@ class HomeStayDetail extends StatelessWidget {
                                 child: Column(
                                   children: [
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Icon(
                                           Icons.web,
                                           color: Colors.teal,
                                         ),
-                                        TextButton(  onPressed: () async {
-                                        final Uri url = Uri.parse(
-                                            Homestay.website);
-                                        if (await canLaunchUrl(url)) {
-                                          await launchUrl(url);
-                                        }
-                                      },
-                                        child: Text(Homestay.website))
+                                        TextButton(
+                                            onPressed: () async {
+                                              final Uri url =
+                                                  Uri.parse(Homestay.website);
+                                              if (await canLaunchUrl(url)) {
+                                                await launchUrl(url);
+                                              }
+                                            },
+                                            child: Text(Homestay.website))
                                       ],
                                     ),
                                   ],
@@ -248,8 +252,8 @@ class HomeStayDetail extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: FloatingActionButton.extended(
-                  label: Text('LOCATE ON MAP'), // <-- Text
-                  backgroundColor: Colors.teal,
+                  label: Text('Locate On Map'), // <-- Text
+                 // backgroundColor: Colors.teal,
                   icon: Icon(
                     // <-- Icon
                     Icons.location_pin,
@@ -259,7 +263,7 @@ class HomeStayDetail extends StatelessWidget {
                     MapUtils.openMap(Homestay.latitude, Homestay.longitude);
                   },
                 ),
-              ), 
+              ),
             ],
           ),
         ));

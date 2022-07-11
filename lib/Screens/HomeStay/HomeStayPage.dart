@@ -62,7 +62,7 @@ class _HomeStayPageState extends State<HomeStayPage> {
                                     right: 0.0,
                                     child: Container(
                                       decoration: BoxDecoration(
-                                        color: Colors.orangeAccent,
+                                        color: Colors.orange,
                                         borderRadius: BorderRadius.only(
                                         
                                           bottomLeft: Radius.circular(20),

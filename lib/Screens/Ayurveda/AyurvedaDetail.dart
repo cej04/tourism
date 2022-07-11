@@ -69,6 +69,8 @@ class AyuvedaDetail extends StatelessWidget {
                   ),
                 ],
               ),
+           
+              ayurveda.overview.isNotEmpty ?
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
@@ -86,7 +88,8 @@ class AyuvedaDetail extends StatelessWidget {
                       
                     ],
                     // subtitle: Text(ayurveda.overview),
-                  )),
+                  )): Container(),
+                ayurveda.facilities.isNotEmpty ?
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
@@ -102,7 +105,8 @@ class AyuvedaDetail extends StatelessWidget {
                       )
                     ],
                     // subtitle: Text(ayurveda.overview),
-                  )),
+                  )): Container(),
+                   ayurveda.treatment.isNotEmpty ?
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
@@ -118,7 +122,7 @@ class AyuvedaDetail extends StatelessWidget {
                       )
                     ],
                     // subtitle: Text(ayurveda.overview),
-                  )),
+                  )):Container(),
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
@@ -151,6 +155,7 @@ class AyuvedaDetail extends StatelessWidget {
                                       )
                                     ],
                                   ),
+                                 
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
