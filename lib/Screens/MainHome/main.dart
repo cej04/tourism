@@ -21,21 +21,21 @@ List<MainSample> mainsample = [
       icons: Icons.explore_outlined),
   MainSample(
       image: "assets/images/stay.png",
-      title: "Guest House ",
+      title: "Rest House ",
       icons: Icons.bed_rounded),
  
-  // MainSample(
-  //     image: "assets/images/produce.png",
-  //     title: "Produce",
-  //     icons: Icons.color_lens),
-  // MainSample(
-  //     image: "assets/images/festival.png",
-  //     title: "Festivals",
-  //     icons: Icons.celebration_rounded),
-  // MainSample(
-  //     image: "assets/images/artbook.png",
-  //     title: "Art & Culture",
-  //     icons: Icons.festival_outlined),
+  MainSample(
+      image: "assets/images/ico_kum.png",
+      title: "Kumarakom",
+      icons: Icons.color_lens),
+  MainSample(
+      image: "assets/images/ico_heritage.png",
+      title: "Heritage",
+      icons: Icons.celebration_rounded),
+  MainSample(
+      image: "assets/images/ico_Hillstation.png",
+      title: "Hill Stations",
+      icons: Icons.festival_outlined),
 
 
     MainSample(
@@ -43,7 +43,7 @@ List<MainSample> mainsample = [
       title: "Ayurveda Centre ",
       icons: Icons.bed_rounded),
   MainSample(
-      image: "assets/images/Homestay.png",
+      image: "assets/images/stayhome.png",
       title: "Home Stay",
       icons: Icons.holiday_village),
   MainSample(
@@ -51,15 +51,15 @@ List<MainSample> mainsample = [
       title: "Hotel",
       icons: Icons.flatware),
         MainSample(
-      image: "assets/images/religion.png",
+      image: "assets/images/Resort.png",
       title: "Resort",
       icons: Icons.holiday_village),
   MainSample(
-      image: "assets/images/delight.png",
+      image: "assets/images/villa.png",
       title: "Serviced Villa",
       icons: Icons.flatware),
         MainSample(
-      image: "assets/images/delight.png",
+      image: "assets/images/Grihasthali.png",
       title: "Grihasthali",
       icons: Icons.flatware),
        MainSample(
@@ -67,7 +67,7 @@ List<MainSample> mainsample = [
       title: "Pilgrim Centers",
       icons: Icons.holiday_village),
   MainSample(
-      image: "assets/images/delight.png",
+      image: "assets/images/CulinaryDelight.png",
       title: "Culinary Delights",
       icons: Icons.flatware),
         MainSample(

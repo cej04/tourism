@@ -55,11 +55,11 @@ class _ViewMorePilgrimState extends State<ViewMorePilgrim> {
           ),
                   Expanded(
             child: ListView.builder(
-                itemCount: _textEditingController!.text.isNotEmpty
+                itemCount: _textEditingController.text.isNotEmpty
                     ? pilgrimviewmoreonsearch.length
                     : pilgrimviewmore.length,
                 itemBuilder: (context, index) => ViewMoreCard(
-                    pilgrimviewmore: _textEditingController!.text.isNotEmpty
+                    pilgrimviewmore: _textEditingController.text.isNotEmpty
                         ? pilgrimviewmoreonsearch[index]
                         : pilgrimviewmore[index],
                     press: () {})),
