@@ -15,7 +15,7 @@ class Pilgrims {
 List<Pilgrims> pilgrims = [
   Pilgrims(
       image: "assets/images/juma.jpg",
-      title: "Thazhathangadi Juma Masjid",
+      title: "Thazhathangadi Juma \nMasjid",
       subtitle: "One of the oldest mosques in India",
       distance: "2.5 km",
       description:
@@ -24,7 +24,7 @@ List<Pilgrims> pilgrims = [
       long: 76.5055463601),
   Pilgrims(
       image: "assets/images/manarcadchurch.jpg",
-      title: "St. Mary’s Church, Manarcad",
+      title: "St. Mary’s Church, \nManarcad",
       subtitle: "St. Mary's Jacobite Syrian Orthodox Cathedral, Manarcad ",
       distance: "9 km",
       description:
@@ -33,7 +33,7 @@ List<Pilgrims> pilgrims = [
       long: 76.5853019716),
   Pilgrims(
       image: "assets/images/mahadevartemple.jpg",
-      title: "Thirunakkara Mahadevar Temple",
+      title: "Thirunakkara Mahadevar \nTemple",
       subtitle: "About 500 years old Temple that was built by the Thekkumkoor Raja",
       distance: "1 km",
       description:
@@ -42,7 +42,7 @@ List<Pilgrims> pilgrims = [
       long: 76.519114),
   Pilgrims(
       image: "assets/images/erumelimasjid.jpg",
-      title: "Vavarupalli, Erumeli Juma Masjid",
+      title: "Vavarupalli, Erumeli Juma \nMasjid",
       subtitle: "The mosque where Hindu pilgrims customarily worship before their trek to Sabarimala.",
       distance: "50 km",
       description:
@@ -51,7 +51,7 @@ List<Pilgrims> pilgrims = [
       long: 76.857055361),
   Pilgrims(
       image: "assets/images/ettumanoortemple.jpg",
-      title: "Ettumanoor Mahadeva Temple",
+      title: "Ettumanoor Mahadeva \nTemple",
       subtitle: "One of the major Shiva temples in Kerala",
       distance: "11 km",
       description:
@@ -60,7 +60,7 @@ List<Pilgrims> pilgrims = [
       long: 76.56077),
   Pilgrims(
       image: "assets/images/mannanamchurch.jpg",
-      title: "St. Joseph’s Monastery, Mannanam",
+      title: "St. Joseph’s Monastery, \nMannanam",
       subtitle: "An important pilgrimage center for followers of Saint Kuriakose Elias Chavara.",
       distance: "8 km",
       description:
@@ -69,7 +69,7 @@ List<Pilgrims> pilgrims = [
       long: 76.52007),
   Pilgrims(
       image: "assets/images/bhmchurch.jpg",
-      title: "St. Alphonsa Shrine Church, Bharananganam",
+      title: "St.Alphonsa Shrine Church,\nBharananganam",
       subtitle: "The mortal remains of the St. Alphonsa is entombed at this church",
       distance: "33 km",
       description:
@@ -78,7 +78,7 @@ List<Pilgrims> pilgrims = [
       long: 76.7261096),
   Pilgrims(
       image: "assets/images/mookambikatemple.jpg",
-      title: "Panachikkadu Dakshina Mookambika Temple",
+      title: "Panachikkadu Dakshina\nMookambika Temple",
       subtitle: "A Hindu temple dedicated to the goddess Saraswati.",
       distance: "11 km",
       description:

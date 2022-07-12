@@ -24,18 +24,18 @@ List<MainSample> mainsample = [
       title: "Rest House ",
       icons: Icons.bed_rounded),
  
-  // MainSample(
-  //     image: "assets/images/produce.png",
-  //     title: "Produce",
-  //     icons: Icons.color_lens),
-  // MainSample(
-  //     image: "assets/images/festival.png",
-  //     title: "Festivals",
-  //     icons: Icons.celebration_rounded),
-  // MainSample(
-  //     image: "assets/images/artbook.png",
-  //     title: "Art & Culture",
-  //     icons: Icons.festival_outlined),
+  MainSample(
+      image: "assets/images/ico_kum.png",
+      title: "Kumarakom",
+      icons: Icons.color_lens),
+  MainSample(
+      image: "assets/images/ico_heritage.png",
+      title: "Heritage",
+      icons: Icons.celebration_rounded),
+  MainSample(
+      image: "assets/images/ico_Hillstation.png",
+      title: "Hill Stations",
+      icons: Icons.festival_outlined),
 
 
     MainSample(

@@ -3,7 +3,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Ayurveda/AyurvedaPage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
-import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliDetail.dart';
 import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliPage.dart';
 import 'package:ktmtourism/Screens/HomeStay/HomeStayPage.dart';
 import 'package:ktmtourism/Screens/Hotel/HotelPage.dart';
