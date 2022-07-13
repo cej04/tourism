@@ -70,7 +70,7 @@ class HeritageDetail extends StatelessWidget {
                 ],
               ),
            
-              heritage.Desc.isNotEmpty ?
+              heritage.desc.isNotEmpty ?
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
@@ -81,7 +81,7 @@ class HeritageDetail extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          heritage.Desc,
+                          heritage.desc,
                           textAlign: TextAlign.justify,
                         ),
                       ),
@@ -272,7 +272,7 @@ class HeritageDetail extends StatelessWidget {
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
                             String activity =
-                                heritage.heritimage[index];
+                                heritage.stayimage[index];
 
                             return Row(
                              
@@ -293,7 +293,7 @@ class HeritageDetail extends StatelessWidget {
                           separatorBuilder: (_, index) => const SizedBox(
                                 width: 10.0,
                               ),
-                          itemCount: heritage.heritimage.length),
+                          itemCount: heritage.stayimage.length),
                     ),
                   ),
 
