@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Ayurveda/AyurvedaPage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliPage.dart';
+import 'package:ktmtourism/Screens/Heritage/HeritagePage.dart';
 import 'package:ktmtourism/Screens/HomeStay/HomeStayPage.dart';
 import 'package:ktmtourism/Screens/Hotel/HotelPage.dart';
 import 'package:ktmtourism/Screens/MainHome/main.dart';
@@ -14,6 +15,7 @@ import 'package:ktmtourism/Screens/Resort/ResortPage.dart';
 import 'package:ktmtourism/Screens/ServicedVilla/ServicedVillaPage.dart';
 import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
+import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/KumarakomPage.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 class MainSample2Page extends StatefulWidget {
@@ -48,6 +50,8 @@ class _MainSample2PageState extends State<MainSample2Page> {
       const welcomektmPage(),
       const Body(),
       const StayKtmBodyPage(),
+      KumarakomPage(),
+      HeritagePage(),
       const AyurvedaPage(),
       HomeStayPage(),
       HotelPage(),
