@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/Kumarakom.dart';
+import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Screens/map_utils.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 import 'package:readmore/readmore.dart';
@@ -20,27 +21,24 @@ class KumarakomDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: PreferredSize(
-        //   preferredSize: const Size.fromHeight(kToolbarHeight),
-        //   child: MyAppBar(),
-        // ),
+       
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(kDefaultPadding),
-              child: Container(
+            // Padding(
+            //   padding: const EdgeInsets.all(kDefaultPadding),
+            //   child: Container(
                
               
 
-                    child: Text("kumarakom",
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black,)),
+            //         child: Text("kumarakom",
+            //       style: Theme.of(context).textTheme.headline6?.copyWith(
+            //           color: Colors.black,)),
                             
                       
                   
                 
-              ),
-            ),
+            //   ),
+            // ),
             Container(
               height: 200,
               decoration: BoxDecoration(

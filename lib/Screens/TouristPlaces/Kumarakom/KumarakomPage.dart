@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ktmtourism/Screens/Ayurveda/AyurvedaDetail.dart';
+import 'package:ktmtourism/Screens/HomeStay/HomeStayPage.dart';
+import 'package:ktmtourism/Screens/Hotel/HotelPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/KumarakomDetail.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'CategoryPages/About/Kumarakom.dart';
 
 class KumarakomPage extends StatelessWidget {
@@ -10,12 +13,26 @@ class KumarakomPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     List pages = [
+     
+     
+    
+      HomeStayPage(),
+      HotelPage(),
+    
+    ];
     return Scaffold(
+       appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(kToolbarHeight),
+          child: MyAppBar(title: 'Kumarakom',),
+        ),
       body: Column(
         children: [
           Expanded(
               child: Container(
-            child: ListView.builder(
+            child: 
+            
+            ListView.builder(
                 itemCount: kumarakom.length,
                 itemBuilder: (context, index) {
                   return Padding(
@@ -43,14 +60,21 @@ class KumarakomPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => KumarakomDetail(
-                                kumarakom: kumarakom[index],
-                              ),
-                            )
-                            ),
+                      //   onTap: () =>
+                      //    Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => pages[index]),
+                      // ),
+                        
+                        
+                        //  Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => KumarakomDetail(
+                        //         kumarakom: kumarakom[index],
+                        //       ),
+                        //     )
+                        //     ),
                         
                         // Container(
                         //     height: 200,
@@ -87,7 +111,9 @@ class KumarakomPage extends StatelessWidget {
                       )
                       );
                 }),
-          ))
+          )),
+          
+
         ],
       ),
     );

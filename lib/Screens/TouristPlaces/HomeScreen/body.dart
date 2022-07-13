@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
@@ -243,7 +243,7 @@ class Body extends StatelessWidget {
           bottom: TabBar(
             isScrollable: true,
             tabs: [
-              Tab(icon: Icon(Icons.water), text: "Kumarakom"),
+              //Tab(icon: Icon(Icons.water), text: "Kumarakom"),
                Tab(
                 icon: Icon(Icons.nature_people_outlined),
                 text: "Natural/Scenic Beauty",
@@ -264,7 +264,7 @@ class Body extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            const KumarakomPage(),
+            //const KumarakomPage(),
             const ViewAllNatural(),
             const ViewAllRecreation(),
             const ViewAllReligious(),
