@@ -103,31 +103,79 @@ class HeritageDetail extends StatelessWidget {
                         ],
                       ))
                   : Container(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Stay", style: Theme.of(context).textTheme.titleSmall),
-                  ],
-                ),
-              ),
-              
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: FloatingActionButton.extended(
-                  label: Text('Locate On Map'), // <-- Text
-                  backgroundColor: Colors.teal,
-                  icon: Icon(
-                    // <-- Icon
-                    Icons.location_pin,
-                    size: 24.0,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  FlatButton(
+                    textColor: Colors.white,
+                    //height: 60.0,
+                    color: Colors.teal,
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(
+                            Icons.night_shelter_outlined,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          'Where to Stay',
+                        )
+                      ],
+                    ),
                   ),
-                  onPressed: () {
-                    MapUtils.openMap(heritage.latitude, heritage.longitude);
-                  },
-                ),
+                  FlatButton(
+                    textColor: Colors.white,
+                    //height: 60.0,
+                    color: Colors.teal,
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(
+                            Icons.pin_drop,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          'Locate on Map',
+                        )
+                      ],
+                    ),
+                  ),
+                ],
               ),
+
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     children: [
+              //       Text("Stay", style: Theme.of(context).textTheme.titleSmall),
+              //     ],
+              //   ),
+              // ),
+
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: FloatingActionButton.extended(
+              //     label: Text('Locate On Map'), // <-- Text
+              //     backgroundColor: Colors.teal,
+              //     icon: Icon(
+              //       // <-- Icon
+              //       Icons.location_pin,
+              //       size: 24.0,
+              //     ),
+              //     onPressed: () {
+              //       MapUtils.openMap(heritage.latitude, heritage.longitude);
+              //     },
+              //   ),
+              // ),
             ],
           ),
         ));
