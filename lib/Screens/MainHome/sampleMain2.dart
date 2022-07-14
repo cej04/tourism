@@ -5,6 +5,7 @@ import 'package:ktmtourism/Screens/Ayurveda/AyurvedaPage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliPage.dart';
 import 'package:ktmtourism/Screens/Heritage/HeritagePage.dart';
+import 'package:ktmtourism/Screens/HillStation/HillStationPage.dart';
 import 'package:ktmtourism/Screens/HomeStay/HomeStayPage.dart';
 import 'package:ktmtourism/Screens/Hotel/HotelPage.dart';
 import 'package:ktmtourism/Screens/MainHome/main.dart';
@@ -52,6 +53,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
       const StayKtmBodyPage(),
       KumarakomPage(),
       HeritagePage(),
+      HillStationPage(),
       const AyurvedaPage(),
       HomeStayPage(),
       HotelPage(),
