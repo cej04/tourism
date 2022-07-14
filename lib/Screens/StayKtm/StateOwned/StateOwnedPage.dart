@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwned.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwnedDetail.dart';
+// import 'package:overlay_support/overlay_support.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class StateOwnedPage extends StatefulWidget {
@@ -11,6 +13,7 @@ class StateOwnedPage extends StatefulWidget {
 }
 
 class _StateOwnedPageState extends State<StateOwnedPage> {
+  bool hasInternet = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +34,6 @@ class _StateOwnedPageState extends State<StateOwnedPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          
                           child: Column(
                             children: [
                               Image.asset(stateowned[index].image),
@@ -40,14 +42,38 @@ class _StateOwnedPageState extends State<StateOwnedPage> {
                                 leading: ElevatedButton(
                                     child: Text("Book"),
                                     onPressed: () async {
-                                      final Uri url = Uri.parse(
-                                          stateowned[index].bookingurl);
-                                      if (await canLaunchUrl(url)) {
-                                        await launchUrl(url);
-                                      }
-                                    }),
+                                      hasInternet =
+                                          await InternetConnectionChecker()
+                                              .hasConnection;
+                                      if (hasInternet) {
+                                        final Uri url = Uri.parse(
+                                            stateowned[index].bookingurl);
+                                        if (await canLaunchUrl(url)) {
+                                          await launchUrl(url);
+                                        }
+                                      } else {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: Text('No Internet!'),
+                                              content: Text(
+                                                  'Internet is required for this action.  Retry after enabling the Connection'),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Text('Ok'))
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      };
+                                    }
+                                    //print('no internet');
+                                    ),
                                 trailing: Icon(Icons.navigate_next),
-                                
                               ),
                             ],
                           ),

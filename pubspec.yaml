@@ -51,8 +51,8 @@ dependencies:
   flutter_layout_grid: ^2.0.1
   connectivity_plus: ^2.3.4
   flutter_emoji: ^2.4.0
-  
-
+  internet_connection_checker: ^0.0.1+4
+  overlay_support: ^2.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

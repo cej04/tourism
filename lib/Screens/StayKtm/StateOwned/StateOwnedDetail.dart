@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwned.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -6,6 +7,7 @@ import '../../../Utils/constants.dart';
 import 'package:ktmtourism/Screens/map_utils.dart';
 
 class StateOwnedDetailsPage extends StatelessWidget {
+  // final bool hasInternet;
   final StateOwned stateowned;
   const StateOwnedDetailsPage({Key? key, required this.stateowned})
       : super(key: key);
@@ -15,7 +17,9 @@ class StateOwnedDetailsPage extends StatelessWidget {
     return Scaffold(
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
-          child: const MyAppBar(title: 'Kottayam Tourism',),
+          child: const MyAppBar(
+            title: 'Kottayam Tourism',
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -52,29 +56,49 @@ class StateOwnedDetailsPage extends StatelessWidget {
                         leading: Icon(Icons.location_searching),
                         title: Text('${stateowned.address}'),
                       ),
-                    
                       ListTile(
-                    //    title: Text(stateowned.address),
+                        //    title: Text(stateowned.address),
                         title: ElevatedButton.icon(
                           icon: Icon(Icons.location_pin),
                           label: Text('Locate on Map'),
-                          onPressed: () {
-                            MapUtils.openMap(
-                                stateowned.latitude, stateowned.longitude);
+                          onPressed: () async {
+                            if (await InternetConnectionChecker()
+                                .hasConnection) {
+                              MapUtils.openMap(
+                                  stateowned.latitude, stateowned.longitude);
+                            } else {
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    title: Text('No Internet!'),
+                                    content: Text(
+                                        'Internet is required for this action.  Retry after enabling the Connection'),
+                                    actions: [
+                                      TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text('Ok'))
+                                    ],
+                                  );
+                                },
+                              );
+                            }
+                            ;
                           },
                         ),
                       ),
                       ListTile(
-                    //    title: Text(
-                    //      stateowned.phone.toString(),
-                     //   ),
+                        //    title: Text(
+                        //      stateowned.phone.toString(),
+                        //   ),
                         title: ElevatedButton.icon(
                           icon: Icon(Icons.call),
                           label: Text('${stateowned.phone}'),
                           onPressed: () async {
-                            
                             final url = 'tel:${stateowned.phone}';
-                            
+
                             if (await canLaunch(url)) {
                               await launch(url);
                             }
@@ -82,7 +106,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
                         ),
                       ),
                       ListTile(
-                      //  title: Text(stateowned.email.toString()),
+                        //  title: Text(stateowned.email.toString()),
                         title: ElevatedButton.icon(
                           icon: Icon(Icons.email),
                           label: Text('${stateowned.email}'),
