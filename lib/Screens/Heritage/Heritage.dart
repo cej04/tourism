@@ -30,7 +30,7 @@ List<Heritage> heritage = [
       name: "St. Mary's Orthodox Church, Cheriapalli",
       image: "assets/place/hr-cheriapalli.jpg",
       desc:
-          "Built in 1579 by Thekkumkoor Maharajah, St. Mary’s Orthodox Syrian Church, popularly known as Kottayam Cheriapalli, displays outstanding architecture which is a blend of Kerala and Portuguese styles. The walls are adorned with beautiful murals made in oriental and western styles on biblical and non-biblical themes. Feast Day: January 15.\n\nChurch Timings: 0800 to1800 hrs\n\nFor details contact:-\nKottayam Cheriapally\nSt. Mary’s Orthodox Syrian Church\nCheriapally Junction\nKottayam - Kumarakom Road\nKottayam - 686001\nPhone: +91 481 2566744\nEmail: office@kottayamcheriapally.com, prayers@kottayamcheriapally.com\nWebsite: www.kottayamcheriapally.com",
+          "Built in 1579 by Thekkumkoor Maharajah, St. Mary’s Orthodox Syrian Church, popularly known as Kottayam Cheriapalli, displays outstanding architecture which is a blend of Kerala and Portuguese styles. The walls are adorned with beautiful murals made in oriental and western styles on biblical and non-biblical themes. Feast Day: January 15.\n\nChurch Timings: 0800 to1800 hrs\n\nFor details contact:-\nKottayam Cheriapally\nSt. Mary’s Orthodox Syrian Church\nCheriapally Junction\nKottayam - Kumarakom Road\nKottayam - 686001\nPhone: +91 481 2566744\nEmail:\noffice@kottayamcheriapally.com,\n prayers@kottayamcheriapally.com\nWebsite: www.kottayamcheriapally.com",
       reach:
           "Nearest railway station: Kottayam, about 3 km\n\nNearest airport: Cochin International Airport, about 91 km",
       latitude: 9.597341,

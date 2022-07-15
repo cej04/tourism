@@ -56,7 +56,7 @@ class _HillStationPageState extends State<HillStationPage> {
                                   Ink.image(
                                       image: AssetImage(hillstation[index].image),
                                       width: double.infinity,
-                                      height: 250,
+                                      height: 200,
                                       fit: BoxFit.cover),
                                  
                                 ],

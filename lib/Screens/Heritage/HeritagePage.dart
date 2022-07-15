@@ -17,7 +17,7 @@ class _HeritagePageState extends State<HeritagePage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Ayurveda Center',
+          title: 'Heritage',
         ),
       ),
       body: Column(
@@ -55,33 +55,14 @@ class _HeritagePageState extends State<HeritagePage> {
                                   Ink.image(
                                       image: AssetImage(heritage[index].image),
                                       width: double.infinity,
-                                      height: 250,
+                                      height: 200,
                                       fit: BoxFit.cover),
-                                  // Positioned(
-                                  //   top: 0.0,
-                                  //   right: 0.0,
-                                  //   child: Container(
-                                  //     decoration: BoxDecoration(
-                                  //       color: Colors.orangeAccent,
-                                  //       borderRadius: BorderRadius.only(
-                                          
-                                  //         bottomLeft: Radius.circular(20),
-                                  //       ),
-                                  //     ),
-                                  //     child: Padding(
-                                  //       padding: const EdgeInsets.all(8.0),
-                                  //       child: Text(
-                                  //         ayurveda[index].classification,
-                                  //         style: TextStyle(color: Colors.white),
-                                  //       ),
-                                  //     ),
-                                  //   ),
-                                  // ),
                                 ],
                               ),
                               ListTile(
+                                leading: Icon(Icons.history_edu),
                                 title: Text(heritage[index].name),
-                               // subtitle: Text(heritage[index].address),
+                                // subtitle: Text(heritage[index].address),
                                 trailing: Icon(Icons.navigate_next),
                               ),
                             ],
