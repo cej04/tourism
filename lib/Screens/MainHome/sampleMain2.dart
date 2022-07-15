@@ -15,8 +15,7 @@ import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/Resort/ResortPage.dart';
 import 'package:ktmtourism/Screens/ServicedVilla/ServicedVillaPage.dart';
-import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwnedPage.dart';
-import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
+import 'package:ktmtourism/Screens/RestHouse/StateOwnedPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';

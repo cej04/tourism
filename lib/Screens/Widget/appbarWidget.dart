@@ -9,9 +9,10 @@ import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/Restaurant/RestaurantDetail.dart';
 import 'package:ktmtourism/Screens/Shopping/shoppingDetail.dart';
-import 'package:ktmtourism/Screens/StayKtm/stayktmbodyPage.dart';
 import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
+
+import '../RestHouse/StateOwnedPage.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
@@ -95,7 +96,7 @@ final String title;
                     width: 20,
                   ),
                   Text(
-                    "Stay in Kottayam",
+                    "Rest House",
                   ),
                 ],
               ),
@@ -277,7 +278,7 @@ void SelectedItem(BuildContext context, item) {
       break;
     case 2:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => StayKtmBodyPage()));
+          .push(MaterialPageRoute(builder: (context) => StateOwnedPage()));
 
       break;
     case 3:

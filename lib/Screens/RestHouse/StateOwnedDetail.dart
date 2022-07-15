@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
-import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwned.dart';
+import 'package:ktmtourism/Screens/RestHouse/StateOwned.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../Utils/constants.dart';
