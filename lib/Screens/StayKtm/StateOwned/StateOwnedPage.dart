@@ -3,6 +3,7 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwned.dart';
 import 'package:ktmtourism/Screens/StayKtm/StateOwned/StateOwnedDetail.dart';
+import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 // import 'package:overlay_support/overlay_support.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -18,6 +19,12 @@ class _StateOwnedPageState extends State<StateOwnedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight),
+        child: const MyAppBar(
+          title: 'State Owned',
+        ),
+      ),
       body: Column(
         children: [
           Expanded(
