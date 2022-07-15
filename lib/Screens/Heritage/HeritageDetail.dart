@@ -82,23 +82,7 @@ class HeritageDetail extends StatelessWidget {
                         // subtitle: Text(ayurveda.overview),
                       ))
                   : Container(),
-              heritage.reach.isNotEmpty
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ExpansionTile(
-                        collapsedBackgroundColor: Colors.grey[200],
-                        title: Text("Getting There"),
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              heritage.reach,
-                              textAlign: TextAlign.justify,
-                            ),
-                          )
-                        ],
-                      ))
-                  : Container(),
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
@@ -163,6 +147,23 @@ class HeritageDetail extends StatelessWidget {
                   ),
                 ],
               ),
+              heritage.reach.isNotEmpty
+                  ? Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ExpansionTile(
+                        collapsedBackgroundColor: Colors.grey[200],
+                        title: Text("Getting There"),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              heritage.reach,
+                              textAlign: TextAlign.justify,
+                            ),
+                          )
+                        ],
+                      ))
+                  : Container(),
             ],
           ),
         ));

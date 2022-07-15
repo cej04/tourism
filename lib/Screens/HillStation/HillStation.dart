@@ -22,8 +22,8 @@ List<HillStation> hillstation = [
         "One of the most popular tourist destinations in Kottayam district is Illickal Kallu, situated on a majestic hill called Illickal Mala. There are numerous mountain streams in Illickal Mala, which is 6,000 ft above sea level, and they flow down to form the serene Meenachil River. Each of the three hills has a peculiar shape. One of them resembles a mushroom and hence, its name ‘Kuda Kallu’ (umbrella-shaped rock). The second hill has a small hunch on the side and is therefore called as ‘Koonu Kallu’ (hunchback rock). The third one is called Illickal Kallu as it derives its name from the mountain itself. The steep rock on the top of the hill has a part of its peak shorn off.\n\nThe nearest town is Nellappara (8km) and the nearest major town is Erattupetta (19km). The journey up the hill is in itself an eventful one. After a thrilling drive negotiating hairpin curves and a hike uphill, there is a path that takes you to Illickal Kallu. You may tread this path or just stay put and feel the might of this imposing muscular rock. \n\nThe breathtaking aerial view of the surroundings and billows of mists that glide past shrouding the towering hill is sure to overwhelm you. The weather is cool and misty here. If the sky is clear, the Arabian Sea can be seen in the distant horizon as a thin blue line. Sunsets on full moon days are special here. The moon can be seen rising like another sun as the orange sun goes down.",
     reach:
         "Nearest railway station: Kottayam, about 55 km \n\nNearest airport: Cochin International Airport, about 85 km ",
-    latitude: 0,
-    longitude: 0,
+    latitude: 9.753149300000006,
+    longitude: 76.8210961,
     stay: "",
   ),
   HillStation(

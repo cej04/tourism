@@ -18,7 +18,7 @@ class _HillStationPageState extends State<HillStationPage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Hill Station',
+          title: 'Hill Stations',
         ),
       ),
       body: Column(
