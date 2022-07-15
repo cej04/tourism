@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/MainHome/sampleMain2.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
@@ -13,10 +14,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF757575),
+    
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: MyAppBar(title: 'Kottayam Tourism',),
+ child: MyAppBar(title: 'Kottayam Tourism',),
       ),
       body:
          

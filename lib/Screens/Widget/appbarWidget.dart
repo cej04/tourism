@@ -261,7 +261,7 @@ final String title;
   }
 
   @override
-  Size get preferredSize => throw UnimplementedError();
+   get preferredSize => throw UnimplementedError();
 }
 
 void SelectedItem(BuildContext context, item) {
