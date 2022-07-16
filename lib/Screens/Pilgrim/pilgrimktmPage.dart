@@ -13,10 +13,12 @@ class PilgrimKtmPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-       appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(kToolbarHeight),
-          child: const MyAppBar(title: 'Pilgrim Centers',),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight),
+        child: const MyAppBar(
+          title: 'Pilgrim Centers',
         ),
+      ),
       body: Column(
         children: [
           Expanded(
@@ -26,7 +28,7 @@ class PilgrimKtmPage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                       padding: const EdgeInsets.only(
-                          left: 20.0, right: 20.0, top: 20.0),
+                          left: 10.0, right: 10.0, top: 10.0),
                       child: GestureDetector(
                         child: Card(
                           color: Colors.grey[200],
@@ -38,17 +40,11 @@ class PilgrimKtmPage extends StatelessWidget {
                             children: [
                               Image.asset(pilgrims[index].image),
                               ListTile(
-                                title: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(pilgrims[index].title),
-                                    Text(pilgrims[index].distance)
-                                  
-                                  ],
-                                ),
+                                title: Text(pilgrims[index].title),
                                 subtitle: Text(
-                                  pilgrims[index].subtitle,),
-                                trailing: Icon(Icons.navigate_next)  ,
+                                  pilgrims[index].subtitle,
+                                ),
+                                trailing: Icon(Icons.navigate_next),
                               ),
                             ],
                           ),
@@ -61,7 +57,6 @@ class PilgrimKtmPage extends StatelessWidget {
                               ),
                             )),
                       ));
-                  
                 }),
           ))
         ],
