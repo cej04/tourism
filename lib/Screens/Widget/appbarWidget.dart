@@ -9,7 +9,6 @@ import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/Restaurant/RestaurantDetail.dart';
 import 'package:ktmtourism/Screens/Shopping/shoppingDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/HomeScreen/body.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 import '../RestHouse/StateOwnedPage.dart';
@@ -67,23 +66,7 @@ final String title;
                 ],
               ),
             ),
-            PopupMenuItem<int>(
-              value: 1,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.explore_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Tourist Places",
-                  ),
-                ],
-              ),
-            ),
+           
             PopupMenuItem<int>(
               value: 2,
               child: Row(
@@ -271,11 +254,7 @@ void SelectedItem(BuildContext context, item) {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => welcomektmPage()));
       break;
-    case 1:
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => Body()));
-
-      break;
+    
     case 2:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => StateOwnedPage()));
