@@ -12,12 +12,12 @@ class MainSample {
 
 List<MainSample> mainsample = [
   MainSample(
-      image: "assets/images/me.png",
+      image: "assets/images/ico_me.png",
       title: "About Kottayam",
       icons: Icons.info),
  
   MainSample(
-      image: "assets/images/stay.png",
+      image: "assets/images/ico_stay.png",
       title: "Rest House ",
       icons: Icons.bed_rounded),
  
@@ -36,39 +36,39 @@ List<MainSample> mainsample = [
 
 
     MainSample(
-      image: "assets/images/Aurveda.png",
+      image: "assets/images/ico_ayurveda.png",
       title: "Ayurveda Centre ",
       icons: Icons.bed_rounded),
   MainSample(
-      image: "assets/images/stayhome.png",
+      image: "assets/images/ico_stayhome.png",
       title: "Home Stay",
       icons: Icons.holiday_village),
   MainSample(
-      image: "assets/images/delight.png",
+      image: "assets/images/ico_delight.png",
       title: "Hotel",
       icons: Icons.flatware),
         MainSample(
-      image: "assets/images/Resort.png",
+      image: "assets/images/ico_Resort.png",
       title: "Resort",
       icons: Icons.holiday_village),
   MainSample(
-      image: "assets/images/villa.png",
+      image: "assets/images/ico_villa.png",
       title: "Serviced Villa",
       icons: Icons.flatware),
         MainSample(
-      image: "assets/images/Grihasthali.png",
+      image: "assets/images/ico_Grihasthali.png",
       title: "Grihasthali",
       icons: Icons.flatware),
        MainSample(
-      image: "assets/images/religion.png",
+      image: "assets/images/ico_religion.png",
       title: "Pilgrim Centers",
       icons: Icons.holiday_village),
   MainSample(
-      image: "assets/images/CulinaryDelight.png",
+      image: "assets/images/ico_CulinaryDelight.png",
       title: "Culinary Delights",
       icons: Icons.flatware),
         MainSample(
-      image: "assets/images/passenger.png",
+      image: "assets/images/ico_passenger.png",
       title: "How to Reach",
       icons: Icons.commute_outlined),
 ];
