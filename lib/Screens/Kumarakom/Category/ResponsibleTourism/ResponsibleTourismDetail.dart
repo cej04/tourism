@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/ResponsibleTourism/ResponsibleTourism.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/ResponsibleTourism/ResponsibleTourism.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
 class ResponsibleTourismDetail extends StatelessWidget {

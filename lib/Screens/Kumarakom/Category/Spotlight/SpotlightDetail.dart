@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/Spotlight/Spotlight.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/Spotlight/Spotlight.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
 class SpotlightDetail extends StatelessWidget {

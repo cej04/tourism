@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/AccessingKumarakom/Accessing.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/AccessingKumarakom/Accessing.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
 class AccessingKumarakomPage extends StatelessWidget {

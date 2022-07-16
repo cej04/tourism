@@ -15,10 +15,7 @@ List<MainSample> mainsample = [
       image: "assets/images/me.png",
       title: "About Kottayam",
       icons: Icons.info),
-  MainSample(
-      image: "assets/images/destination.png",
-      title: "Tourist Places",
-      icons: Icons.explore_outlined),
+ 
   MainSample(
       image: "assets/images/stay.png",
       title: "Rest House ",

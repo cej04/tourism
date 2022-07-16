@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/MotorBoat/MotorBoat.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/MotorBoat/MotorBoat.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 

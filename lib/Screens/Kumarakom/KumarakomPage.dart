@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Kumarakom/KumarakomDetail.dart';
 import 'package:ktmtourism/Screens/Kumarakom/kumarakom.dart';
-
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
 class KumarakomPage extends StatefulWidget {
@@ -32,7 +31,7 @@ class _KumarakomPageState extends State<KumarakomPage> {
                     padding: const EdgeInsets.only(
                         left: 20.0, right: 20.0, top: 20.0),
                     child: InkWell(
-                      onTap: (() {
+                     onTap: (() {
                         Navigator.push(
                             context,
                             MaterialPageRoute(

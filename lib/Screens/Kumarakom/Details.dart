@@ -1,26 +1,24 @@
+
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/KumarakomDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/AccessingKumarakom/AccessingKumarakom.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/FerryTiming/FerryTimingDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/MotorBoat/MotorBoatDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/RoadBased/RoadBasedDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/Spotlight/SpotlightDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/WaterBased/WaterBasedDetail.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/About/Kumarakom.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/AccessingKumarakom/AccessingKumarakom.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/BoatRaces/BoatRaceDetail.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/FerryTiming/FerryTimingDetail.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/MotorBoat/MotorBoatDetail.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/ResponsibleTourism/ResponsibleTourismDetail.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/RoadBased/RoadBasedDetail.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/Spotlight/SpotlightDetail.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/WaterBased/WaterBasedDetail.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
-import 'CategoryPages/BoatRaces/BoatRaceDetail.dart';
-import 'CategoryPages/ResponsibleTourism/ResponsibleTourismDetail.dart';
+class details extends StatefulWidget {
+  
 
-class KumarakomDetail extends StatefulWidget {
-  final Kumarakom kumarakom;
-
-  const KumarakomDetail({Key? key, required this.kumarakom}) : super(key: key);
+  const details({Key? key,}) : super(key: key);
 
   @override
-  State<KumarakomDetail> createState() => _KumarakomDetailState();
+  State<details> createState() => _detailsState();
 }
 
-class _KumarakomDetailState extends State<KumarakomDetail> {
+class _detailsState extends State<details> {
   var selected = 0;
 
   late Function callback;
@@ -45,7 +43,7 @@ class _KumarakomDetailState extends State<KumarakomDetail> {
 
 Widget _tabSection(BuildContext context) {
   return DefaultTabController(
-    length: 9,
+    length: 8,
     child: Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
@@ -53,7 +51,7 @@ Widget _tabSection(BuildContext context) {
           isScrollable: true,
           indicatorColor: Colors.white,
           tabs: [
-            Tab(icon: Icon(Icons.info), text: "About Kumarakom "),
+           // Tab(icon: Icon(Icons.info), text: "About Kumarakom "),
             Tab(icon: Icon(Icons.alt_route), text: "Accessing Kumarakom "),
             Tab(
               icon: Icon(Icons.attractions_rounded),
@@ -86,7 +84,7 @@ Widget _tabSection(BuildContext context) {
   
           height: MediaQuery.of(context).size.height,
           child: TabBarView(children: [
-            KumarakomDetails(),
+          //  KumarakomDetails(),
             const AccessingKumarakomPage(),
             const SpotlightDetail(),
             const BoatRaceDetail(),

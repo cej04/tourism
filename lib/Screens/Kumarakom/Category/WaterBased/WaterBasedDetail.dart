@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/RoadBased/RoadBased.dart';
-import 'package:ktmtourism/Utils/constants.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/WaterBased/WaterBased.dart';
+ import 'package:ktmtourism/Utils/constants.dart';
 
-class RoadBasedDetail extends StatelessWidget {
-  const RoadBasedDetail({
+class WaterBasedDetail extends StatelessWidget {
+  const WaterBasedDetail({
     Key? key,
   }) : super(key: key);
 
@@ -17,25 +17,25 @@ class RoadBasedDetail extends StatelessWidget {
       //     child: const MyAppBar(),
 
       // ),
-      body: 
-         Column(
+      body:
+       Column(
         children: [
            Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
-            child: Text("Road Based Sightseeing\n Routes In Kumarakom",style: Theme.of(context).textTheme.headline6?.copyWith(
+            child: Text("Water Based sightseeing\n Routes In Kumarakom",style: Theme.of(context).textTheme.headline6?.copyWith(
                 color: Colors.black, fontWeight: FontWeight.bold,)),
           ),
          // HeaderWithFAQS(size: size),
           Expanded(
             child: ListView.builder(
-                itemCount: roadbased.length,
+                itemCount: waterbased.length,
                 itemBuilder: (BuildContext context, int index) {
-                  final que = roadbased[index];
+                  final que = waterbased[index];
 
                   return Card(
                     child: ListTile(
                       tileColor: que.bgcolor,
-                      leading: Icon(Icons.emoji_transportation_outlined,color: que.iconColor,),
+                      leading: Icon(Icons.directions_ferry_rounded,color: que.iconColor,),
                      
                       subtitle: Text(que.description)
                     
@@ -46,21 +46,21 @@ class RoadBasedDetail extends StatelessWidget {
           )
         ],
       ),
-      // Column(
+      //  Column(
       //   children: [
       //     Padding(
       //       padding: const EdgeInsets.all(kDefaultPadding),
       //       child: Text(
-      //           "Road Based Sightseeing\n Routes In Kumarakom"
+      //           "Water Based sightseeing\n Routes In Kumarakom"
       //               ,style: Theme.of(context).textTheme.headline6?.copyWith(
       //           color: Colors.black, fontWeight: FontWeight.bold,)),
       //     ),
       //     // HeaderWithRestaurant(size: size),
       //     Expanded(
       //         child: ListView.builder(
-      //             itemCount: roadbased.length,
-      //             itemBuilder: (context, index) =>
-      //                 RoadBasedCard(roadbased: roadbased[index], press: () {})))
+      //             itemCount: waterbased.length,
+      //             itemBuilder: (context, index) => WaterBasedCard(
+      //                 waterbased: waterbased[index], press: () {})))
       //   ],
       // ),
     );

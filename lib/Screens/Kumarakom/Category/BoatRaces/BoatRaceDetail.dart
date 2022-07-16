@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/TouristPlaces/Kumarakom/CategoryPages/BoatRaces/BoatRaces.dart';
+import 'package:ktmtourism/Screens/Kumarakom/Category/BoatRaces/BoatRaces.dart';
 import 'package:ktmtourism/Utils/constants.dart';
 
 class BoatRaceDetail extends StatelessWidget {
