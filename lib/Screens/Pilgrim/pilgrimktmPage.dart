@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Pilgrim/ViewMore/ViewMore.dart';
+//import 'package:ktmtourism/Screens/Pilgrim/ViewMore/ViewMore.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimsBodyPage.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrims.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
@@ -60,15 +60,6 @@ class PilgrimKtmPage extends StatelessWidget {
                 }),
           ))
         ],
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ViewMorePilgrim()));
-        },
-        label: const Text('View More'),
-        icon: const Icon(Icons.navigate_next),
-        backgroundColor: Colors.teal,
       ),
     );
   }

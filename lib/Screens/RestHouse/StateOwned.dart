@@ -120,7 +120,7 @@ List<StateOwned> stateowned = [
   ),
   StateOwned(
     image: "assets/images/guesthousektm.jpg",
-    title: "Government Guest House,Kottayam",
+    title: "Government Guest House, Kottayam",
     address: "Guest House, Kottayam, Pin: 680012",
     //  pin:680012,
     phone: "+914812562219",

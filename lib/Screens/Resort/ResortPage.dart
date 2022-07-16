@@ -31,7 +31,7 @@ class _ResortPageState extends State<ResortPage> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 20.0),
+                        left: 10.0, right: 10.0, top: 10.0),
                     child: InkWell(
                       onTap: (() {
                         Navigator.push(
@@ -57,7 +57,7 @@ class _ResortPageState extends State<ResortPage> {
                                   Ink.image(
                                       image: AssetImage(resort[index].image),
                                       width: double.infinity,
-                                      height: 250,
+                                      height: 200,
                                       fit: BoxFit.cover),
                                   Positioned(
                                     top: 0.0,

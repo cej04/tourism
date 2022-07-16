@@ -33,7 +33,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 200,
+                height: 250,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -54,7 +54,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       ListTile(
-                        leading: Icon(Icons.location_searching),
+                        leading: Icon(Icons.place_outlined),
                         title: Text('${stateowned.address}'),
                       ),
                       ListTile(
