@@ -253,22 +253,26 @@ class HowToReachPage extends StatelessWidget {
           bottom: TabBar(
             isScrollable: true,
             tabs: [
-            Tab(icon: Icon(Icons.bus_alert), text: "By Road"),
-            Tab(
-              icon: Icon(Icons.train),
-              text: "By Train",
-            ),
-            Tab(
+                Tab(
               icon: Icon(Icons.flight),
               text: "By Air",
             ),
+              Tab(
+              icon: Icon(Icons.train),
+              text: "By Train",
+            ),
+            Tab(icon: Icon(Icons.bus_alert), text: "By Road"),
+          
+          
             Tab(icon: Icon(Icons.sailing), text: "Backwater Ferry Services"),
           ]),
         ),
         body: TabBarView(children: [
-          const RoadDEtails(),
-          const TrainDetailPage(),
           const AirDetailPage(),
+          const TrainDetailPage(),
+          const RoadDEtails(),
+          
+          
           const FerryServise(),
         ]),
       ),
