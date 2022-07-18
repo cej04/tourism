@@ -33,7 +33,7 @@ List<ServicedVilla> servicedvilla = [
   ServicedVilla(
     name: "Oasis Aqua Villa",
     image: "assets/stay/sv-oasis.jpg",
-    address: "Malarickal\nKanjiram, Kottayam\nPin: 686020",
+    address: "Malarickal, Kanjiram,\nKottayam, Pin: 686020",
     ph1: "+919447366841",
     ph2: "+919746021383",
     ph3: "",
@@ -48,7 +48,7 @@ List<ServicedVilla> servicedvilla = [
  ServicedVilla(
     name: "Lake Vechoor Villas",
     image: "assets/stay/sv-lakevechoor.jpg",
-    address: "Near Thanneermukkom Bund\nVaikom, Ambika Mkt P.O.\nVechoor, Kottayam\nPin: 686144",
+    address: "Near Thanneermukkom Bund\nVaikom, Ambika Mkt P.O., Vechoor,\nKottayam, Pin: 686144",
     ph1: "+919818457417",
     ph2: "+919810132143",
     ph3: "+917510791139",
@@ -63,7 +63,7 @@ List<ServicedVilla> servicedvilla = [
    ServicedVilla(
     name: "Swasthi",
     image: "assets/stay/sv-swasthi.jpg",
-    address: "Thonduveli, ThampalakkaduP.O\nKanjirappally, Kottayam\nPin: 686506",
+    address: "Thonduveli, ThampalakkaduP.O\nKanjirappally, Kottayam, Pin: 686506",
     ph1: "+919074809884",
     ph2: "+914828204592",
     ph3: "",

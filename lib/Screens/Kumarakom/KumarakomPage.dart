@@ -62,6 +62,7 @@ class _KumarakomPageState extends State<KumarakomPage> {
                               ),
                               ListTile(
                                 title: Text(Kumarakom[index].name),
+                                subtitle: Text(Kumarakom[index].subname),
                                 leading: Icon(Icons.water),
                                // subtitle: Text(heritage[index].address),
                                 trailing: Icon(Icons.navigate_next),

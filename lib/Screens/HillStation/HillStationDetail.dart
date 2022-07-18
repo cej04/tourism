@@ -154,53 +154,7 @@ class _HillStationDetailState extends State<HillStationDetail> {
                   ),
                 ],
               ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //   children: <Widget>[
-            //     FlatButton(
-            //       textColor: Colors.white,
-            //       //height: 60.0,
-            //       color: Colors.teal,
-            //       onPressed: () {},
-            //       child: Row(
-            //         mainAxisAlignment: MainAxisAlignment.center,
-            //         children: [
-            //           Padding(
-            //             padding: const EdgeInsets.all(8.0),
-            //             child: Icon(
-            //               Icons.night_shelter_outlined,
-            //               color: Colors.white,
-            //             ),
-            //           ),
-            //           Text(
-            //             'Where to Stay',
-            //           )
-            //         ],
-            //       ),
-            //     ),
-            //     FlatButton(
-            //       textColor: Colors.white,
-            //       //height: 60.0,
-            //       color: Colors.teal,
-            //       onPressed: () {},
-            //       child: Row(
-            //         mainAxisAlignment: MainAxisAlignment.center,
-            //         children: [
-            //           Padding(
-            //             padding: const EdgeInsets.all(8.0),
-            //             child: Icon(
-            //               Icons.pin_drop,
-            //               color: Colors.white,
-            //             ),
-            //           ),
-            //           Text(
-            //             'Locate on Map',
-            //           )
-            //         ],
-            //       ),
-            //     ),
-            //   ],
-            // ),
+            
             widget.hillstation.reach.isNotEmpty
                 ? Padding(
                     padding: const EdgeInsets.all(8.0),

@@ -18,7 +18,7 @@ class _DestinationPageState extends State<DestinationPage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Destination',
+          title: 'Destinations',
         ),
       ),
       body: Column(
@@ -30,7 +30,7 @@ class _DestinationPageState extends State<DestinationPage> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 20.0),
+                        left: 10.0, right: 10.0, top: 10.0),
                     child: InkWell(
                       onTap: (() {
                         Navigator.push(
@@ -61,9 +61,9 @@ class _DestinationPageState extends State<DestinationPage> {
                                 ],
                               ),
                               ListTile(
-                                leading: Icon(Icons.history_edu),
+                              //  leading: Icon(Icons.history_edu),
                                 title: Text(destination[index].name),
-                                // subtitle: Text(heritage[index].address),
+                               subtitle: Text(destination[index].subname),
                                 trailing: Icon(Icons.navigate_next),
                               ),
                             ],

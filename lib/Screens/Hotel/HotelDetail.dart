@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:ktmtourism/Screens/Hotel/Hotel.dart';
 
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
@@ -75,6 +76,7 @@ class HotelDetail extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
+                    initiallyExpanded: true,
                     collapsedBackgroundColor: Colors.grey[200],
                     title: Text("Overview"),
                     
@@ -84,6 +86,7 @@ class HotelDetail extends StatelessWidget {
                         child: Text(
                           hotel.overview,
                           textAlign: TextAlign.justify,
+                          style: TextStyle(height: 1.7)
                         ),
                       ),
                       
@@ -234,22 +237,36 @@ class HotelDetail extends StatelessWidget {
                       // )
                     ],
                     // subtitle: Text(HotelDetail.overview),
-                  )),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: FloatingActionButton.extended(
-                  label: Text('Locate On Map'), // <-- Text
-                  backgroundColor: Colors.teal,
-                  icon: Icon(
-                    // <-- Icon
-                    Icons.location_pin,
-                    size: 24.0,
+                  ),),
+                  ElevatedButton.icon(
+                    icon: Icon(Icons.location_pin),
+                    label: Text('Locate on Map'),
+                    onPressed: () async {
+                      if (await InternetConnectionChecker().hasConnection) {
+                        MapUtils.openMap(hotel.latitude, hotel.longitude);
+                      } else {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('No Internet!'),
+                              content: Text(
+                                  'Internet is required for this action.  Retry after enabling the Connection'),
+                              actions: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text('Ok'))
+                              ],
+                            );
+                          },
+                        );
+                      }
+                      ;
+                    },
                   ),
-                  onPressed: () {
-                    MapUtils.openMap(hotel.latitude, hotel.longitude);
-                  },
-                ),
-              ), 
+              
             ],
           ),
         ));

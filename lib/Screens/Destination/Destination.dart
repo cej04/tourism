@@ -52,8 +52,8 @@ List<Destination> destination = [
         "https://www.keralatourism.org/where-to-stay/vembanad-lake-kumarakom/111",
   ),
   Destination(
-      name: "Anchuvilakku– a Stone Lamp Post",
-      subname: "A historical and architectural marvel, the magnificent Anchuvilakku",
+      name: "Anchuvilakku",
+      subname: "A historical and architectural stone lamp post",
       image: "assets/place/des-anchuvilakku.jpg",
       desc:
           "Lying near the picturesque Changanacherry Boat Jetty in Kottayam district is a historical and architectural marvel, the magnificent Anchuvilakku. This stone lamp post personifies the Kerala school of architecture at its finest, and was laid here by the legendary freedom fighter Veluthampi Dalawa himself. The surrounding market is an area renowned for being a commercial hub and is also attributed to him. Today, people come from around the world to view this beautiful lamp post, with its five lamps still lit using kerosene.",

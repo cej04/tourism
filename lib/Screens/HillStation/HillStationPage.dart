@@ -63,8 +63,8 @@ class _HillStationPageState extends State<HillStationPage> {
                               ),
                               ListTile(
                                 title: Text(hillstation[index].name),
-                                leading: Icon(Icons.landscape),
-                               // subtitle: Text(heritage[index].address),
+                             //   leading: Icon(Icons.landscape),
+                               subtitle: Text(hillstation[index].subname),
                                 trailing: Icon(Icons.navigate_next),
                               ),
                             ],

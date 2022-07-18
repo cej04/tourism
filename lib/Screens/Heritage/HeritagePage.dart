@@ -60,9 +60,9 @@ class _HeritagePageState extends State<HeritagePage> {
                                 ],
                               ),
                               ListTile(
-                                leading: Icon(Icons.history_edu),
+                              //  leading: Icon(Icons.history_edu),
                                 title: Text(heritage[index].name),
-                                // subtitle: Text(heritage[index].address),
+                                subtitle: Text(heritage[index].subname),
                                 trailing: Icon(Icons.navigate_next),
                               ),
                             ],

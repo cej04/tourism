@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:ktmtourism/Screens/HomeStay/HomeStay.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Screens/map_utils.dart';
@@ -67,58 +68,46 @@ class HomeStayDetail extends StatelessWidget {
                   ),
                 ],
               ),
-        Homestay.overview.isNotEmpty ?
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ExpansionTile(
-                    collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("Overview"),
-                    
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          Homestay.overview,
-                          textAlign: TextAlign.justify,
-                        ),
-                      ),
-                      
-                    ],
-                    // subtitle: Text(ayurveda.overview),
-                  )): Container(),
-               Homestay.facilities.isNotEmpty ?
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ExpansionTile(
-                    collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("Facilities"),
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          Homestay.facilities,
-                          textAlign: TextAlign.justify,
-                        ),
-                      )
-                    ],
-                    // subtitle: Text(ayurveda.overview),
-                  )): Container(),
-              // Padding(
-              //     padding: const EdgeInsets.all(8.0),
-              //     child: ExpansionTile(
-              //       collapsedBackgroundColor: Colors.grey[200],
-              //       title: Text("AYURVEDIC TREATMENTS"),
-              //       children: [
-              //         Padding(
-              //           padding: const EdgeInsets.all(8.0),
-              //           child: Text(
-              //             Homestay.treatment,
-              //             textAlign: TextAlign.justify,
-              //           ),
-              //         )
-              //       ],
-              //       // subtitle: Text(ayurveda.overview),
-              //     )),
+              Homestay.overview.isNotEmpty
+                  ? Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ExpansionTile(
+                        initiallyExpanded: true,
+                        collapsedBackgroundColor: Colors.grey[200],
+                        title: Text("Overview"),
+
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              Homestay.overview,
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(height: 1.7),
+                            ),
+                          ),
+                        ],
+                        // subtitle: Text(ayurveda.overview),
+                      ))
+                  : Container(),
+              Homestay.facilities.isNotEmpty
+                  ? Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ExpansionTile(
+                        collapsedBackgroundColor: Colors.grey[200],
+                        title: Text("Facilities"),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              Homestay.facilities,
+                              textAlign: TextAlign.justify,
+                            ),
+                          )
+                        ],
+                        // subtitle: Text(ayurveda.overview),
+                      ))
+                  : Container(),
+              
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
@@ -153,26 +142,28 @@ class HomeStayDetail extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Homestay.ph2.isNotEmpty ?
-                                    TextButton(
-                                        onPressed: () async {
-                                          final url = 'tel:${Homestay.ph2}';
-                                          // final url = 'tel:$stateowned.phone';
-                                          if (await canLaunch(url)) {
-                                            await launch(url);
-                                          }
-                                        },
-                                        child: Text(Homestay.ph2)): Container(),
-                                        Homestay.ph3.isNotEmpty ?
-                                    TextButton(
-                                        onPressed: () async {
-                                          final url = 'tel:${Homestay.ph3}';
-                                          // final url = 'tel:$stateowned.phone';
-                                          if (await canLaunch(url)) {
-                                            await launch(url);
-                                          }
-                                        },
-                                        child: Text(Homestay.ph3)) :Container()
+                                    Homestay.ph2.isNotEmpty
+                                        ? TextButton(
+                                            onPressed: () async {
+                                              final url = 'tel:${Homestay.ph2}';
+                                              // final url = 'tel:$stateowned.phone';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              }
+                                            },
+                                            child: Text(Homestay.ph2))
+                                        : Container(),
+                                    Homestay.ph3.isNotEmpty
+                                        ? TextButton(
+                                            onPressed: () async {
+                                              final url = 'tel:${Homestay.ph3}';
+                                              // final url = 'tel:$stateowned.phone';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              }
+                                            },
+                                            child: Text(Homestay.ph3))
+                                        : Container()
                                   ],
                                 ),
                               ],
@@ -200,49 +191,49 @@ class HomeStayDetail extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Homestay.email2.isNotEmpty ?
-                                    TextButton(
-                                        onPressed: () async {
-                                          final url =
-                                              'mailto:${Homestay.email2}';
-                                          if (await canLaunch(url)) {
-                                            await launch(url);
-                                          }
-                                        },
-                                        child: Text(Homestay.email2)):Container()
+                                    Homestay.email2.isNotEmpty
+                                        ? TextButton(
+                                            onPressed: () async {
+                                              final url =
+                                                  'mailto:${Homestay.email2}';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              }
+                                            },
+                                            child: Text(Homestay.email2))
+                                        : Container()
                                   ],
                                 ),
                               ],
                             ),
-                            Homestay.website.isNotEmpty ?
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Column(
-                                
-                                children: [
-                                  Row(
-                                    
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.web,
-                                        color: Colors.teal,
-                                      ),
-                                      TextButton(
-                                          onPressed: () async {
-                                            final Uri url =
-                                                Uri.parse(Homestay.website);
-                                            if (await canLaunchUrl(url)) {
-                                              await launchUrl(url);
-                                            }
-                                          },
-                                          child: Text(Homestay.website))
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ):Container()
+                            Homestay.website.isNotEmpty
+                                ? SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Column(
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Icon(
+                                              Icons.web,
+                                              color: Colors.teal,
+                                            ),
+                                            TextButton(
+                                                onPressed: () async {
+                                                  final Uri url = Uri.parse(
+                                                      Homestay.website);
+                                                  if (await canLaunchUrl(url)) {
+                                                    await launchUrl(url);
+                                                  }
+                                                },
+                                                child: Text(Homestay.website))
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                : Container()
                           ],
                         ),
                       ),
@@ -250,21 +241,35 @@ class HomeStayDetail extends StatelessWidget {
                     ],
                     // subtitle: Text(ayurveda.overview),
                   )),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: FloatingActionButton.extended(
-                  label: Text('Locate On Map'), // <-- Text
-                 // backgroundColor: Colors.teal,
-                  icon: Icon(
-                    // <-- Icon
-                    Icons.location_pin,
-                    size: 24.0,
+                  ElevatedButton.icon(
+                    icon: Icon(Icons.location_pin),
+                    label: Text('Locate on Map'),
+                    onPressed: () async {
+                      if (await InternetConnectionChecker().hasConnection) {
+                        MapUtils.openMap(Homestay.latitude, Homestay.longitude);
+                      } else {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('No Internet!'),
+                              content: Text(
+                                  'Internet is required for this action.  Retry after enabling the Connection'),
+                              actions: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text('Ok'))
+                              ],
+                            );
+                          },
+                        );
+                      }
+                      ;
+                    },
                   ),
-                  onPressed: () {
-                    MapUtils.openMap(Homestay.latitude, Homestay.longitude);
-                  },
-                ),
-              ),
+              
             ],
           ),
         ));

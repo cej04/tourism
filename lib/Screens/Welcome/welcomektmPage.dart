@@ -16,7 +16,7 @@ class _welcomektmPageState extends State<welcomektmPage> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: MyAppBar(title: 'Welcome to Kottayam'),
+        child: MyAppBar(title: 'About Kottayam'),
       ),
       body: Column(
         children: [
@@ -26,7 +26,7 @@ class _welcomektmPageState extends State<welcomektmPage> {
                   itemBuilder: (context, index) {
                     return Padding(
                         padding: const EdgeInsets.only(
-                            left: 20.0, right: 20.0, top: 20.0),
+                            left: 10.0, right: 10.0, top: 10.0),
                         child: GestureDetector(
                           child: Card(
                             color: Colors.grey[200],
