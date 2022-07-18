@@ -30,7 +30,7 @@ class TourismInfoPage extends StatelessWidget {
                        
                         children: [
                           TextSpan(
-                            text: 'Deputy Director\n\n',
+                            text: 'Department of Tourism\n\nDeputy Director\n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
                                 color: Colors.black,
@@ -48,7 +48,7 @@ class TourismInfoPage extends StatelessWidget {
                        
                           TextSpan(
                             text:
-                                'District Tourism Promotion Council(DTPC)\n\n',
+                                'District Tourism Promotion Council (DTPC)\n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
                                 color: Colors.black,
