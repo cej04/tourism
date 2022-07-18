@@ -142,18 +142,19 @@ class ResortDetail extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    resort.ph2.isNotEmpty ?
-                                    TextButton(
-                                        onPressed: () async {
-                                          final url = 'tel:${resort.ph2}';
-                                          // final url = 'tel:$stateowned.phone';
-                                          if (await canLaunch(url)) {
-                                            await launch(url);
-                                          }
-                                        },
-                                        child: Text(resort.ph2)): Container(),
-                                         resort.ph3.isNotEmpty ?
-                                   TextButton(
+                                    resort.ph2.isNotEmpty
+                                        ? TextButton(
+                                            onPressed: () async {
+                                              final url = 'tel:${resort.ph2}';
+                                              // final url = 'tel:$stateowned.phone';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              }
+                                            },
+                                            child: Text(resort.ph2))
+                                        : Container(),
+                                    resort.ph3.isNotEmpty
+                                        ? TextButton(
                                             onPressed: () async {
                                               final url = 'tel:${resort.ph3}';
                                               // final url = 'tel:$stateowned.phone';
@@ -161,7 +162,8 @@ class ResortDetail extends StatelessWidget {
                                                 await launch(url);
                                               }
                                             },
-                                            child: Text(resort.ph3)):Container()
+                                            child: Text(resort.ph3))
+                                        : Container()
                                   ],
                                 ),
                               ],
@@ -177,8 +179,7 @@ class ResortDetail extends StatelessWidget {
                                     ),
                                     TextButton(
                                         onPressed: () async {
-                                          final url =
-                                              'mailto:${resort.email1}';
+                                          final url = 'mailto:${resort.email1}';
                                           if (await canLaunch(url)) {
                                             await launch(url);
                                           }
@@ -186,54 +187,60 @@ class ResortDetail extends StatelessWidget {
                                         child: Text(resort.email1))
                                   ],
                                 ),
-                                resort.email2.isNotEmpty ?
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    TextButton(
-                                        onPressed: () async {
-                                          final url =
-                                              'mailto:${resort.email2}';
-                                          if (await canLaunch(url)) {
-                                            await launch(url);
-                                          }
-                                        },
-                                        child: Text(resort.email2)),
-                                  ],
-                                ) : Container()
+                                resort.email2.isNotEmpty
+                                    ? Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          TextButton(
+                                              onPressed: () async {
+                                                final url =
+                                                    'mailto:${resort.email2}';
+                                                if (await canLaunch(url)) {
+                                                  await launch(url);
+                                                }
+                                              },
+                                              child: Text(resort.email2)),
+                                        ],
+                                      )
+                                    : Container()
                               ],
                             ),
-                            resort.website.isNotEmpty ?
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                            
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(left:8.0,right: 8.0),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.web,
-                                          color: Colors.teal,
-                                        ),
-                                        TextButton(
-                                            onPressed: () async {
-                                              final Uri url =
-                                                  Uri.parse(resort.website);
-                                              if (await canLaunchUrl(url)) {
-                                                await launchUrl(url);
-                                              }
-                                            },
-                                            child: Text(resort.website))
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ):Container()
+                            resort.website.isNotEmpty
+                                ? ElevatedButton.icon(
+                                    icon: Icon(Icons.web),
+                                    label: Text(resort.website),
+                                    onPressed: () async {
+                                      if (await InternetConnectionChecker()
+                                          .hasConnection) {
+                                        final Uri url =
+                                            Uri.parse(resort.website);
+                                        if (await canLaunchUrl(url)) {
+                                          await launchUrl(url);
+                                        }
+                                      } else {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: Text('No Internet!'),
+                                              content: Text(
+                                                  'Internet is required for this action.  Retry after enabling the Connection'),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Text('Ok'))
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      }
+                                      ;
+                                    },
+                                  )
+                                : Container()
                           ],
                         ),
                       ),
@@ -241,35 +248,34 @@ class ResortDetail extends StatelessWidget {
                     ],
                     // subtitle: Text(ResortDetail.overview),
                   )),
-                  ElevatedButton.icon(
-                    icon: Icon(Icons.location_pin),
-                    label: Text('Locate on Map'),
-                    onPressed: () async {
-                      if (await InternetConnectionChecker().hasConnection) {
-                        MapUtils.openMap(resort.latitude, resort.longitude);
-                      } else {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return AlertDialog(
-                              title: Text('No Internet!'),
-                              content: Text(
-                                  'Internet is required for this action.  Retry after enabling the Connection'),
-                              actions: [
-                                TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Ok'))
-                              ],
-                            );
-                          },
+              ElevatedButton.icon(
+                icon: Icon(Icons.location_pin),
+                label: Text('Locate on Map'),
+                onPressed: () async {
+                  if (await InternetConnectionChecker().hasConnection) {
+                    MapUtils.openMap(resort.latitude, resort.longitude);
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text('No Internet!'),
+                          content: Text(
+                              'Internet is required for this action.  Retry after enabling the Connection'),
+                          actions: [
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Ok'))
+                          ],
                         );
-                      }
-                      ;
-                    },
-                  ),
-              
+                      },
+                    );
+                  }
+                  ;
+                },
+              ),
             ],
           ),
         ));

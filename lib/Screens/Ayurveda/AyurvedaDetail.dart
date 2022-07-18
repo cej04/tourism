@@ -222,30 +222,65 @@ class AyuvedaDetail extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.web,
-                                        color: Colors.teal,
-                                      ),
-                                      TextButton(  onPressed: () async {
-                                      final Uri url = Uri.parse(
-                                          ayurveda.website);
-                                      if (await canLaunchUrl(url)) {
-                                        await launchUrl(url);
+                            ayurveda.website.isNotEmpty
+                                ? ElevatedButton.icon(
+                                    icon: Icon(Icons.web),
+                                    label: Text(ayurveda.website),
+                                    onPressed: () async {
+                                      if (await InternetConnectionChecker()
+                                          .hasConnection) {
+                                        final Uri url =
+                                            Uri.parse(ayurveda.website);
+                                        if (await canLaunchUrl(url)) {
+                                          await launchUrl(url);
+                                        }
+                                      } else {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: Text('No Internet!'),
+                                              content: Text(
+                                                  'Internet is required for this action.  Retry after enabling the Connection'),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Text('Ok'))
+                                              ],
+                                            );
+                                          },
+                                        );
                                       }
+                                      ;
                                     },
-                                      child: Text(ayurveda.website))
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
+                                  )
+                                : Container()
+                            // SingleChildScrollView(
+                            //   scrollDirection: Axis.horizontal,
+                            //   child: Column(
+                            //     children: [
+                            //       Row(
+                            //         mainAxisAlignment: MainAxisAlignment.center,
+                            //         children: [
+                            //           Icon(
+                            //             Icons.web,
+                            //             color: Colors.teal,
+                            //           ),
+                            //           TextButton(  onPressed: () async {
+                            //           final Uri url = Uri.parse(
+                            //               ayurveda.website);
+                            //           if (await canLaunchUrl(url)) {
+                            //             await launchUrl(url);
+                            //           }
+                            //         },
+                            //           child: Text(ayurveda.website))
+                            //         ],
+                            //       ),
+                            //     ],
+                            //   ),
+                            // )
                           ],
                         ),
                       ),

@@ -223,8 +223,9 @@ class GrihasthaliDetail extends StatelessWidget {
                               ],
                             ),
                             grihasthali.website.isNotEmpty ?
-                            ElevatedButton(
-                                    child: Text(grihasthali.website),
+                            ElevatedButton.icon(
+                              icon: Icon(Icons.web),
+                                    label: Text(grihasthali.website),
                                     onPressed: () async {
                                       // hasInternet =
                                       //     await InternetConnectionChecker()

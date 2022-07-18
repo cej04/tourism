@@ -47,7 +47,7 @@ List<Ayurveda> ayurveda = [
     ph3: "+914812424354",
     email1: "info@ambaayurveda.org",
     email2: "", 
-    website: "www.ambaayurveda.org",
+    website: "http://www.ambaayurveda.org/",
     overview: "",
     facilities: "24-hour Room Service, A/c Room, Cable / Satellite TV, Car parking and valet services, Color TV, Credit Card Accepted, Doctor-on-call, High speed Wi-fi access, Internet facility, Non A/c Room, Photocopying, Restaurant, South Indian Dishes, Travel desk",
     treatment: "Abhyangam, Choorna Swedam (Podikizhi), Dhanyamla dhara, Dhara, Greevavasthi, Kashaya Dhara, Kashayavasthy, Kativasthi, Kizhi, Ksheeradhara, Lepanam, Medicated steam bath, Mukhalepam, Nasyam, Netraprakshalanam, Netratharpanam, Njavarakizhi, Pathrapotali Swedam, Pichu, Pizhichil, Raktamoksham, Sarvanga Dhara, Sirodhara, Sirolepa, Sirovasthi, Snehapanam, Snehavasthy, Swedana, Thakradhara, Thalam, Tharpanam, Udvarthanam, Upanaham, Urovasthi, Vasthi, Virechanam, Yoniprakshalanam",

@@ -9,7 +9,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ServicedVillaDetail extends StatelessWidget {
   final ServicedVilla servicedvilla;
-  const ServicedVillaDetail({Key? key, required this.servicedvilla}) : super(key: key);
+  const ServicedVillaDetail({Key? key, required this.servicedvilla})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,44 +69,43 @@ class ServicedVillaDetail extends StatelessWidget {
                   ),
                 ],
               ),
-        servicedvilla.overview.isNotEmpty ?
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ExpansionTile(
-                    initiallyExpanded: true,
-                    collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("Overview"),
-                    
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          servicedvilla.overview,
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(height: 1.7)
-                        ),
-                      ),
-                      
-                    ],
-                    // subtitle: Text(ayurveda.overview),
-                  )): Container(),
-               servicedvilla.facilities.isNotEmpty ?
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ExpansionTile(
-                    collapsedBackgroundColor: Colors.grey[200],
-                    title: Text("Facilities"),
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          servicedvilla.facilities,
-                          textAlign: TextAlign.justify,
-                        ),
-                      )
-                    ],
-                    // subtitle: Text(ayurveda.overview),
-                  )): Container(),
+              servicedvilla.overview.isNotEmpty
+                  ? Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ExpansionTile(
+                        initiallyExpanded: true,
+                        collapsedBackgroundColor: Colors.grey[200],
+                        title: Text("Overview"),
+
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(servicedvilla.overview,
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(height: 1.7)),
+                          ),
+                        ],
+                        // subtitle: Text(ayurveda.overview),
+                      ))
+                  : Container(),
+              servicedvilla.facilities.isNotEmpty
+                  ? Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ExpansionTile(
+                        collapsedBackgroundColor: Colors.grey[200],
+                        title: Text("Facilities"),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              servicedvilla.facilities,
+                              textAlign: TextAlign.justify,
+                            ),
+                          )
+                        ],
+                        // subtitle: Text(ayurveda.overview),
+                      ))
+                  : Container(),
               // Padding(
               //     padding: const EdgeInsets.all(8.0),
               //     child: ExpansionTile(
@@ -156,26 +156,30 @@ class ServicedVillaDetail extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    servicedvilla.ph2.isNotEmpty ?
-                                    TextButton(
-                                        onPressed: () async {
-                                          final url = 'tel:${servicedvilla.ph2}';
-                                          // final url = 'tel:$stateowned.phone';
-                                          if (await canLaunch(url)) {
-                                            await launch(url);
-                                          }
-                                        },
-                                        child: Text(servicedvilla.ph2)): Container(),
-                                        servicedvilla.ph3.isNotEmpty ?
-                                    TextButton(
-                                        onPressed: () async {
-                                          final url = 'tel:${servicedvilla.ph3}';
-                                          // final url = 'tel:$stateowned.phone';
-                                          if (await canLaunch(url)) {
-                                            await launch(url);
-                                          }
-                                        },
-                                        child: Text(servicedvilla.ph3)) :Container()
+                                    servicedvilla.ph2.isNotEmpty
+                                        ? TextButton(
+                                            onPressed: () async {
+                                              final url =
+                                                  'tel:${servicedvilla.ph2}';
+                                              // final url = 'tel:$stateowned.phone';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              }
+                                            },
+                                            child: Text(servicedvilla.ph2))
+                                        : Container(),
+                                    servicedvilla.ph3.isNotEmpty
+                                        ? TextButton(
+                                            onPressed: () async {
+                                              final url =
+                                                  'tel:${servicedvilla.ph3}';
+                                              // final url = 'tel:$stateowned.phone';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              }
+                                            },
+                                            child: Text(servicedvilla.ph3))
+                                        : Container()
                                   ],
                                 ),
                               ],
@@ -203,49 +207,83 @@ class ServicedVillaDetail extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    servicedvilla.email2.isNotEmpty ?
-                                    TextButton(
-                                        onPressed: () async {
-                                          final url =
-                                              'mailto:${servicedvilla.email2}';
-                                          if (await canLaunch(url)) {
-                                            await launch(url);
-                                          }
-                                        },
-                                        child: Text(servicedvilla.email2)):Container()
+                                    servicedvilla.email2.isNotEmpty
+                                        ? TextButton(
+                                            onPressed: () async {
+                                              final url =
+                                                  'mailto:${servicedvilla.email2}';
+                                              if (await canLaunch(url)) {
+                                                await launch(url);
+                                              }
+                                            },
+                                            child: Text(servicedvilla.email2))
+                                        : Container()
                                   ],
                                 ),
                               ],
                             ),
-                            servicedvilla.website.isNotEmpty ?
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Column(
-                                
-                                children: [
-                                  Row(
-                                    
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.web,
-                                        color: Colors.teal,
-                                      ),
-                                      TextButton(
-                                          onPressed: () async {
-                                            final Uri url =
-                                                Uri.parse(servicedvilla.website);
-                                            if (await canLaunchUrl(url)) {
-                                              await launchUrl(url);
-                                            }
+                            servicedvilla.website.isNotEmpty
+                                ? ElevatedButton.icon(
+                                    icon: Icon(Icons.web),
+                                    label: Text(servicedvilla.website),
+                                    onPressed: () async {
+                                      if (await InternetConnectionChecker()
+                                          .hasConnection) {
+                                        final Uri url =
+                                            Uri.parse(servicedvilla.website);
+                                        if (await canLaunchUrl(url)) {
+                                          await launchUrl(url);
+                                        }
+                                      } else {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: Text('No Internet!'),
+                                              content: Text(
+                                                  'Internet is required for this action.  Retry after enabling the Connection'),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Text('Ok'))
+                                              ],
+                                            );
                                           },
-                                          child: Text(servicedvilla.website))
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ):Container()
+                                        );
+                                      }
+                                      ;
+                                    })
+                                // SingleChildScrollView(
+                                //   scrollDirection: Axis.horizontal,
+                                //   child: Column(
+
+                                //     children: [
+                                //       Row(
+
+                                //         mainAxisAlignment:
+                                //             MainAxisAlignment.center,
+                                //         children: [
+                                //           Icon(
+                                //             Icons.web,
+                                //             color: Colors.teal,
+                                //           ),
+                                //           TextButton(
+                                //               onPressed: () async {
+                                //                 final Uri url =
+                                //                     Uri.parse(servicedvilla.website);
+                                //                 if (await canLaunchUrl(url)) {
+                                //                   await launchUrl(url);
+                                //                 }
+                                //               },
+                                //               child: Text(servicedvilla.website))
+                                //         ],
+                                //       ),
+                                //     ],
+                                //   ),
+                                // )
+                                : Container()
                           ],
                         ),
                       ),
@@ -253,34 +291,35 @@ class ServicedVillaDetail extends StatelessWidget {
                     ],
                     // subtitle: Text(ayurveda.overview),
                   )),
-                  ElevatedButton.icon(
-                    icon: Icon(Icons.location_pin),
-                    label: Text('Locate on Map'),
-                    onPressed: () async {
-                      if (await InternetConnectionChecker().hasConnection) {
-                        MapUtils.openMap(servicedvilla.latitude, servicedvilla.longitude);
-                      } else {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return AlertDialog(
-                              title: Text('No Internet!'),
-                              content: Text(
-                                  'Internet is required for this action.  Retry after enabling the Connection'),
-                              actions: [
-                                TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Ok'))
-                              ],
-                            );
-                          },
+              ElevatedButton.icon(
+                icon: Icon(Icons.location_pin),
+                label: Text('Locate on Map'),
+                onPressed: () async {
+                  if (await InternetConnectionChecker().hasConnection) {
+                    MapUtils.openMap(
+                        servicedvilla.latitude, servicedvilla.longitude);
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text('No Internet!'),
+                          content: Text(
+                              'Internet is required for this action.  Retry after enabling the Connection'),
+                          actions: [
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Ok'))
+                          ],
                         );
-                      }
-                      ;
-                    },
-                  ),
+                      },
+                    );
+                  }
+                  ;
+                },
+              ),
               // Padding(
               //   padding: const EdgeInsets.all(8.0),
               //   child: FloatingActionButton.extended(
