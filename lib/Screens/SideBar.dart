@@ -61,6 +61,16 @@ class _HomePageState extends State<HomePage> {
             const Divider(
               thickness: 2.0,
             ),
+             ListTile(
+              leading: const Icon(Icons.fire_extinguisher),
+              title: Text('Fire & Rescue'),
+              onTap: () {
+                Navigator.pushNamed(context, '/FRdetail');
+              },
+            ),
+            const Divider(
+              thickness: 2.0,
+            ),
             ListTile(
               leading: Icon(Icons.question_answer),
               title: Text('FAQs'),

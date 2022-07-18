@@ -1,10 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/ArtCulture/art_culturePage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
 import 'package:ktmtourism/Screens/Hospital/hospitalDetail.dart';
-import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/Restaurant/RestaurantDetail.dart';
@@ -12,28 +10,19 @@ import 'package:ktmtourism/Screens/Shopping/shoppingDetail.dart';
 import 'package:ktmtourism/Screens/SideBar.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
-import '../RestHouse/StateOwnedPage.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String title;
 
-final String title;
-
-  const MyAppBar({
-    Key? key, required this.title
-
-  }) : super(key: key);
+  const MyAppBar({Key? key, required this.title}) : super(key: key);
   @override
-
   @override
   Widget build(BuildContext context) {
-   
     return AppBar(
-      
       elevation: 0,
-      title:  Text(
-       title,
+      title: Text(
+        title,
       ),
-     
       actions: [
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -42,15 +31,12 @@ final String title;
               child: Image.asset(
                 "assets/images/APPlogo2.png",
                 fit: BoxFit.contain,
-              
               )),
         ),
         PopupMenuButton(
           elevation: 5.0,
-       
-
           itemBuilder: (context) => [
-                PopupMenuItem<int>(
+            PopupMenuItem<int>(
               value: 0,
               child: Row(
                 children: [
@@ -84,7 +70,7 @@ final String title;
                 ],
               ),
             ),
-                PopupMenuItem<int>(
+            PopupMenuItem<int>(
               value: 2,
               child: Row(
                 children: [
@@ -101,7 +87,7 @@ final String title;
                 ],
               ),
             ),
-             PopupMenuItem<int>(
+            PopupMenuItem<int>(
               value: 3,
               child: Row(
                 children: [
@@ -135,7 +121,7 @@ final String title;
                 ],
               ),
             ),
-             PopupMenuItem<int>(
+            PopupMenuItem<int>(
               value: 5,
               child: Row(
                 children: [
@@ -152,7 +138,7 @@ final String title;
                 ],
               ),
             ),
-             PopupMenuItem<int>(
+            PopupMenuItem<int>(
               value: 6,
               child: Row(
                 children: [
@@ -186,7 +172,7 @@ final String title;
                 ],
               ),
             ),
-              PopupMenuItem<int>(
+            PopupMenuItem<int>(
               value: 8,
               child: Row(
                 children: [
@@ -228,12 +214,12 @@ final String title;
   }
 
   @override
-   get preferredSize => throw UnimplementedError();
+  get preferredSize => throw UnimplementedError();
 }
 
 void SelectedItem(BuildContext context, item) {
   switch (item) {
-      case 0:
+    case 0:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => HomePage()));
       break;
@@ -241,7 +227,7 @@ void SelectedItem(BuildContext context, item) {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => welcomektmPage()));
       break;
-    
+
     case 2:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => CulinaryDelightPage()));
@@ -282,7 +268,5 @@ void SelectedItem(BuildContext context, item) {
           .push(MaterialPageRoute(builder: (context) => HowToReachPage()));
 
       break;
-   
-  
   }
 }
