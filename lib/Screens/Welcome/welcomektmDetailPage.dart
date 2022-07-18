@@ -14,7 +14,7 @@ class WelcomeKtmDetailsPage extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
- child: MyAppBar(title: 'Kottayam Tourism'),
+ child: MyAppBar(title: 'Welcome to Kottayam'),
       ),
       body: Column(
         children: [

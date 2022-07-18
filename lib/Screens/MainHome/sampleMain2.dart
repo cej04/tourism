@@ -2,7 +2,6 @@ import 'package:carousel_indicator/carousel_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Ayurveda/AyurvedaPage.dart';
-import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
 import 'package:ktmtourism/Screens/Destination/DestinationPage.dart';
 import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliPage.dart';
 import 'package:ktmtourism/Screens/Heritage/HeritagePage.dart';
@@ -13,12 +12,11 @@ import 'package:ktmtourism/Screens/Kumarakom/KumarakomPage.dart';
 import 'package:ktmtourism/Screens/MainHome/main.dart';
 import 'package:ktmtourism/Screens/MainHome/maincard.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
-import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/Resort/ResortPage.dart';
 import 'package:ktmtourism/Screens/ServicedVilla/ServicedVillaPage.dart';
 import 'package:ktmtourism/Screens/RestHouse/StateOwnedPage.dart';
+import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
-import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 class MainSample2Page extends StatefulWidget {
   const MainSample2Page({
@@ -49,27 +47,23 @@ class _MainSample2PageState extends State<MainSample2Page> {
   @override
   Widget build(BuildContext context) {
     List pages = [
-      const welcomektmPage(),
-      const StateOwnedPage(),
       KumarakomPage(),
       DestinationPage(),
       HeritagePage(),
       HillStationPage(),
-      const AyurvedaPage(),
-      HomeStayPage(),
-      HotelPage(),
-      ResortPage(),
-      ServicedVillaPage(),
+      PilgrimKtmPage(),
+      AyurvedaPage(),
       GrihasthaliPage(),
-      const PilgrimKtmPage(),
-      const CulinaryDelightPage(),
-      // const ProducePage(),
-      // const FestivalPage(),
-      // const ArtCulturePage(),
-      const HowToReachPage(),
+      StateOwnedPage(),
+      ResortPage(),
+      HotelPage(),
+      HomeStayPage(),
+      ServicedVillaPage(),
+   
     ];
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -79,30 +73,30 @@ class _MainSample2PageState extends State<MainSample2Page> {
             ),
             child: CarouselSlider.builder(
               itemCount: images.length,
-              itemBuilder: (BuildContext context, int itemIndex,
-                      int pageViewIndex) =>
-                  Container(
-                      margin: EdgeInsets.all(6.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        image: DecorationImage(
-                          image: AssetImage(images[itemIndex]),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      alignment: Alignment.bottomCenter,
-                      child: Padding(
-                          padding: EdgeInsets.only(left: 15.0, bottom: 15),
-                          child: Text(titles[itemIndex].toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .caption
-                                  ?.apply(
-                                    color: Colors.white,
-                                    backgroundColor:
-                                        Colors.black.withOpacity(0.5),
-                                  )
-                                  .copyWith(letterSpacing: 1)))),
+              itemBuilder:
+                  (BuildContext context, int itemIndex, int pageViewIndex) =>
+                      Container(
+                          margin: EdgeInsets.all(6.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            image: DecorationImage(
+                              image: AssetImage(images[itemIndex]),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          alignment: Alignment.bottomCenter,
+                          child: Padding(
+                              padding: EdgeInsets.only(left: 15.0, bottom: 15),
+                              child: Text(titles[itemIndex].toUpperCase(),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .caption
+                                      ?.apply(
+                                        color: Colors.white,
+                                        backgroundColor:
+                                            Colors.black.withOpacity(0.5),
+                                      )
+                                      .copyWith(letterSpacing: 1)))),
               options: CarouselOptions(
                   height: 180.0,
                   enlargeCenterPage: true,
@@ -132,10 +126,9 @@ class _MainSample2PageState extends State<MainSample2Page> {
                 shrinkWrap: true,
                 itemCount: mainsample.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  childAspectRatio: 1.0
-                  //childAspectRatio: (1 / .9),
-                ),
+                    crossAxisCount: 3, childAspectRatio: 1.0
+                    //childAspectRatio: (1 / .9),
+                    ),
                 itemBuilder: (context, index) => mainCard(
                       mainsample: mainsample[index],
                       press: () => Navigator.push(
@@ -144,7 +137,9 @@ class _MainSample2PageState extends State<MainSample2Page> {
                       ),
                     )),
           ),
-                  SizedBox(height: 10,)
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     );

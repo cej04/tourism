@@ -18,7 +18,7 @@ class ServicedVillaDetail extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
           child: const MyAppBar(
-            title: 'Kottayam Tourism',
+            title: 'Serviced Villa',
           ),
         ),
         body: SingleChildScrollView(

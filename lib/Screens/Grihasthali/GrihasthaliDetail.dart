@@ -17,7 +17,7 @@ class GrihasthaliDetail extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
           child: const MyAppBar(
-            title: 'Kottayam Tourism',
+            title: 'Grihasthali',
           ),
         ),
         body: SingleChildScrollView(
