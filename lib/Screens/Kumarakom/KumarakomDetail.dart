@@ -19,7 +19,7 @@ class KumarakomDetail extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
           child: const MyAppBar(
-            title: 'Kottayam Tourism',
+            title: 'Kumarakom',
           ),
         ),
         body: SingleChildScrollView(

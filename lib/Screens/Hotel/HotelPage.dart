@@ -18,7 +18,7 @@ class _HotelPageState extends State<HotelPage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Hotel',
+          title: 'Hotels',
         ),
       ),
       body: Column(
