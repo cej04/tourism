@@ -25,6 +25,10 @@ List<MainSample> mainsample = [
       image: "assets/images/ico_kum.png",
       title: "Kumarakom",
       icons: Icons.color_lens),
+       MainSample(
+      image: "assets/images/ico_destination.png",
+      title: "Destinations",
+      icons: Icons.color_lens),
   MainSample(
       image: "assets/images/ico_heritage.png",
       title: "Heritage",

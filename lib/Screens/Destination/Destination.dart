@@ -1,8 +1,8 @@
-class Heritage {
+class Destination {
   final String name, subname, image, desc, reach, stay;
   double latitude, longitude;
 
-  Heritage({
+  Destination({
     required this.name,
     required this.subname,
     required this.image,
@@ -14,8 +14,8 @@ class Heritage {
   });
 }
 
-List<Heritage> heritage = [
-  Heritage(
+List<Destination> destination = [
+  Destination(
       name: "Aqua Tourism",
       subname: "A place to simply sit and relax in the loving embrace of nature",
       image: "assets/place/des-aquatourism.jpg",
@@ -26,7 +26,7 @@ List<Heritage> heritage = [
       longitude: 76.435186,
       stay:
           "https://www.keralatourism.org/where-to-stay/aquatourism-kottayam/247"),
-  Heritage(
+  Destination(
       name: "Malarickal Village Tourism",
       subname: "The water lilies greet the terrain during the end of the monsoon rains",
       image: "assets/place/des-malarickal.jpg",
@@ -38,7 +38,7 @@ List<Heritage> heritage = [
       longitude: 76.490511,
       stay:
           "https://www.keralatourism.org/where-to-stay/malarickal-village-tourism/669"),
-  Heritage(
+  Destination(
     name: "Vembanad Lake",
     subname: "There are many boating, fishing and sightseeing options available in the area",
     image: "assets/place/des-vembanad.jpg",
@@ -51,7 +51,7 @@ List<Heritage> heritage = [
     stay:
         "https://www.keralatourism.org/where-to-stay/vembanad-lake-kumarakom/111",
   ),
-  Heritage(
+  Destination(
       name: "Anchuvilakku– a Stone Lamp Post",
       subname: "A historical and architectural marvel, the magnificent Anchuvilakku",
       image: "assets/place/des-anchuvilakku.jpg",
@@ -63,7 +63,7 @@ List<Heritage> heritage = [
       longitude: 76.528301,
       stay:
           "https://www.keralatourism.org/where-to-stay/anchuvilakku-changanacherry/404"),
-  Heritage(
+  Destination(
       name: "Mannanam ",
       subname: "Boat rides in the Pennar Canal that leads to the beautiful backwaters",
       image: "assets/place/des-mannanam.jpg",
@@ -75,7 +75,7 @@ List<Heritage> heritage = [
       longitude: 76.522679,
       stay:
           "https://www.keralatourism.org/where-to-stay/mannanam-historic-place/115"),
-  Heritage(
+  Destination(
       name: "Alapra",
       subname: "The only place in the district where the legendary ritual art form of Padayani is performed",
       image: "assets/place/des-alapra.jpg",

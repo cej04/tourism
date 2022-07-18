@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:ktmtourism/Screens/Heritage/Heritage.dart';
-import 'package:ktmtourism/Screens/Heritage/HeritageDetail.dart';
+import 'package:ktmtourism/Screens/Destination/Destination.dart';
+import 'package:ktmtourism/Screens/Destination/DestinationDetail.dart';
+
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 
-class HeritagePage extends StatefulWidget {
-  const HeritagePage({Key? key}) : super(key: key);
+class DestinationPage extends StatefulWidget {
+  const DestinationPage({Key? key}) : super(key: key);
 
   @override
-  _HeritagePageState createState() => _HeritagePageState();
+  _DestinationPageState createState() => _DestinationPageState();
 }
 
-class _HeritagePageState extends State<HeritagePage> {
+class _DestinationPageState extends State<DestinationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Heritage',
+          title: 'Destination',
         ),
       ),
       body: Column(
@@ -25,7 +26,7 @@ class _HeritagePageState extends State<HeritagePage> {
           Expanded(
               child: Container(
             child: ListView.builder(
-                itemCount: heritage.length,
+                itemCount: destination.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(
@@ -35,8 +36,8 @@ class _HeritagePageState extends State<HeritagePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HeritageDetail(
-                                heritage: heritage[index],
+                              builder: (context) => DestinationDetail(
+                                destination: destination[index],
                               ),
                             ));
                       }),
@@ -53,7 +54,7 @@ class _HeritagePageState extends State<HeritagePage> {
                               Stack(
                                 children: [
                                   Ink.image(
-                                      image: AssetImage(heritage[index].image),
+                                      image: AssetImage(destination[index].image),
                                       width: double.infinity,
                                       height: 200,
                                       fit: BoxFit.cover),
@@ -61,7 +62,7 @@ class _HeritagePageState extends State<HeritagePage> {
                               ),
                               ListTile(
                                 leading: Icon(Icons.history_edu),
-                                title: Text(heritage[index].name),
+                                title: Text(destination[index].name),
                                 // subtitle: Text(heritage[index].address),
                                 trailing: Icon(Icons.navigate_next),
                               ),

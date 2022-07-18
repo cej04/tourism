@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Ayurveda/AyurvedaPage.dart';
 import 'package:ktmtourism/Screens/Culinary/culinarydelightsPage.dart';
+import 'package:ktmtourism/Screens/Destination/DestinationPage.dart';
 import 'package:ktmtourism/Screens/Grihasthali/GrihasthaliPage.dart';
 import 'package:ktmtourism/Screens/Heritage/HeritagePage.dart';
 import 'package:ktmtourism/Screens/HillStation/HillStationPage.dart';
@@ -51,6 +52,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
       const welcomektmPage(),
       const StateOwnedPage(),
       KumarakomPage(),
+      DestinationPage(),
       HeritagePage(),
       HillStationPage(),
       const AyurvedaPage(),
