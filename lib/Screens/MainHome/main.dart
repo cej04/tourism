@@ -12,20 +12,10 @@ class MainSample {
 
 List<MainSample> mainsample = [
   MainSample(
-      image: "assets/images/ico_me.png",
-      title: "About Kottayam",
-      icons: Icons.info),
- 
-  MainSample(
-      image: "assets/images/ico_stay.png",
-      title: "Rest House ",
-      icons: Icons.bed_rounded),
- 
-  MainSample(
       image: "assets/images/ico_kum.png",
       title: "Kumarakom",
       icons: Icons.color_lens),
-       MainSample(
+  MainSample(
       image: "assets/images/ico_destination.png",
       title: "Destinations",
       icons: Icons.color_lens),
@@ -37,42 +27,37 @@ List<MainSample> mainsample = [
       image: "assets/images/ico_Hillstation.png",
       title: "Hill Stations",
       icons: Icons.festival_outlined),
-
-
-    MainSample(
+  MainSample(
+      image: "assets/images/ico_religion.png",
+      title: "Pilgrim Centers",
+      icons: Icons.holiday_village),
+  MainSample(
       image: "assets/images/ico_ayurveda.png",
       title: "Ayurveda Centre ",
       icons: Icons.bed_rounded),
   MainSample(
-      image: "assets/images/ico_stayhome.png",
-      title: "Home Stay",
+      image: "assets/images/ico_Grihasthali.png",
+      title: "Grihasthali",
+      icons: Icons.flatware),
+  MainSample(
+      image: "assets/images/ico_stay.png",
+      title: "Rest House ",
+      icons: Icons.bed_rounded),
+  MainSample(
+      image: "assets/images/ico_Resort.png",
+      title: "Resort",
       icons: Icons.holiday_village),
   MainSample(
       image: "assets/images/ico_delight.png",
       title: "Hotel",
       icons: Icons.flatware),
-        MainSample(
-      image: "assets/images/ico_Resort.png",
-      title: "Resort",
+  MainSample(
+      image: "assets/images/ico_stayhome.png",
+      title: "Home Stay",
       icons: Icons.holiday_village),
   MainSample(
       image: "assets/images/ico_villa.png",
       title: "Serviced Villa",
       icons: Icons.flatware),
-        MainSample(
-      image: "assets/images/ico_Grihasthali.png",
-      title: "Grihasthali",
-      icons: Icons.flatware),
-       MainSample(
-      image: "assets/images/ico_religion.png",
-      title: "Pilgrim Centers",
-      icons: Icons.holiday_village),
-  MainSample(
-      image: "assets/images/ico_CulinaryDelight.png",
-      title: "Culinary Delights",
-      icons: Icons.flatware),
-        MainSample(
-      image: "assets/images/ico_passenger.png",
-      title: "How to Reach",
-      icons: Icons.commute_outlined),
+
 ];

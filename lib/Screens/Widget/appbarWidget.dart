@@ -9,6 +9,7 @@ import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/Restaurant/RestaurantDetail.dart';
 import 'package:ktmtourism/Screens/Shopping/shoppingDetail.dart';
+import 'package:ktmtourism/Screens/SideBar.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
 import '../RestHouse/StateOwnedPage.dart';
@@ -49,8 +50,25 @@ final String title;
        
 
           itemBuilder: (context) => [
-            PopupMenuItem<int>(
+                PopupMenuItem<int>(
               value: 0,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.home,
+                    color: Colors.black,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Home",
+                  ),
+                ],
+              ),
+            ),
+            PopupMenuItem<int>(
+              value: 1,
               child: Row(
                 children: [
                   Icon(
@@ -66,47 +84,12 @@ final String title;
                 ],
               ),
             ),
-           
-            PopupMenuItem<int>(
+                PopupMenuItem<int>(
               value: 2,
               child: Row(
                 children: [
                   Icon(
-                    Icons.bed_rounded,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Rest House",
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 3,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.holiday_village,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Main Pilgrim Centers",
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 4,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.flatware,
+                    Icons.food_bank,
                     color: Colors.black,
                   ),
                   SizedBox(
@@ -118,12 +101,12 @@ final String title;
                 ],
               ),
             ),
-            PopupMenuItem<int>(
-              value: 5,
+             PopupMenuItem<int>(
+              value: 3,
               child: Row(
                 children: [
                   Icon(
-                    Icons.color_lens,
+                    Icons.work_rounded,
                     color: Colors.black,
                   ),
                   SizedBox(
@@ -136,7 +119,7 @@ final String title;
               ),
             ),
             PopupMenuItem<int>(
-              value: 6,
+              value: 4,
               child: Row(
                 children: [
                   Icon(
@@ -152,12 +135,12 @@ final String title;
                 ],
               ),
             ),
-            PopupMenuItem<int>(
-              value: 7,
+             PopupMenuItem<int>(
+              value: 5,
               child: Row(
                 children: [
                   Icon(
-                    Icons.festival_outlined,
+                    Icons.art_track,
                     color: Colors.black,
                   ),
                   SizedBox(
@@ -169,25 +152,8 @@ final String title;
                 ],
               ),
             ),
-            PopupMenuItem<int>(
-              value: 8,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.commute_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "How to Reach",
-                  ),
-                ],
-              ),
-            ),
-            PopupMenuItem<int>(
-              value: 9,
+             PopupMenuItem<int>(
+              value: 6,
               child: Row(
                 children: [
                   Icon(
@@ -204,11 +170,11 @@ final String title;
               ),
             ),
             PopupMenuItem<int>(
-              value: 10,
+              value: 7,
               child: Row(
                 children: [
                   Icon(
-                    Icons.shopping_bag_outlined,
+                    Icons.shopping_bag,
                     color: Colors.black,
                   ),
                   SizedBox(
@@ -220,8 +186,8 @@ final String title;
                 ],
               ),
             ),
-            PopupMenuItem<int>(
-              value: 11,
+              PopupMenuItem<int>(
+              value: 8,
               child: Row(
                 children: [
                   Icon(
@@ -233,6 +199,23 @@ final String title;
                   ),
                   Text(
                     "Hospital",
+                  ),
+                ],
+              ),
+            ),
+            PopupMenuItem<int>(
+              value: 9,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.travel_explore,
+                    color: Colors.black,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "How to Reach",
                   ),
                 ],
               ),
@@ -250,60 +233,56 @@ final String title;
 
 void SelectedItem(BuildContext context, item) {
   switch (item) {
-    case 0:
+      case 0:
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => HomePage()));
+      break;
+    case 1:
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => welcomektmPage()));
       break;
     
     case 2:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => StateOwnedPage()));
+          .push(MaterialPageRoute(builder: (context) => CulinaryDelightPage()));
 
       break;
     case 3:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => PilgrimKtmPage()));
+          .push(MaterialPageRoute(builder: (context) => ProducePage()));
 
       break;
     case 4:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => CulinaryDelightPage()));
+          .push(MaterialPageRoute(builder: (context) => FestivalPage()));
 
       break;
     case 5:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => ProducePage()));
+          .push(MaterialPageRoute(builder: (context) => ArtCulturePage()));
 
       break;
     case 6:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => FestivalPage()));
+          .push(MaterialPageRoute(builder: (context) => RestaurantDetail()));
 
       break;
     case 7:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => ArtCulturePage()));
+          .push(MaterialPageRoute(builder: (context) => ShoppingDetail()));
 
       break;
     case 8:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => HowToReachPage()));
+          .push(MaterialPageRoute(builder: (context) => HospitalDetail()));
 
       break;
     case 9:
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => RestaurantDetail()));
+          .push(MaterialPageRoute(builder: (context) => HowToReachPage()));
 
       break;
-    case 10:
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => ShoppingDetail()));
-
-      break;
-    case 11:
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => HospitalDetail()));
-
-      break;
+   
+  
   }
 }
