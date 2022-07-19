@@ -10,7 +10,6 @@ import 'package:ktmtourism/Screens/Shopping/shoppingDetail.dart';
 import 'package:ktmtourism/Screens/SideBar.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
 
-
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
 
@@ -26,13 +25,24 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: CircleAvatar(
-              backgroundColor: Colors.white,
-              child: Image.asset(
-                "assets/images/APPlogo2.png",
-                fit: BoxFit.contain,
-              )),
+          child: GestureDetector(
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => HomePage())),
+            child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Image.asset(
+                  "assets/images/APPlogo2.png",
+                  fit: BoxFit.contain,
+                  // Navigator.of(context)
+                  //  .push(MaterialPageRoute(builder: (context) => HomePage()));
+                )),
+          ),
         ),
+        // IconButton(
+        //   onPressed: () => Navigator.of(context)
+        //       .push(MaterialPageRoute(builder: (context) => HomePage())),
+        //   icon: Icon(Icons.home),
+        // ),
         PopupMenuButton(
           elevation: 5.0,
           itemBuilder: (context) => [
@@ -172,23 +182,23 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ],
               ),
             ),
-            PopupMenuItem<int>(
-              value: 8,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.local_hospital_outlined,
-                    color: Colors.black,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Hospital",
-                  ),
-                ],
-              ),
-            ),
+            // PopupMenuItem<int>(
+            //   value: 8,
+            //   child: Row(
+            //     children: [
+            //       Icon(
+            //         Icons.local_hospital_outlined,
+            //         color: Colors.black,
+            //       ),
+            //       SizedBox(
+            //         width: 20,
+            //       ),
+            //       Text(
+            //         "Hospital",
+            //       ),
+            //     ],
+            //   ),
+            // ),
             PopupMenuItem<int>(
               value: 9,
               child: Row(

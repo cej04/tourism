@@ -27,7 +27,7 @@ class ArtCulturePage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(
-                        left: 20.0, right: 20.0, top: 20.0),
+                        left: 10.0, right: 10.0, top: 10.0),
                     child: GestureDetector(
                       child: Card(
                         color: Colors.grey[200],

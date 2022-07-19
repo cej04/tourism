@@ -30,18 +30,25 @@ class MainSample2Page extends StatefulWidget {
 class _MainSample2PageState extends State<MainSample2Page> {
   int activeIndex = 0;
   final images = [
-    "assets/images/heritage.jpg",
-    "assets/images/back1.jpg",
-    "assets/images/aruvikkuzhi waterfalls.jpg",
-    "assets/images/vallyachanmala.jpg",
-    "assets/images/paddy-filed1.jpg"
+    "assets/place/ku-canalcruise.jpg",
+    "assets/place/des-malarickal.jpg",
+    "assets/images/poonjarkottaram.jpg", 
+    "assets/place/hs-illickal.jpg",
+    "assets/pilgrim/pil-puthupalli.jpg",
+    "assets/stay/ac-soma.jpg",
+    "assets/stay/ho-olive.jpg",
+    "assets/stay/hs-achadipura.jpg",
+    
   ];
   final titles = [
-    "Heritage Destinations",
     "Backwaters",
-    "Waterfalls",
-    "Worship",
-    "Agriculture"
+    "Picnic Spots",
+    "Heritage Destinations",
+    "Hill Stations",
+    "Pilgrim Centres",
+    "Ayurveda Centres",
+    "Hotels",
+    "Home Stays",
   ];
 
   @override

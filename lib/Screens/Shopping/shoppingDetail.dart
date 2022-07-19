@@ -48,14 +48,9 @@ class ShoppingDetail extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           SizedBox(height: 10.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              // Text("Phone :"),
-                              Text(que.description),
-                            ],
-                          ),
-                          SizedBox(height: 5.0),
+                          Text(que.description),
+                          
+                          
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
