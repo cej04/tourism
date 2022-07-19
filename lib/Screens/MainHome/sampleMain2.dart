@@ -76,7 +76,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
         children: [
           Container(
             padding: EdgeInsets.symmetric(
-              vertical: 20.0,
+              vertical: 5.0,
             ),
             child: CarouselSlider.builder(
               itemCount: images.length,
@@ -85,7 +85,19 @@ class _MainSample2PageState extends State<MainSample2Page> {
                       Container(
                           margin: EdgeInsets.all(6.0),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0),
+                            // border: Border.all(
+                            //   color: Colors.teal,
+                            //   width: 5.0
+                            // ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+       // spreadRadius: 3,
+        blurRadius: 10,
+        offset: Offset(5, 5),
+                              )
+                            ],
+                            borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(
                               image: AssetImage(images[itemIndex]),
                               fit: BoxFit.cover,
@@ -93,7 +105,7 @@ class _MainSample2PageState extends State<MainSample2Page> {
                           ),
                           alignment: Alignment.bottomCenter,
                           child: Padding(
-                              padding: EdgeInsets.only(left: 15.0, bottom: 15),
+                              padding: EdgeInsets.only(left: 15.0, bottom: 10),
                               child: Text(titles[itemIndex].toUpperCase(),
                                   style: Theme.of(context)
                                       .textTheme
@@ -101,9 +113,9 @@ class _MainSample2PageState extends State<MainSample2Page> {
                                       ?.apply(
                                         color: Colors.white,
                                         backgroundColor:
-                                            Colors.black.withOpacity(0.5),
+                                            Colors.black.withOpacity(0.3),
                                       )
-                                      .copyWith(letterSpacing: 1)))),
+                                      .copyWith(letterSpacing: 2)))),
               options: CarouselOptions(
                   height: 180.0,
                   enlargeCenterPage: true,
