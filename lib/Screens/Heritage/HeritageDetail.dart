@@ -17,7 +17,7 @@ class HeritageDetail extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
           child: const MyAppBar(
-            title: 'Heritage',
+            title: 'Kottayam Tourism',
           ),
         ),
         body: SingleChildScrollView(

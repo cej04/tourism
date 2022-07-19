@@ -17,7 +17,7 @@ class _KumarakomPageState extends State<KumarakomPage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Kumarakom',
+          title: 'Backwater',
         ),
       ),
       body: Column(

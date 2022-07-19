@@ -17,7 +17,7 @@ class AyuvedaDetail extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
           child: const MyAppBar(
-            title: 'Ayurveda Centers',
+            title: 'Kottayam Tourism',
           ),
         ),
         body: SingleChildScrollView(

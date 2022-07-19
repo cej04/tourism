@@ -25,7 +25,7 @@ class _HillStationDetailState extends State<HillStationDetail> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Hill Stations',
+          title: 'Kottayam Tourism',
         ),
       ),
       body: SingleChildScrollView(

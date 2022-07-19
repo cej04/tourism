@@ -22,7 +22,7 @@ class _StateOwnedPageState extends State<StateOwnedPage> {
         appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'State Owned',
+          title: 'Rest House',
         ),
       ),
       body: Column(

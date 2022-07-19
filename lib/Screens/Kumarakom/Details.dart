@@ -29,7 +29,7 @@ class _detailsState extends State<details> {
     return Scaffold(
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
-          child: MyAppBar(title: 'Kottayam Tourism',),
+          child: MyAppBar(title: 'Kumarakom',),
         ),
         body: SingleChildScrollView(
           child: Column(

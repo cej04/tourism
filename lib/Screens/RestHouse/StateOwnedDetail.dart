@@ -19,7 +19,7 @@ class StateOwnedDetailsPage extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
           child: const MyAppBar(
-            title: 'State Owned',
+            title: 'Kottayam Tourism',
           ),
         ),
         body: SingleChildScrollView(

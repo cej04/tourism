@@ -18,7 +18,7 @@ class _DestinationPageState extends State<DestinationPage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
         child: const MyAppBar(
-          title: 'Destinations',
+          title: 'Picnic Spots',
         ),
       ),
       body: Column(

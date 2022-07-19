@@ -18,7 +18,7 @@ class PilgrimsBodyPage extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: const MyAppBar(title: 'Pilgrim Centers',),
+        child: const MyAppBar(title: 'Kottayam Tourism',),
       ),
       body: SingleChildScrollView(
         child: Column(

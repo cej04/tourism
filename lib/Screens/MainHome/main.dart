@@ -13,11 +13,11 @@ class MainSample {
 List<MainSample> mainsample = [
   MainSample(
       image: "assets/images/ico_kum.png",
-      title: "Kumarakom",
+      title: "Backwater",
       icons: Icons.color_lens),
   MainSample(
       image: "assets/images/ico_destination.png",
-      title: "Destinations",
+      title: "Picnic Spots",
       icons: Icons.color_lens),
   MainSample(
       image: "assets/images/ico_heritage.png",

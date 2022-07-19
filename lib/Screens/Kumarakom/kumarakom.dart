@@ -21,7 +21,7 @@ class KumaraKom {
 
 List<KumaraKom> Kumarakom = [
   KumaraKom(
-      name: "About Kumarakom",
+      name: "Kumarakom",
       subname: "A cluster of little islands on the Vembanad Lake",
       image: "assets/place/ku_about.jpg",
       desc:
@@ -79,7 +79,7 @@ List<KumaraKom> Kumarakom = [
     email: "rt@keralatourism.org",
   ),
   KumaraKom(
-    name: "Backwater",
+    name: "Vembanad Lake",
     subname: "An enchanting backwater destination",
     image: "assets/place/ku-backwater.jpg",
     desc:

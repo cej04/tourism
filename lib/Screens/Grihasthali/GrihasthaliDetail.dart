@@ -17,7 +17,7 @@ class GrihasthaliDetail extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(kToolbarHeight),
           child: const MyAppBar(
-            title: 'Grihasthali',
+            title: 'Kottayam Tourism',
           ),
         ),
         body: SingleChildScrollView(
@@ -109,23 +109,7 @@ class GrihasthaliDetail extends StatelessWidget {
                     ],
                     // subtitle: Text(ayurveda.overview),
                   )): Container(),
-              //      grihasthali.treatment.isNotEmpty ?
-              // Padding(
-              //     padding: const EdgeInsets.all(8.0),
-              //     child: ExpansionTile(
-              //       collapsedBackgroundColor: Colors.grey[200],
-              //       title: Text("Ayurvedic Treatments"),
-              //       children: [
-              //         Padding(
-              //           padding: const EdgeInsets.all(8.0),
-              //           child: Text(
-              //             grihasthali.treatment,
-              //             textAlign: TextAlign.justify,
-              //           ),
-              //         )
-              //       ],
-              //       // subtitle: Text(ayurveda.overview),
-              //     )):Container(),
+              
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
