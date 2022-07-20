@@ -101,6 +101,7 @@ class ResortDetail extends StatelessWidget {
                             child: Text(
                               resort.facilities,
                               textAlign: TextAlign.justify,
+                              style: TextStyle(height: 1.7),
                             ),
                           )
                         ],

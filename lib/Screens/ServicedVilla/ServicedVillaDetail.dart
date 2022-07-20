@@ -100,6 +100,7 @@ class ServicedVillaDetail extends StatelessWidget {
                             child: Text(
                               servicedvilla.facilities,
                               textAlign: TextAlign.justify,
+                              style: TextStyle(height: 1.7)
                             ),
                           )
                         ],

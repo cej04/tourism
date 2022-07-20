@@ -12,6 +12,8 @@ class HotelPage extends StatefulWidget {
 }
 
 class _HotelPageState extends State<HotelPage> {
+  TextEditingController _textEditingController = TextEditingController();
+  List<Hotel> hotelonsearch = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +25,26 @@ class _HotelPageState extends State<HotelPage> {
       ),
       body: Column(
         children: [
+          TextField(
+            onChanged: (value) {
+              setState(() {
+                hotelonsearch = hotel
+                    .where((element) => element.name
+                        .toLowerCase()
+                        .contains(value.toLowerCase()))
+                    .toList();
+              });
+            },
+            controller: _textEditingController,
+            decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(20), hintText: 'Search here'),
+          ),
           Expanded(
-              child: Container(
-            child: ListView.builder(
-                itemCount: hotel.length,
+            child: Container(
+              child: ListView.builder(
+                itemCount: _textEditingController.text.isNotEmpty
+                    ? hotelonsearch.length
+                    : hotel.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(
@@ -37,7 +55,9 @@ class _HotelPageState extends State<HotelPage> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => HotelDetail(
-                                hotel: hotel[index],
+                                hotel: _textEditingController.text.isNotEmpty
+                                    ? hotelonsearch[index]
+                                    : hotel[index],
                               ),
                             ));
                       }),
@@ -54,7 +74,10 @@ class _HotelPageState extends State<HotelPage> {
                               Stack(
                                 children: [
                                   Ink.image(
-                                      image: AssetImage(hotel[index].image),
+                                      image: AssetImage(
+                                          _textEditingController.text.isNotEmpty
+                                              ? hotelonsearch[index].image
+                                              : hotel[index].image),
                                       width: double.infinity,
                                       height: 200,
                                       fit: BoxFit.cover),
@@ -65,14 +88,16 @@ class _HotelPageState extends State<HotelPage> {
                                       decoration: BoxDecoration(
                                         color: Colors.orangeAccent,
                                         borderRadius: BorderRadius.only(
-                                          
                                           bottomLeft: Radius.circular(20),
                                         ),
                                       ),
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
-                                          hotel[index].classification,
+                                          _textEditingController.text.isNotEmpty
+                                              ? hotelonsearch[index]
+                                                  .classification
+                                              : hotel[index].classification,
                                           style: TextStyle(color: Colors.white),
                                         ),
                                       ),
@@ -81,8 +106,14 @@ class _HotelPageState extends State<HotelPage> {
                                 ],
                               ),
                               ListTile(
-                                title: Text(hotel[index].name),
-                                subtitle: Text(hotel[index].address),
+                                title: Text(
+                                    _textEditingController.text.isNotEmpty
+                                        ? hotelonsearch[index].name
+                                        : hotel[index].name),
+                                subtitle: Text(
+                                    _textEditingController.text.isNotEmpty
+                                        ? hotelonsearch[index].address
+                                        : hotel[index].address),
                                 trailing: Icon(Icons.navigate_next),
                               ),
                             ],
@@ -91,8 +122,10 @@ class _HotelPageState extends State<HotelPage> {
                       ),
                     ),
                   );
-                }),
-          ))
+                },
+              ),
+            ),
+          )
         ],
       ),
     );

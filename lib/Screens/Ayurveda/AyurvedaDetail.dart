@@ -104,6 +104,7 @@ class AyuvedaDetail extends StatelessWidget {
                         child: Text(
                           ayurveda.facilities,
                           textAlign: TextAlign.justify,
+                          style: TextStyle(height: 1.7)
                         ),
                       )
                     ],
@@ -121,6 +122,7 @@ class AyuvedaDetail extends StatelessWidget {
                         child: Text(
                           ayurveda.treatment,
                           textAlign: TextAlign.justify,
+                          style: TextStyle(height: 1.7)
                         ),
                       )
                     ],

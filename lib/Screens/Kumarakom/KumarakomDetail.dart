@@ -132,16 +132,13 @@ class KumarakomDetail extends StatelessWidget {
                         children: [
                           Kumarakom.contact.isNotEmpty
                               ? Column(children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
+                                  
                                       Text(
                                         Kumarakom.contact,
                                         textAlign: TextAlign.justify,
                                         style: TextStyle(height: 1.9),
                                       ),
-                                    ],
-                                  ),
+                                  
                                 ])
                               : Container(),
                           Padding(

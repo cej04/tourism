@@ -104,6 +104,7 @@ class GrihasthaliDetail extends StatelessWidget {
                         child: Text(
                           grihasthali.facilities,
                           textAlign: TextAlign.justify,
+                          style: TextStyle(height: 1.7)
                         ),
                       )
                     ],

@@ -101,6 +101,7 @@ class HomeStayDetail extends StatelessWidget {
                             child: Text(
                               Homestay.facilities,
                               textAlign: TextAlign.justify,
+                              style: TextStyle(height: 1.7),
                             ),
                           )
                         ],

@@ -105,6 +105,7 @@ class HotelDetail extends StatelessWidget {
                         child: Text(
                           hotel.facilities,
                           textAlign: TextAlign.justify,
+                          style: TextStyle(height: 1.7)
                         ),
                       )
                     ],
