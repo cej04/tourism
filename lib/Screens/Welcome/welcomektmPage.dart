@@ -14,10 +14,19 @@ class _welcomektmPageState extends State<welcomektmPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: MyAppBar(title: 'About Kottayam'),
-      ),
+          appBar:AppBar(   
+      title: Text("About Kottayam"),     
+    automaticallyImplyLeading: false,
+    leading: Navigator.canPop(context)
+        ? IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              
+            ),
+            onPressed: () => Navigator.of(context).pop(),
+          )
+        : null,
+),
       body: Column(
         children: [
           Expanded(

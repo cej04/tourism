@@ -12,12 +12,19 @@ class FestivalPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
-        child: const MyAppBar(
-          title: 'Festivals',
-        ),
-      ),
+    appBar:AppBar(   
+      title: Text("Festivals"),     
+    automaticallyImplyLeading: false,
+    leading: Navigator.canPop(context)
+        ? IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              
+            ),
+            onPressed: () => Navigator.of(context).pop(),
+          )
+        : null,
+),
       body: Column(
         children: [
           Expanded(
