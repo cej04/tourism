@@ -10,7 +10,7 @@ class Splash extends StatelessWidget {
       navigateRoute: HomePage(),
       duration: 3000,
       imageSize: 710,
-      imageSrc: "assets/images/flash1.png",
+      imageSrc: "assets/images/flash1.jpg",
     
 
       backgroundColor: Colors.white,
