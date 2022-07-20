@@ -52,6 +52,6 @@ class MyApp extends StatelessWidget {
           '/FAQPage': (context) => const FAQPage(),
           '/MainSample2Page': (context) => const MainSample2Page(),
         },
-        home: Splash());
+        home: SplashPage());
   }
 }
