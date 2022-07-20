@@ -12,10 +12,19 @@ class WelcomeKtmDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(kToolbarHeight),
- child: MyAppBar(title: 'Welcome to Kottayam'),
-      ),
+     appBar:AppBar(   
+      title: Text("About Kottayam"),     
+    automaticallyImplyLeading: false,
+    leading: Navigator.canPop(context)
+        ? IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              
+            ),
+            onPressed: () => Navigator.of(context).pop(),
+          )
+        : null,
+),
       body: Column(
         children: [
           Padding(
