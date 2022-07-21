@@ -5,8 +5,11 @@ import 'package:ktmtourism/Screens/EmergencyContact/emergency.dart';
 import 'package:ktmtourism/Screens/FAQ/FAQPage.dart';
 import 'package:ktmtourism/Screens/Festivals/festivalPage.dart';
 import 'package:ktmtourism/Screens/Fire&Rescue/FRdetail.dart';
+import 'package:ktmtourism/Screens/GovHos/GovHosDetail.dart';
 import 'package:ktmtourism/Screens/MainHome/sampleMain2.dart';
 import 'package:ktmtourism/Screens/Pilgrim/pilgrimktmPage.dart';
+import 'package:ktmtourism/Screens/Police/PoliceDetail.dart';
+import 'package:ktmtourism/Screens/PrivateHospitals/PrivateDetail.dart';
 import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/TourismInfo/tourismInfo.dart';
@@ -52,7 +55,12 @@ class MyApp extends StatelessWidget {
           '/HowToReachPage': (context) => const HowToReachPage(),
           '/TourismInfoPage': (context) => const TourismInfoPage(),
           '/EmergencyPage': (context) => const EmergencyPage(),
+          '/PoliceDetail': (context) => const PoliceDetail(),
+          
           '/FRdetail': (context) => const FRdetail(),
+          '/GovDetail': (context) => const GovDetail(),
+          
+          '/PrivateDetail': (context) => const PrivateDetail(),
           
           '/FAQPage': (context) => const FAQPage(),
           '/MainSample2Page': (context) => const MainSample2Page(),
