@@ -28,7 +28,7 @@ class _SplashPageState extends State<SplashPage> {
        decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-              'assets/images/flashs3.jpg'),
+              'assets/images/flashs4.jpg'),
           fit: BoxFit.fill,
         ),
       ),
