@@ -108,6 +108,13 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, '/FAQPage');
               },
             ),
+            ListTile(
+              leading: Icon(Icons.question_answer),
+              title: Text('speech'),
+              onTap: () {
+                Navigator.pushNamed(context, '/Speech');
+              },
+            ),
           ],
         ),
       ),
