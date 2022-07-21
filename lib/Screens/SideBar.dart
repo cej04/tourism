@@ -58,6 +58,16 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, '/TourismInfoPage');
               },
             ),
+             const Divider(
+              thickness: 2.0,
+            ),
+             ListTile(
+              leading: const Icon(Icons.local_police_outlined),
+              title: Text('Police'),
+              onTap: () {
+                Navigator.pushNamed(context, '/PoliceDetail');
+              },
+            ),
             const Divider(
               thickness: 2.0,
             ),
@@ -66,6 +76,26 @@ class _HomePageState extends State<HomePage> {
               title: Text('Fire & Rescue'),
               onTap: () {
                 Navigator.pushNamed(context, '/FRdetail');
+              },
+            ),
+            const Divider(
+              thickness: 2.0,
+            ),
+             ListTile(
+              leading: const Icon(Icons.local_hospital),
+              title: Text('Government Hospitals'),
+              onTap: () {
+                Navigator.pushNamed(context, '/GovDetail');
+              },
+            ),
+             const Divider(
+              thickness: 2.0,
+            ),
+             ListTile(
+              leading: const Icon(Icons.local_hospital),
+              title: Text('Private Hospitals'),
+              onTap: () {
+                Navigator.pushNamed(context, '/PrivateDetail');
               },
             ),
             const Divider(

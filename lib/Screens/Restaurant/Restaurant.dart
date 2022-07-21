@@ -75,13 +75,7 @@ List<Restaurant> restaurant = [
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFCF0F0),
       iconColor: Color.fromARGB(255, 236, 151, 158)),
-  Restaurant(
-      name: "KFC",
-      description: "Manjooran Tower, Kanjikuzhi  ",
-      phone: "+914812570553",
-      //  iconData :Icons.hotel_class_outlined,
-      bgcolor: Color(0XFFEDF4FE),
-      iconColor: Color.fromARGB(255, 96, 151, 219)),
+  
   Restaurant(
       name: "Thali South Indian Restaurant  ",
       description: "KK Road, Opp. Malayala Manorama ",
@@ -117,13 +111,7 @@ List<Restaurant> restaurant = [
       //iconData :Icons.hotel_class_outlined,
       bgcolor: Color(0xFFFCF0F0),
       iconColor: Color.fromARGB(255, 236, 151, 158)),
-  Restaurant(
-      name: "Best Hotel",
-      description: "YMCA Road, Central Jn.",
-      phone: "+914812564000",
-      // iconData :Icons.hotel_class_outlined,
-      bgcolor: Color(0XFFEDF4FE),
-      iconColor: Color.fromARGB(255, 96, 151, 219)),
+
   Restaurant(
       name: "Vellrose (Hotel Floral Park) ",
       description: "Gandhi Nagar ",
