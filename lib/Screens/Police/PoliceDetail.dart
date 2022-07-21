@@ -30,14 +30,13 @@ class PoliceDetail extends StatelessWidget {
                         ),
                         title: Text(PoliceDetail.name),
                         subtitle: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             
                            
-                            Row(
+                            Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Text("Phone :"),
+                                Text(""),
                                 TextButton(
                                     onPressed: () async {
                                       final url = 'tel:${PoliceDetail.ph1}';

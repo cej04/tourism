@@ -28,25 +28,18 @@ class PrivateDetail extends StatelessWidget {
                           
                         ),
                         title: Text(PrivateDetail.name),
-                        subtitle: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        subtitle: Row(
                           children: [
-                         
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text("Phone :"),
-                                TextButton(
-                                    onPressed: () async {
-                                      final url = 'tel:${PrivateDetail.ph1}';
+                            Text("Phone :"),
+                            TextButton(
+                                onPressed: () async {
+                                  final url = 'tel:${PrivateDetail.ph1}';
             
-                                      if (await canLaunch(url)) {
-                                        await launch(url);
-                                      }
-                                    },
-                                    child: Text(PrivateDetail.ph1.toString())),
-                              ],
-                            ),
+                                  if (await canLaunch(url)) {
+                                    await launch(url);
+                                  }
+                                },
+                                child: Text(PrivateDetail.ph1.toString())),
                           ],
                         ),
                       ),

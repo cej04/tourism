@@ -31,19 +31,13 @@ class WelcomeKtmDetailsPage extends StatelessWidget {
             padding: const EdgeInsets.all(kDefaultPadding),
             child: Container(
               child: Text(welcome.title,
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
+              ),
             ),
           ),
           Container(
             height: 200,
             decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 6.0,
-                ),
-              ],
+              
               image: DecorationImage(
                 image: AssetImage(welcome.image),
                 fit: BoxFit.fill,
@@ -63,13 +57,8 @@ class WelcomeKtmDetailsPage extends StatelessWidget {
                         padding: const EdgeInsets.all(kDefaultPadding),
                         child: ReadMoreText(welcome.description,
                             textAlign: TextAlign.justify,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2
-                                ?.apply(
-                                  color: Colors.black,
-                                )
-                                .copyWith(height: 1.8),
+                                                         style: TextStyle(height: 1.7),
+
                             trimLines: 20,
                             colorClickableText: Colors.blue,
                             trimMode: TrimMode.Line,

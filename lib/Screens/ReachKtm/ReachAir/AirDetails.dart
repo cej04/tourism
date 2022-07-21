@@ -26,40 +26,13 @@ class AirDetailPage extends StatelessWidget {
 
                   return Card(
                     child: ListTile(
-                      tileColor: que.bgcolor,
+                      //tileColor: que.bgcolor,
                       leading: Icon(Icons.flight,color: que.iconColor,),
                       title: Text(que.title),
                     
                       subtitle: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          SizedBox(height:10.0),
-                                Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Website :"),
-                              TextButton(onPressed: () async {
-                                      final Uri url = Uri.parse(
-                                          que.weblink);
-                                      if (await canLaunchUrl(url)) {
-                                        await launchUrl(url);
-                                      }
-                                    },
-                              child: Text(que.weblink)),
-                              
-                            ],
-                          ),
-                            SizedBox(height:5.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Phone :"),
-                              Text(que.phone),
-                              
-                            ],
-                          ),
-                            SizedBox(height:5.0),
-                           Row(
+                             Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text("Pincode :"),
@@ -67,6 +40,42 @@ class AirDetailPage extends StatelessWidget {
                               
                             ],
                           ),
+                           TextButton.icon(
+                               onPressed: () async {
+                                      final Uri url = Uri.parse(
+                                          que.weblink);
+                                      if (await canLaunchUrl(url)) {
+                                        await launchUrl(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.web),
+                                    label: Text( que.weblink),
+                              
+                                ),
+                          
+                      
+                       
+                                TextButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${que.phone}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text(que.phone),
+                              
+                                ),
+                                   TextButton.icon(
+                                    onPressed: () {},
+                                    icon:Icon(Icons.phone),
+                                    label: Text(que.phone),
+                              
+                                ),
+                         
+                       
+                        
                         ],
                       ),
                     

@@ -30,19 +30,13 @@ class ProduceBodyPage extends StatelessWidget {
             padding: const EdgeInsets.all(kDefaultPadding),
             child: Container(
               child: Text(produce.title,
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
+                ),
             ),
           ),
           Container(
             height: 200,
             decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 6.0,
-                ),
-              ],
+              
            
               image: DecorationImage(
                 image: AssetImage(produce.image),
@@ -88,13 +82,7 @@ class ProduceBodyPage extends StatelessWidget {
                         produce.description,
                         overflow: TextOverflow.visible,
                         textAlign: TextAlign.justify,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2
-                            ?.apply(
-                              color: Colors.black,
-                            )
-                            .copyWith(height: 1.8),
+                       style: TextStyle(height: 1.7),
                       ),
                     ),
                   ),

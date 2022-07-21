@@ -37,34 +37,32 @@ class ShoppingDetail extends StatelessWidget {
 
                   return Card(
                     child: ListTile(
-                      tileColor: que.bgcolor,
+                     // tileColor: que.bgcolor,
                       leading: Icon(
                         Icons.shopping_bag_outlined,
                         color: que.iconColor,
                       ),
                       title: Text(que.name),
+                        
                       subtitle: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          SizedBox(height: 10.0),
-                          Text(que.description),
+                       
+                           que.description.isNotEmpty ?
+                          Text(que.description):Container(),
                           
                           
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Phone :"),
-                              TextButton(
-                                  onPressed: () async {
-                                    final url = 'tel:${que.phone}';
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: Text(que.phone.toString())),
-                            ],
-                          ),
+                          TextButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${que.phone}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text(que.phone),
+                              
+                                ),
                         ],
                       ),
                     ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/ReachKtm/ReachTrain/Train.dart';
 import 'package:ktmtourism/Utils/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TrainDetailPage extends StatelessWidget {
   const TrainDetailPage({
@@ -26,23 +27,12 @@ class TrainDetailPage extends StatelessWidget {
 
                   return Card(
                     child: ListTile(
-                      tileColor: que.bgcolor,
+                     // tileColor: que.bgcolor,
                       leading: Icon(Icons.train,color: que.iconColor,),
                       title: Text(que.title),
                     
                       subtitle: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          SizedBox(height:10.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Phone :"),
-                              Text(que.phone),
-                              
-                            ],
-                          ),
-                            SizedBox(height:5.0),
                            Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
@@ -51,6 +41,28 @@ class TrainDetailPage extends StatelessWidget {
                               
                             ],
                           ),
+                          SizedBox(height:10.0),
+                              TextButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${que.phone}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text(que.phone),
+                              
+                                ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.start,
+                          //   children: [
+                          //     Text("Phone :"),
+                          //     Text(que.phone),
+                              
+                          //   ],
+                          // ),
+                          
                         ],
                       ),
                     

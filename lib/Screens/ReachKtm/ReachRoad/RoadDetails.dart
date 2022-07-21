@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/ReachKtm/ReachRoad/Road.dart';
 import 'package:ktmtourism/Utils/constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RoadDEtails extends StatelessWidget {
   const RoadDEtails({
@@ -26,24 +27,14 @@ class RoadDEtails extends StatelessWidget {
 
                   return Card(
                     child: ListTile(
-                      tileColor: que.bgcolor,
+                    //  tileColor: que.bgcolor,
                       leading: Icon(Icons.bus_alert,color: que.iconColor,),
                       title: Text(que.title),
                     
                       subtitle: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      //  mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          SizedBox(height:10.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Phone :"),
-                              Text(que.phone),
-                              
-                            ],
-                          ),
-                            SizedBox(height:5.0),
-                           Row(
+                             Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text("Pincode :"),
@@ -51,6 +42,21 @@ class RoadDEtails extends StatelessWidget {
                               
                             ],
                           ),
+                         
+                                TextButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${que.phone}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text(que.phone),
+                              
+                                ),
+                          
+                        
                         ],
                       ),
                     

@@ -11,43 +11,34 @@ class CulinaryBodyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-     appBar:AppBar(   
-      title: Text("Culinary Delights"),     
-    automaticallyImplyLeading: false,
-    leading: Navigator.canPop(context)
-        ? IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              
-            ),
-            onPressed: () => Navigator.of(context).pop(),
-          )
-        : null,
-),
+      appBar: AppBar(
+        title: Text("Culinary Delights"),
+        automaticallyImplyLeading: false,
+        leading: Navigator.canPop(context)
+            ? IconButton(
+                icon: Icon(
+                  Icons.arrow_back,
+                ),
+                onPressed: () => Navigator.of(context).pop(),
+              )
+            : null,
+      ),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
             child: Container(
-              child: Text(culinary.title,
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
+              child: Text(
+                culinary.title,
+              ),
             ),
           ),
           Container(
             height: 200,
             decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black,
-                  blurRadius: 6.0,
-                ),
-              ],
-             
               image: DecorationImage(
                 image: AssetImage(culinary.image),
                 fit: BoxFit.fill,
-
               ),
             ),
           ),
@@ -56,7 +47,6 @@ class CulinaryBodyPage extends StatelessWidget {
           ),
           Container(
               color: Colors.grey,
-           
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
@@ -77,7 +67,6 @@ class CulinaryBodyPage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-            
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -87,23 +76,15 @@ class CulinaryBodyPage extends StatelessWidget {
                         culinary.description,
                         overflow: TextOverflow.visible,
                         textAlign: TextAlign.justify,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2
-                            ?.apply(
-                              color: Colors.black,
-                            )
-                            .copyWith(height: 1.8),
+                 style: TextStyle(height: 1.7),
+
                       ),
                     ),
                   ),
                 )
-
-        
               ],
             ),
           ),
-        
         ],
       ),
     );

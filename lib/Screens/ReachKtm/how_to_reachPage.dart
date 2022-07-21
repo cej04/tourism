@@ -68,14 +68,10 @@ class FerryServise extends StatelessWidget {
       // 
       body: Column(
         children: [
-           Padding(
-            padding: const EdgeInsets.all(kDefaultPadding),
-            child: Text("Backwater Ferry Services",style: Theme.of(context).textTheme.headline6?.copyWith(
-                color: Colors.black, fontWeight: FontWeight.bold,)),
-          ),
+          
          // HeaderWithFAQS(size: size),
           ListTile(
-            tileColor: Color(0xFFFFF7EC),
+            //tileColor: Color(0xFFFFF7EC),
             leading: Icon(Icons.sailing,color:Color.fromARGB(255, 236, 199, 119)),
             title: Text("There are two ferry stations. \n\nThe Town Jetty is about 3 km from the railway station and operates services during the monsoon. \nDuring summer, boats are operated from the Kodimatha Jetty. "),
           

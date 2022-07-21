@@ -37,33 +37,30 @@ class RestaurantDetail extends StatelessWidget {
 
                   return Card(
                     child: ListTile(
-                      tileColor: que.bgcolor,
+                    //  tileColor: que.bgcolor,
                       leading: Icon(
                         Icons.hotel_class_outlined,
                         color: que.iconColor,
                       ),
                       title: Text(que.name),
                       subtitle: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text(que.description),
+                           que.description.isNotEmpty ?
+                          Text(que.description) : Container(),
                           //  SizedBox(height: 5.0),
 
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text("Phone :"),
-                              TextButton(
-                                  onPressed: () async {
-                                    final url = 'tel:${que.phone}';
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: Text(que.phone.toString())),
-                            ],
-                          ),
+                          TextButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${que.phone}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text(que.phone),
+                              
+                                ),
                         ],
                       ),
                     ),
