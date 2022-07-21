@@ -66,7 +66,7 @@ class KumarakomDetail extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: ExpansionTile(
                         initiallyExpanded: true,
-                        collapsedBackgroundColor: Colors.grey[200],
+        //                collapsedBackgroundColor: Colors.grey[200],
                         title: Text("Description"),
                         children: [
                           Padding(
@@ -86,7 +86,7 @@ class KumarakomDetail extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: ExpansionTile(
                       initiallyExpanded: true,
-                      collapsedBackgroundColor: Colors.grey[200],
+       //               collapsedBackgroundColor: Colors.grey[200],
                       title: Text("More About Kumarakom"),
                       children: [
                         ElevatedButton(
@@ -108,7 +108,7 @@ class KumarakomDetail extends StatelessWidget {
                   ? Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ExpansionTile(
-                        collapsedBackgroundColor: Colors.grey[200],
+       //                 collapsedBackgroundColor: Colors.grey[200],
                         title: Text("Activities"),
                         children: [
                           Padding(
@@ -127,7 +127,7 @@ class KumarakomDetail extends StatelessWidget {
                   ? Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ExpansionTile(
-                        collapsedBackgroundColor: Colors.grey[200],
+     //                   collapsedBackgroundColor: Colors.grey[200],
                         title: Text("Contact Us"),
                         children: [
                           Kumarakom.contact.isNotEmpty
@@ -209,7 +209,7 @@ class KumarakomDetail extends StatelessWidget {
                   ? Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ExpansionTile(
-                        collapsedBackgroundColor: Colors.grey[200],
+            //            collapsedBackgroundColor: Colors.grey[200],
                         title: Text("Getting There"),
                         children: [
                           Padding(

@@ -41,7 +41,7 @@ class _HomeStayPageState extends State<HomeStayPage> {
                             ));
                       }),
                       child: Card(
-                        color: Colors.grey[200],
+                //        color: Colors.grey[200],
                         clipBehavior: Clip.antiAlias,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),

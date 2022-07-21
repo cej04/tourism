@@ -27,12 +27,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
+          brightness: Brightness.light,
           colorScheme: ColorScheme.fromSwatch(
             primarySwatch: Colors.teal,
           ).copyWith(
             secondary: Colors.teal,
           ),
         ),
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+        ),
+        themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {

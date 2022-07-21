@@ -41,7 +41,7 @@ class _AyurvedaPageState extends State<AyurvedaPage> {
                             ));
                       }),
                       child: Card(
-                        color: Colors.grey[200],
+                 //       color: Colors.grey[200],
                         clipBehavior: Clip.antiAlias,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),

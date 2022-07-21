@@ -76,7 +76,7 @@ class AyuvedaDetail extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
                     initiallyExpanded: true,
-                    collapsedBackgroundColor: Colors.grey[200],
+              //      collapsedBackgroundColor: Colors.grey[200],
                     title: Text("Overview"),
                     
                     children: [
@@ -96,7 +96,7 @@ class AyuvedaDetail extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
-                    collapsedBackgroundColor: Colors.grey[200],
+              //      collapsedBackgroundColor: Colors.grey[200],
                     title: Text("Facilities"),
                     children: [
                       Padding(
@@ -114,7 +114,7 @@ class AyuvedaDetail extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
-                    collapsedBackgroundColor: Colors.grey[200],
+             //       collapsedBackgroundColor: Colors.grey[200],
                     title: Text("Ayurvedic Treatments"),
                     children: [
                       Padding(
@@ -131,7 +131,7 @@ class AyuvedaDetail extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
-                    collapsedBackgroundColor: Colors.grey[200],
+            //        collapsedBackgroundColor: Colors.grey[200],
                     title: Text("Contact Us"),
                     children: [
                       Padding(

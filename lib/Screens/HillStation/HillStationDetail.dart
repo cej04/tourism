@@ -74,7 +74,7 @@ class _HillStationDetailState extends State<HillStationDetail> {
                     padding: const EdgeInsets.all(8.0),
                     child: ExpansionTile(
                       initiallyExpanded: true,
-                      collapsedBackgroundColor: Colors.grey[200],
+          //            collapsedBackgroundColor: Colors.grey[200],
                       title: Text("Description"),
 
                       children: [
@@ -159,7 +159,7 @@ class _HillStationDetailState extends State<HillStationDetail> {
                 ? Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ExpansionTile(
-                      collapsedBackgroundColor: Colors.grey[200],
+            //          collapsedBackgroundColor: Colors.grey[200],
                       title: Text("Getting There"),
                       children: [
                         Padding(

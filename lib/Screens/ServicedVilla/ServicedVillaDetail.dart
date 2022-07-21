@@ -74,7 +74,7 @@ class ServicedVillaDetail extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: ExpansionTile(
                         initiallyExpanded: true,
-                        collapsedBackgroundColor: Colors.grey[200],
+              //          collapsedBackgroundColor: Colors.grey[200],
                         title: Text("Overview"),
 
                         children: [
@@ -92,7 +92,7 @@ class ServicedVillaDetail extends StatelessWidget {
                   ? Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ExpansionTile(
-                        collapsedBackgroundColor: Colors.grey[200],
+             //           collapsedBackgroundColor: Colors.grey[200],
                         title: Text("Facilities"),
                         children: [
                           Padding(
@@ -107,26 +107,11 @@ class ServicedVillaDetail extends StatelessWidget {
                         // subtitle: Text(ayurveda.overview),
                       ))
                   : Container(),
-              // Padding(
-              //     padding: const EdgeInsets.all(8.0),
-              //     child: ExpansionTile(
-              //       collapsedBackgroundColor: Colors.grey[200],
-              //       title: Text("AYURVEDIC TREATMENTS"),
-              //       children: [
-              //         Padding(
-              //           padding: const EdgeInsets.all(8.0),
-              //           child: Text(
-              //             Homestay.treatment,
-              //             textAlign: TextAlign.justify,
-              //           ),
-              //         )
-              //       ],
-              //       // subtitle: Text(ayurveda.overview),
-              //     )),
+              
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ExpansionTile(
-                    collapsedBackgroundColor: Colors.grey[200],
+            //        collapsedBackgroundColor: Colors.grey[200],
                     title: Text("Contact Us"),
                     children: [
                       Padding(
@@ -256,34 +241,7 @@ class ServicedVillaDetail extends StatelessWidget {
                                       }
                                       ;
                                     })
-                                // SingleChildScrollView(
-                                //   scrollDirection: Axis.horizontal,
-                                //   child: Column(
-
-                                //     children: [
-                                //       Row(
-
-                                //         mainAxisAlignment:
-                                //             MainAxisAlignment.center,
-                                //         children: [
-                                //           Icon(
-                                //             Icons.web,
-                                //             color: Colors.teal,
-                                //           ),
-                                //           TextButton(
-                                //               onPressed: () async {
-                                //                 final Uri url =
-                                //                     Uri.parse(servicedvilla.website);
-                                //                 if (await canLaunchUrl(url)) {
-                                //                   await launchUrl(url);
-                                //                 }
-                                //               },
-                                //               child: Text(servicedvilla.website))
-                                //         ],
-                                //       ),
-                                //     ],
-                                //   ),
-                                // )
+                                
                                 : Container()
                           ],
                         ),

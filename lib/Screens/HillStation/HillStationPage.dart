@@ -42,7 +42,7 @@ class _HillStationPageState extends State<HillStationPage> {
                             ));
                       }),
                       child: Card(
-                        color: Colors.grey[200],
+               //         color: Colors.grey[200],
                         clipBehavior: Clip.antiAlias,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
