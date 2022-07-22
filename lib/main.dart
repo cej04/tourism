@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
           '/ArtCulturePage': (context) => const ArtCulturePage(),
           '/HowToReachPage': (context) => const HowToReachPage(),
           '/TourismInfoPage': (context) => const TourismInfoPage(),
-          '/EmergencyPage': (context) => const EmergencyPage(),
+          '/EmergencyPage': (context) =>  EmergencyPage(),
           '/PoliceDetail': (context) => const PoliceDetail(),
           
           '/FRdetail': (context) => const FRdetail(),

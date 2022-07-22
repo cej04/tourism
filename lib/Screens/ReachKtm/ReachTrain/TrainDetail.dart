@@ -15,8 +15,7 @@ class TrainDetailPage extends StatelessWidget {
         children: [
            Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
-            child: Text(" Railway Station Kottayam",style: Theme.of(context).textTheme.headline6?.copyWith(
-                color: Colors.black, fontWeight: FontWeight.bold,)),
+            child: Text(" Railway Station Kottayam",),
           ),
          // HeaderWithFAQS(size: size),
           Expanded(

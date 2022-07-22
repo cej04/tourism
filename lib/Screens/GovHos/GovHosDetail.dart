@@ -32,27 +32,31 @@ class GovDetail extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                            
-                            TextButton.icon(
-                                onPressed: () async {
-                                  final url = 'tel:${GovDetail.ph1}';
+                           
+                                TextButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${GovDetail.ph1}';
             
-                                  if (await canLaunch(url)) {
-                                    await launch(url);
-                                  }
-                                },
-                                icon:Icon(Icons.phone),
-                                label: Text(GovDetail.ph1),
-                          
-                            ),
-                                  TextButton(
-                                onPressed: () async {
-                                  final url = 'tel:${GovDetail.ph2}';
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text(GovDetail.ph2),
+                              
+                                ),
+                                   TextButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${GovDetail.ph2}';
             
-                                  if (await canLaunch(url)) {
-                                    await launch(url);
-                                  }
-                                },
-                                child: Text(GovDetail.ph2.toString())),
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text(GovDetail.ph2),
+                              
+                                ),
                         
                                // child: Text(GovDetail.ph1.toString())),
                                 //   TextButton(

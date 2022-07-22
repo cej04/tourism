@@ -15,8 +15,7 @@ class RoadDEtails extends StatelessWidget {
         children: [
            Padding(
             padding: const EdgeInsets.all(kDefaultPadding),
-            child: Text("K S R T C Bus Stations",style: Theme.of(context).textTheme.headline6?.copyWith(
-                color: Colors.black, fontWeight: FontWeight.bold,)),
+            child: Text("K S R T C Bus Stations",),
           ),
          // HeaderWithFAQS(size: size),
           Expanded(

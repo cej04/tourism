@@ -33,7 +33,7 @@ class TourismInfoPage extends StatelessWidget {
                             text: 'Department of Tourism\n\nDeputy Director\n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
-                                color: Colors.black,
+                               
                                 fontWeight: FontWeight.bold),
                            
                           ),
@@ -42,7 +42,6 @@ class TourismInfoPage extends StatelessWidget {
                                 'District Office\nDepartment of Tourism\nKavanattinkara\nKumarakom P O\nKottayam :0481-2524343\n\n',
                             style: const TextStyle(
                               fontSize: 16.0,
-                              color: Colors.black,
                             ),
                           ),
                        
@@ -51,7 +50,6 @@ class TourismInfoPage extends StatelessWidget {
                                 'District Tourism Promotion Council (DTPC)\n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
-                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           
                           ),
@@ -60,7 +58,6 @@ class TourismInfoPage extends StatelessWidget {
                                 'DTPC provide constant aid and information to the Visitors.',
                             style: const TextStyle(
                               fontSize: 16.0,
-                              color: Colors.black,
                             ),
                         
                           ),
@@ -80,7 +77,6 @@ class TourismInfoPage extends StatelessWidget {
                             text: 'The Secretary\n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
-                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           
                           ),
@@ -89,7 +85,6 @@ class TourismInfoPage extends StatelessWidget {
                                 'District Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\nPh: +91 481 2560479\nEmail :',
                             style: const TextStyle(
                               fontSize: 18.0,
-                              color: Colors.black,
                             ),
                           
                           ),
@@ -123,7 +118,6 @@ class TourismInfoPage extends StatelessWidget {
                             text: 'Tourist Information Offices\n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
-                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           
                           ),
@@ -132,7 +126,6 @@ class TourismInfoPage extends StatelessWidget {
                                 'District Tourism Office,Kottayam,Kumarakom & Tourist Information Counter\n',
                             style: const TextStyle(
                               fontSize: 18.0,
-                              color: Colors.black,
                             ),
                            
                           ),
@@ -140,7 +133,6 @@ class TourismInfoPage extends StatelessWidget {
                             text: 'Ph:2524343\nEmail',
                             style: const TextStyle(
                               fontSize: 18.0,
-                              color: Colors.black,
                             ),
                       
                           ),
@@ -168,7 +160,6 @@ class TourismInfoPage extends StatelessWidget {
                             text: 'Responsible Tourism Travel Desk  \n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
-                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                        
                           ),
@@ -177,7 +168,6 @@ class TourismInfoPage extends StatelessWidget {
                                 'Kumarakom\nPh: +91 481 2523097\nMob:9633992977\nEmail : ',
                             style: const TextStyle(
                               fontSize: 18.0,
-                              color: Colors.black,
                             ),
                           
                           ),
@@ -206,7 +196,6 @@ class TourismInfoPage extends StatelessWidget {
                             text: 'KTDC  \n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
-                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                         
                           ),
@@ -214,7 +203,6 @@ class TourismInfoPage extends StatelessWidget {
                             text: 'Kumarakom\nPh: +91 481 2527650\nEmail :',
                             style: const TextStyle(
                               fontSize: 18.0,
-                              color: Colors.black,
                             ),
                        
                           ),
@@ -242,7 +230,6 @@ class TourismInfoPage extends StatelessWidget {
                             text: 'Websites\n\n',
                             style: const TextStyle(
                                 fontSize: 18.0,
-                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           
                           ),
@@ -251,7 +238,6 @@ class TourismInfoPage extends StatelessWidget {
                                 'District Tourism Promotion Council (DTPC) Kottayam:',
                             style: const TextStyle(
                               fontSize: 16.0,
-                              color: Colors.black,
                             ),
                           
                           ),
@@ -268,7 +254,6 @@ class TourismInfoPage extends StatelessWidget {
                                 'Department of Tourism, Government of Kerala:',
                             style: const TextStyle(
                               fontSize: 16.0,
-                              color: Colors.black,
                             ),
                             
                           ),
