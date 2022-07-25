@@ -76,5 +76,17 @@ List<HillStation> hillstation = [
     longitude: 76.904783,
     stay: "https://www.keralatourism.org/where-to-stay/vagamon-idukki/324",
   ),
+  HillStation(
+    name: "Ayyampara Hills ",
+    subname: "The Ayyampara hills is a beautiful picnic spot in Kottayam. ",
+    image: "assets/place/hs-ayyampara.jpg",
+    desc:
+        "Located on Erattupetta Muttom Road, the Ayyampara hills is a beautiful picnic spot in Kottayam.\n\nAccording to legends, the five Pandava brothers - epic heroes of the Mahabharatha - stayed near this rock, 2000 ft. above sea level and spread over 20 acres, during their exile. The name of the rock is said to be a modified version of the original term Anchupara (five rocks). However, some say that the name owes its origin to the Ayyappa Temple here. This temple has four pillars which support a flat piece of rock that forms the roof. On one side of the rock is a cave that can accommodate over 15 people.\n\nThe sunset vies from Ayyampara hill is beautiful. Above all, the cool mountain breeze does wonders to your mind and body.",
+    reach:
+        "",
+    latitude: 9.726754,
+    longitude: 76.794408,
+    stay: "https://www.keralatourism.org/where-to-stay/ayyampara-hills-kottayam/565",
+  ),
   
 ];
