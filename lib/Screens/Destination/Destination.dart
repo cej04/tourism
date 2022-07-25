@@ -87,5 +87,19 @@ List<Destination> destination = [
       longitude: 76.763134,
       stay:
           "https://www.keralatourism.org/homestays/zarahs-home-stay/4541"),
+          
+          Destination(
+      name: "Aruvikuzhy Waterfalls",
+      subname: " loved for the natural beauty they possess along with the quaint charm of the surrounding rubber plantations.",
+      image: "assets/place/des-aruvi.jpg",
+      desc:
+          "Aruvikkuzhi Waterfalls are loved for the natural beauty they possess along with the quaint charm of the surrounding rubber plantations. The trails surrounding the area along with the cool water falling from over 100 ft. make it a picnicker’s paradise. Families are regularly seen camping in this wonderful spot in Kottayam. One gets the distinct feeling of being hugged directly by nature when you stand here. The cool breeze and affable climate make this among the best picnic spots in the district. St. Mary's Church at the top of the waterfalls is another added incentive to visit the place. ",
+      reach:
+          "Nearest railway station: Kottayam, about 19 km\n\nNearest airport: Cochin International Airport, about 88 km",
+      latitude: 0,
+      longitude: 0,
+      stay:
+          ""),
+  
   
 ];

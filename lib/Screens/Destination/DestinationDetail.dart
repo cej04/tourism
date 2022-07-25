@@ -82,10 +82,12 @@ class DestinationDetail extends StatelessWidget {
                         // subtitle: Text(ayurveda.overview),
                       ))
                   : Container(),
-              
+             
               Row(
+                
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
+                    destination.stay.isNotEmpty ?
                   ElevatedButton.icon(
                     icon: Icon(Icons.night_shelter),
                     label: Text('Where to Stay'),
@@ -116,7 +118,8 @@ class DestinationDetail extends StatelessWidget {
                       }
                       ;
                     },
-                  ),
+                  ):Container(),
+                       if (destination.latitude != 0)
                   ElevatedButton.icon(
                     icon: Icon(Icons.location_pin),
                     label: Text('Locate on Map'),
@@ -144,7 +147,7 @@ class DestinationDetail extends StatelessWidget {
                       }
                       ;
                     },
-                  ),
+                  )
                 ],
               ),
               destination.reach.isNotEmpty

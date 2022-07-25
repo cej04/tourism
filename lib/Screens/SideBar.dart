@@ -114,7 +114,17 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.pushNamed(context, '/Speech');
               },
+            
             ),
+               ListTile(
+              leading: Icon(Icons.question_answer),
+              title: Text('WebViewApp'),
+              onTap: () {
+                Navigator.pushNamed(context, '/WebViewApp');
+              },
+            
+            ),
+            
           ],
         ),
       ),

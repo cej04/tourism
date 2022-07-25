@@ -14,7 +14,9 @@ import 'package:ktmtourism/Screens/Produce/producePage.dart';
 import 'package:ktmtourism/Screens/ReachKtm/how_to_reachPage.dart';
 import 'package:ktmtourism/Screens/TourismInfo/tourismInfo.dart';
 import 'package:ktmtourism/Screens/Welcome/welcomektmPage.dart';
+import 'package:ktmtourism/Screens/speech.dart';
 import 'package:ktmtourism/Screens/splashScreen.dart';
+import 'package:ktmtourism/Screens/webview.dart';
 
 import 'Screens/RestHouse/StateOwnedPage.dart';
 
@@ -63,6 +65,9 @@ class MyApp extends StatelessWidget {
           '/PrivateDetail': (context) => const PrivateDetail(),
           
           '/FAQPage': (context) => const FAQPage(),
+          '/Speech': (context) =>  Speech(),
+          '/WebViewApp': (context) =>  WebViewApp(),
+          
           '/MainSample2Page': (context) => const MainSample2Page(),
         },
         home: SplashPage());
