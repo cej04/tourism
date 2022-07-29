@@ -24,252 +24,227 @@ class TourismInfoPage extends StatelessWidget {
                 HeaderWithTourismInfo(size: size),
                 Padding(
                   padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Container(
-                    child: RichText(
-                      text: TextSpan(
-                       
-                        children: [
-                          TextSpan(
-                            text: 'Department of Tourism\n\nDeputy Director\n\n',
-                            style: const TextStyle(
-                                fontSize: 18.0,
+                  child: 
+                  Column(
+                    children: [
+                      Card(
+                        child: ListTile(
+                          title:Text('Department of Tourism\n\nDeputy Director\n'),
+                          subtitle: Column(
+                            children: [
+                              Text('District Office\nDepartment of Tourism\nKavanattinkara\nKumarakom P O\nKottayam'),
+                              //Text('phone:+91481 2524343')
+                              // TextButton.icon(
+                              //       onPressed: () async {
+                              //         final url = 'tel:${'+91481 2524343'}';
+            
+                              //         if (await canLaunch(url)) {
+                              //           await launch(url);
+                              //         }
+                              //       },
+                              //       child: Text('+91481 2524343')),
+                                  ElevatedButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${'+91481 2524343'}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text('+91481 2524343'),
+                              
+                                ),
+                            ],
+
+                          ),
+                        ),
+                      ),
+                         Card(
+                        child: ListTile(
+                          title:Text('District Tourism Promotion Council (DTPC)\n'),
+                          subtitle: Text('DTPC provide constant aid and information to the Visitors.'),
+                        ),
+                      ),
+                       Card(
+                        child: ListTile(
+                          title:Text('The Secretary\n'),
+                          subtitle: Column(
+                            children: [
+                              Text('District Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\n'),
+                             ElevatedButton.icon(
+                          icon: Icon(Icons.email),
+                          label: Text('${'info@dtpckottayam.com'}'),
+                          onPressed: () async {
+                            final url = 'mailto:${'info@dtpckottayam.com'}';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            }
+                          },
+                        ),
+                              ElevatedButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${'+91481 2560479'}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text('+91481 2560479'),
+                              
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                       Card(
+                        child: ListTile(
+                          title:Text('Tourist Information Offices\n'),
+                          subtitle: Column(
+                            children: [
+                              Text('District Tourism Office,Kottayam,Kumarakom & Tourist Information Counter\n'),
+                                ElevatedButton.icon(
+                          icon: Icon(Icons.email),
+                          label: Text('${'ddktm@keralatourism.org'}'),
+                          onPressed: () async {
+                            final url = 'mailto:${'ddktm@keralatourism.org'}';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            }
+                          },
+                        ),
+                               ElevatedButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${'+91481 2524343'}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text('+91481 2524343'),
+                              
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                        Card(
+                        child: ListTile(
+                          title:Text('Responsible Tourism Travel Desk\n'),
+                          subtitle: Column(
+                            children: [
+                              Text('Kumarakom\n'),
                                
-                                fontWeight: FontWeight.bold),
-                           
+                                ElevatedButton.icon(
+                          icon: Icon(Icons.email),
+                          label: Text('${'vlekumarakom@gmail.com'}'),
+                          onPressed: () async {
+                            final url = 'mailto:${'vlekumarakom@gmail.com'}';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            }
+                          },
+                        ),
+                        ElevatedButton.icon(
+                          icon: Icon(Icons.email),
+                          label: Text('${'rt@keralatourism.org'}'),
+                          onPressed: () async {
+                            final url = 'mailto:${'rt@keralatourism.org'}';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            }
+                          },
+                        ),
+                               ElevatedButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${'+91481 2523097'}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text('+91481 2523097'),
+                              
+                                ),
+                                  ElevatedButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${'9633992977'}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone_android),
+                                    label: Text('9633992977'),
+                              
+                                ),
+                            ],
                           ),
-                          TextSpan(
-                            text:
-                                'District Office\nDepartment of Tourism\nKavanattinkara\nKumarakom P O\nKottayam :0481-2524343\n\n',
-                            style: const TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                       
-                          TextSpan(
-                            text:
-                                'District Tourism Promotion Council (DTPC)\n\n',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
-                          
-                          ),
-                          TextSpan(
-                            text:
-                                'DTPC provide constant aid and information to the Visitors.',
-                            style: const TextStyle(
-                              fontSize: 16.0,
-                            ),
-                        
-                          ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Container(
-                    child: RichText(
-                      text: TextSpan(
-                      
-                        children: [
-                          TextSpan(
-                            text: 'The Secretary\n\n',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
-                          
+                       Card(
+                        child: ListTile(
+                          title:Text('KTDC\n'),
+                          subtitle: Column(
+                            children: [
+                              Text('Kumarakom\n'),
+                                ElevatedButton.icon(
+                          icon: Icon(Icons.email),
+                          label: Text('${'waterscapes@ktdc.com'}'),
+                          onPressed: () async {
+                            final url = 'mailto:${'waterscapes@ktdc.com'}';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            }
+                          },
+                        ),
+                            ElevatedButton.icon(
+                                    onPressed: () async {
+                                      final url = 'tel:${' +91481 2527650'}';
+            
+                                      if (await canLaunch(url)) {
+                                        await launch(url);
+                                      }
+                                    },
+                                    icon:Icon(Icons.phone),
+                                    label: Text(' +91481 2527650'),
+                              
+                                ),
+                            ],
                           ),
-                          TextSpan(
-                            text:
-                                'District Tourism Promotion Council (DTPC)\nKodimatha, Kottayam\nPh: +91 481 2560479\nEmail :',
-                            style: const TextStyle(
-                              fontSize: 18.0,
-                            ),
-                          
-                          ),
-                          TextSpan(
-                            recognizer: new TapGestureRecognizer()..onTap = () async {
-                                    final Uri url = Uri.parse('info@dtpckottayam.com');
-                                    if (await canLaunchUrl(url)) {
-                                      await launchUrl(url);
-                                    }
-                                  },
-                            text: 'info@dtpckottayam.com',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline),
-                       
-                          ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Container(
-                    child: RichText(
-                      text: TextSpan(
-                        
-                        children: [
-                          TextSpan(
-                            text: 'Tourist Information Offices\n\n',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
-                          
-                          ),
-                          TextSpan(
-                            text:
-                                'District Tourism Office,Kottayam,Kumarakom & Tourist Information Counter\n',
-                            style: const TextStyle(
-                              fontSize: 18.0,
-                            ),
-                           
-                          ),
-                          TextSpan(
-                            text: 'Ph:2524343\nEmail',
-                            style: const TextStyle(
-                              fontSize: 18.0,
-                            ),
-                      
-                          ),
-                          TextSpan(
-                            text: ':ddktm@keralatourism.org',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline),
-                       
-                          ),
-                        ],
+                       Card(
+                        child: ListTile(
+                          title:Text('Websites\n'),
+                          subtitle: Text('District Tourism Promotion Council (DTPC) Kottayam:www.discoverkottayam.com\n\nDepartment of Tourism, Government of Kerala:www.keralatourism.org\n\n'),
+                        ),
                       ),
-                    ),
-                  ),
+                    ],
+                  )
+                  
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Container(
-                    child: RichText(
-                      text: TextSpan(
+             
+                          // TextSpan(
+                          //   recognizer: new TapGestureRecognizer()..onTap = () async {
+                          //           final Uri url = Uri.parse('info@dtpckottayam.com');
+                          //           if (await canLaunchUrl(url)) {
+                          //             await launchUrl(url);
+                          //           }
+                          //         },
+                          //   text: 'info@dtpckottayam.com',
+                          //   style: const TextStyle(
+                          //       fontSize: 18.0,
+                          //       color: Colors.blue,
+                          //       decoration: TextDecoration.underline),
                        
-                        children: [
-                          TextSpan(
-                            text: 'Responsible Tourism Travel Desk  \n\n',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
-                       
-                          ),
-                          TextSpan(
-                            text:
-                                'Kumarakom\nPh: +91 481 2523097\nMob:9633992977\nEmail : ',
-                            style: const TextStyle(
-                              fontSize: 18.0,
-                            ),
-                          
-                          ),
-                          TextSpan(
-                            text:
-                                'vlekumarakom@gmail.com ,  rt@keralatourism.org',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline),
-                          
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Container(
-                    child: RichText(
-                      text: TextSpan(
-                    
-                        children: [
-                          TextSpan(
-                            text: 'KTDC  \n\n',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
-                        
-                          ),
-                          TextSpan(
-                            text: 'Kumarakom\nPh: +91 481 2527650\nEmail :',
-                            style: const TextStyle(
-                              fontSize: 18.0,
-                            ),
-                       
-                          ),
-                          TextSpan(
-                            text: 'waterscapes@ktdc.com',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline),
-                         
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Container(
-                    child: RichText(
-                      text: TextSpan(
-                       
-                        children: [
-                          TextSpan(
-                            text: 'Websites\n\n',
-                            style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold),
-                          
-                          ),
-                          TextSpan(
-                            text:
-                                'District Tourism Promotion Council (DTPC) Kottayam:',
-                            style: const TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          
-                          ),
-                          TextSpan(
-                            text: ' www.discoverkottayam.com\n\n',
-                            style: const TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline),
-                       
-                          ),
-                          TextSpan(
-                            text:
-                                'Department of Tourism, Government of Kerala:',
-                            style: const TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            
-                          ),
-                          TextSpan(
-                            text: ' www.keralatourism.org\n\n',
-                            style: const TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.blue,
-                                decoration: TextDecoration.underline),
-                            
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                          // ),
+              
+  
+             
               ]),
         ));
   }
