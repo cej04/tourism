@@ -15,7 +15,7 @@ class mainCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left:2.0,right:2.0),
         child: Card(
-          elevation: 10,
+          elevation: 3,
           
           child: Padding(
             padding: const EdgeInsets.only(top:12.0),

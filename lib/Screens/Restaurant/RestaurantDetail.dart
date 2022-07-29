@@ -13,22 +13,20 @@ class RestaurantDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-         appBar:AppBar(   
-      title: Text("Restaurants"),     
-    automaticallyImplyLeading: false,
-    leading: Navigator.canPop(context)
-        ? IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              
-            ),
-            onPressed: () => Navigator.of(context).pop(),
-          )
-        : null,
-),
+      appBar: AppBar(
+        title: Text("Restaurants"),
+        automaticallyImplyLeading: false,
+        leading: Navigator.canPop(context)
+            ? IconButton(
+                icon: Icon(
+                  Icons.arrow_back,
+                ),
+                onPressed: () => Navigator.of(context).pop(),
+              )
+            : null,
+      ),
       body: Column(
         children: [
-      
           Expanded(
             child: ListView.builder(
                 itemCount: restaurant.length,
@@ -37,7 +35,7 @@ class RestaurantDetail extends StatelessWidget {
 
                   return Card(
                     child: ListTile(
-                    //  tileColor: que.bgcolor,
+                      //  tileColor: que.bgcolor,
                       leading: Icon(
                         Icons.hotel_class_outlined,
                         color: que.iconColor,
@@ -45,22 +43,22 @@ class RestaurantDetail extends StatelessWidget {
                       title: Text(que.name),
                       subtitle: Column(
                         children: [
-                           que.description.isNotEmpty ?
-                          Text(que.description) : Container(),
+                          que.description.isNotEmpty
+                              ? Text(que.description)
+                              : Container(),
                           //  SizedBox(height: 5.0),
 
                           TextButton.icon(
-                                    onPressed: () async {
-                                      final url = 'tel:${que.phone}';
-            
-                                      if (await canLaunch(url)) {
-                                        await launch(url);
-                                      }
-                                    },
-                                    icon:Icon(Icons.phone),
-                                    label: Text(que.phone),
-                              
-                                ),
+                            onPressed: () async {
+                              final url = 'tel:${que.phone}';
+
+                              if (await canLaunch(url)) {
+                                await launch(url);
+                              }
+                            },
+                            icon: Icon(Icons.phone),
+                            label: Text(que.phone),
+                          ),
                         ],
                       ),
                     ),

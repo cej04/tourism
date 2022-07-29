@@ -38,6 +38,13 @@ class MyApp extends StatelessWidget {
           ).copyWith(
             secondary: Colors.teal,
           ),
+          cardTheme: CardTheme(
+              color: Colors.grey[200],
+           clipBehavior: Clip.antiAlias,
+      shape:  RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+    ),
         ),
         darkTheme: ThemeData(
           brightness: Brightness.dark,

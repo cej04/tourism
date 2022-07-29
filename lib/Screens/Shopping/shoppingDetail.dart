@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ktmtourism/Screens/Shopping/shopping.dart';
-import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
-import 'package:ktmtourism/Utils/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ShoppingDetail extends StatelessWidget {

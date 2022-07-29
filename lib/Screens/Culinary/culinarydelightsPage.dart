@@ -39,11 +39,7 @@ return Padding(
                         left: 10.0, right: 10.0, top: 10.0),
                     child: GestureDetector(
                       child: Card(
-                  //      color: Colors.grey[200],
-                        clipBehavior: Clip.antiAlias,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                 
                         child: Column(
                           children: [
                             Image.asset(culinary[index].image),

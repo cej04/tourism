@@ -42,11 +42,6 @@ class _DestinationPageState extends State<DestinationPage> {
                             ));
                       }),
                       child: Card(
-                       // color: Colors.grey[200],
-                        clipBehavior: Clip.antiAlias,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Column(
@@ -54,16 +49,17 @@ class _DestinationPageState extends State<DestinationPage> {
                               Stack(
                                 children: [
                                   Ink.image(
-                                      image: AssetImage(destination[index].image),
+                                      image:
+                                          AssetImage(destination[index].image),
                                       width: double.infinity,
                                       height: 200,
                                       fit: BoxFit.cover),
                                 ],
                               ),
                               ListTile(
-                              //  leading: Icon(Icons.history_edu),
+                                //  leading: Icon(Icons.history_edu),
                                 title: Text(destination[index].name),
-                               subtitle: Text(destination[index].subname),
+                                subtitle: Text(destination[index].subname),
                                 trailing: Icon(Icons.navigate_next),
                               ),
                             ],

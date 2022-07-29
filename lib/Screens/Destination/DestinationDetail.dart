@@ -1,16 +1,35 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:ktmtourism/Screens/Destination/Destination.dart';
 import 'package:ktmtourism/Screens/Widget/appbarWidget.dart';
 import 'package:ktmtourism/Screens/map_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class DestinationDetail extends StatelessWidget {
+class DestinationDetail extends StatefulWidget {
   final Destination destination;
   const DestinationDetail({Key? key, required this.destination}) : super(key: key);
 
+  @override
+  State<DestinationDetail> createState() => _DestinationDetailState();
+}
+
+class _DestinationDetailState extends State<DestinationDetail> {
+ 
+  final Completer<WebViewController> _controller =
+      Completer<WebViewController>();
+
+  num _stackToView = 1;
+
+  void _handleLoad(String value) {
+    setState(() {
+      _stackToView = 0;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +46,7 @@ class DestinationDetail extends StatelessWidget {
               Stack(
                 children: [
                   Ink.image(
-                      image: AssetImage(destination.image),
+                      image: AssetImage(widget.destination.image),
                       width: double.infinity,
                       height: 300,
                       fit: BoxFit.cover),
@@ -49,7 +68,7 @@ class DestinationDetail extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
-                                destination.name,
+                                widget.destination.name,
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 18),
                               ),
@@ -61,7 +80,7 @@ class DestinationDetail extends StatelessWidget {
                   ),
                 ],
               ),
-              destination.desc.isNotEmpty
+              widget.destination.desc.isNotEmpty
                   ? Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ExpansionTile(
@@ -73,7 +92,7 @@ class DestinationDetail extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(16.0),
                             child: Text(
-                              destination.desc,
+                              widget.destination.desc,
                               textAlign: TextAlign.justify,
                               style: TextStyle(height: 1.9),
                             ),
@@ -87,45 +106,58 @@ class DestinationDetail extends StatelessWidget {
                 
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                    destination.stay.isNotEmpty ?
+                    widget.destination.stay.isNotEmpty ?
                   ElevatedButton.icon(
                     icon: Icon(Icons.night_shelter),
                     label: Text('Where to Stay'),
-                    onPressed: () async {
-                      if (await InternetConnectionChecker().hasConnection) {
-                        final Uri url = Uri.parse(destination.stay);
-                        if (await canLaunchUrl(url)) {
-                          await launchUrl(url);
-                        }
-                      } else {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return AlertDialog(
-                              title: Text('No Internet!'),
-                              content: Text(
-                                  'Internet is required for this action.  Retry after enabling the Connection'),
-                              actions: [
-                                TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Ok'))
-                              ],
-                            );
-                          },
-                        );
-                      }
-                      ;
-                    },
+                    onPressed: (){
+
+                    WebView(
+                  initialUrl: widget.destination.stay,
+                  javascriptMode: JavascriptMode.unrestricted,
+                  onPageFinished: _handleLoad,
+                  onWebViewCreated: (WebViewController webViewController) {
+                    _controller.complete(webViewController);
+                  },
+                );
+
+                    }
+                    
+                    //  async {
+                    //   if (await InternetConnectionChecker().hasConnection) {
+                    //     final Uri url = Uri.parse(destination.stay);
+                    //     if (await canLaunchUrl(url)) {
+                    //       await launchUrl(url);
+                    //     }
+                    //   } else {
+                    //     showDialog(
+                    //       context: context,
+                    //       builder: (BuildContext context) {
+                    //         return AlertDialog(
+                    //           title: Text('No Internet!'),
+                    //           content: Text(
+                    //               'Internet is required for this action.  Retry after enabling the Connection'),
+                    //           actions: [
+                    //             TextButton(
+                    //                 onPressed: () {
+                    //                   Navigator.pop(context);
+                    //                 },
+                    //                 child: Text('Ok'))
+                    //           ],
+                    //         );
+                    //       },
+                    //     );
+                    //   }
+                    //   ;
+                    // },
                   ):Container(),
-                       if (destination.latitude != 0)
+                       if (widget.destination.latitude != 0)
                   ElevatedButton.icon(
                     icon: Icon(Icons.location_pin),
                     label: Text('Locate on Map'),
                     onPressed: () async {
                       if (await InternetConnectionChecker().hasConnection) {
-                        MapUtils.openMap(destination.latitude, destination.longitude);
+                        MapUtils.openMap(widget.destination.latitude, widget.destination.longitude);
                       } else {
                         showDialog(
                           context: context,
@@ -150,7 +182,7 @@ class DestinationDetail extends StatelessWidget {
                   )
                 ],
               ),
-              destination.reach.isNotEmpty
+              widget.destination.reach.isNotEmpty
                   ? Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ExpansionTile(
@@ -160,7 +192,7 @@ class DestinationDetail extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              destination.reach,
+                              widget.destination.reach,
                               textAlign: TextAlign.justify,
                             ),
                           )

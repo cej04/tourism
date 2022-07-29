@@ -88,5 +88,17 @@ List<HillStation> hillstation = [
     longitude: 76.794408,
     stay: "https://www.keralatourism.org/where-to-stay/ayyampara-hills-kottayam/565",
   ),
+    HillStation(
+    name: "Nadukani Hills ",
+    subname: "The panoramic view of mountain ranges on one side and that of the River Muvattupuzha on the other. ",
+    image: "assets/place/hs-nadukani.jpg",
+    desc:"Perched atop Nadukani, the mountains and the rivers seem like ancient beings, lying in deep slumber with a host of greenery on all sides as spectators. The bird’s eye view from this hill station in Kottayam is sought out annually by people numbering into the thousands. Nobody wishes to miss out on the panoramic view of mountain ranges on one side and that of the River Muvattupuzha on the other. Gigantic rocks are your companions, over 3000 ft. above sea level, and it is a visual worth embracing at least once in your lifetime.",
+        
+        reach: "Nearest railway station: Aluva, about 40 km\n\nNearest airport: Cochin International Airport, about 39 km",
+    latitude:  10.085488,
+    longitude:76.67593,
+    stay: "https://www.keralatourism.org/where-to-stay/nadukani-kottayam/527",
+  ),
+ 
   
 ];

@@ -100,6 +100,31 @@ List<Destination> destination = [
       longitude: 0,
       stay:
           ""),
+           Destination(
+      name: "Kattikkayam Waterfalls",
+      subname: "An ideal spot to witness nature in all its splendour ",
+      image: "assets/place/des-kattikkayam.jpg",
+      desc:
+          "This spectacular waterfall straddled by two mountains is located at Mechal near Melukavu in Kottayam. The waters tumbling down the rocky face set amidst the lush green surrounds is an alluring sight. The Kattikkayam Waterfalls is an ideal spot to witness nature in all its splendour and is en-route to Ilaveezhapoonchira from Illickal Kallu.",
+      reach:
+          "",
+      latitude: 0,
+      longitude: 0,
+      stay:
+          ""),
+               Destination(
+      name: "Marmala Stream",
+      subname: "An ideal spot to witness nature in all its splendour ",
+      image: "assets/place/des_marmala.jpg",
+      desc:
+          "Located in Teekoy village on the way to Vagamon Hill Station, Marmala Waterfalls in Kottayam district is a year-round destination and calls for a little bit of trekking a rocky terrain amid the scenic village. Falling from a height of 60 metre, the waterfall is surrounded by dense forests and plantations. It is popular during monsoon season during which the waterfall will descend in all its glory and splendor.",
+      reach:
+          "",
+      latitude: 0,
+      longitude: 0,
+      stay:
+          ""),
+  
   
   
 ];
